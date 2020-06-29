@@ -1,11 +1,14 @@
 import React from 'react';
-import { Router, Link } from '@reach/router';
-// import { RouteComponentProps } from '@reach/router';
+import { Router, RouteComponentProps, Link } from '@reach/router';
 import './App.scss';
 
-const Home = () => <div className="App">estore</div>;
+const Home = (props: RouteComponentProps) => (
+  <div className="App">
+    <h1>estore</h1>
+  </div>
+);
 
-const NotFound = () => (
+const NotFound = (props: RouteComponentProps) => (
   <div>
     <h3>Whoops, page does not Exist! </h3>
     <p>
@@ -18,18 +21,15 @@ function App() {
   return (
     <React.StrictMode>
       {/* <NavBar /> */}
-      <h1>estore</h1>
+
       <main>
-        <Router>{/* <Home path="/" />
-          <NotFound default /> */}</Router>
+        <Router>
+          <Home path="/" />
+          <NotFound default />
+        </Router>
       </main>
     </React.StrictMode>
   );
 }
-
-// export type RouteComponentProps<TParams = {}> = Partial<TParams> & {
-//   path?: string;
-//   default?: boolean;
-// };
 
 export default App;
