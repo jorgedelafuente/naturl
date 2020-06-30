@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { Router } from '@reach/router';
 import { AuthProvider } from './auth/Auth';
 import ApiClient from './services/ApiClient';
 import './App.scss';
+// import 'antd/dist/antd.css';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
@@ -13,8 +15,6 @@ import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import NotFound from './pages/notfound/NotFound';
-
-import styled from 'styled-components';
 
 const Layout = styled.div`
   margin-top: 30px;

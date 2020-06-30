@@ -16,6 +16,7 @@ const StyledNavBar = styled.div`
       display: none;
     }
   }
+  font-size: 1.1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,18 +27,17 @@ const StyledNavBar = styled.div`
   right: 0;
   left: 0;
   top: 0;
-  color: black;
   & a,
   & span {
     margin-right: 1.25rem;
     color: black;
     text-decoration: none;
     &:hover {
-      color: palevioletred;
+      color: #00677d;
     }
   }
   div:nth-child(1) {
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
   }
   /* z-index: 10; */
 `;
@@ -47,7 +47,7 @@ const NavBar = () => {
     <StyledNavBar>
       <div>
         <span>
-          <Link to="/">NatURL</Link>
+          <Link to="/">NATURL</Link>
         </span>
       </div>
       <div>
@@ -60,7 +60,6 @@ const NavBar = () => {
         <span>
           <Link to="/signin">Sign In</Link>
         </span>
-
         <span>Cart</span>
       </div>
       {/* <button onClick={signInWithGoogle}>Sign In With Google</button>
