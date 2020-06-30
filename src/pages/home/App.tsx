@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, RouteComponentProps, Link } from '@reach/router';
+import Products from '../Products';
 import './App.scss';
 
 const Home = (props: RouteComponentProps) => (
@@ -25,6 +26,7 @@ function App() {
       <main>
         <Router>
           <Home path="/" />
+          <Products path="/products" />
           <NotFound default />
         </Router>
       </main>
