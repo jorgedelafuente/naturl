@@ -1,0 +1,23 @@
+.category__Main {
+  display: grid;
+  justify-content: space-between;
+}
+
+.categories__items {
+  align-content: space-around;
+}
+
+.News {
+  display: grid;
+  justify-items: center;
+
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+form {
+  margin-top: 70px;
+}
+.About__us {
+  text-align: center;
+}
