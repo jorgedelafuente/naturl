@@ -14,6 +14,12 @@ import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import NotFound from './pages/notfound/NotFound';
 
+import styled from 'styled-components';
+
+const Layout = styled.div`
+  margin-top: 30px;
+`;
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -31,23 +37,24 @@ function App() {
     <React.StrictMode>
       <AuthProvider>
         <NavBar />
+        <Layout>
+          <main>
+            <Router primary={false}>
+              <Home path="/" />
+              <SignIn path="/signin" />
+              <SignUp path="/signup" />
+              <Category path="/category" />
+              <Products path="/products" />
+              <Product path="/product" />
+              <CheckOut path="/checkout" />
 
-        <main>
-          <Router>
-            <Home path="/" />
-            <SignIn path="/signin" />
-            <SignUp path="/signup" />
-            <Category path="/category" />
-            <Products path="/products" />
-            <Product path="/product" />
-            <CheckOut path="/checkout" />
-
-            {/* <Category data={data} path="/:category" /> 
+              {/* <Category data={data} path="/:category" /> 
             <Product data={data} path="/products/:product" /> */}
 
-            <NotFound default />
-          </Router>
-        </main>
+              <NotFound default />
+            </Router>
+          </main>
+        </Layout>
         <Footer />
       </AuthProvider>
     </React.StrictMode>
