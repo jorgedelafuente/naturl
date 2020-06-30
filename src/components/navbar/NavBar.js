@@ -5,6 +5,17 @@ import { Link } from '@reach/router';
 import styled from 'styled-components';
 
 const StyledNavBar = styled.div`
+  /* tablet */
+  @media (max-width: 700px) and (min-width: 480px) {
+    font-size: 0.8rem;
+  }
+  /* mobile */
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+    .navbar-links {
+      display: none;
+    }
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,16 +27,18 @@ const StyledNavBar = styled.div`
   left: 0;
   top: 0;
   color: black;
-  a,
-  span {
+  & a,
+  & span {
     margin-right: 1.25rem;
     color: black;
     text-decoration: none;
-    &: hover {
+    &:hover {
       color: palevioletred;
     }
   }
-
+  div:nth-child(1) {
+    margin-left: 0.25rem;
+  }
   /* z-index: 10; */
 `;
 
@@ -38,10 +51,10 @@ const NavBar = () => {
         </span>
       </div>
       <div>
-        <span>
+        <span className="navbar-links">
           <Link to="/category">Vegan</Link>
         </span>
-        <span>
+        <span className="navbar-links">
           <Link to="/category">Gluten Free</Link>
         </span>
         <span>
