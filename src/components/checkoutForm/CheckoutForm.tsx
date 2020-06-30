@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-// import { CardElement, injectStripe } from 'react-stripe-elements';
+import { CardElement, injectStripe } from 'react-stripe-elements';
 import './CheckoutForm.css';
 
 function CheckoutForm({ stripe, totalCost }) {
   const [status, setStatus] = useState('default');
 
-  const submit = async e => {
+  const handleSubmit = async e => {
     e.preventDefault();
 
-    setStatus('submitting');
+    setStatus('handleSubmitting');
 
     try {
       let { token } = await stripe.createToken({ name: 'Name' });
@@ -36,9 +36,9 @@ function CheckoutForm({ stripe, totalCost }) {
   }
 
   return (
-    <form className="CheckoutForm" onSubmit={submit}>
+    <form className="CheckoutForm" onSubmit={handleSubmit}>
       <h4>Would you like to complete the purchase?</h4>
-      {/* <CardElement /> */}
+      <CardElement />
       <button
         className="CheckoutForm-button"
         type="submit"
@@ -53,5 +53,4 @@ function CheckoutForm({ stripe, totalCost }) {
   );
 }
 
-// export default injectStripe(CheckoutForm);
-export default CheckoutForm;
+export default injectStripe(CheckoutForm);

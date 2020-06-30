@@ -11,8 +11,19 @@
   }
 }
 
-.Product-title {
+.Produc-name {
   font-size: 16px;
+}
+
+.Product-image {
+  width: 200px;
+  height: 400px;
+}
+
+img {
+  width: 100%; /* or any custom size */
+  height: 100%; 
+  object-fit: contain;
 }
 
 .Product-price {
@@ -25,12 +36,12 @@
   padding: 0.85em 1em;
   border: 0;
   outline: 0;
-  border-radius: 100em;
+  border-radius: 3px;
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1;
   text-align: center;
-  background-color: #ae9ad3;
+  background-color: #63418f;
   color: #fff;
   cursor: pointer;
   transition-property: background-color, color;
@@ -41,5 +52,5 @@
 
 .Product-buy-button:hover,
 .Product-buy-button:focus {
-  background-color: #7758af;
+  background-color: #6f598b;
 }
