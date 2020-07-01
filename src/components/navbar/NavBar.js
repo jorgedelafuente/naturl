@@ -52,10 +52,13 @@ const NavBar = () => {
       </div>
       <div>
         <span className="navbar-links">
-          <Link to="/category">Vegan</Link>
+          <Link to="/products">Products</Link>
         </span>
         <span className="navbar-links">
-          <Link to="/category">Gluten Free</Link>
+          <Link to="/products-vegan">Vegan</Link>
+        </span>
+        <span className="navbar-links">
+          <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
         <span>
           <Link to="/signin">Sign In</Link>

@@ -8,6 +8,7 @@ import { Card } from 'antd';
 import Title from './card-title';
 
 function ProductItem(props) {
+  // console.log(props);
   const { Meta } = Card;
 
   return (

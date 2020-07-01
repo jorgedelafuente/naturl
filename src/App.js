@@ -8,12 +8,13 @@ import './App.scss';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
-import Category from './pages/category/Category';
 import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import Product from './pages/product/Product';
 import Products from './pages/products/Products';
+import ProductsVegan from './pages/products/ProductsVegan';
+import ProductsGluten from './pages/products/ProductsGluten';
 import NotFound from './pages/notfound/NotFound';
 // import ProductItem from './pages/productitem/ProductItem';
 
@@ -22,17 +23,22 @@ const Layout = styled.div`
 `;
 
 function App() {
-  // eslint-disable-next-line
-  const [isLoading, setIsLoading] = useState(true); // eslint-disable-next-line
-  const [data, setData] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
+  const [allData, setData] = useState([]);
+  const [veganData, setVeganData] = useState([]);
+  const [glutenData, setGlutenData] = useState([]);
 
   useEffect(() => {
-    ApiClient.getData()
-      .then((data) => {
-        setData(data);
-        // console.log(data);
-      })
-      .then(() => setIsLoading(false));
+    ApiClient.getData().then((data) => {
+      setData(data);
+      const Vegan = data.filter((item) => item.tag_list.includes('Vegan'));
+      const Gluten = data.filter((item) =>
+        item.tag_list.includes('Gluten Free')
+      );
+      setVeganData([...Vegan]);
+      setGlutenData([...Gluten]);
+    });
+    // .then(() => setIsLoading(false));
   }, []);
 
   return (
@@ -42,14 +48,29 @@ function App() {
         <Layout>
           <main>
             <Router primary={false}>
-              <Home data={data} path="/" />
+              <Home data={allData} path="/" />
               <SignIn path="/signin" />
               <SignUp path="/signup" />
-              <Category path="/category" />
-              <Products data={data} path="/products" />
-              <Product data={data} path="/product" />
-              {/* <ProductItem data={data} path="/product/:id" /> */}
+              {/* <ProductItem data={allData} path="/product/:id" /> */}
+              <Product data={allData} path="/product/:id" />
+              <Products
+                data={allData}
+                title={'All Products'}
+                path="/products"
+              />
+              <ProductsVegan
+                data={veganData}
+                title={'Vegan'}
+                path="/products-vegan"
+              />
+              <ProductsGluten
+                data={glutenData}
+                title={'Gluten Free'}
+                path="/products-gluten-free"
+              />
               <CheckOut path="/checkout" />
+              {/* <UserProfile path="/profile" /> */}
+
               <NotFound default />
             </Router>
           </main>
