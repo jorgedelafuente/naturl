@@ -15,14 +15,16 @@ import SignUp from './pages/signup/SignUp';
 import Product from './pages/product/Product';
 import Products from './pages/products/Products';
 import NotFound from './pages/notfound/NotFound';
+// import ProductItem from './pages/productitem/ProductItem';
+
+const Layout = styled.div`
+  margin-top: 30px;
+`;
 
 function App() {
   // eslint-disable-next-line
-  const [isLoading, setIsLoading] = useState(true);    // eslint-disable-next-line
+  const [isLoading, setIsLoading] = useState(true); // eslint-disable-next-line
   const [data, setData] = useState([]);
-  const Layout = styled.div`
-    margin-top: 30px;
-  `;
 
   useEffect(() => {
     ApiClient.getData()
@@ -46,6 +48,7 @@ function App() {
               <Category path="/category" />
               <Products data={data} path="/products" />
               <Product data={data} path="/product" />
+              {/* <ProductItem data={data} path="/product/:id" /> */}
               <CheckOut path="/checkout" />
               <NotFound default />
             </Router>
