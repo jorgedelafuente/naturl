@@ -2,11 +2,10 @@ import React from 'react';
 import './product.scss';
 
 
-// import ProductItem from "../components/product-card-item";
 
 
 
-function Products() {
+function Product({ onAddToCartClick, price, name, image }) {
 
   return (
     <div className="singleproduct-page-container">
@@ -38,8 +37,9 @@ function Products() {
           </div>
           <div className="singleproduct-page-colors" >
             <input id='instant-input1' className='settings-input' type='number' name='discountInstant' min="0" max="100" autocomplete='off'  ></input>
-            <button>Add to cart</button>
-          </div>  
+            <button>Quantity</button>
+          </div>
+          <button className="Product-buy-button" onClick={onAddToCartClick}>Add to cart</button>
         </div>
       </div>
     </div>
@@ -47,4 +47,4 @@ function Products() {
 }
 
 
-export default Products;
+export default Product;
