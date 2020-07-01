@@ -1,5 +1,4 @@
 import React from 'react';
-import ProductSubItem from './ProductSubItem';
 
 const ProductItem = (props) => {
   console.log(props.data);
