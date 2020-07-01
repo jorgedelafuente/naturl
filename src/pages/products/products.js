@@ -2,9 +2,14 @@ import React from 'react';
 import './products.css';
 
 
-import ProductItem from "../../components/products/product-card-display";
+import ProductItem from "../../components/product-card/Product-card";
 
-function Products() {
+function Products(data) {
+
+  // console.log(data);
+  const datad = data.data;
+  // console.log(datad);
+  
 
   return (
     <div className="products-page-container">
@@ -20,7 +25,18 @@ function Products() {
       <div className="products-categories-list">
         <a href="/">Powder</a><a href="/">Cream</a>
       </div>
+        {/* {
+          datad.map(item =>  <ProductItem image={item.image_link}  title={item.name} price={item.price} />     console.log(item)   )
+        } */}
       <div className="products-categories-container">
+
+        {
+          datad.map(item => (<ProductItem image={item.image_link}  name={item.name} price={item.price} />))
+        }
+
+        
+
+        {/* <ProductItem />
         <ProductItem />
         <ProductItem />
         <ProductItem />
@@ -39,8 +55,7 @@ function Products() {
         <ProductItem />
         <ProductItem />
         <ProductItem />
-        <ProductItem />
-        <ProductItem />
+        <ProductItem /> */}
 
 
 

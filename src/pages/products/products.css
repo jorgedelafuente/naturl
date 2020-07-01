@@ -22,10 +22,16 @@
 
 .products-types-list a {
   margin-right: 40px;
-  color: rgb(255, 139, 158);
+  /* color: rgb(255, 139, 158); */
+  /* color: #00677D; */
+  color: #A586AE;
+
+
 }
 .products-types-list a:hover {
-  color: rgb(253, 85, 113);
+  /* color: rgb(253, 85, 113); */
+  color: #00677D;
+  /* color: #A586AE; */
 }
 
 .products-categories-title {
@@ -34,12 +40,15 @@
 
 .products-categories-list a {
   margin: 30px;
-  color: rgb(253, 85, 113);
+  /* color: rgb(253, 85, 113); */
+  color: #00677D;
+  /* color: #A586AE; */
 }
 .products-categories-list a:hover {
-  color: rgb(255, 139, 158);
+  /* color: rgb(255, 139, 158); */
+  /* color: #00677D; */
+  color: #A586AE;
 }
-
 
 
 .products-categories-container {
