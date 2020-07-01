@@ -1,0 +1,77 @@
+.category__Main {
+  display: grid;
+  justify-content: space-between;
+}
+
+.categories__items {
+  align-content: space-around;
+}
+
+.News {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.News__Text{
+
+  color: black;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+  letter-spacing: 2%;
+  text-align:center;
+  text-transform: lowercase;
+  line-height: 100%;
+  font-size: 15pt;
+  font-variant: small-caps;
+}
+
+form {
+  margin-top: 70px;
+}
+.About__us {
+  text-align: center;
+  text-decoration: underline;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: black;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 51px;
+  line-height: 44px;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+
+  .About__text:first-letter{
+    text-transform: uppercase;
+
+}
+
+
+.About__text {
+color: #424242;
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+letter-spacing: 5%;
+text-align:center;
+margin: 40px auto;
+text-transform: lowercase;
+line-height: 145%;
+font-size: 20pt;
+font-variant: small-caps;
+}
+
+
+.Main_Logo{
+  font-size: 70px;
+  text-align: center;
+  color: White;
+  background-color: black;
+  height: 6vh;
+}
+
+.Home__Hr{
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
