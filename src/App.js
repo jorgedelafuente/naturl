@@ -11,7 +11,7 @@ import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import Product from './pages/product/Product';
-import Products from './pages/products/Products';
+import Products from './pages/Products';
 import NotFound from './pages/notfound/NotFound';
 import './App.scss';
 // import 'antd/dist/antd.css';
@@ -21,7 +21,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);    // eslint-disable-next-line
   const [data, setData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
-  const [totalCost, setTotalCost] = useState(0);
+  // const [totalCost, setTotalCost] = useState(0);
 
   const Layout = styled.div`
     margin-top: 30px;
@@ -36,6 +36,28 @@ function App() {
       .then(() => setIsLoading(false));
   }, []);
 
+  const handleAddToCartClick = (id) => {
+    setItemsInCart((itemsInCart) => {
+      const itemInCart = itemsInCart.find((item) => item.id === id);
+
+      // if item is already in cart, update the quantity
+      if (itemInCart) {
+        return itemsInCart.map((item) => {
+          if (item.id !== id) return item;
+          return { ...itemInCart, quantity: item.quantity + 1 };
+        });
+      }
+
+      // otherwise, add new item to cart
+      const item = data.find((item) => item.id === id);
+      return [...itemsInCart, { ...item, quantity: 1 }];
+    });
+  };
+
+  setTotalCost(
+    itemsInCart.reduce((acc, item) => acc + item.price * item.quantity, 0)
+  );
+
   return (
     <React.StrictMode>
       <AuthProvider>
@@ -49,18 +71,11 @@ function App() {
               <Category path="/category" />
               <Products
                 data={data}
-                itemsInCart={itemsInCart}
-                setItemsInCart={setItemsInCart}
-                totalCost={totalCost}
-                setTotalCost={setTotalCost}
+                addToCart={handleAddToCartClick}
                 path="/products"
               />
               <Product data={data} path="/product" />
-              <CheckOut
-                itemsInCart={itemsInCart}
-                totalCost={totalCost}
-                path="/checkout"
-              />
+              <CheckOut itemsInCart={itemsInCart} path="/checkout" />
               <NotFound default />
             </Router>
           </main>
