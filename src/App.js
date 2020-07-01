@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Router } from '@reach/router';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { AuthProvider } from './auth/Auth';
 import ApiClient from './services/ApiClient';
 import './App.scss';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
-import Home from './pages/home/Home';
+import HomePage from './pages/home/Home';
 import Category from './pages/category/Category';
 import Product from './pages/product/Product';
 import Products from './pages/products/Products';
@@ -34,17 +34,15 @@ function App() {
 
         <main>
           <Router>
-            <Home path="/" />
+            <HomePage data ={data} path="/" />
             <SignIn path="/signin" />
             <SignUp path="/signup" />
             <Category path="/category" />
             <Products path="/products" />
             <Product path="/product" />
             <CheckOut path="/checkout" />
-
             {/* <Category data={data} path="/:category" /> 
             <Product data={data} path="/products/:product" /> */}
-
             <NotFound default />
           </Router>
         </main>
