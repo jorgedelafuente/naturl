@@ -14,12 +14,12 @@
   grid-gap: 20px;
 }
 
-.News__Text{
-
+.News__Text {
   color: black;
-  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+  font-family: 'Adobe Caslon Pro', 'Hoefler Text', Georgia, Garamond, Times,
+    serif;
   letter-spacing: 2%;
-  text-align:center;
+  text-align: center;
   text-transform: lowercase;
   line-height: 100%;
   font-size: 15pt;
@@ -42,35 +42,33 @@ form {
   font-weight: bold;
 }
 
-
-  .About__text:first-letter{
-    text-transform: uppercase;
-
+.About__text:first-letter {
+  text-transform: uppercase;
 }
-
 
 .About__text {
-color: #424242;
-font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-letter-spacing: 5%;
-text-align:center;
-margin: 40px auto;
-text-transform: lowercase;
-line-height: 145%;
-font-size: 20pt;
-font-variant: small-caps;
+  color: #424242;
+  font-family: 'Adobe Caslon Pro', 'Hoefler Text', Georgia, Garamond, Times,
+    serif;
+  letter-spacing: 5%;
+  text-align: center;
+  margin: 40px auto;
+  text-transform: lowercase;
+  line-height: 145%;
+  font-size: 20pt;
+  font-variant: small-caps;
 }
 
-
-.Main_Logo{
+.Main_Logo {
   font-size: 70px;
   text-align: center;
   color: White;
   background-color: black;
   height: 6vh;
+  margin-bottom: 0px !important;
 }
 
-.Home__Hr{
+.Home__Hr {
   border-style: solid;
   border-color: black;
   border-width: 2px;

@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link } from '@reach/router';
 import { StarOutlined, StarFilled } from '@ant-design/icons';
-import { Button } from 'antd';
+// import { Button } from 'antd';
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
-import '../../styles/Home.scss';
+import './Home.scss';
+import CustomChatbot from '../chatbot/Chatbot';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 import { Carousel } from 'antd';
 
 const { Meta } = Card;
 function HomePage(props) {
-  // const [featuredImages, setFeaturedImages] = useState([]);
-
-  // console.log(props.data[0])
   return (
     <React.Fragment>
       <h1 className="Main_Logo">Naturl</h1>
@@ -39,7 +37,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80"
               alt="First slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Los Angeles</h3>
               <p>
                 “My dad used to say makeup was a shallow girl's sport, but it's
@@ -53,7 +51,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1498746163870-51e3223d85a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
               alt="Second slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Paris</h3>
               <p>
                 “Beneath the makeup and behind the smile I am just a girl who
@@ -67,7 +65,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1470072508653-1be229b63562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
               alt="Third slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Global</h3>
               <p>
                 “Beauty, to me, is about being comfortable in your own skin.
@@ -107,37 +105,116 @@ function HomePage(props) {
       </div>
       <hr className="Home__Hr" />
       {/* END OF CAROSEL */}
-      <Button block size="large">
-        Shop Now
-      </Button>
-      <h2 style={{ textAlign: 'center' }}>Featured Products</h2>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <button
+          style={{
+            cursor: 'pointer',
+            padding: '29px 48px',
+            fontSize: '2rem',
+            backgroundColor: '#000000',
+            borderRadius: '31px',
+            color: '#ffffff',
+            margin: 'auto',
+            outline: 'none',
+          }}
+        >
+          Shop Now
+        </button>
+      </div>
+      <h2 style={{ textAlign: 'center', fontSize: '35px' }}>
+        Featured Products
+      </h2>
       <div className="container">
         <div className="row">
           <div className="col-sm">
-            {props.data.slice(0, 3).map((data, index) => {
+            {props.data.slice(44, 45).map((data, index) => {
               return (
-                <div>
-                  <Carousel autoplay>
-                    <div>
-                      {' '}
-                      <h1>
-                        <img src={data.api_featured_image} />
-                      </h1>
-                    </div>
-                    <div>
-                      {' '}
-                      <h2>
-                        <img src={data.api_featured_image} />
-                      </h2>
-                    </div>
-                  </Carousel>
+                <div key={index} className="row">
+                  <div className="col-md-4">
+                    <Carousel autoplay key={index}>
+                      <div key={index}>
+                        {' '}
+                        <h1 key={index}>
+                          <img
+                            src={data.api_featured_image}
+                            className="mx-auto"
+                            width="350px"
+                            alt="Product image"
+                          />
+                        </h1>
+                      </div>
+                      <div key={index}>
+                        {' '}
+                        <h2 key={index}>
+                          <img
+                            src={data.api_featured_image}
+                            className="mx-auto"
+                            width="350px"
+                            alt="Product image"
+                          />
+                        </h2>
+                      </div>
+                    </Carousel>
+                  </div>
+                  <div className="col-md-4">
+                    <Carousel autoplay key={index}>
+                      <div key={index}>
+                        {' '}
+                        <h1 key={index}>
+                          <img
+                            src={data.api_featured_image}
+                            className="mx-auto"
+                            width="350px"
+                            alt="Product image"
+                          />
+                        </h1>
+                      </div>
+                      <div key={index}>
+                        {' '}
+                        <h2 key={index}>
+                          <img
+                            src={data.api_featured_image}
+                            className="mx-auto"
+                            width="350px"
+                            alt="Product image"
+                          />
+                        </h2>
+                      </div>
+                    </Carousel>
+                  </div>
+                  <div className="col-md-4">
+                    <Carousel autoplay key={index}>
+                      <div key={index}>
+                        {' '}
+                        <h1 key={index}>
+                          <img
+                            src={data.api_featured_image}
+                            className="mx-auto"
+                            width="350px"
+                            alt="Product image"
+                          />
+                        </h1>
+                      </div>
+                      <div key={index}>
+                        {' '}
+                        <h2 key={index}>
+                          <img
+                            src={data.api_featured_image}
+                            className="mx-auto"
+                            width="350px"
+                            alt="Product image"
+                          />
+                        </h2>
+                      </div>
+                    </Carousel>
+                  </div>
                 </div>
               );
             })}
           </div>
         </div>
       </div>
-
+      <CustomChatbot />
       <hr className="Home__Hr" />
       <div className="News">
         <h1>Subscribe to our newsletter!</h1>
@@ -174,11 +251,12 @@ function HomePage(props) {
           <Col span={12}>
             {props.data.slice(6, 7).map((data, index) => {
               return (
-                <Card hoverable>
+                <Card hoverable key={index}>
                   <img
                     src={data.api_featured_image}
                     width="500px"
                     height="500px"
+                    alt="Product image"
                   />{' '}
                   <Meta title="Product Name" /> <p></p>
                   <Meta title="$300" />
@@ -193,14 +271,15 @@ function HomePage(props) {
           </Col>
           <Col span={12}>
             <Row>
-              {props.data.slice(0, 4).map((data, index) => {
+              {props.data.slice(7, 11).map((data, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <Card hoverable>
                       <img
                         src={data.api_featured_image}
                         width="500px"
                         height="500px"
+                        alt="Product image"
                       />
                       <Meta title="Product Name" /> <p></p>
                       <Meta title="$300" />
