@@ -98,14 +98,20 @@ const FormContainer = styled.div`
 const SignUp = () => {
   const handleSignUp = useCallback(async (event) => {
     event.preventDefault();
-    const { email, password } = event.target.elements;
-    try {
-      await firebase
-        .auth()
-        .createUserWithEmailAndPassword(email.value, password.value);
-      navigate(`/`);
-    } catch (error) {
-      alert(error);
+    const { email, password, password2 } = event.target.elements;
+
+    if (password.value === password2.value) {
+      // console.log('passwords match');
+      try {
+        await firebase
+          .auth()
+          .createUserWithEmailAndPassword(email.value, password.value);
+        navigate(`/`);
+      } catch (error) {
+        alert(error);
+      }
+    } else {
+      alert('passwords do not match');
     }
   }, []);
 
@@ -122,10 +128,18 @@ const SignUp = () => {
             <input name="email" type="email" placeholder="Email" />
           </label>
         </div>
+
         <div className="InputGroup">
           <label>
             <span>Password</span>
             <input name="password" type="password" placeholder="Password" />
+          </label>
+        </div>
+
+        <div className="InputGroup">
+          <label>
+            <span>Re-Enter Password</span>
+            <input name="password2" type="password" placeholder="Password" />
           </label>
         </div>
 
