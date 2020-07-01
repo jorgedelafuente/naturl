@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from '@reach/router';
 import { StarOutlined, StarFilled } from '@ant-design/icons';
-import { Button } from 'antd';
+// import { Button } from 'antd';
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
@@ -115,7 +115,7 @@ function HomePage(props) {
             borderRadius: '31px',
             color: '#ffffff',
             margin: 'auto',
-            outline:"none"
+            outline: 'none',
           }}
         >
           Shop Now
