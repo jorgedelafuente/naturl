@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { Router } from '@reach/router';
 import { AuthProvider } from './auth/Auth';
 import ApiClient from './services/ApiClient';
 import './App.scss';
+// import 'antd/dist/antd.css';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
@@ -13,6 +15,10 @@ import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import NotFound from './pages/notfound/NotFound';
+
+const Layout = styled.div`
+  margin-top: 30px;
+`;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,23 +37,24 @@ function App() {
     <React.StrictMode>
       <AuthProvider>
         <NavBar />
+        <Layout>
+          <main>
+            <Router primary={false}>
+              <Home path="/" />
+              <SignIn path="/signin" />
+              <SignUp path="/signup" />
+              <Category path="/category" />
+              <Products path="/products" />
+              <Product path="/product" />
+              <CheckOut path="/checkout" />
 
-        <main>
-          <Router>
-            <Home path="/" />
-            <SignIn path="/signin" />
-            <SignUp path="/signup" />
-            <Category path="/category" />
-            <Products path="/products" />
-            <Product path="/product" />
-            <CheckOut path="/checkout" />
-
-            {/* <Category data={data} path="/:category" /> 
+              {/* <Category data={data} path="/:category" /> 
             <Product data={data} path="/products/:product" /> */}
 
-            <NotFound default />
-          </Router>
-        </main>
+              <NotFound default />
+            </Router>
+          </main>
+        </Layout>
         <Footer />
       </AuthProvider>
     </React.StrictMode>

@@ -3,6 +3,7 @@ import mockData from './mockData.json'; // Import mock data.
 
 function getData() {
   // return fetchRequest('/');
+  console.log(mockData);
   return Promise.resolve(mockData); // Use this lines to access mock data for the client.
 }
 
