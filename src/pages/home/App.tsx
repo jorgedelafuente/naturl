@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Router, RouteComponentProps, Link } from '@reach/router';
 import Products from '../Products';
 import './App.scss';
+import Checkout from '../Checkout';
 
 const Home = (props: RouteComponentProps) => (
   <div className="App">
@@ -19,6 +20,8 @@ const NotFound = (props: RouteComponentProps) => (
 );
 
 function App() {
+  const [itemsInCart, setItemsInCart] = useState([]);
+  const [totalCost, setTotalCost] = useState(0);
   return (
     <React.StrictMode>
       {/* <NavBar /> */}
@@ -26,7 +29,18 @@ function App() {
       <main>
         <Router>
           <Home path="/" />
-          <Products path="/products" />
+          <Products
+            path="/products"
+            itemsInCart={itemsInCart}
+            setItemsInCart={setItemsInCart}
+            totalCost={totalCost}
+            setTotalCost={setTotalCost}
+          />
+          <Checkout
+            path="/checkout"
+            itemsInCart={itemsInCart}
+            totalCost={totalCost}
+          />
           <NotFound default />
         </Router>
       </main>

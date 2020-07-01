@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import { loadStripe } from '@stripe/stripe-js';
+// import { loadStripe } from '@stripe/stripe-js';
 import data from '../mocks/data';
 import Product from '../components/product/Product';
-import Cart from '../components/cart/Cart';
+// import Cart from '../components/cart/Cart';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT);
+// const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT);
 
-export default function Products(props: RouteComponentProps) {
-  const [itemsInCart, setItemsInCart] = useState([]);
+export default function Products(props: RouteComponentProps, itemsInCart, setItemsInCart, setTotalCost) {
+  // const [itemsInCart, setItemsInCart] = useState([]);
+  // const [totalCost, setTotalCost] = useState(0);
 
   const handleAddToCartClick = (id) => {
     setItemsInCart((itemsInCart) => {
@@ -28,33 +29,33 @@ export default function Products(props: RouteComponentProps) {
     });
   };
 
-  const totalCost = itemsInCart.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
+  setTotalCost(
+    itemsInCart.reduce((acc, item) => acc + item.price * item.quantity, 0)
   );
 
-  console.log("TOTAL COST ", totalCost);
-  console.log("ITEMS IN CART ", itemsInCart);
+  // console.log("TOTAL COST ", totalCost);
+  // console.log("ITEMS IN CART ", itemsInCart);
 
-  const handleCheckoutClick = async (event) => {
-    // When the customer clicks on the button, redirect them to Checkout.
-    const stripe = await stripePromise;
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: [
-        // Replace with the ID of your price
-        { price: 'price_1Gzi24CzjdOYYybLCABpt0VD', quantity: 1 },
-      ],
-      mode: 'payment',
-      successUrl: 'https://example.com/success',
-      cancelUrl: 'https://example.com/cancel',
-    });
-    // If `redirectToCheckout` fails due to a browser or network
-    // error, display the localized error message to your customer
-    // using `error.message`.
-    if (error) {
-      return <div>error.message</div>;
-    }
-  };
+  // const handleCheckoutClick = async (event) => {
+  //   // When the customer clicks on the button, redirect them to Checkout.
+  //   console.log(event.target.value);
+  //   const stripe = await stripePromise;
+  //   const { error } = await stripe.redirectToCheckout({
+  //     lineItems: [
+  //       // Replace with the ID of your price
+  //       { price: 'price_1Gzi24CzjdOYYybLCABpt0VD', quantity: 1 },
+  //     ],
+  //     mode: 'payment',
+  //     successUrl: 'https://example.com/success',
+  //     cancelUrl: 'https://example.com/cancel',
+  //   });
+  //   // If `redirectToCheckout` fails due to a browser or network
+  //   // error, display the localized error message to your customer
+  //   // using `error.message`.
+  //   if (error) {
+  //     return <div>error.message</div>;
+  //   }
+  // };
 
   return (
     <>
@@ -70,11 +71,13 @@ export default function Products(props: RouteComponentProps) {
           />
         ))}
       </div>
-      <Cart
+      {/* <Cart
         itemsInCart={itemsInCart}
         totalCost={totalCost}
         onCheckoutClick={handleCheckoutClick}
-      />
+      /> */}
+
+      <button>Go to Checkout</button>
     </>
   );
 }
