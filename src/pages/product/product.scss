@@ -15,14 +15,11 @@
 
 
 
-
-
 .singleproduct-image {
   width: 400px;
   height: 500px;
   display: flex;
   justify-content: center;
-  /* background-color: greenyellow; */
 }
 
 
@@ -33,8 +30,6 @@
   flex-direction: column;
   justify-content: center;
   width: 500px;
-  /* background-color: blue; */
-
 }
 
 .singleproduct-page-title {
@@ -46,6 +41,5 @@
 .singleproduct-page-colors {
   display: flex;
   flex-direction: row;
-  /* background-color: red; */
 }
 

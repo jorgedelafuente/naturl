@@ -1,0 +1,33 @@
+
+
+.product-card-style {
+  height: 470px;
+}
+
+
+.cardBodyStyle {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.product-card-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+
+.product-card-image-container img {
+  width: 80%;
+  height: auto;
+}
+
+
+
+.products-card-nametitle-container {
+  color: black;
+  font-size: 16px;
+  font-weight: 450;
+}

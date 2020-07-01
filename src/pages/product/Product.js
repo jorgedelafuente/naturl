@@ -1,5 +1,5 @@
 import React from 'react';
-import './product.css';
+import './product.scss';
 
 
 // import ProductItem from "../components/product-card-item";
@@ -40,8 +40,6 @@ function Products() {
             <input id='instant-input1' className='settings-input' type='number' name='discountInstant' min="0" max="100" autocomplete='off'  ></input>
             <button>Add to cart</button>
           </div>  
-          {/* <div className="singleproduct-page-description" >
-          </div>  */}
         </div>
       </div>
     </div>
