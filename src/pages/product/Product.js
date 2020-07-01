@@ -6,7 +6,7 @@ import './product.scss';
 
 
 
-function Products() {
+function Product() {
 
   return (
     <div className="singleproduct-page-container">
