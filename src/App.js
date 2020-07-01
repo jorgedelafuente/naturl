@@ -45,9 +45,6 @@ function App() {    // eslint-disable-next-line
             <Products data={data} path="/products" />
             <Product data={data} path="/product" />
 
-            {/* <Category path="/category" /> */}
-            {/* <Category data={data} path="/:category" /> 
-            <Product data={data} path="/products/:product" /> */}
 
             <NotFound default />
           </Router>

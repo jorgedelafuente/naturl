@@ -15,8 +15,8 @@ function Products(data) {
       <div className="products-title" >
         <h1>Products</h1>
       </div>
-      <div className="products-types-list">
-        <a className="all-products-clicked" href="/">All products</a><a href="/">Product types/ Filter</a>
+      <div className="products-labels-and-filter">
+        <a className="products-allproducts-label" href="/">All products</a><a href="/">Product types/ Filter</a>
       </div>
       
       
