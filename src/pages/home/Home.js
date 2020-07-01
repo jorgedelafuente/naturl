@@ -1,15 +1,14 @@
-/* eslint-disable jsx-a11y/alt-text */
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from '@reach/router';
 import { StarOutlined, StarFilled } from '@ant-design/icons';
 import { Button } from 'antd';
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../styles/Home.scss';
-import { Components } from 'antd/lib/date-picker/generatePicker';
+// import { Components } from 'antd/lib/date-picker/generatePicker';
 import { Carousel } from 'antd';
+
 const { Meta } = Card;
 function HomePage(props) {
   // const [featuredImages, setFeaturedImages] = useState([]);
