@@ -1,11 +1,10 @@
 import React from 'react';
-import { RouteComponentProps } from '@reach/router';
 import { loadStripe } from '@stripe/stripe-js';
-import Cart from '../components/cart/Cart';
+import Cart from '../../components/cart/Cart';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT);
 
-export default function Checkout(props: RouteComponentProps, itemsInCart, totalCost) {
+export default function Checkout(itemsInCart, totalCost) {
   const handleCheckoutClick = async (event) => {
     // When the customer clicks on the button, redirect them to Checkout.
 

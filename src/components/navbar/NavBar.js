@@ -52,6 +52,9 @@ const NavBar = () => {
       </div>
       <div>
         <span className="navbar-links">
+          <Link to="/products">All Products</Link>
+        </span>
+        <span className="navbar-links">
           <Link to="/category">Vegan</Link>
         </span>
         <span className="navbar-links">
@@ -60,7 +63,9 @@ const NavBar = () => {
         <span>
           <Link to="/signin">Sign In</Link>
         </span>
-        <span>Cart</span>
+        <button>
+          <Link to="/checkout">Your Cart</Link>
+        </button>
       </div>
       {/* <button onClick={signInWithGoogle}>Sign In With Google</button>
       <button onClick={() => firebase.auth().signOut()}>Sign Out</button> */}
