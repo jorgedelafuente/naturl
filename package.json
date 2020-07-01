@@ -1,5 +1,5 @@
 {
-  "name": "estore-react-typescript",
+  "name": "front-end",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,8 +12,6 @@
     "@types/node": "^14.0.14",
     "antd": "^4.4.0",
     "firebase": "^7.15.5",
-    "firebase-admin": "^8.12.1",
-    "firebase-tools": "^8.4.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -25,20 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "tsc": "tsc --noEmit"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix"
-    ]
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
