@@ -18,10 +18,8 @@ import NotFound from './pages/notfound/NotFound';
 
 function App() {
   // eslint-disable-next-line
-  const [isLoading, setIsLoading] = useState(true); // eslint-disable-next-line
+  const [isLoading, setIsLoading] = useState(true);    // eslint-disable-next-line
   const [data, setData] = useState([]);
-  //Array for duplicating only filter data
-  const [filterData, setFilterData] = useState([]);
   const Layout = styled.div`
     margin-top: 30px;
   `;
@@ -30,25 +28,15 @@ function App() {
     ApiClient.getData()
       .then((data) => {
         setData(data);
-        setFilterData(data);
         // console.log(data);
       })
       .then(() => setIsLoading(false));
   }, []);
-  const Filter = (SearchTag) => {
-    const FilterArray = data.filter((product) =>
-      product.tag_list.includes(SearchTag)
-    );
-    setFilterData(FilterArray);
-    console.log('our dat is ,', FilterArray);
-  };
-  const UndoFilter = () => {
-    setFilterData(data);
-  };
+
   return (
     <React.StrictMode>
       <AuthProvider>
-        <NavBar filter={Filter} undoFilter={UndoFilter} />
+        <NavBar />
         <Layout>
           <main>
             <Router primary={false}>
@@ -56,7 +44,7 @@ function App() {
               <SignIn path="/signin" />
               <SignUp path="/signup" />
               <Category path="/category" />
-              <Products data={filterData} path="/products" />
+              <Products data={data} path="/products" />
               <Product data={data} path="/product" />
               <CheckOut path="/checkout" />
               <NotFound default />
