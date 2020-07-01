@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Router } from '@reach/router';
 import { AuthProvider } from './auth/Auth';
 import ApiClient from './services/ApiClient';
-import './App.scss';
-// import 'antd/dist/antd.css';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
@@ -15,6 +13,8 @@ import SignUp from './pages/signup/SignUp';
 import Product from './pages/product/Product';
 import Products from './pages/products/Products';
 import NotFound from './pages/notfound/NotFound';
+import './App.scss';
+// import 'antd/dist/antd.css';
 
 function App() {
   // eslint-disable-next-line
