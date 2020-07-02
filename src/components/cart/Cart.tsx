@@ -24,8 +24,8 @@ export default function Cart({ onCheckoutClick, itemsInCart, totalCost }) {
             <button className="Cart-purchase-button" onClick={onCheckoutClick}>
               Checkout
             </button>
-            <Link to="/">
-              <button className="Cart-cancel-button">Cancel</button>
+            <Link to="/products">
+              <button className="Cart-cancel-button">Continue Shopping</button>
             </Link>
           </div>
         </div>
