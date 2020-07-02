@@ -2,14 +2,11 @@ import React from 'react';
 import './products.scss';
 import { Link } from '@reach/router';
 
-import ProductCard from '../../components/product-card/Product-card';
-import ProductDrawerFilter from '../../components/product-card/product-filter-drawer';
-import ProductPopUp from '../../components/product-card/product-popup-details';
-
-
+import ProductItem from '../../components/product-card/Product-card';
 
 function Products(props) {
   const datad = props.data;
+  // console.log(datad);
 
   return (
     <div className="products-page-container">
@@ -21,13 +18,11 @@ function Products(props) {
           {props.title}
         </Link>
         <a href="/">Product types/ Filter</a>
-        <ProductPopUp />
-        <ProductDrawerFilter />
       </div>
 
       <div className="products-categories-container">
         {datad.map((item) => (
-          <ProductCard
+          <ProductItem
             key={item.id}
             image={item.image_link}
             name={item.name}
