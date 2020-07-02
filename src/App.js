@@ -15,11 +15,11 @@ import Product from './pages/product/Product';
 import Products from './pages/products/Products';
 import ProductsVegan from './pages/products/ProductsVegan';
 import ProductsGluten from './pages/products/ProductsGluten';
+import Cart from './pages/cart/Cart';
 import NotFound from './pages/notfound/NotFound';
-// import ProductItem from './pages/productitem/ProductItem';
 
 const Layout = styled.div`
-  margin-top: 30px;
+  margin-top: 40px;
 `;
 
 function App() {
@@ -68,6 +68,8 @@ function App() {
                 title={'Gluten Free'}
                 path="/products-gluten-free"
               />
+              <Cart path="/cart" />
+
               <CheckOut path="/checkout" />
               {/* <UserProfile path="/profile" /> */}
 

@@ -17,8 +17,7 @@ function HomePage(props) {
   return (
     <React.Fragment>
       <h1 className="Main_Logo">Naturl</h1>
-
-      <div
+      {/* <div
         id="carouselExampleIndicators"
         className="carousel slide"
         data-ride="carousel"
@@ -107,7 +106,7 @@ function HomePage(props) {
       </div>
       <hr className="Home__Hr" />
       {/* END OF CAROSEL */}
-      <Button block size="large">
+      {/* <Button block size="large">
         Shop Now
       </Button>
       <h2 style={{ textAlign: 'center' }}>Featured Products</h2>
@@ -137,7 +136,6 @@ function HomePage(props) {
           </div>
         </div>
       </div>
-
       <hr className="Home__Hr" />
       <div className="News">
         <h1>Subscribe to our newsletter!</h1>
@@ -217,7 +215,6 @@ function HomePage(props) {
           </Col>
         </Row>
       </div>
-
       <hr className="Home__Hr" />
       <h1 className="About__us">About Us</h1>
       <p className="About__text">
@@ -230,9 +227,7 @@ function HomePage(props) {
         dolor consectetur mollit dolor incididunt. Laborum magna in aliqua
         mollit ad voluptate aliquip consequat adipisicing mollit in.
       </p>
-      <hr className="Home__Hr" />
-
-      {/* ------------------footer---------------------------------- */}
+      <hr className="Home__Hr" />  */}
     </React.Fragment>
   );
 }

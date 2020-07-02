@@ -19,10 +19,11 @@ const StyledFooter = styled.div`
       display: none;
     }
   }
+  min-height: 50px;
   display: flex;
   text-align: center;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   /* background-color: white; */
   width: 100%;
   a {
