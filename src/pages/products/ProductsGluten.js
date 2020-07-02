@@ -4,7 +4,6 @@ import { Link } from '@reach/router';
 
 import ProductItem from '../../components/product-card/Product-card';
 
-
 function Products(props) {
   const datad = props.data;
   // console.log(datad);

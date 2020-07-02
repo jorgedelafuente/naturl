@@ -60,20 +60,13 @@ const NavBar = ({filter,undoFilter}) => {
           >All Products</div>
         </span>
         <span className="navbar-links">
-          {/* <Link to="/category"
-          onClick={()=>filter("Vegan")}
-          >Vegan</Link> */}
-          <div
-          onClick={()=>filter("Vegan")}
-          >Vegan</div>
+          <Link to="/products">Products</Link>
         </span>
         <span className="navbar-links">
-          <div
-           onClick={()=>filter("Gluten Free")}
-          >Gluten Free</div>
-                   {/* <Link to="/category"
-           onClick={()=>filter("Vegan")}
-          >Gluten Free</Link> */}
+          <Link to="/products-vegan">Vegan</Link>
+        </span>
+        <span className="navbar-links">
+          <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
         <span>
           <Link to="/signin">Sign In</Link>
