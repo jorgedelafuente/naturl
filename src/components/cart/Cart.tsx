@@ -1,6 +1,7 @@
 import React from 'react';
 import CartItem from '../cartItem/CartItem';
 import './Cart.scss';
+import { Link } from '@reach/router';
 
 export default function Cart({ onCheckoutClick, itemsInCart, totalCost }) {
   return (
@@ -23,7 +24,9 @@ export default function Cart({ onCheckoutClick, itemsInCart, totalCost }) {
             <button className="Cart-purchase-button" onClick={onCheckoutClick}>
               Checkout
             </button>
-            <button className="Cart-cancel-button">Cancel</button>
+            <Link to="/">
+              <button className="Cart-cancel-button">Cancel</button>
+            </Link>
           </div>
         </div>
       ) : (

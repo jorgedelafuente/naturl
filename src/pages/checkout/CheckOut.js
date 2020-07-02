@@ -2,9 +2,14 @@ import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import Cart from '../../components/cart/Cart';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT_PK);
 
-export default function Checkout(itemsInCart, totalCost) {
+export default function Checkout({ itemsInCart }) {
+  const totalCost = itemsInCart.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+
   const handleCheckoutClick = async (event) => {
     // When the customer clicks on the button, redirect them to Checkout.
 

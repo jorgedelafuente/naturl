@@ -21,7 +21,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);    // eslint-disable-next-line
   const [data, setData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
-  // const [totalCost, setTotalCost] = useState(0);
 
   const Layout = styled.div`
     margin-top: 30px;
@@ -54,10 +53,6 @@ function App() {
     });
   };
 
-  setTotalCost(
-    itemsInCart.reduce((acc, item) => acc + item.price * item.quantity, 0)
-  );
-
   return (
     <React.StrictMode>
       <AuthProvider>
@@ -71,7 +66,7 @@ function App() {
               <Category path="/category" />
               <Products
                 data={data}
-                addToCart={handleAddToCartClick}
+                handleAddToCartClick={handleAddToCartClick}
                 path="/products"
               />
               <Product data={data} path="/product" />
