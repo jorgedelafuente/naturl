@@ -6,7 +6,7 @@ const stripePromise = loadStripe(
   'pk_test_51GzKbCCzjdOYYybLYg6lpPWTks0jg5Ph8Tsb66ive472tuNoKsYJnC7WwGwrOcYLRweuJEBpIXA86UUAii0fO9g80099ornxU7'
 );
 
-export default function Checkout({ itemsInCart }) {
+export default function Checkout({ itemsInCart, handleClearCartClick }) {
   const totalCost = itemsInCart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -16,9 +16,6 @@ export default function Checkout({ itemsInCart }) {
     return { price: item.stripe_price_id, quantity: item.quantity };
   });
 
-  console.log(currentLineItems);
-
-  // console.log(currentLineItems);
   const handleCheckoutClick = async (event) => {
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await stripePromise;
@@ -42,6 +39,7 @@ export default function Checkout({ itemsInCart }) {
       <Cart
         itemsInCart={itemsInCart}
         totalCost={totalCost}
+        handleClearCartClick={handleClearCartClick}
         onCheckoutClick={handleCheckoutClick}
       />
     </>

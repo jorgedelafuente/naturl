@@ -7,6 +7,16 @@
   text-align: center;
 }
 
+.Cart-clear-button {
+  border-bottom: 1px solid #eee;
+  margin: 1rem;
+}
+
+.Cart-clear-button:hover,
+.Cart-clear-button:focus { 
+  color: #00677D;
+}
+
 .Cart-total-cost {
   font-weight: 700;
   padding: 2rem;

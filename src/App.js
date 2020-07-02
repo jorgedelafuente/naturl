@@ -54,6 +54,10 @@ function App() {
     });
   };
 
+  const handleClearCartClick = () => {
+    return setItemsInCart([]);
+  };
+
   return (
     <React.StrictMode>
       <AuthProvider>
@@ -71,7 +75,11 @@ function App() {
                 path="/products"
               />
               <Product data={data} path="/product" />
-              <CheckOut itemsInCart={itemsInCart} path="/checkout" />
+              <CheckOut
+                itemsInCart={itemsInCart}
+                handleClearCartClick={handleClearCartClick}
+                path="/checkout"
+              />
               <Success path="/success"></Success>
               <NotFound default />
             </Router>
