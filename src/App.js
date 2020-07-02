@@ -13,6 +13,7 @@ import SignUp from './pages/signup/SignUp';
 import Product from './pages/product/Product';
 import Products from './pages/Products';
 import NotFound from './pages/notfound/NotFound';
+import Success from './pages/success/Success';
 import './App.scss';
 // import 'antd/dist/antd.css';
 
@@ -71,6 +72,7 @@ function App() {
               />
               <Product data={data} path="/product" />
               <CheckOut itemsInCart={itemsInCart} path="/checkout" />
+              <Success path="/success"></Success>
               <NotFound default />
             </Router>
           </main>

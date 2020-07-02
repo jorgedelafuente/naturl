@@ -11,7 +11,6 @@ const addToStripe = (data) => {
     await sleep(1000/10*i);
     const stripeProduct = await stripe.products.create({
       name: item.name,
-      description: item.description,
       images: [item.image_link],
       type: 'good',
     });
