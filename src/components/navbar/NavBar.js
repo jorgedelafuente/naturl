@@ -42,7 +42,7 @@ const StyledNavBar = styled.div`
   /* z-index: 10; */
 `;
 
-const NavBar = () => {
+const NavBar = ({filter,undoFilter}) => {
   return (
     <StyledNavBar>
       <div>
@@ -50,7 +50,15 @@ const NavBar = () => {
           <Link to="/">NATURL</Link>
         </span>
       </div>
-      <div>
+      <div style={{display:"flex",alignItems:"center",cursor:"pointer"}}>
+      <span className="navbar-links">
+          {/* <Link to="/category"
+          onClick={()=>filter("Vegan")}
+          >Vegan</Link> */}
+          <div
+          onClick={()=>undoFilter()}
+          >All Products</div>
+        </span>
         <span className="navbar-links">
           <Link to="/products">Products</Link>
         </span>
