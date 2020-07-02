@@ -2,7 +2,9 @@ import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import Cart from '../../components/cart/Cart';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT_PK);
+const stripePromise = loadStripe(
+  'pk_test_51GzKbCCzjdOYYybLYg6lpPWTks0jg5Ph8Tsb66ive472tuNoKsYJnC7WwGwrOcYLRweuJEBpIXA86UUAii0fO9g80099ornxU7'
+);
 
 export default function Checkout({ itemsInCart }) {
   const totalCost = itemsInCart.reduce(
@@ -10,23 +12,27 @@ export default function Checkout({ itemsInCart }) {
     0
   );
 
+  const currentLineItems = itemsInCart.map((item) => {
+    return { price: item.stripe_price_id, quantity: item.quantity };
+  });
+
+  console.log(currentLineItems);
+
+  // console.log(currentLineItems);
   const handleCheckoutClick = async (event) => {
     // When the customer clicks on the button, redirect them to Checkout.
-
-    // console.log(event.target.value);
     const stripe = await stripePromise;
+
     const { error } = await stripe.redirectToCheckout({
-      lineItems: [
-        // Replace with the ID of your price
-        { price: 'price_1Gzi24CzjdOYYybLCABpt0VD', quantity: 1 },
-      ],
+      lineItems: currentLineItems,
       mode: 'payment',
-      successUrl: 'https://example.com/success',
-      cancelUrl: 'https://example.com/cancel',
+      successUrl: 'http://localhost:3000/success',
+      cancelUrl: 'http://localhost:3000/checkout',
+      shippingAddressCollection: {
+        allowedCountries: ['US', 'CA', 'DE', 'ES', 'GB', 'MX'],
+      },
     });
-    // If `redirectToCheckout` fails due to a browser or network
-    // error, display the localized error message to your customer
-    // using `error.message`.
+    //TODO: handle error message
     if (error) {
       return <div>error.message</div>;
     }
