@@ -5,7 +5,11 @@ import { Link } from '@reach/router';
 import styled from 'styled-components';
 import { Badge } from 'antd';
 import { Drawer } from 'antd';
-import { MenuOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import {
+  MenuOutlined,
+  ShoppingCartOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
 
 const StyledNavBar = styled.div`
   /* tablet */
@@ -88,15 +92,20 @@ const NavBar = () => {
           <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
         <span>
+          <Link to="/profile">
+            <UserOutlined />
+          </Link>
+        </span>
+        <span>
           <Link to="/signin">Sign In</Link>
         </span>
-
         <span>
           <Link to="/cart">
             <Badge
               count={badgeCount}
               title={'Number of Cart Items'}
               onClick={addToCart}
+              offset={[0, 5]}
               style={{
                 backgroundColor: '#a1a1a1',
                 maxWidth: 2,

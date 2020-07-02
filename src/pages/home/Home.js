@@ -17,7 +17,7 @@ function HomePage(props) {
   return (
     <React.Fragment>
       <h1 className="Main_Logo">Naturl</h1>
-      {/* <div
+      <div
         id="carouselExampleIndicators"
         className="carousel slide"
         data-ride="carousel"
@@ -38,7 +38,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80"
               alt="First slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Los Angeles</h3>
               <p>
                 “My dad used to say makeup was a shallow girl's sport, but it's
@@ -52,7 +52,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1498746163870-51e3223d85a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
               alt="Second slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Paris</h3>
               <p>
                 “Beneath the makeup and behind the smile I am just a girl who
@@ -66,7 +66,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1470072508653-1be229b63562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
               alt="Third slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Global</h3>
               <p>
                 “Beauty, to me, is about being comfortable in your own skin.
@@ -105,8 +105,8 @@ function HomePage(props) {
         </Link>
       </div>
       <hr className="Home__Hr" />
-      {/* END OF CAROSEL */}
-      {/* <Button block size="large">
+      {/*  END OF CAROSEL */}
+      <Button block size="large">
         Shop Now
       </Button>
       <h2 style={{ textAlign: 'center' }}>Featured Products</h2>
@@ -227,7 +227,7 @@ function HomePage(props) {
         dolor consectetur mollit dolor incididunt. Laborum magna in aliqua
         mollit ad voluptate aliquip consequat adipisicing mollit in.
       </p>
-      <hr className="Home__Hr" />  */}
+      <hr className="Home__Hr" />
     </React.Fragment>
   );
 }

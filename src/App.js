@@ -16,6 +16,7 @@ import Products from './pages/products/Products';
 import ProductsVegan from './pages/products/ProductsVegan';
 import ProductsGluten from './pages/products/ProductsGluten';
 import Cart from './pages/cart/Cart';
+import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
 
 const Layout = styled.div`
@@ -24,7 +25,7 @@ const Layout = styled.div`
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true);
-  const [allData, setData] = useState([]);
+  const [productData, setData] = useState([]);
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
 
@@ -48,13 +49,12 @@ function App() {
         <Layout>
           <main>
             <Router primary={false}>
-              <Home data={allData} path="/" />
+              <Home data={productData} path="/" />
               <SignIn path="/signin" />
               <SignUp path="/signup" />
-              {/* <ProductItem data={allData} path="/product/:id" /> */}
-              <Product data={allData} path="/product/:id" />
+              <Product data={productData} path="/product/:id" />
               <Products
-                data={allData}
+                data={productData}
                 title={'All Products'}
                 path="/products"
               />
@@ -71,7 +71,7 @@ function App() {
               <Cart path="/cart" />
 
               <CheckOut path="/checkout" />
-              {/* <UserProfile path="/profile" /> */}
+              <Profile path="/profile" />
 
               <NotFound default />
             </Router>
