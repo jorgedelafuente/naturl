@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link } from '@reach/router';
-
+import { Card } from 'antd';
+import Title from './product-card-properties/card-title';
 import 'antd/dist/antd.css';
 import './product-card.scss';
 
-import { Card } from 'antd';
-import Title from './product-card-properties/card-title';
-
-function ProductCard (props) {
-
+function ProductCard(props) {
   const { Meta } = Card;
-
   return (
     <div className="products-categories-container-item">
       <Link to={`/product/${props.id}`}>
