@@ -11,13 +11,18 @@ import Home from './pages/home/Home';
 import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
-import Product from './pages/product/Product';
 import Products from './pages/products/Products';
 import ProductsVegan from './pages/products/ProductsVegan';
 import ProductsGluten from './pages/products/ProductsGluten';
 import Cart from './pages/cart/Cart';
 import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
+
+import Product from './pages/product/Product';
+
+
+import { GlobalProvider } from './context/globalState';
+
 
 const Layout = styled.div`
   margin-top: 40px;
@@ -45,6 +50,7 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
+      <GlobalProvider>
         <NavBar />
         <Layout>
           <main>
@@ -52,7 +58,9 @@ function App() {
               <Home data={productData} path="/" />
               <SignIn path="/signin" />
               <SignUp path="/signup" />
+
               <Product data={productData} path="/product/:id" />
+
               <Products
                 data={productData}
                 title={'All Products'}
@@ -78,6 +86,7 @@ function App() {
           </main>
         </Layout>
         <Footer />
+      </GlobalProvider>
       </AuthProvider>
     </React.StrictMode>
   );
