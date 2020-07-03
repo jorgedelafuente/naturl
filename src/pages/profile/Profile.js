@@ -1,4 +1,4 @@
-import React, { Component, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   auth,
   createUserProfileDocument,
@@ -6,13 +6,13 @@ import {
   getUserDocument,
 } from '../../firebase';
 import { AuthContext } from '../../auth/Auth';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { FormButton } from '../../components/common/button/Button';
 import { FormContainer } from '../../components/common/container/Container';
 import { Alert } from 'antd';
-import { Tabs } from 'antd';
+// import { Tabs } from 'antd';
 
-const { TabPane } = Tabs;
+// const { TabPane } = Tabs;
 
 const Profile = () => {
   const [displayName, setDisplayName] = useState('');
@@ -49,8 +49,13 @@ const Profile = () => {
       <div className="Logo">
         <h3>NATURL</h3>
       </div>
-      <div>{currentUser && <div>Welcome Back {displayName}</div>}</div>
-      <form onSubmit={handleUpdate}>
+      <div>{currentUser && <h2>Welcome Back {displayName}</h2>}</div>
+
+      <div>
+        <h4>Wishlist</h4>
+      </div>
+
+      {/* <form onSubmit={handleUpdate}>
         <div className="InputGroup">
           <label>
             <span>First Name</span>
@@ -74,7 +79,7 @@ const Profile = () => {
 
         <FormButton type="submit">Update Profile</FormButton>
       </form>
-      <br />
+      <br /> */}
       <FormButton onClick={handleSignOut}>Sign out</FormButton>
       <Alert
         banner
@@ -84,7 +89,7 @@ const Profile = () => {
         closable
         style={{ display: displayAlert }}
       />
-      <Tabs defaultActiveKey="1" onChange={callback}>
+      {/* <Tabs defaultActiveKey="1" onChange={callback}>
         <TabPane tab="Tab 1" key="1">
           Content of Tab Pane 1
         </TabPane>
@@ -94,7 +99,7 @@ const Profile = () => {
         <TabPane tab="Tab 3" key="3">
           Content of Tab Pane 3
         </TabPane>
-      </Tabs>
+      </Tabs> */}
     </FormContainer>
   );
 };

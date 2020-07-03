@@ -2,7 +2,6 @@ import React, { useCallback, useContext } from 'react';
 import firebase from '../../firebase';
 import { AuthContext } from '../../auth/Auth';
 import { navigate, Link } from '@reach/router';
-import styled from 'styled-components';
 import { FormButton } from '../../components/common/button/Button';
 import { FormContainer } from '../../components/common/container/Container';
 
@@ -22,9 +21,9 @@ const Login = () => {
 
   const { currentUser } = useContext(AuthContext);
 
-  // if (currentUser) {
-  //   console.log(currentUser);
-  // }
+  if (currentUser) {
+    console.log(currentUser);
+  }
 
   return (
     <FormContainer>

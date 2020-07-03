@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from '@reach/router';
 // import firebase from '../../firebase';
 // import { signInWithGoogle } from '../../firebase';
@@ -10,11 +10,15 @@ import {
   ShoppingCartOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+import { AuthContext } from '../../auth/Auth';
 
 const StyledNavBar = styled.div`
   /* tablet */
   @media (max-width: 700px) and (min-width: 480px) {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    .navbar-links {
+      display: none;
+    }
   }
   /* mobile */
   @media (max-width: 480px) {
@@ -56,12 +60,13 @@ const StyledNavBar = styled.div`
     }
   }
 
-  /* z-index: 10; */
+  z-index: 100;
 `;
 
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
   const [badgeCount, setBadgeCount] = useState(0);
+  const { currentUser } = useContext(AuthContext);
   const showDrawer = () => {
     setVisible(true);
   };
@@ -91,14 +96,19 @@ const NavBar = () => {
         <span className="navbar-links">
           <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
-        <span>
-          <Link to="/profile">
-            <UserOutlined />
-          </Link>
-        </span>
-        <span>
-          <Link to="/signin">Sign In</Link>
-        </span>
+
+        {currentUser ? (
+          <span>
+            <Link to="/profile">
+              <UserOutlined style={{ fontSize: '20px' }} />
+            </Link>
+          </span>
+        ) : (
+          <span>
+            <Link to="/signin">Sign In</Link>
+          </span>
+        )}
+
         <span>
           <Link to="/cart">
             <Badge
@@ -140,6 +150,12 @@ const NavBar = () => {
           <span>
             <Link onClick={onClose} to="/products-gluten-free">
               Gluten Free
+            </Link>
+          </span>
+          <br />
+          <span>
+            <Link onClick={onClose} to="/profile">
+              Wishlist
             </Link>
           </span>
           <br />

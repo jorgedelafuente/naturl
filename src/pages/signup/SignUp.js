@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import firebase from '../../firebase';
 import { navigate, Link } from '@reach/router';
-import styled from 'styled-components';
 import { FormButton } from '../../components/common/button/Button';
 import { FormContainer } from '../../components/common/container/Container';
 
