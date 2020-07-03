@@ -5,7 +5,7 @@ import 'antd/dist/antd.css';
 import './product-card.scss';
 
 import { Card } from 'antd';
-import Title from './card-title';
+import Title from './product-card-properties/card-title';
 
 function ProductItem(props) {
   // console.log(props);

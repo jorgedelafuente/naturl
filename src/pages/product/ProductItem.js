@@ -3,8 +3,8 @@ import './productItem.scss';
 
 import { Rate } from 'antd';
 
-import ProductColor from "../../components/product-card/product-colors";
-import ProductTags from "../../components/product-card/product-tags";
+import ProductColor from "../../components/product-details/product-colors";
+import ProductTags from "../../components/product-details/product-tags";
 
 // import styled from 'styled-components';
 // const AddToCart = styled.button;
