@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from '@reach/router';
 // import firebase from '../../firebase';
 // import { signInWithGoogle } from '../../firebase';
 import styled from 'styled-components';
+import { Badge } from 'antd';
+import { Drawer } from 'antd';
+import {
+  MenuOutlined,
+  ShoppingCartOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
+import { AuthContext } from '../../auth/Auth';
 
 const StyledNavBar = styled.div`
   /* tablet */
   @media (max-width: 700px) and (min-width: 480px) {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    .navbar-links {
+      display: none;
+    }
   }
   /* mobile */
   @media (max-width: 480px) {
@@ -22,7 +33,7 @@ const StyledNavBar = styled.div`
   align-items: center;
   background-color: white;
   width: 100%;
-  height: 30px;
+  height: 40px;
   position: fixed;
   right: 0;
   left: 0;
@@ -37,12 +48,41 @@ const StyledNavBar = styled.div`
     }
   }
   div:nth-child(1) {
-    margin-left: 0.5rem;
+    margin-left: 1.25rem;
   }
-  /* z-index: 10; */
+  div:nth-child(2) {
+    margin-right: 1.25rem;
+  }
+
+  .Burger-Icon {
+    &:hover {
+      color: #00677d;
+    }
+  }
+
+  z-index: 100;
 `;
 
-const NavBar = ({ filter, undoFilter }) => {
+
+
+
+const NavBar = () => {
+  const [visible, setVisible] = useState(false);
+  const [badgeCount, setBadgeCount] = useState(0);
+  const { currentUser } = useContext(AuthContext);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
+  const addToCart = () => {
+    console.log(badgeCount);
+    setBadgeCount(badgeCount + 1);
+  };
+
+
   return (
     <StyledNavBar>
       <div>
@@ -65,13 +105,76 @@ const NavBar = ({ filter, undoFilter }) => {
         <span className="navbar-links">
           <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
+
+        {currentUser ? (
+          <span>
+            <Link to="/profile">
+              <UserOutlined style={{ fontSize: '20px' }} />
+            </Link>
+          </span>
+        ) : (
+          <span>
+            <Link to="/signin">Sign In</Link>
+          </span>
+        )}
+
         <span>
-          <Link to="/signin">Sign In</Link>
+          <Link to="/cart">
+            <Badge
+              count={badgeCount}
+              title={'Number of Cart Items'}
+              onClick={addToCart}
+              offset={[0, 5]}
+              style={{
+                backgroundColor: '#a1a1a1',
+                maxWidth: 2,
+                color: '#000000',
+              }}
+            >
+              <ShoppingCartOutlined style={{ fontSize: '20px' }} />
+            </Badge>
+          </Link>
         </span>
-        <span>Cart</span>
+
+        <MenuOutlined className="Burger-Icon" onClick={showDrawer} />
+        <Drawer
+          title="NATURL"
+          placement="right"
+          closable={true}
+          onClose={onClose}
+          visible={visible}
+        >
+          <span>
+            <Link onClick={onClose} to="/products">
+              Products
+            </Link>
+          </span>
+          <br />
+          <span>
+            <Link onClick={onClose} to="/products-vegan">
+              Vegan
+            </Link>
+          </span>
+          <br />
+          <span>
+            <Link onClick={onClose} to="/products-gluten-free">
+              Gluten Free
+            </Link>
+          </span>
+          <br />
+          <span>
+            <Link onClick={onClose} to="/profile">
+              Wishlist
+            </Link>
+          </span>
+          <br />
+          <span>
+            <Link onClick={onClose} to="/cart">
+              Cart
+            </Link>
+          </span>
+        </Drawer>
       </div>
-      {/* <button onClick={signInWithGoogle}>Sign In With Google</button>
-      <button onClick={() => firebase.auth().signOut()}>Sign Out</button> */}
     </StyledNavBar>
   );
 };

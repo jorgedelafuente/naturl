@@ -28,3 +28,5 @@ Create a .env file in the **client** folder with the following variables:
     REACT_APP_FIREBASE_SENDER_ID=YOUR_ID
     REACT_APP_STRIPE_CHECKOUT=YOUR_KEY
     REACT_APP_API_URL=
+    REACT_APP_STRIPE_CHECKOUT_PK=
+    REACT_APP_STRIPE_CHECKOUT_SK=

@@ -11,20 +11,25 @@ import Home from './pages/home/Home';
 import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
-import Product from './pages/product/Product';
 import Products from './pages/products/Products';
 import ProductsVegan from './pages/products/ProductsVegan';
 import ProductsGluten from './pages/products/ProductsGluten';
+import Cart from './pages/cart/Cart';
+import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
-// import ProductItem from './pages/productitem/ProductItem';
+import Product from './pages/product/Product';
+
+
+import { GlobalProvider } from './context/globalState';
+
 
 const Layout = styled.div`
-  margin-top: 30px;
+  margin-top: 40px;
 `;
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true);
-  const [allData, setData] = useState([]);
+  const [productData, setData] = useState([]);
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
 
@@ -44,17 +49,19 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
+      <GlobalProvider>
         <NavBar />
         <Layout>
           <main>
             <Router primary={false}>
-              <Home data={allData} path="/" />
+              <Home data={productData} path="/" />
               <SignIn path="/signin" />
               <SignUp path="/signup" />
-              {/* <ProductItem data={allData} path="/product/:id" /> */}
-              <Product data={allData} path="/product/:id" />
+
+              <Product data={productData} path="/product/:id" />
+
               <Products
-                data={allData}
+                data={productData}
                 title={'All Products'}
                 path="/products"
               />
@@ -68,14 +75,17 @@ function App() {
                 title={'Gluten Free'}
                 path="/products-gluten-free"
               />
+              <Cart path="/cart" />
+
               <CheckOut path="/checkout" />
-              {/* <UserProfile path="/profile" /> */}
+              <Profile path="/profile" />
 
               <NotFound default />
             </Router>
           </main>
         </Layout>
         <Footer />
+      </GlobalProvider>
       </AuthProvider>
     </React.StrictMode>
   );
