@@ -17,7 +17,6 @@ function HomePage(props) {
   return (
     <React.Fragment>
       <h1 className="Main_Logo">Naturl</h1>
-
       <div
         id="carouselExampleIndicators"
         className="carousel slide"
@@ -39,7 +38,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80"
               alt="First slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Los Angeles</h3>
               <p>
                 “My dad used to say makeup was a shallow girl's sport, but it's
@@ -53,7 +52,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1498746163870-51e3223d85a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
               alt="Second slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Paris</h3>
               <p>
                 “Beneath the makeup and behind the smile I am just a girl who
@@ -67,7 +66,7 @@ function HomePage(props) {
               src="https://images.unsplash.com/photo-1470072508653-1be229b63562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
               alt="Third slide"
             />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h3 style={{ color: 'white' }}>Naturl Global</h3>
               <p>
                 “Beauty, to me, is about being comfortable in your own skin.
@@ -106,7 +105,7 @@ function HomePage(props) {
         </Link>
       </div>
       <hr className="Home__Hr" />
-      {/* END OF CAROSEL */}
+      {/*  END OF CAROSEL */}
       <Button block size="large">
         Shop Now
       </Button>
@@ -137,7 +136,6 @@ function HomePage(props) {
           </div>
         </div>
       </div>
-
       <hr className="Home__Hr" />
       <div className="News">
         <h1>Subscribe to our newsletter!</h1>
@@ -217,7 +215,6 @@ function HomePage(props) {
           </Col>
         </Row>
       </div>
-
       <hr className="Home__Hr" />
       <h1 className="About__us">About Us</h1>
       <p className="About__text">
@@ -231,8 +228,6 @@ function HomePage(props) {
         mollit ad voluptate aliquip consequat adipisicing mollit in.
       </p>
       <hr className="Home__Hr" />
-
-      {/* ------------------footer---------------------------------- */}
     </React.Fragment>
   );
 }
