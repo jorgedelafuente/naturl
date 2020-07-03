@@ -1,13 +1,16 @@
 import React from 'react';
-
-import './productItem.scss';
 import ProductItem from './ProductItem';
+import './productItem.scss';
 
 const Product = (props) => {
+  const handleAddToCartClick = props.handleAddToCartClick;
   const foundItem = props.data.find((item) => item.id == props.id);
   return (
     <div className="product-page-container">
-      <ProductItem data={foundItem} />
+      <ProductItem
+        data={foundItem}
+        onAddToCartClick={handleAddToCartClick}
+      />
     </div>
   );
 };
