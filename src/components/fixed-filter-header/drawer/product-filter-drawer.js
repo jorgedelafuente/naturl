@@ -45,10 +45,10 @@ function ProductDrawerFilter () {
         visible={visible}
       >
 
-        <ProductTypeTags />
-        <BrandTags />
-        <p className="products-drawer-price-filter" >Price filter</p>
-        <Slider range defaultValue={[0, 50]} tipFormatter={formatter} />
+      <ProductTypeTags />
+      <BrandTags />
+      <p className="products-drawer-price-filter" >Price filter</p>
+      <Slider range defaultValue={[0, 50]} tipFormatter={formatter} />
 
       </Drawer>
     </>

@@ -3,7 +3,7 @@ import { Affix } from 'antd';
 import { Link } from '@reach/router';
 
 import "./fixed-filter-header.scss";
-import ProductDrawerFilter from './drawer/product-filter-drawer';
+import ProductFilterDrawer from './drawer/product-filter-drawer';
 
 
 
@@ -12,11 +12,11 @@ const FixedFilterHeader = () => {
   return (
     <>
       <Affix offsetTop={top}>
-        <div className="fixedHeaderButton" onClick={() => setTop(top)}>
+        <div className="fixedHeaderArea" onClick={() => setTop(top)}>
           <Link className="" to="/products">
             All products         
           </Link>
-          <ProductDrawerFilter />
+          <ProductFilterDrawer />
         </div>
       </Affix>
     </>
