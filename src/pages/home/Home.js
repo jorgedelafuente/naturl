@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from '@reach/router';
 import { StarOutlined, StarFilled } from '@ant-design/icons';
-import { Button } from 'antd';
-import { Row, Col } from 'antd';
+// import { Button } from 'antd';
+// import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import './Home.scss';
@@ -90,7 +90,7 @@ function HomePage(props) {
                     width="100%"
                     style={{ backgroundColor: 'rgba(0,0,0,1)' }}
                     height="400px"
-                    alt="Image"
+                    alt="carousel1"
                   />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ function HomePage(props) {
                     width="100%"
                     style={{ backgroundColor: 'rgba(0,0,0,1)' }}
                     height="400px"
-                    alt="Image"
+                    alt="carousel2"
                   />
                 </div>
               </Carousel>
@@ -147,7 +147,7 @@ function HomePage(props) {
                   <img
                     src={data.api_featured_image}
                     className="left-Card-main-image"
-                    alt="Image"
+                    alt="product1"
                   />{' '}
                   <Meta title={data.name} /> <p></p>
                   <Meta title={`$ ${data.price}`} />
@@ -173,7 +173,7 @@ function HomePage(props) {
                   <img
                     src={data.api_featured_image}
                     className="right-Card-main-image"
-                    alt="Image"
+                    alt="product2"
                   />
                   <Meta title={data.name} /> <p></p>
                   <Meta title={`$ ${data.price}`} />
@@ -206,4 +206,3 @@ function HomePage(props) {
 }
 
 export default HomePage;
-

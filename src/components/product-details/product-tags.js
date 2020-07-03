@@ -4,8 +4,8 @@ function ProductTags(props) {
   const tagsArr = props.objItem.tag_list;
   return (
     <div className="product-details-tags">
-      {tagsArr.map((item) => (
-        <p>{item}</p>
+      {tagsArr.map((item, index) => (
+        <p key={index}>{item}</p>
       ))}
     </div>
   );

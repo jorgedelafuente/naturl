@@ -9,14 +9,13 @@ function Products(props) {
 
   return (
     <div className="products-page-container">
-      {' '}
       <div className="products-title">
-        {' '}
-        <h1>Products</h1>{' '}
-      </div>{' '}
-      <FixedFilterHeader />{' '}
+        <h2>Products</h2>
+      </div>
+
+      <FixedFilterHeader />
+
       <div className="products-categories-container">
-        {' '}
         {datad.map((item) => (
           <ProductCard
             key={item.id}
@@ -25,8 +24,8 @@ function Products(props) {
             price={item.price}
             id={item.id}
           />
-        ))}{' '}
-      </div>{' '}
+        ))}
+      </div>
     </div>
   );
 }
