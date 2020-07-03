@@ -63,6 +63,9 @@ const StyledNavBar = styled.div`
   z-index: 100;
 `;
 
+
+
+
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
   const [badgeCount, setBadgeCount] = useState(0);
@@ -79,6 +82,7 @@ const NavBar = () => {
     setBadgeCount(badgeCount + 1);
   };
 
+
   return (
     <StyledNavBar>
       <div>
@@ -86,7 +90,12 @@ const NavBar = () => {
           <Link to="/">NATURL</Link>
         </span>
       </div>
-      <div>
+      <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+        <span className="navbar-links">
+          {/* <Link to="/category"
+          onClick={()=>filter("Vegan")}
+          >Vegan</Link> */}
+        </span>
         <span className="navbar-links">
           <Link to="/products">Products</Link>
         </span>
