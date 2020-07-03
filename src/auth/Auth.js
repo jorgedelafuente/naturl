@@ -9,6 +9,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
+      // console.log(user.email);
       setCurrentUser(user);
       // if (user.email) {
       //   console.log('user-email:', user.email);
