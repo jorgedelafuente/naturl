@@ -17,7 +17,6 @@ import ProductsGluten from './pages/products/ProductsGluten';
 import Cart from './pages/cart/Cart';
 import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
-
 import Product from './pages/product/Product';
 
 
