@@ -1,48 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from '@reach/router';
 import {
   InstagramOutlined,
   FacebookOutlined,
   YoutubeOutlined,
 } from '@ant-design/icons';
+import './Footer.scss';
 
-const StyledFooter = styled.div`
-  /* tablet */
-  @media (max-width: 700px) and (min-width: 480px) {
-    font-size: 0.8rem;
-  }
-  /* mobile */
-  @media (max-width: 480px) {
-    font-size: 0.7rem;
-    .navbar-links {
-      display: none;
-    }
-  }
-  min-height: 50px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  /* background-color: white; */
-  width: 100%;
-  a {
-    text-decoration: none;
-  }
-  & a,
-  & span {
-    margin-right: 1.25rem;
-    color: black;
-    text-decoration: none;
-    &:hover {
-      color: #00677d;
-    }
-  }
-`;
+// const StyledFooter = styled.div``;
 
 const Footer = () => {
   return (
-    <StyledFooter>
+    <div className="footer">
       <span>
         <Link to="/">NATURL</Link>
       </span>
@@ -61,7 +30,7 @@ const Footer = () => {
           <YoutubeOutlined />
         </a>
       </div>
-    </StyledFooter>
+    </div>
   );
 };
 

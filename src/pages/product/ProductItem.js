@@ -6,9 +6,6 @@ import { Rate } from 'antd';
 import ProductColor from '../../components/product-details/product-colors';
 import ProductTags from '../../components/product-details/product-tags';
 
-// import styled from 'styled-components';
-// const AddToCart = styled.button;
-
 function ProductItem(props) {
   return (
     props.data !== undefined && (
@@ -35,7 +32,9 @@ function ProductItem(props) {
               max="100"
               autoComplete="off"
             ></input>
-            <button onClick={() => props.onAddToCartClick(props.data.id)}>Add to cart</button>
+            <button onClick={() => props.onAddToCartClick(props.data.id)}>
+              Add to cart
+            </button>
           </div>
 
           <div className="singleproduct-page-description">
