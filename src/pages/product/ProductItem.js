@@ -1,8 +1,13 @@
 import React from 'react';
+import './productItem.scss';
+
 import { Rate } from 'antd';
+
 import ProductColor from '../../components/product-details/product-colors';
 import ProductTags from '../../components/product-details/product-tags';
-import './productItem.scss';
+
+// import styled from 'styled-components';
+// const AddToCart = styled.button;
 
 function ProductItem(props) {
   return (
@@ -10,6 +15,7 @@ function ProductItem(props) {
       <>
         <div className="product-image-leftside-page">
           <div className="product-image-leftside-sizecontainer">
+            {console.log(props.data)}
             <img alt="example" src={props.data.image_link} />
           </div>
         </div>
@@ -27,9 +33,9 @@ function ProductItem(props) {
               name="discountInstant"
               min="0"
               max="100"
-              autocomplete="off"
+              autoComplete="off"
             ></input>
-            <button onClick={() => props.onAddToCartClick(props.data.id)}>Add to cart</button>
+            <button>Add to cart</button>
           </div>
 
           <div className="singleproduct-page-description">
@@ -37,7 +43,7 @@ function ProductItem(props) {
           </div>
 
           {props.data.product_colors.map((item) => (
-            <ProductColor color={item.hex_value} />
+            <ProductColor key={item.hex_value} color={item.hex_value} />
           ))}
 
           <div className="product-details-categories-brand">
@@ -45,7 +51,7 @@ function ProductItem(props) {
             <p>Product type: {props.data.product_type} </p>
             <p>Category: {props.data.category} </p>
             <p>
-              Rating: <Rate disabled defaultValue={props.data.rating} />{' '}
+              Rating: <Rate disabled defaultValue={props.data.rating} />
             </p>
           </div>
 

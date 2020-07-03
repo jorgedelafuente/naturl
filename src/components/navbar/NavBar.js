@@ -63,9 +63,6 @@ const StyledNavBar = styled.div`
   z-index: 100;
 `;
 
-
-
-
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
   const [badgeCount, setBadgeCount] = useState(0);
@@ -81,7 +78,6 @@ const NavBar = () => {
     console.log(badgeCount);
     setBadgeCount(badgeCount + 1);
   };
-
 
   return (
     <StyledNavBar>

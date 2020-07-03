@@ -3,8 +3,9 @@ import ProductItem from './ProductItem';
 import './productItem.scss';
 
 const Product = (props) => {
+  console.log(props);
+  const foundItem = props.data.find((item) => item.id === parseInt(props.id));
   const handleAddToCartClick = props.handleAddToCartClick;
-  const foundItem = props.data.find((item) => item.id == props.id);
   return (
     <div className="product-page-container">
       <ProductItem data={foundItem} onAddToCartClick={handleAddToCartClick} />
