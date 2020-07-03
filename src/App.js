@@ -40,20 +40,11 @@ function App() {
     });
     // .then(() => setIsLoading(false));
   }, []);
-  const Filter = (SearchTag) => {
-    const FilterArray = data.filter((product) =>
-      product.tag_list.includes(SearchTag)
-    );
-    setFilterData(FilterArray);
-    console.log('our dat is ,', FilterArray);
-  };
-  const UndoFilter = () => {
-    setFilterData(data);
-  };
+
   return (
     <React.StrictMode>
       <AuthProvider>
-        <NavBar filter={Filter} undoFilter={UndoFilter} />
+        <NavBar />
         <Layout>
           <main>
             <Router primary={false}>
