@@ -78,12 +78,15 @@ function App() {
                 <SignIn path="/signin" />
                 <SignUp path="/signup" />
 
-                <Product data={productData} path="/product/:id" />
+                <Product
+                  data={productData}
+                  handleAddToCartClick={handleAddToCartClick}
+                  path="/product/:id"
+                />
 
                 <Products
                   data={productData}
                   title={'All Products'}
-                  handleAddToCartClick={handleAddToCartClick}
                   path="/products"
                 />
                 <ProductsVegan
