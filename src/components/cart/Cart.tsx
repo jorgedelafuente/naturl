@@ -27,16 +27,16 @@ export default function Cart({ handleClearCartClick, onCheckoutClick, itemsInCar
             </button>
           </div>
           <div className="Cart-navigation">
-            <button className="Cart-purchase-button" onClick={onCheckoutClick}>
+            <button className="Cart-button-purchase" onClick={onCheckoutClick}>
               Checkout
             </button>
             <Link to="/products">
-              <button className="Cart-cancel-button">Continue Shopping</button>
+              <button className="Cart-button-cancel">Continue Shopping</button>
             </Link>
           </div>
         </div>
       ) : (
-        <div>Your cart is empty</div>
+        <div className="Cart-message-empty">Cart is empty</div>
       )}
     </div>
   );
