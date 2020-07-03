@@ -12,7 +12,7 @@ import SignUp from './pages/signup/SignUp';
 import Products from './pages/products/Products';
 import ProductsVegan from './pages/products/ProductsVegan';
 import ProductsGluten from './pages/products/ProductsGluten';
-import Cart from './pages/cart/Cart';
+// import Cart from './pages/cart/Cart';
 import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
@@ -78,12 +78,15 @@ function App() {
                 <SignIn path="/signin" />
                 <SignUp path="/signup" />
 
-                <Product data={productData} path="/product/:id" />
+                <Product
+                  data={productData}
+                  handleAddToCartClick={handleAddToCartClick}
+                  path="/product/:id"
+                />
 
                 <Products
                   data={productData}
                   title={'All Products'}
-                  handleAddToCartClick={handleAddToCartClick}
                   path="/products"
                 />
                 <ProductsVegan
@@ -96,7 +99,7 @@ function App() {
                   title={'Gluten Free'}
                   path="/products-gluten-free"
                 />
-                <Cart path="/cart" />
+                {/* <Cart path="/cart" /> */}
 
                 <CheckOut
                   itemsInCart={itemsInCart}
