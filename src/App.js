@@ -12,7 +12,6 @@ import SignUp from './pages/signup/SignUp';
 import Products from './pages/products/Products';
 import ProductsVegan from './pages/products/ProductsVegan';
 import ProductsGluten from './pages/products/ProductsGluten';
-import Cart from './pages/cart/Cart';
 import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
@@ -70,7 +69,7 @@ function App() {
     <React.StrictMode>
       <AuthProvider>
         <GlobalProvider>
-          <NavBar />
+          <NavBar itemsInCart={itemsInCart} />
           <Layout>
             <main>
               <Router primary={false}>
@@ -99,7 +98,6 @@ function App() {
                   title={'Gluten Free'}
                   path="/products-gluten-free"
                 />
-                <Cart path="/cart" />
 
                 <CheckOut
                   itemsInCart={itemsInCart}
