@@ -43,6 +43,15 @@ function App() {
     // .then(() => setIsLoading(false));
   }, []);
 
+  useEffect(() => {
+    let userCart = localStorage.getItem('cart');
+    // get the user's cart if one exists in local storage
+    userCart = JSON.parse(userCart);
+    if (userCart) {
+      setItemsInCart(userCart);
+    }
+  }, []);
+
   const handleAddToCartClick = (id) => {
     setItemsInCart((itemsInCart) => {
       const itemInCart = itemsInCart.find((item) => item.id === id);
@@ -59,10 +68,15 @@ function App() {
       const item = productData.find((item) => item.id === id);
       return [...itemsInCart, { ...item, quantity: 1 }];
     });
+
+    // update local storage with itemsInCart
+    let stringifiedCart = JSON.stringify(itemsInCart);
+    localStorage.setItem('cart', stringifiedCart);
   };
 
   const handleClearCartClick = () => {
-    return setItemsInCart([]);
+    setItemsInCart([]);
+    localStorage.removeItem('cart');
   };
 
   return (
