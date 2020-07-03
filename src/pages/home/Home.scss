@@ -1,0 +1,245 @@
+#Home-Main {
+  max-width: 100vw;
+}
+.category__Main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-right: auto;
+  padding-left: 5%;
+}
+.category__Main_feature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-right: auto;
+  padding-left: 5%;
+}
+
+.Right-Cards {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Left-Cards {
+  width: 30%;
+}
+.HeroCarouselImage {
+  background-image: url(../../images/photo-1470259078422-826894b933aa.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+.HeroCarouselImage1 {
+  background-image: url(../../images/photo-1498746163870-51e3223d85a2.jpg);
+}
+.HeroCarouselImage2 {
+  background-image: url(../../images/photo-1470072508653-1be229b63562.jpg);
+}
+.Carousel_Text {
+  position: absolute;
+  top: 90%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  margin: auto;
+}
+.Carousel_Text p {
+  color: #fff;
+  padding: 0;
+  margin-top: -70px;
+}
+.column-card {
+  margin-bottom: 20px;
+  flex: 1 0 40%;
+  min-width: 300px;
+  margin-right: auto;
+}
+.left-Card-main-image {
+  width: 100%;
+  height: 700px;
+}
+.right-Card-main-image {
+  width: 100%;
+  height: 300px;
+}
+.column-card:nth-child(even) {
+  margin-left: 20px;
+}
+.categories__items {
+  align-content: space-around;
+}
+
+.News {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.News_div {
+  width: 40%;
+  margin-right: 20px;
+}
+.News_div h1 {
+  text-align: left;
+  padding-left: 30px;
+}
+.NewsLetterInput {
+  display: flex;
+  align-items: center;
+}
+.News__Text {
+  color: black;
+  font-family: 'Adobe Caslon Pro', 'Hoefler Text', Georgia, Garamond, Times,
+    serif;
+  letter-spacing: 2%;
+  text-align: justify;
+  padding-left: 5%;
+  text-transform: lowercase;
+  line-height: 100%;
+  font-size: 15pt;
+  font-variant: small-caps;
+}
+.Email-button {
+  height: 48px;
+  padding: 0px 10px;
+  background-color: #000000;
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+.Email_input {
+  height: 48px;
+  padding-left: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.About__us {
+  text-align: center;
+  text-decoration: underline;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: black;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 51px;
+  line-height: 44px;
+
+  font-weight: bold;
+}
+
+.About__text:first-letter {
+  text-transform: uppercase;
+}
+
+.About__text {
+  color: #424242;
+  font-family: 'Adobe Caslon Pro', 'Hoefler Text', Georgia, Garamond, Times,
+    serif;
+  letter-spacing: 5%;
+  text-align: center;
+  margin: 40px auto;
+  text-transform: lowercase;
+  line-height: 145%;
+  font-size: 20pt;
+  width: 80%;
+  font-style: italic;
+  font-variant: small-caps;
+}
+
+.Main_Logo {
+  font-size: 70px;
+  text-align: center;
+  color: White;
+  background-color: black;
+  height: 90px;
+  margin-bottom: 0px !important;
+  font-family: Vidaloka;
+  letter-spacing: 10px;
+}
+
+.Home__Hr {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 80vh;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+.carousal-column .ant-carousel .slick-slide {
+  height: 400px;
+}
+
+@media (max-width: 1024px) {
+  .category__Main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Right-Cards {
+    width: 100%;
+  }
+  .Left-Cards {
+    width: 90%;
+    margin: auto;
+  }
+  .left-Card-main-image {
+    height: 500px;
+  }
+  .right-Card-main-image {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 500px) {
+  .column-card-left {
+    flex: 1 0 40%;
+    min-width: 300px;
+    margin-left: 30%;
+    margin-right: auto;
+  }
+  .category__Main {
+    justify-content: center;
+  }
+  .ant-carousel .slick-slide {
+    text-align: center;
+    height: 40vh;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  }
+  .News {
+    flex-direction: column-reverse;
+  }
+  .News_div {
+    width: 80%;
+  }
+  .News__Text {
+    padding: 0;
+    padding-top: 20px;
+    width: 100%;
+  }
+  .column-card {
+    flex: 1 0 300px;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .feature-item {
+    margin-bottom: 50px;
+  }
+}

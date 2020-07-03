@@ -1,6 +1,6 @@
 import React from 'react';
-import { loadStripe } from '@stripe/stripe-js';
 import Cart from '../../components/cart/Cart';
+import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT_PK);
 

@@ -6,34 +6,42 @@ import ApiClient from './services/ApiClient';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
-import Category from './pages/category/Category';
 import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
-import Product from './pages/product/Product';
-import Products from './pages/Products';
+import Products from './pages/products/Products';
+import ProductsVegan from './pages/products/ProductsVegan';
+import ProductsGluten from './pages/products/ProductsGluten';
+import Cart from './pages/cart/Cart';
+import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
+import Product from './pages/product/Product';
 import Success from './pages/success/Success';
+import { GlobalProvider } from './context/globalState';
 import './App.scss';
-// import 'antd/dist/antd.css';
+
+const Layout = styled.div`
+  margin-top: 40px;
+`;
 
 function App() {
-  // eslint-disable-next-line
-  const [isLoading, setIsLoading] = useState(true);    // eslint-disable-next-line
-  const [data, setData] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
+  const [productData, setData] = useState([]);
+  const [veganData, setVeganData] = useState([]);
+  const [glutenData, setGlutenData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
 
-  const Layout = styled.div`
-    margin-top: 30px;
-  `;
-
   useEffect(() => {
-    ApiClient.getData()
-      .then((data) => {
-        setData(data);
-        // console.log(data);
-      })
-      .then(() => setIsLoading(false));
+    ApiClient.getData().then((data) => {
+      setData(data);
+      const Vegan = data.filter((item) => item.tag_list.includes('Vegan'));
+      const Gluten = data.filter((item) =>
+        item.tag_list.includes('Gluten Free')
+      );
+      setVeganData([...Vegan]);
+      setGlutenData([...Gluten]);
+    });
+    // .then(() => setIsLoading(false));
   }, []);
 
   const handleAddToCartClick = (id) => {
@@ -61,31 +69,51 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
-        <NavBar />
-        <Layout>
-          <main>
-            <Router primary={false}>
-              <Home data={data} path="/" />
-              <SignIn path="/signin" />
-              <SignUp path="/signup" />
-              <Category path="/category" />
-              <Products
-                data={data}
-                handleAddToCartClick={handleAddToCartClick}
-                path="/products"
-              />
-              <Product data={data} path="/product" />
-              <CheckOut
-                itemsInCart={itemsInCart}
-                handleClearCartClick={handleClearCartClick}
-                path="/checkout"
-              />
-              <Success path="/success"></Success>
-              <NotFound default />
-            </Router>
-          </main>
-        </Layout>
-        <Footer />
+        <GlobalProvider>
+          <NavBar />
+          <Layout>
+            <main>
+              <Router primary={false}>
+                <Home data={productData} path="/" />
+                <SignIn path="/signin" />
+                <SignUp path="/signup" />
+
+                <Product data={productData} path="/product/:id" />
+
+                <Products
+                  data={productData}
+                  title={'All Products'}
+                  handleAddToCartClick={handleAddToCartClick}
+                  path="/products"
+                />
+                <ProductsVegan
+                  data={veganData}
+                  title={'Vegan'}
+                  path="/products-vegan"
+                />
+                <ProductsGluten
+                  data={glutenData}
+                  title={'Gluten Free'}
+                  path="/products-gluten-free"
+                />
+                <Cart path="/cart" />
+
+                <CheckOut
+                  itemsInCart={itemsInCart}
+                  handleClearCartClick={handleClearCartClick}
+                  path="/checkout"
+                />
+
+                <Success path="/success" />
+
+                <Profile path="/profile" />
+
+                <NotFound default />
+              </Router>
+            </main>
+          </Layout>
+          <Footer />
+        </GlobalProvider>
       </AuthProvider>
     </React.StrictMode>
   );
