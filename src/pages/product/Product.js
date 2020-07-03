@@ -16,7 +16,7 @@ const Product = (props ) => {
   useEffect(() => {
     ApiClient.getData().then((data) => {
       setData(data);
-
+      
       let result;
       for (let i = 0; i < data.length; i++) {
         if (Object.is(data[i], props) === true) {
