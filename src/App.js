@@ -52,17 +52,9 @@ function App() {
               <SignUp path="/signup" />
               
 
-              {allData.map((item) => (
-                <Product 
-                  objItem={item}
-                  key={item.id}
-                  image={item.image_link}
-                  name={item.name}
-                  price={item.price}
-                  id={item.id}
-                  path={`/product/${item.id}`}
-                />
-              ))}
+              <Product 
+                data={allData} path="/product/:id"
+              />
 
               <Products
                 data={allData}

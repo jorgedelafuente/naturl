@@ -12,60 +12,56 @@ import ProductTags from "../../components/product-details/product-tags";
 
 function ProductItem(props) {
   
-  const colorArr = props.objItem.product_colors;
-
   return (
-
+    props.data !== undefined && (
     <>
 
       <div className="product-image-leftside-page">
         <div className="product-image-leftside-sizecontainer" > 
-          <img alt="example" src={props.image} />
+        {console.log(props.data)}
+          <img alt="example" src={props.data.image_link} />
         </div>
       </div>
 
       <div className="product-details-rightside-page ">
 
         <div className="singleproduct-page-title" >
-          <h3>{props.name}</h3>
+          <h3>{props.data.name}</h3>
         </div>
 
         <div className="product-details-shopinfo" >
-          <h4>${props.price} </h4>
+          <h4>${props.data.price} </h4>
           <input className='product-details-quantity-input' type='number' name='discountInstant' min="0" max="100" autocomplete='off'  ></input>
           <button>Add to cart</button>
         </div>
+
         <div className="singleproduct-page-description" >
-          <p>{props.objItem.description} </p>          
+          <p>{props.data.description} </p>          
         </div>
 
-          {colorArr.map((item) => (
+          {props.data.product_colors.map((item) => (
             <ProductColor
               color={item.hex_value}
             />
           ))}
 
           <div className="product-details-categories-brand" >
-            <p>Brand: {props.objItem.brand} </p>
-            <p>Product type: {props.objItem.product_type} </p>
-            <p>Category: {props.objItem.category} </p>
-            <p>Rating: <Rate disabled defaultValue={props.objItem.rating} /> </p>
+            <p>Brand: {props.data.brand} </p>
+            <p>Product type: {props.data.product_type} </p>
+            <p>Category: {props.data.category} </p>
+            <p>Rating: <Rate disabled defaultValue={props.data.rating} /> </p>
           </div>
 
           <ProductTags
-            objItem={props.objItem}
+            objItem={props.data}
           />
         
       </div>
 
     </>
+    )
   );
 }
   
 export default ProductItem;
 
-
-
-// import { Rate } from 'antd';
-
-// ReactDOM.render(<Rate disabled defaultValue={2} />, mountNode);

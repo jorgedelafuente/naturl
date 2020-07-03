@@ -30,31 +30,18 @@ const Product = (props ) => {
   //   });
   //   // .then(() => setIsLoading(false));
   // }, []);
-  // const foundItem = props.data.find((item) => item.id == props.id);
+  
+  const foundItem = props.data.find((item) => item.id == props.id);
   return (
 
 
       <div className="product-page-container">    
-          <ProductItem
-            // data={foundItem}
-            objItem={props.objItem}            
-            key={props.id}
-            image={props.image}
-            name={props.name}
-            price={props.price}
-            id={props.id}
-          />
+          <ProductItem data={foundItem} />
       </div>
   );
 
 };
 
-
-// function Product(props) {
-//   console.log(props);
-//   const foundItem = props.data.find((item) => item.id == props.id);
-//   return <ProductItem data={foundItem}></ProductItem>;
-// }
 
 
 export default Product;
