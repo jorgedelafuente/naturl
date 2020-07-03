@@ -119,7 +119,7 @@ const NavBar = () => {
         )}
 
         <span>
-          <Link to="/cart">
+          <Link to="/checkout">
             <Badge
               count={badgeCount}
               title={'Number of Cart Items'}
@@ -169,7 +169,7 @@ const NavBar = () => {
           </span>
           <br />
           <span>
-            <Link onClick={onClose} to="/cart">
+            <Link onClick={onClose} to="/checkout">
               Cart
             </Link>
           </span>

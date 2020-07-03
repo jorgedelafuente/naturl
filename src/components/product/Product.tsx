@@ -8,7 +8,7 @@ export default function Product({ onAddToCartClick, price, name, image }) {
     <div className="Product">
       <h2 className="Produc-name">{name}</h2>
       <div className="Product-image">
-        <img src={image} alt="beauty product" />
+        <img src={image} alt={name} />
       </div>
       <div className="Product-price">${price}</div>
       <button className="Product-buy-button" onClick={onAddToCartClick}>
