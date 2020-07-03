@@ -63,9 +63,8 @@ const StyledNavBar = styled.div`
   z-index: 100;
 `;
 
-const NavBar = () => {
+const NavBar = ({ itemsInCart }) => {
   const [visible, setVisible] = useState(false);
-  const [badgeCount, setBadgeCount] = useState(0);
   const { currentUser } = useContext(AuthContext);
   const showDrawer = () => {
     setVisible(true);
@@ -74,10 +73,10 @@ const NavBar = () => {
     setVisible(false);
   };
 
-  const addToCart = () => {
-    console.log(badgeCount);
-    setBadgeCount(badgeCount + 1);
-  };
+  const badgeCount = itemsInCart.reduce(
+    (quantity, item) => quantity + item.quantity,
+    0
+  );
 
   return (
     <StyledNavBar>
@@ -119,7 +118,6 @@ const NavBar = () => {
             <Badge
               count={badgeCount}
               title={'Number of Cart Items'}
-              onClick={addToCart}
               offset={[0, 5]}
               style={{
                 backgroundColor: '#a1a1a1',

@@ -35,7 +35,7 @@ function ProductItem(props) {
               max="100"
               autoComplete="off"
             ></input>
-            <button>Add to cart</button>
+            <button onClick={() => props.onAddToCartClick(props.data.id)}>Add to cart</button>
           </div>
 
           <div className="singleproduct-page-description">
