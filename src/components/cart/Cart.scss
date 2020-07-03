@@ -10,6 +10,7 @@
 .Cart-clear-button {
   border-bottom: 1px solid #eee;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .Cart-clear-button:hover,
@@ -22,15 +23,14 @@
   padding: 2rem;
 }
 
-.Cart-purchase-button {
+.Cart-button-purchase {
   display: inline-block;
   margin: 0 0 1rem 0;
   padding: 0.85em 1em;
   border: 0;
   outline: 0;
-  border-radius: 3px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   text-align: center;
   background-color: #262626;
@@ -42,20 +42,19 @@
   -webkit-appearance: none;
 }
 
-.Cart-purchase-button:hover,
-.Cart-purchase-button:focus {
+.Cart-button-purchase:hover,
+.Cart-button-purchase:focus {
   background-color: #00677D;
 }
 
-.Cart-cancel-button {
+.Cart-button-cancel {
   display: inline-block;
   margin: 0 0 1rem 0;
   padding: 0.85em 1em;
   border: 0;
   outline: 0;
-  border-radius: 3px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   text-align: center;
   background-color: #757575;
@@ -67,12 +66,16 @@
   -webkit-appearance: none;
 }
 
-.Cart-cancel-button:hover,
-.Cart-cancel-button:focus {
+.Cart-button-cancel:hover,
+.Cart-button-cancel:focus {
   background-color: #a1a1a1;
 }
 
 .Cart-navigation {
   display: flex;
   justify-content: space-evenly;
+}
+
+.Cart-message-empty{
+  margin: 1rem;
 }
