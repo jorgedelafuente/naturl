@@ -23,7 +23,6 @@ import Product from './pages/product/Product';
 import { GlobalProvider } from './context/globalState';
 
 
-
 const Layout = styled.div`
   margin-top: 40px;
 `;
@@ -58,7 +57,9 @@ function App() {
               <Home data={productData} path="/" />
               <SignIn path="/signin" />
               <SignUp path="/signup" />
+
               <Product data={productData} path="/product/:id" />
+
               <Products
                 data={productData}
                 title={'All Products'}
