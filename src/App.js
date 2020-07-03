@@ -57,7 +57,7 @@ function App() {
       }
 
       // otherwise, add new item to cart
-      const item = data.find((item) => item.id === id);
+      const item = productData.find((item) => item.id === id);
       return [...itemsInCart, { ...item, quantity: 1 }];
     });
   };
