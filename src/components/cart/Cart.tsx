@@ -28,7 +28,7 @@ export default function Cart({ handleClearCartClick, onCheckoutClick, itemsInCar
           </div>
           <div className="Cart-navigation">
             <button className="Cart-button-purchase" onClick={onCheckoutClick}>
-              Checkout
+              Proceed To Checkout
             </button>
             <Link to="/products">
               <button className="Cart-button-cancel">Continue Shopping</button>
