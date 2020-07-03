@@ -6,7 +6,7 @@ import { StarOutlined, StarFilled } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import './Home.scss';
-import CustomChatbot from '../chatbot/Chatbot';
+import CustomChatbot from '../../components/chatbot/Chatbot';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 import { Carousel } from 'antd';
 function onChange(a, b, c) {

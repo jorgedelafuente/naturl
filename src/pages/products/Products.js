@@ -10,7 +10,7 @@ function Products(props) {
   return (
     <div className="products-page-container">
       <div className="products-title">
-        <h2>Products</h2>
+        <h1>Products</h1>
       </div>
 
       <FixedFilterHeader />
