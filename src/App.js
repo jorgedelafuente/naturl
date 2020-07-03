@@ -17,6 +17,11 @@ import ProductsGluten from './pages/products/ProductsGluten';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
 
+
+import { GlobalProvider } from './context/globalState';
+
+
+
 const Layout = styled.div`
   margin-top: 30px;
 `;
@@ -43,6 +48,7 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
+      <GlobalProvider>
         <NavBar />
         <Layout>
           <main>
@@ -79,6 +85,7 @@ function App() {
           </main>
         </Layout>
         <Footer />
+      </GlobalProvider>
       </AuthProvider>
     </React.StrictMode>
   );
