@@ -1,27 +1,20 @@
-
-
-
 import React, { useState } from 'react';
 import { Drawer } from 'antd';
 
-import "./product-filter-drawer.scss"
+import './product-filter-drawer.scss';
 
 import { Slider } from 'antd';
 
 import ProductTypeTags from './tags/product-type-tags';
 import BrandTags from './tags/brand-tags';
 
-import {NodeExpandOutlined } from '@ant-design/icons';
-
-
-
+import { NodeExpandOutlined } from '@ant-design/icons';
 
 function formatter(value) {
   return `$${value}`;
 }
 
-
-function ProductDrawerFilter () {
+function ProductDrawerFilter() {
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
     setVisible(true);
@@ -31,10 +24,13 @@ function ProductDrawerFilter () {
   };
   return (
     <>
-      <div className="filter-product-types-link"> {// eslint-disable-next-line
-       }<a onClick={showDrawer}>
+      <div className="filter-product-types-link">
+        <span onClick={showDrawer} style={{ fontSize: 18, cursor: 'pointer' }}>
           Filter <NodeExpandOutlined />
-        </a>
+        </span>
+        {
+          // eslint-disable-next-line
+        }
       </div>
 
       <Drawer
@@ -44,15 +40,13 @@ function ProductDrawerFilter () {
         onClose={onClose}
         visible={visible}
       >
-
-      <ProductTypeTags />
-      <BrandTags />
-      <p className="products-drawer-price-filter" >Price filter</p>
-      <Slider range defaultValue={[0, 50]} tipFormatter={formatter} />
-
+        <ProductTypeTags />
+        <BrandTags />
+        <p className="products-drawer-price-filter">Price filter</p>
+        <Slider range defaultValue={[0, 50]} tipFormatter={formatter} />
       </Drawer>
     </>
   );
-};
+}
 
 export default ProductDrawerFilter;

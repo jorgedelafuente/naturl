@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
-import {
-  auth,
-  createUserProfileDocument,
-  signOut,
-  getUserDocument,
-} from '../../firebase';
+// import {
+//   auth,
+//   createUserProfileDocument,
+//   signOut,
+//   getUserDocument,
+// } from '../../firebase';
+import { signOut, getUserDocument } from '../../firebase';
 import { AuthContext } from '../../auth/Auth';
 // import styled from 'styled-components';
 import { FormButton } from '../../components/common/button/Button';
@@ -24,25 +25,23 @@ const Profile = () => {
 
   if (currentUser) {
     console.log(currentUser.id);
-    let userData = Promise.resolve(getUserDocument(currentUser.uid)).then(
-      (profile) => {
-        setDisplayName(profile.displayName);
-      }
-    );
+    Promise.resolve(getUserDocument(currentUser.uid)).then((profile) => {
+      setDisplayName(profile.displayName);
+    });
   }
 
-  const handleUpdate = () => {
-    console.log('test');
-  };
+  // const handleUpdate = () => {
+  //   console.log('test');
+  // };
 
   const handleSignOut = () => {
     setDisplayAlert('block');
     signOut();
   };
 
-  function callback(key) {
-    console.log(key);
-  }
+  // function callback(key) {
+  //   console.log(key);
+  // }
 
   return (
     <FormContainer>
