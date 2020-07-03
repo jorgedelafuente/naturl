@@ -12,9 +12,8 @@ import ProductTags from "../../components/product-details/product-tags";
 
 function ProductItem(props) {
   
-  const TagsArr = props.objItem.tag_list;
   const colorArr = props.objItem.product_colors;
-  // console.log(colorArr);
+
   return (
 
     <>
