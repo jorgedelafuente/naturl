@@ -31,6 +31,7 @@ const Product = (props ) => {
   //   // .then(() => setIsLoading(false));
   // }, []);
   
+  // eslint-disable-next-line
   const foundItem = props.data.find((item) => item.id == props.id);
   return (
 

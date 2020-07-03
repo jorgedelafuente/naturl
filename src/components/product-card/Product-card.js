@@ -7,8 +7,8 @@ import './product-card.scss';
 import { Card } from 'antd';
 import Title from './product-card-properties/card-title';
 
-function ProductItem(props) {
-  // console.log(props);
+function ProductCard (props) {
+
   const { Meta } = Card;
 
   return (
@@ -28,4 +28,4 @@ function ProductItem(props) {
   );
 }
 
-export default ProductItem;
+export default ProductCard;

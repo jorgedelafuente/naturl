@@ -5,8 +5,16 @@ import React, { useState } from 'react';
 import { Drawer } from 'antd';
 
 import "./product-filter-drawer.scss"
-import CategoryTags from './tags/product-type-tags';
 
+import { Slider } from 'antd';
+
+import CategoryTags from './tags/product-type-tags';
+import BrandTags from './tags/brand-tags';
+
+
+function formatter(value) {
+  return `$${value}`;
+}
 
 
 function ProductDrawerFilter () {
@@ -19,8 +27,8 @@ function ProductDrawerFilter () {
   };
   return (
     <>
-      <div className="filter-product-types-link">
-        <a onClick={showDrawer}>
+      <div className="filter-product-types-link"> {// eslint-disable-next-line
+       }<a onClick={showDrawer}>
           Product types/ Filter
         </a>
       </div>
@@ -34,9 +42,10 @@ function ProductDrawerFilter () {
       >
 
         <CategoryTags />
+        <BrandTags />
+        <p className="products-drawer-price-filter" >Price filter</p>
+        <Slider range defaultValue={[0, 50]} tipFormatter={formatter} />
 
-        <p>Brand name filters</p>
-        <p>Price filter</p>
       </Drawer>
     </>
   );
