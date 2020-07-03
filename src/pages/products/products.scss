@@ -12,6 +12,10 @@
   margin-top: 60px;
 }
 
+
+
+
+
 .products-labels-and-filter {
   display: flex;
   flex-direction: row;
@@ -31,21 +35,11 @@
   color: #00677D;
 }
 
-.products-labels-and-filter .all-products-clicked {
-  color: #00677D;
-}
 
-.products-categories-title {
-  margin-top: 50px;
-}
 
-.products-categories-list a {
-  margin: 30px;
-  color: #00677D;
-}
-.products-categories-list a:hover {
-  color: #A586AE;
-}
+
+
+
 
 .products-categories-container {
   width: 80%;
@@ -56,6 +50,6 @@
 }
 
 .products-categories-container-item {
-  background-color: yellowgreen;
   margin-bottom: 50px;
 }
+
