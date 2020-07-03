@@ -2,9 +2,7 @@ import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import Cart from '../../components/cart/Cart';
 
-const stripePromise = loadStripe(
-  'pk_test_51GzKbCCzjdOYYybLYg6lpPWTks0jg5Ph8Tsb66ive472tuNoKsYJnC7WwGwrOcYLRweuJEBpIXA86UUAii0fO9g80099ornxU7'
-);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT_PK);
 
 export default function Checkout({ itemsInCart, handleClearCartClick }) {
   const totalCost = itemsInCart.reduce(
