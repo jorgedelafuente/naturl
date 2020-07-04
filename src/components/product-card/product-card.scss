@@ -24,4 +24,26 @@
   color: black;
   font-size: 16px;
   font-weight: 450;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: red;
 }
+
+.products-card-nametitle-container p {
+  text-align: center;
+}
+
+.products-card-price-buy {
+  // background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  // color: black;
+  // color: #00677d;
+}
+
+// .products-card-price-buy button {
+//   // background-color: black;
+//   color: #00677d;
+// }
