@@ -9,8 +9,6 @@ import CheckOut from './pages/checkout/CheckOut';
 import SignIn from './pages/auth/signin/SignIn';
 import SignUp from './pages/auth/signup/SignUp';
 import Products from './pages/products/Products';
-import ProductsVegan from './pages/products/ProductsVegan';
-import ProductsGluten from './pages/products/ProductsGluten';
 import Profile from './pages/auth/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
@@ -80,12 +78,8 @@ function App() {
               title={'All Products'}
               path="/products"
             />
-            <ProductsVegan
-              data={veganData}
-              title={'Vegan'}
-              path="/products-vegan"
-            />
-            <ProductsGluten
+            <Products data={veganData} title={'Vegan'} path="/products-vegan" />
+            <Products
               data={glutenData}
               title={'Gluten Free'}
               path="/products-gluten-free"

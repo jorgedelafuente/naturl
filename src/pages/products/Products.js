@@ -46,7 +46,7 @@ const brandTags = [
   'butter london',
 ];
 
-const Products = ({ data }) => {
+const Products = ({ data, title }) => {
   // const [filteredData, setFilteredData] = useState([]);
   const [originalData, setOriginalData] = useState([]);
   // const [filteredData, setFilteredData] = useState([]);
@@ -137,12 +137,14 @@ const Products = ({ data }) => {
   return (
     <div className="products-page-container">
       <div className="products-title">
-        <h1>Products</h1>
+        <h1>{title}</h1>
       </div>
 
       <Affix offsetTop={top}>
         <div className="fixedHeaderButton" onClick={() => setTop(top)}>
-          <Link to="/products">All products</Link>
+          <div>
+            <Link to="/products">All products</Link>
+          </div>
           <div className="filter-product-types-link">
             <span
               onClick={showDrawer}
@@ -234,6 +236,7 @@ const Products = ({ data }) => {
 
 Products.propTypes = {
   data: PropTypes.array,
+  title: PropTypes.string,
 };
 
 export default Products;
