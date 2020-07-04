@@ -1,7 +1,7 @@
-import React from 'react';
-import CartItem from '../cartItem/CartItem';
-import './Cart.scss';
-import { Link } from '@reach/router';
+import React from "react";
+import CartItem from "../cartItem/CartItem";
+import "./Cart.scss";
+import { Link } from "@reach/router";
 
 export default function Cart({
   handleClearCartClick,
@@ -18,6 +18,7 @@ export default function Cart({
           {itemsInCart.map((item) => (
             <CartItem
               key={item.id}
+              thumbnail={item.image_link}
               name={item.name}
               cost={item.price * item.quantity}
               quantity={item.quantity}
