@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { Router } from "@reach/router";
-import { AuthProvider } from "./auth/Auth";
-import ApiClient from "./services/ApiClient";
-import NavBar from "./components/navbar/NavBar";
-import Footer from "./components/footer/Footer";
-import Home from "./pages/home/Home";
-import CheckOut from "./pages/checkout/CheckOut";
-import SignIn from "./pages/auth/signin/SignIn";
-import SignUp from "./pages/auth/signup/SignUp";
-import Products from "./pages/products/Products";
-import ProductsVegan from "./pages/products/ProductsVegan";
-import ProductsGluten from "./pages/products/ProductsGluten";
-import Profile from "./pages/auth/profile/Profile";
-import NotFound from "./pages/notfound/NotFound";
-import Product from "./pages/product/Product";
-import Success from "./pages/success/Success";
-import { GlobalProvider } from "./context/globalState";
-import "./App.scss";
+import React, { useEffect, useState } from 'react';
+import { Router } from '@reach/router';
+import { AuthProvider } from './auth/Auth';
+import ApiClient from './services/ApiClient';
+import NavBar from './components/navbar/NavBar';
+import Footer from './components/footer/Footer';
+import Home from './pages/home/Home';
+import CheckOut from './pages/checkout/CheckOut';
+import SignIn from './pages/auth/signin/SignIn';
+import SignUp from './pages/auth/signup/SignUp';
+import Products from './pages/products/Products';
+import Profile from './pages/auth/profile/Profile';
+import NotFound from './pages/notfound/NotFound';
+import Product from './pages/product/Product';
+import Success from './pages/success/Success';
+import './App.scss';
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true);
@@ -86,52 +83,46 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
-        <GlobalProvider>
-          <NavBar itemsInCart={itemsInCart} />
-          <main className="main-container">
-            <Router primary={false}>
-              <Home data={productData} path="/" />
-              <SignIn path="/signin" />
-              <SignUp path="/signup" />
+        <NavBar itemsInCart={itemsInCart} />
+        <main className="main-container">
+          <Router primary={false}>
+            <Home data={productData} path="/" />
+            <SignIn path="/signin" />
+            <SignUp path="/signup" />
 
-              <Product
-                data={productData}
-                handleAddToCartClick={handleAddToCartClick}
-                path="/product/:id"
-              />
+            <Product
+              data={productData}
+              handleAddToCartClick={handleAddToCartClick}
+              path="/product/:id"
+            />
 
-              <Products
-                data={productData}
-                title={"All Products"}
-                path="/products"
-              />
-              <ProductsVegan
-                data={veganData}
-                title={"Vegan"}
-                path="/products-vegan"
-              />
-              <ProductsGluten
-                data={glutenData}
-                title={"Gluten Free"}
-                path="/products-gluten-free"
-              />
+            <Products
+              data={productData}
+              title={"All Products"}
+              path="/products"
+            />
+            <Products data={veganData} title={'Vegan'} path="/products-vegan" />
+            <Products
+              data={glutenData}
+              title={'Gluten Free'}
+              path="/products-gluten-free"
+            />
 
-              <CheckOut
-                itemsInCart={itemsInCart}
-                handleClearCartClick={handleClearCartClick}
-                handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
-                path="/checkout"
-              />
+            <CheckOut
+              itemsInCart={itemsInCart}
+              handleClearCartClick={handleClearCartClick}
+              handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
+              path="/checkout"
+            />
 
-              <Success path="/success" />
+            <Success path="/success" />
 
-              <Profile path="/profile" />
+            <Profile path="/profile" />
 
-              <NotFound default />
-            </Router>
-          </main>
-          <Footer />
-        </GlobalProvider>
+            <NotFound default />
+          </Router>
+        </main>
+        <Footer />
       </AuthProvider>
     </React.StrictMode>
   );
