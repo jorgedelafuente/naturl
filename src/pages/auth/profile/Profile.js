@@ -5,15 +5,13 @@ import React, { useContext, useState } from 'react';
 //   signOut,
 //   getUserDocument,
 // } from '../../firebase';
-import { signOut, getUserDocument } from '../../firebase';
-import { AuthContext } from '../../auth/Auth';
-// import styled from 'styled-components';
-import { FormButton } from '../../components/common/button/Button';
-import { FormContainer } from '../../components/common/container/Container';
+import { signOut, getUserDocument } from '../../../firebase';
+import { AuthContext } from '../../../auth/Auth';
+// import { FormButton } from '../../../components/common/button/FormButton';
 import { Alert } from 'antd';
 // import { Tabs } from 'antd';
-
 // const { TabPane } = Tabs;
+import '../FormContainer.scss';
 
 const Profile = () => {
   const [displayName, setDisplayName] = useState('');
@@ -44,7 +42,7 @@ const Profile = () => {
   // }
 
   return (
-    <FormContainer>
+    <div className="form-container">
       <div className="Logo">
         <h3>NATURL</h3>
       </div>
@@ -79,7 +77,9 @@ const Profile = () => {
         <FormButton type="submit">Update Profile</FormButton>
       </form>
       <br /> */}
-      <FormButton onClick={handleSignOut}>Sign out</FormButton>
+      <button className="form-button" onClick={handleSignOut}>
+        Sign out
+      </button>
       <Alert
         banner
         message="Sign Out Successful"
@@ -99,7 +99,7 @@ const Profile = () => {
           Content of Tab Pane 3
         </TabPane>
       </Tabs> */}
-    </FormContainer>
+    </div>
   );
 };
 

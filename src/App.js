@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { Router } from '@reach/router';
 import { AuthProvider } from './auth/Auth';
 import ApiClient from './services/ApiClient';
@@ -7,20 +6,16 @@ import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 import CheckOut from './pages/checkout/CheckOut';
-import SignIn from './pages/signin/SignIn';
-import SignUp from './pages/signup/SignUp';
+import SignIn from './pages/auth/signin/SignIn';
+import SignUp from './pages/auth/signup/SignUp';
 import Products from './pages/products/Products';
 import ProductsVegan from './pages/products/ProductsVegan';
 import ProductsGluten from './pages/products/ProductsGluten';
-import Profile from './pages/profile/Profile';
+import Profile from './pages/auth/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
 import Success from './pages/success/Success';
 import './App.scss';
-
-const Layout = styled.div`
-  margin-top: 40px;
-`;
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +37,15 @@ function App() {
     // .then(() => setIsLoading(false));
   }, []);
 
+  useEffect(() => {
+    let userCart = localStorage.getItem('cart');
+    // get the user's cart if one exists in local storage
+    userCart = JSON.parse(userCart);
+    if (userCart) {
+      setItemsInCart(userCart);
+    }
+  }, []);
+
   const handleAddToCartClick = (id) => {
     setItemsInCart((itemsInCart) => {
       const itemInCart = itemsInCart.find((item) => item.id === id);
@@ -58,60 +62,59 @@ function App() {
       const item = productData.find((item) => item.id === id);
       return [...itemsInCart, { ...item, quantity: 1 }];
     });
+
+    // update local storage with itemsInCart
+    let stringifiedCart = JSON.stringify(itemsInCart);
+    localStorage.setItem('cart', stringifiedCart);
   };
 
   const handleClearCartClick = () => {
-    return setItemsInCart([]);
+    setItemsInCart([]);
+    localStorage.removeItem('cart');
   };
 
   return (
     <React.StrictMode>
       <AuthProvider>
         <NavBar itemsInCart={itemsInCart} />
-        <Layout>
-          <main>
-            <Router primary={false}>
-              <Home data={productData} path="/" />
-              <SignIn path="/signin" />
-              <SignUp path="/signup" />
+        <main>
+          <Router primary={false}>
+            <Home data={productData} path="/" />
+            <SignIn path="/signin" />
+            <SignUp path="/signup" />
 
-              <Product
-                data={productData}
-                handleAddToCartClick={handleAddToCartClick}
-                path="/product/:id"
-              />
+            <Product
+              data={productData}
+              handleAddToCartClick={handleAddToCartClick}
+              path="/product/:id"
+            />
 
-              <Products
-                data={productData}
-                title={'products'}
-                path="/products"
-              />
+            <Products data={productData} title={'products'} path="/products" />
 
-              <ProductsVegan
-                data={veganData}
-                title={'products-vegan'}
-                path="/products-vegan"
-              />
-              <ProductsGluten
-                data={glutenData}
-                title={'products-gluten-free'}
-                path="/products-gluten-free"
-              />
+            <ProductsVegan
+              data={veganData}
+              title={'products-vegan'}
+              path="/products-vegan"
+            />
+            <ProductsGluten
+              data={glutenData}
+              title={'products-gluten-free'}
+              path="/products-gluten-free"
+            />
 
-              <CheckOut
-                itemsInCart={itemsInCart}
-                handleClearCartClick={handleClearCartClick}
-                path="/checkout"
-              />
+            <CheckOut
+              itemsInCart={itemsInCart}
+              handleClearCartClick={handleClearCartClick}
+              path="/checkout"
+            />
 
-              <Success path="/success" />
+            <Success path="/success" />
 
-              <Profile path="/profile" />
+            <Profile path="/profile" />
 
-              <NotFound default />
-            </Router>
-          </main>
-        </Layout>
+            <NotFound default />
+          </Router>
+        </main>
         <Footer />
       </AuthProvider>
     </React.StrictMode>
