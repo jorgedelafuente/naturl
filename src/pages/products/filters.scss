@@ -1,3 +1,7 @@
+// -----------
+// fixed-filter-header
+// -----------
+
 .fixedHeaderButton {
   display: flex;
   flex-direction: row;
@@ -19,6 +23,8 @@
 }
 
 // -----------
+// product-filter-drawer
+// -----------
 
 .filter-product-types-link {
   color: black;
@@ -31,4 +37,24 @@
 .products-drawer-price-filter {
   color: black;
   margin-bottom: 30px;
+}
+
+// -----------
+// product-type-tags
+// -----------
+
+.drawer-product-type-title {
+  color: black;
+}
+
+.drawer-product-type-tags {
+  margin-bottom: 30px;
+}
+
+.drawer-product-type-tags .producttype-tags:hover {
+  color: gray;
+}
+
+.ant-tag-checkable-checked {
+  background-color: #00677d;
 }

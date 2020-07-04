@@ -36,11 +36,7 @@ const NavBar = ({ itemsInCart }) => {
         </span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-        <span className="navbar-links">
-          {/* <Link to="/category"
-          onClick={()=>filter("Vegan")}
-          >Vegan</Link> */}
-        </span>
+        <span className="navbar-links"></span>
         <span className="navbar-links">
           <Link to="/products">Products</Link>
         </span>

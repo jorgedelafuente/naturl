@@ -15,7 +15,6 @@ import Profile from './pages/auth/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
 import Success from './pages/success/Success';
-// import { GlobalProvider } from './context/globalState';
 import './App.scss';
 
 function App() {
@@ -63,7 +62,6 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
-        {/* <GlobalProvider> */}
         <NavBar itemsInCart={itemsInCart} />
         <main className="main-container">
           <Router primary={false}>
@@ -107,7 +105,6 @@ function App() {
           </Router>
         </main>
         <Footer />
-        {/* </GlobalProvider> */}
       </AuthProvider>
     </React.StrictMode>
   );
