@@ -91,75 +91,76 @@ const Products = ({ data }) => {
   };
 
   const handleChange = (tag, checked) => {
-    // console.log(tag);
-    // console.log(checked);
-    // setSelectedTags([tag]);
-    setVisible(false);
-
+    console.log(tag);
+    console.log(checked);
+    // setVisible(false);
     const nextSelectedTags = checked
       ? [...selectedTags, tag]
       : selectedTags.filter((t) => t !== tag);
-    console.log('You are interested in: ', nextSelectedTags);
-
+    // console.log('You are interested in: ', nextSelectedTags);
     setSelectedTags([...nextSelectedTags]);
   };
 
   const filtered = (data) => {
+    if (selectedTags.length === 0) return data;
     // console.log(data);
     // console.log(selectedTags);
-    if (selectedTags.length === 0) return data;
-
-    // if (selectedTags.length === 1) {
-    // let tempArr = [];
-    // for (let i = 0; i < selectedTags.length; i++) {
-    //   // return data.forEach((item) =>
-    //   //   item.product_type.includes(selectedTags[i])
-    //   // );
-    //   tempArr.push(data.product_type.includes(selectedTags[i]));
-    // }
-    // console.log(tempArr);
-    // return tempArr;
-    // }
-
-    if (selectedTags.length > 0) {
-      let brandArr = [];
-      data.forEach((item) => {
-        brandArr.push(item.brand);
-      });
-      console.log([...new Set(brandArr)]);
+    if (selectedTags.length === 1) {
+      console.log('case1');
       let tempArr = [];
       for (let i = 0; i < selectedTags.length; i++) {
         console.log(selectedTags[i]);
-        // tempArr.push(selectedTags[i]);
 
         for (let j = 0; j < data.length; j++) {
           if (
-            data[j].product_type === selectedTags[i] &&
-            !tempArr.includes(data[j])
+            data[j].product_type === selectedTags[i] ||
+            (data[j].brand === selectedTags[i] && !tempArr.includes(data[j]))
           ) {
             tempArr.push(data[j]);
           }
         }
-        // tempArr = [
-        //   ...data.filter((item) => {
-        //     return item.product_type.includes(selectedTags[i]);
-        //   }),
-        // ];
       }
-      console.log(tempArr);
-      // return [...tempArr];
+      // console.log('Filtered Products Length:', tempArr.length);
+      // tempArr = [...new Set(tempArr)];
+      console.log('Filtered Products Length:', tempArr.length);
+
       return tempArr;
     }
+    if (selectedTags.length > 1) {
+      console.log('case2');
+      let tempArr = [];
+      for (let i = 0; i < selectedTags.length; i++) {
+        console.log(selectedTags[i]);
 
-    // if (selectedTags.length > 1) {
-    //   console.log(data);
-    //   return data;
-    // }
+        for (let j = 0; j < data.length; j++) {
+          if (
+            data[j].product_type === selectedTags[i] ||
+            (data[j].brand === selectedTags[i] && !tempArr.includes(data[j]))
+          ) {
+            tempArr.push(data[j]);
+          }
+        }
+      }
+      // console.log('Filtered Products Length:', tempArr.length);
+      // tempArr = [...new Set(tempArr)];
+      console.log(
+        'Filtered Products Length:',
+        tempArr.length,
+        tempArr,
+        selectedTags
+      );
 
-    // const filteredData = data.filter((item) => {
-    //   return item.product_type.includes(selectedTags);
-    // });
-    // return [...tempArr];
+      let filteredArr = tempArr.filter((item) => {
+        return (
+          selectedTags.includes(item.product_type) &&
+          selectedTags.includes(item.brand)
+        );
+        // selectedTags.forEach()
+      });
+      console.log(filteredArr);
+
+      return filteredArr;
+    }
   };
 
   return (
@@ -232,7 +233,7 @@ const Products = ({ data }) => {
                   className="producttype-tags"
                   key={tag}
                   checked={selectedTags.indexOf(tag) > -1}
-                  onChange={(checked) => this.handleChange(tag, checked)}
+                  onChange={(checked) => handleChange(tag, checked)}
                 >
                   {formatBrandText(tag)}
                 </CheckableTag>
