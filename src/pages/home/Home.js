@@ -9,6 +9,9 @@ import './Home.scss';
 import CustomChatbot from '../../components/chatbot/Chatbot';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 import { Carousel } from 'antd';
+
+import ProductCard from '../../components/product-card/Product-card';
+
 function onChange(a, b, c) {
   console.log(a, b, c);
 }
@@ -16,7 +19,7 @@ const { Meta } = Card;
 function HomePage(props) {
   return (
     <div className="Home-Main">
-      <h1 className="Main_Logo">Naturl</h1>
+      {/* <h1 className="Main_Logo">Naturl</h1> */}
 
       <Carousel autoplay afterChange={onChange}>
         <div className="HeroCarouselImage">
@@ -83,23 +86,23 @@ function HomePage(props) {
               key={index}
             >
               <Carousel autoplay>
-                <div>
+                <div className="home-featureproducts-carousal-image-container">
                   <img
                     src={data.api_featured_image}
-                    className="mx-auto"
-                    width="100%"
-                    style={{ backgroundColor: 'rgba(0,0,0,1)' }}
-                    height="400px"
+                    // className="mx-auto"
+                    // width="100%"
+                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
+                    // height="400px"
                     alt="carousel1"
                   />
                 </div>
-                <div>
+                <div className="home-featureproducts-carousal-image-container">
                   <img
                     src={data.api_featured_image}
-                    className="mx-auto"
-                    width="100%"
-                    style={{ backgroundColor: 'rgba(0,0,0,1)' }}
-                    height="400px"
+                    // className="mx-auto"
+                    // width="100%"
+                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
+                    // height="400px"
                     alt="carousel2"
                   />
                 </div>
@@ -137,53 +140,69 @@ function HomePage(props) {
         <div className="Left-Cards">
           {props.data.slice(6, 7).map((data, index) => {
             return (
-              <Link to={`/product/${data.id}`} key={index}>
-                {' '}
-                <Card
-                  hoverable
-                  key={index}
-                  className="column-card column-card-left"
-                >
-                  <img
-                    src={data.api_featured_image}
-                    className="left-Card-main-image"
-                    alt="product1"
-                  />{' '}
-                  <Meta title={data.name} /> <p></p>
-                  <Meta title={`$ ${data.price}`} />
-                  <StarFilled />
-                  <StarFilled />
-                  <StarFilled />
-                  <StarFilled />
-                  <StarOutlined />
-                </Card>
-              </Link>
+              <ProductCard
+                key={index}
+                image={data.api_featured_image}
+                name={data.name}
+                price={data.price}
+                id={data.id}
+              />
+              // <Link to={`/product/${data.id}`} key={index}>
+              //   {' '}
+              //   <Card
+              //     hoverable
+              //     key={index}
+              //     className="column-card column-card-left"
+              //   >
+              //     <img
+              //       src={data.api_featured_image}
+              //       className="left-Card-main-image"
+              //       alt="product1"
+              //     />{' '}
+              //     <Meta title={data.name} /> <p></p>
+              //     <Meta title={`$ ${data.price}`} />
+              //     <StarFilled />
+              //     <StarFilled />
+              //     <StarFilled />
+              //     <StarFilled />
+              //     <StarOutlined />
+              //   </Card>
+              // </Link>
             );
           })}
         </div>
         <div className="Right-Cards">
-          {props.data.slice(7, 11).map((data, index) => {
+          {props.data.slice(7, 10).map((data, index) => {
             return (
-              <Link
-                to={`/product/${data.id}`}
-                className="column-card"
-                key={index}
-              >
-                <Card hoverable className="column-card">
-                  <img
-                    src={data.api_featured_image}
-                    className="right-Card-main-image"
-                    alt="product2"
-                  />
-                  <Meta title={data.name} /> <p></p>
-                  <Meta title={`$ ${data.price}`} />
-                  <StarFilled />
-                  <StarFilled />
-                  <StarFilled />
-                  <StarOutlined />
-                  <StarOutlined />
-                </Card>
-              </Link>
+              <>
+                <ProductCard
+                  key={index}
+                  image={data.api_featured_image}
+                  name={data.name}
+                  price={data.price}
+                  id={data.id}
+                />
+                {/* // <Link
+              //   to={`/product/${data.id}`}
+              //   className="column-card"
+              //   key={index}
+              // >
+              //   <Card hoverable className="column-card">
+              //     <img
+              //       src={data.api_featured_image}
+              //       className="right-Card-main-image"
+              //       alt="product2"
+              //     />
+              //     <Meta title={data.name} /> <p></p>
+              //     <Meta title={`$ ${data.price}`} />
+              //     <StarFilled />
+              //     <StarFilled />
+              //     <StarFilled />
+              //     <StarOutlined />
+              //     <StarOutlined />
+              //   </Card>
+              // </Link> */}
+              </>
             );
           })}
         </div>

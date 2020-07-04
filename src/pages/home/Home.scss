@@ -243,3 +243,16 @@
     margin-bottom: 50px;
   }
 }
+
+// .home-featureproducts-carousal-image-container {
+// background-color: red;
+// style={{ backgroundColor: 'rgba(0,0,0,1)' }}
+// }
+
+.home-featureproducts-carousal-image-container img {
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  object-fit: scale-down;
+  // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
+}

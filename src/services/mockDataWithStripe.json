@@ -2126,31 +2126,6 @@
     "stripe_price_id": "price_1H0SJ5CzjdOYYybL0caxhxQ2"
   },
   {
-    "id": 1005,
-    "brand": "alva",
-    "name": "Liquid Eye Shadow",
-    "price": "9.95",
-    "price_sign": "$",
-    "currency": "USD",
-    "image_link": "http://www.purpicks.com/wp-content/uploads/2018/06/Alva-Liquid-Eye-Shadow-1-Pale-Almond.png",
-    "product_link": "http://www.purpicks.com/product/alva-liquid-eye-shadow-1-pale-almond/",
-    "website_link": "https://purpicks.com/",
-    "description": "Our Liquid Edition Eye Shadows have been a real winner since their launch and are a real first of their kind in natural and organic make-up. Whether you're looking for a striking or glamorous look for night time, or something more subtle and natural for wearing during the day, there is a shade for everyone. They dry quickly, and depending on the depth of colour desired, can be blended in on application or left to dry before blending for a more vivid look. Layering is also possible, but however you choose to use these liquid eye shadows they won't gather in crow's feet or fine lines around the eyes. The inclusion of patented beta glucan also means they're perfect for sensitive eyes. Pale Almond is subtle, natural, and perfect for daytime wear, and compliments our Bronzed Hazel liquid eye shadow if a duo tone is desired.",
-    "rating": null,
-    "category": "cream",
-    "product_type": "eyeshadow",
-    "tag_list": ["Organic", "Vegan", "purpicks"],
-    "created_at": "2018-06-30T19:19:29.708Z",
-    "updated_at": "2018-09-02T22:52:06.744Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1005.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/005/original/open-uri20180630-4-1eau5wj?1530390360",
-    "product_colors": [
-      { "hex_value": "#B8A89A", "colour_name": "Pale Almond" }
-    ],
-    "stripe_product_id": "prod_HZbW0I2gdZEghU",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybL7Yx9RpNQ"
-  },
-  {
     "id": 485,
     "brand": "milani",
     "name": "Milani Baked Bronzer ",

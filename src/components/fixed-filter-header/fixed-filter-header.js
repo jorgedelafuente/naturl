@@ -6,7 +6,7 @@ import './fixed-filter-header.scss';
 import ProductFilterDrawer from './drawer/product-filter-drawer';
 
 const FixedFilterHeader = (props) => {
-  const [top, setTop] = useState(0);
+  const [top, setTop] = useState(50);
 
   return (
     <>

@@ -30,17 +30,10 @@ const NavBar = ({ itemsInCart }) => {
 
   return (
     <div className="navbar">
-      <div>
-        <span>
-          <Link to="/">NATURL</Link>
-        </span>
+      <div className="navbar-logo">
+        <Link to="/">NATURL</Link>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-        <span className="navbar-links">
-          {/* <Link to="/category"
-          onClick={()=>filter("Vegan")}
-          >Vegan</Link> */}
-        </span>
         <span className="navbar-links">
           <Link to="/products">Products</Link>
         </span>
@@ -50,18 +43,6 @@ const NavBar = ({ itemsInCart }) => {
         <span className="navbar-links">
           <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
-
-        {currentUser ? (
-          <span>
-            <Link to="/profile">
-              <UserOutlined style={{ fontSize: '20px' }} />
-            </Link>
-          </span>
-        ) : (
-          <span>
-            <Link to="/signin">Sign In</Link>
-          </span>
-        )}
 
         <span>
           <Link to="/checkout">
@@ -80,7 +61,20 @@ const NavBar = ({ itemsInCart }) => {
           </Link>
         </span>
 
+        {currentUser ? (
+          <span>
+            <Link to="/profile">
+              <UserOutlined style={{ fontSize: '20px' }} />
+            </Link>
+          </span>
+        ) : (
+          <span>
+            <Link to="/signin">Sign In</Link>
+          </span>
+        )}
+
         <MenuOutlined className="Burger-Icon" onClick={showDrawer} />
+
         <Drawer
           title="NATURL"
           placement="right"
