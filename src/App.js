@@ -16,7 +16,6 @@ import Profile from './pages/profile/Profile';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
 import Success from './pages/success/Success';
-import { GlobalProvider } from './context/globalState';
 import './App.scss';
 
 const Layout = styled.div`
