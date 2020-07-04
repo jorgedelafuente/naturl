@@ -139,7 +139,7 @@ const NavBar = ({ itemsInCart }) => {
           visible={visible}
         >
           <span>
-            <Link onClick={onClose} to="/products">
+            <Link onClick={onClose} to="/all-products">
               Products
             </Link>
           </span>

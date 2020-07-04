@@ -6,8 +6,7 @@ import { Rate } from 'antd';
 import ProductColor from '../../components/product-details/product-colors';
 import ProductTags from '../../components/product-details/product-tags';
 
-// import styled from 'styled-components';
-// const AddToCart = styled.button;
+
 
 function ProductItem(props) {
   return (

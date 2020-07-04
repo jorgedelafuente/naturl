@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { Affix } from 'antd';
 import { Link } from '@reach/router';
 
-import "./fixed-filter-header.scss";
+import './fixed-filter-header.scss';
 import ProductFilterDrawer from './drawer/product-filter-drawer';
 
-
-
-const FixedFilterHeader = () => {
+const FixedFilterHeader = (props) => {
   const [top, setTop] = useState(0);
+
   return (
     <>
       <Affix offsetTop={top}>
         <div className="fixedHeaderArea" onClick={() => setTop(top)}>
-          <Link className="" to="/products">
-            All products         
+          <Link className="" to={`/${props.title}`}>
+            All products
           </Link>
           <ProductFilterDrawer />
         </div>
@@ -22,6 +21,5 @@ const FixedFilterHeader = () => {
     </>
   );
 };
-    
-    
+
 export default FixedFilterHeader;

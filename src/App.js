@@ -68,53 +68,52 @@ function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
-        <GlobalProvider>
-          <NavBar itemsInCart={itemsInCart} />
-          <Layout>
-            <main>
-              <Router primary={false}>
-                <Home data={productData} path="/" />
-                <SignIn path="/signin" />
-                <SignUp path="/signup" />
+        <NavBar itemsInCart={itemsInCart} />
+        <Layout>
+          <main>
+            <Router primary={false}>
+              <Home data={productData} path="/" />
+              <SignIn path="/signin" />
+              <SignUp path="/signup" />
 
-                <Product
-                  data={productData}
-                  handleAddToCartClick={handleAddToCartClick}
-                  path="/product/:id"
-                />
+              <Product
+                data={productData}
+                handleAddToCartClick={handleAddToCartClick}
+                path="/product/:id"
+              />
 
-                <Products
-                  data={productData}
-                  title={'All Products'}
-                  path="/products"
-                />
-                <ProductsVegan
-                  data={veganData}
-                  title={'Vegan'}
-                  path="/products-vegan"
-                />
-                <ProductsGluten
-                  data={glutenData}
-                  title={'Gluten Free'}
-                  path="/products-gluten-free"
-                />
+              <Products
+                data={productData}
+                title={'products'}
+                path="/products"
+              />
 
-                <CheckOut
-                  itemsInCart={itemsInCart}
-                  handleClearCartClick={handleClearCartClick}
-                  path="/checkout"
-                />
+              <ProductsVegan
+                data={veganData}
+                title={'products-vegan'}
+                path="/products-vegan"
+              />
+              <ProductsGluten
+                data={glutenData}
+                title={'products-gluten-free'}
+                path="/products-gluten-free"
+              />
 
-                <Success path="/success" />
+              <CheckOut
+                itemsInCart={itemsInCart}
+                handleClearCartClick={handleClearCartClick}
+                path="/checkout"
+              />
 
-                <Profile path="/profile" />
+              <Success path="/success" />
 
-                <NotFound default />
-              </Router>
-            </main>
-          </Layout>
-          <Footer />
-        </GlobalProvider>
+              <Profile path="/profile" />
+
+              <NotFound default />
+            </Router>
+          </main>
+        </Layout>
+        <Footer />
       </AuthProvider>
     </React.StrictMode>
   );
