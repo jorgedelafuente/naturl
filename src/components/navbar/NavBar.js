@@ -1,17 +1,17 @@
-import React, { useState, useContext } from 'react';
-import { Link } from '@reach/router';
+import React, { useState, useContext } from "react";
+import { Link } from "@reach/router";
 // import firebase from '../../firebase';
 // import { signInWithGoogle } from '../../firebase';
-import { Badge } from 'antd';
-import { Drawer } from 'antd';
+import { Badge } from "antd";
+import { Drawer } from "antd";
 import {
   MenuOutlined,
   ShoppingCartOutlined,
   UserOutlined,
-} from '@ant-design/icons';
-import { AuthContext } from '../../auth/Auth';
-import './NavBar.scss';
-import PropTypes from 'prop-types';
+} from "@ant-design/icons";
+import { AuthContext } from "../../auth/Auth";
+import "./NavBar.scss";
+import PropTypes from "prop-types";
 
 const NavBar = ({ itemsInCart }) => {
   const [visible, setVisible] = useState(false);
@@ -28,6 +28,8 @@ const NavBar = ({ itemsInCart }) => {
     0
   );
 
+  console.log("BADGE COUNT", badgeCount);
+
   return (
     <div className="navbar">
       <div>
@@ -35,7 +37,7 @@ const NavBar = ({ itemsInCart }) => {
           <Link to="/">NATURL</Link>
         </span>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+      <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
         <span className="navbar-links">
           {/* <Link to="/category"
           onClick={()=>filter("Vegan")}
@@ -54,7 +56,7 @@ const NavBar = ({ itemsInCart }) => {
         {currentUser ? (
           <span>
             <Link to="/profile">
-              <UserOutlined style={{ fontSize: '20px' }} />
+              <UserOutlined style={{ fontSize: "20px" }} />
             </Link>
           </span>
         ) : (
@@ -67,15 +69,15 @@ const NavBar = ({ itemsInCart }) => {
           <Link to="/checkout">
             <Badge
               count={badgeCount}
-              title={'Number of Cart Items'}
+              title={"Number of Cart Items"}
               offset={[0, 5]}
               style={{
-                backgroundColor: '#a1a1a1',
+                backgroundColor: "#a1a1a1",
                 maxWidth: 2,
-                color: '#000000',
+                color: "#000000",
               }}
             >
-              <ShoppingCartOutlined style={{ fontSize: '20px' }} />
+              <ShoppingCartOutlined style={{ fontSize: "20px" }} />
             </Badge>
           </Link>
         </span>

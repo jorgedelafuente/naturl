@@ -1,9 +1,8 @@
-import React from 'react';
-import ProductItem from './ProductItem';
-import './productItem.scss';
+import React from "react";
+import ProductItem from "./ProductItem";
+import "./productItem.scss";
 
 const Product = (props) => {
-  console.log(props);
   const foundItem = props.data.find((item) => item.id === parseInt(props.id));
   const handleAddToCartClick = props.handleAddToCartClick;
   return (
