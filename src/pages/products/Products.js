@@ -140,78 +140,7 @@ const Products = ({ data, title }) => {
         <h1>{title}</h1>
       </div>
 
-      <Affix offsetTop={top}>
-        <div className="fixedHeaderButton" onClick={() => setTop(top)}>
-          <div>
-            <Link to="/products">All products</Link>
-          </div>
-          <div className="filter-product-types-link">
-            <span
-              onClick={showDrawer}
-              style={{ fontSize: 18, cursor: 'pointer' }}
-            >
-              Filter <NodeExpandOutlined />
-            </span>
-          </div>
-
-          <Drawer
-            title="Filter"
-            placement="left"
-            closable={true}
-            onClose={onClose}
-            visible={visible}
-          >
-            {/* <ProductTypeTags /> */}
-
-            <div
-              className="drawer-product-type-title"
-              style={{ marginRight: 8 }}
-            >
-              <p>Product types:</p>
-            </div>
-
-            {/* PRODUCT_TYPE */}
-
-            <div className="drawer-product-type-tags">
-              {productTags.map((tag) => (
-                <CheckableTag
-                  className="producttype-tags"
-                  key={tag}
-                  checked={selectedTags.indexOf(tag) > -1}
-                  onChange={(checked) => handleChange(tag, checked)}
-                  onClick={onClose}
-                >
-                  {formatProductText(tag)}
-                </CheckableTag>
-              ))}
-            </div>
-
-            <br />
-
-            <div
-              className="drawer-product-type-title"
-              style={{ marginRight: 8 }}
-            >
-              <p>Brands:</p>
-            </div>
-            {/* BRANDS */}
-            <div className="drawer-product-type-tags">
-              {brandTags.map((tag) => (
-                <CheckableTag
-                  className="producttype-tags"
-                  key={tag}
-                  checked={selectedTags.indexOf(tag) > -1}
-                  onChange={(checked) => handleChange(tag, checked)}
-                >
-                  {formatBrandText(tag)}
-                </CheckableTag>
-              ))}
-            </div>
-            {/* <p className="products-drawer-price-filter">Price filter</p>
-            <Slider range defaultValue={[0, 50]} tipFormatter={formatter} /> */}
-          </Drawer>
-        </div>
-      </Affix>
+      <FixedFilterHeader title={props.title} />
 
       <div className="products-categories-container">
         {filtered(originalData).length > 0 ? (

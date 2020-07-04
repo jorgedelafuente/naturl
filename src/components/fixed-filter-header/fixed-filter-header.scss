@@ -1,0 +1,20 @@
+
+.fixedHeaderArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.fixedHeaderArea a {
+  font-size: 18px;
+  color: black;
+}
+.fixedHeaderArea a:hover {
+  color: #00677D;
+}

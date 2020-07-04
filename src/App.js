@@ -75,7 +75,7 @@ function App() {
     <React.StrictMode>
       <AuthProvider>
         <NavBar itemsInCart={itemsInCart} />
-        <main className="main-container">
+        <main>
           <Router primary={false}>
             <Home data={productData} path="/" />
             <SignIn path="/signin" />
@@ -87,15 +87,16 @@ function App() {
               path="/product/:id"
             />
 
-            <Products
-              data={productData}
-              title={'All Products'}
-              path="/products"
+            <Products data={productData} title={'products'} path="/products" />
+
+            <ProductsVegan
+              data={veganData}
+              title={'products-vegan'}
+              path="/products-vegan"
             />
-            <Products data={veganData} title={'Vegan'} path="/products-vegan" />
-            <Products
+            <ProductsGluten
               data={glutenData}
-              title={'Gluten Free'}
+              title={'products-gluten-free'}
               path="/products-gluten-free"
             />
 
