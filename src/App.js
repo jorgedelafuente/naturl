@@ -47,7 +47,13 @@ function App() {
     }
   }, []);
 
-  const handleAddToCartClick = (id) => {
+  useEffect(() => {
+    // update local storage with itemsInCart
+    let stringifiedCart = JSON.stringify(itemsInCart);
+    localStorage.setItem('cart', stringifiedCart);
+  }, [itemsInCart]);
+
+  const handleAddToCartClick = (id, itemQuantity) => {
     setItemsInCart((itemsInCart) => {
       const itemInCart = itemsInCart.find((item) => item.id === id);
 
@@ -55,18 +61,14 @@ function App() {
       if (itemInCart) {
         return itemsInCart.map((item) => {
           if (item.id !== id) return item;
-          return { ...itemInCart, quantity: item.quantity + 1 };
+          return { ...itemInCart, quantity: item.quantity + itemQuantity }; //item.quantity + 1
         });
       }
 
       // otherwise, add new item to cart
       const item = productData.find((item) => item.id === id);
-      return [...itemsInCart, { ...item, quantity: 1 }];
+      return [...itemsInCart, { ...item, quantity: itemQuantity }];
     });
-
-    // update local storage with itemsInCart
-    let stringifiedCart = JSON.stringify(itemsInCart);
-    localStorage.setItem('cart', stringifiedCart);
   };
 
   const handleRemoveItemFromCartClick = (id) => {
