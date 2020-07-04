@@ -69,6 +69,13 @@ function App() {
     localStorage.setItem('cart', stringifiedCart);
   };
 
+  const handleRemoveItemFromCartClick = (id) => {
+    setItemsInCart((itemsInCart) => {
+      let filteredItemsInCart = itemsInCart.filter((item) => item.id !== id);
+      return filteredItemsInCart;
+    });
+  };
+
   const handleClearCartClick = () => {
     setItemsInCart([]);
     localStorage.removeItem('cart');
@@ -110,6 +117,7 @@ function App() {
               <CheckOut
                 itemsInCart={itemsInCart}
                 handleClearCartClick={handleClearCartClick}
+                handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
                 path="/checkout"
               />
 

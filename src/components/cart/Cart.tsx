@@ -3,7 +3,13 @@ import CartItem from '../cartItem/CartItem';
 import './Cart.scss';
 import { Link } from '@reach/router';
 
-export default function Cart({ handleClearCartClick, onCheckoutClick, itemsInCart, totalCost }) {
+export default function Cart({
+  handleClearCartClick,
+  handleRemoveItemFromCartClick,
+  onCheckoutClick,
+  itemsInCart,
+  totalCost,
+}) {
   return (
     <div className="Cart">
       <h2 className="Cart-title">Your shopping cart</h2>
@@ -15,6 +21,9 @@ export default function Cart({ handleClearCartClick, onCheckoutClick, itemsInCar
               name={item.name}
               cost={item.price * item.quantity}
               quantity={item.quantity}
+              onRemoveItemFromCartClick={() =>
+                handleRemoveItemFromCartClick(item.id)
+              }
             />
           ))}
           <div className="Cart-total-cost">

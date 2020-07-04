@@ -18,3 +18,12 @@
 .CartItem-quantity {
   padding: 0 1rem;
 }
+
+.CartItem .CartItem-button-remove {
+  opacity: 0;
+}
+
+.CartItem:hover .CartItem-button-remove {
+  opacity: 1;
+  cursor: pointer;
+}
