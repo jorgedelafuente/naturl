@@ -8,7 +8,7 @@ import { Affix } from 'antd';
 import { Link } from '@reach/router';
 import './filters.scss';
 // import ProductDrawerFilter from '../../components/fixed-filter-header/drawer/product-filter-drawer';
-import { NodeExpandOutlined, DatabaseOutlined } from '@ant-design/icons';
+import { NodeExpandOutlined } from '@ant-design/icons';
 // import { Slider } from 'antd';
 import { Drawer } from 'antd';
 import { Tag } from 'antd';
@@ -28,28 +28,27 @@ const productTags = [
 ];
 
 const brandTags = [
-  'Mineral fusion',
-  'Marcelle',
-  'Cargo cosmetics',
-  'Pure anada',
-  'W3llpeople',
-  'Rejuva minerals',
-  'Penny lane organics',
-  'Marienatie',
-  null,
-  'Physicians formula',
-  'Sante',
-  'Pacifica',
-  'Zorah',
-  'Moov',
-  'Colourpop',
-  'Alva',
-  'Milani',
-  'E.l.f.',
-  'Dr. hauschka',
-  'Suncoat',
-  'Misa',
-  'Butter london',
+  'mineral fusion',
+  'marcelle',
+  'cargo cosmetics',
+  'pure anada',
+  'w3llpeople',
+  'rejuva minerals',
+  'marienatie',
+  'physicians formula',
+  'sante',
+  'pacifica',
+  'zorah',
+  'moov',
+  'colourpop',
+  'penny lane organics',
+  'alva',
+  'milani',
+  'e.l.f.',
+  'dr. hauschka',
+  'suncoat',
+  'misa',
+  'butter london',
 ];
 
 const Products = ({ data }) => {
@@ -66,8 +65,16 @@ const Products = ({ data }) => {
     setOriginalData([...data]);
   }, [data]);
 
-  const formatText = (tag) => {
+  const formatProductText = (tag) => {
     let wordsArr = tag.split('_');
+    for (let i = 0; i < wordsArr.length; i++) {
+      wordsArr[i] =
+        wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
+    }
+    return wordsArr.join(' ');
+  };
+  const formatBrandText = (tag) => {
+    let wordsArr = tag.split(' ');
     for (let i = 0; i < wordsArr.length; i++) {
       wordsArr[i] =
         wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
@@ -115,6 +122,11 @@ const Products = ({ data }) => {
     // }
 
     if (selectedTags.length > 0) {
+      let brandArr = [];
+      data.forEach((item) => {
+        brandArr.push(item.brand);
+      });
+      console.log([...new Set(brandArr)]);
       let tempArr = [];
       for (let i = 0; i < selectedTags.length; i++) {
         console.log(selectedTags[i]);
@@ -171,7 +183,7 @@ const Products = ({ data }) => {
           <Drawer
             title="Filter"
             placement="left"
-            closable={false}
+            closable={true}
             onClose={onClose}
             visible={visible}
           >
@@ -183,6 +195,8 @@ const Products = ({ data }) => {
             >
               <p>Product types:</p>
             </div>
+
+            {/* PRODUCT_TYPE */}
 
             <div className="drawer-product-type-tags">
               {productTags.map((tag) => (
@@ -198,7 +212,7 @@ const Products = ({ data }) => {
                   {/* {tag.replace(/_/g, ' ')}
                    */}
 
-                  {formatText(tag)}
+                  {formatProductText(tag)}
                 </CheckableTag>
               ))}
             </div>
@@ -211,7 +225,7 @@ const Products = ({ data }) => {
             >
               <p>Brands:</p>
             </div>
-
+            {/* BRANDS */}
             <div className="drawer-product-type-tags">
               {brandTags.map((tag) => (
                 <CheckableTag
@@ -220,7 +234,7 @@ const Products = ({ data }) => {
                   checked={selectedTags.indexOf(tag) > -1}
                   onChange={(checked) => this.handleChange(tag, checked)}
                 >
-                  {tag}
+                  {formatBrandText(tag)}
                 </CheckableTag>
               ))}
             </div>
