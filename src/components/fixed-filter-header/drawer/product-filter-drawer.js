@@ -28,9 +28,6 @@ function ProductDrawerFilter() {
         <span onClick={showDrawer} style={{ fontSize: 18, cursor: 'pointer' }}>
           Filter <NodeExpandOutlined />
         </span>
-        {
-          // eslint-disable-next-line
-        }
       </div>
 
       <Drawer
