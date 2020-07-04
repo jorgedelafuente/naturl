@@ -19,7 +19,7 @@
 }
 
 .Right-Cards {
-  width: 60%;
+  width: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -79,6 +79,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 5%;
+  height: 300px;
 }
 
 .News_div {
@@ -122,15 +123,15 @@
 }
 .About__us {
   text-align: center;
-  text-decoration: underline;
-  font-family: times, Times New Roman, times-roman, georgia, serif;
-  color: black;
-  margin: 0;
-  padding: 0px 0px 6px 0px;
-  font-size: 51px;
-  line-height: 44px;
-
-  font-weight: bold;
+  // text-decoration: underline;
+  // font-family: times, Times New Roman, times-roman, georgia, serif;
+  // color: black;
+  // margin: 0;
+  // padding: 0px 0px 6px 0px;
+  margin-top: 100px;
+  // font-size: 51px;
+  // line-height: 44px;
+  // font-weight: bold;
 }
 
 .About__text:first-letter {
@@ -150,6 +151,7 @@
   width: 80%;
   font-style: italic;
   font-variant: small-caps;
+  margin-bottom: 100px;
 }
 
 .Main_Logo {
@@ -163,11 +165,12 @@
   letter-spacing: 10px;
 }
 
-.Home__Hr {
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-}
+// .Home__Hr {
+//   border-style: solid;
+//   border-color: black;
+//   border-width: 2px;
+// }
+
 .ant-carousel .slick-slide {
   text-align: center;
   height: 80vh;
@@ -249,6 +252,12 @@
 // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
 // }
 
+.home-page-featured-products {
+  margin-bottom: 50px;
+  // background-color: red;
+  margin-top: 50px;
+}
+
 .home-featureproducts-carousal-image-container img {
   background-color: white;
   width: 300px;
@@ -258,5 +267,5 @@
 }
 
 .home-featuredproducts-header {
-  margin-top: 150px;
+  margin-top: 50px;
 }

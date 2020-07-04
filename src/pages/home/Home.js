@@ -3,19 +3,21 @@ import { Link } from '@reach/router';
 // import { StarOutlined, StarFilled } from '@ant-design/icons';
 // import { Button } from 'antd';
 // import { Row, Col } from 'antd';
-import 'antd/dist/antd.css';
 // import { Card } from 'antd';
-import './Home.scss';
-import CustomChatbot from '../../components/chatbot/Chatbot';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
-import { Carousel } from 'antd';
+// const { Meta } = Card;
 
+import 'antd/dist/antd.css';
+import './Home.scss';
+
+import { Carousel } from 'antd';
+import CustomChatbot from '../../components/chatbot/Chatbot';
 import ProductCard from '../../components/product-card/Product-card';
 
 function onChange(a, b, c) {
   console.log(a, b, c);
 }
-// const { Meta } = Card;
+
 function HomePage(props) {
   return (
     <div className="Home-Main">
@@ -52,9 +54,10 @@ function HomePage(props) {
         </div>
       </Carousel>
 
-      <hr className="Home__Hr" />
+      {/* <hr className="Home__Hr" /> */}
       {/* END OF CAROSEL */}
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+      {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button
           style={{
             cursor: 'pointer',
@@ -67,80 +70,17 @@ function HomePage(props) {
             outline: 'none',
           }}
         >
-          <Link style={{ color: 'white' }} to="/products">
-            Shop Now
-          </Link>
+          <Link to="/products">Shop Now</Link>
         </button>
-      </div>
+      </div> */}
       <h2
-        className="home-featuredproducts-header"
+        className="home-page-featured-products"
         style={{ textAlign: 'center', fontSize: '35px' }}
       >
         Featured Products
       </h2>
-
-      <div className="category__Main_feature carousal-column">
-        {props.data.slice(45, 48).map((data, index) => (
-          <div style={{ width: '300px' }} key={index}>
-            {' '}
-            <Link
-              to={`/product/${data.id}`}
-              className="feature-item"
-              key={index}
-            >
-              <Carousel autoplay>
-                <div className="home-featureproducts-carousal-image-container">
-                  <img
-                    src={data.api_featured_image}
-                    // className="mx-auto"
-                    // width="100%"
-                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
-                    // height="400px"
-                    alt="carousel1"
-                  />
-                </div>
-                <div className="home-featureproducts-carousal-image-container">
-                  <img
-                    src={data.api_featured_image}
-                    // className="mx-auto"
-                    // width="100%"
-                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
-                    // height="400px"
-                    alt="carousel2"
-                  />
-                </div>
-              </Carousel>
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      <CustomChatbot />
-      <hr />
-      <div className="News">
-        <div className="News_div">
-          <h1>Subscribe to our newsletter!</h1>
-          <p className="News__Text">
-            Signup for our weekly newsletter to get the latset news, updates and
-            amazing offers delivered directly to your inbox.
-          </p>
-        </div>
-        <form className="NewsLetterInput">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="Email_input"
-            placeholder="Email Address"
-          />
-          <button className="Email-button" type="submit">
-            Subscribe
-          </button>
-        </form>
-      </div>
-      <hr />
       <div className="category__Main">
-        <div className="Left-Cards">
+        {/* <div className="Left-Cards">
           {props.data.slice(6, 7).map((data, index) => {
             return (
               <ProductCard
@@ -173,9 +113,9 @@ function HomePage(props) {
               // </Link>
             );
           })}
-        </div>
+        </div> */}
         <div className="Right-Cards">
-          {props.data.slice(7, 10).map((data, index) => {
+          {props.data.slice(102, 110).map((data, index) => {
             return (
               <>
                 <ProductCard
@@ -211,7 +151,52 @@ function HomePage(props) {
         </div>
       </div>
 
-      <hr className="Home__Hr" />
+      <h2
+        className="home-featuredproducts-header"
+        style={{ textAlign: 'center', fontSize: '35px' }}
+      >
+        New Arrivals
+      </h2>
+
+      <div className="category__Main_feature carousal-column">
+        {props.data.slice(0, 4).map((data, index) => (
+          <div style={{ width: '300px' }} key={index}>
+            {' '}
+            <Link
+              to={`/product/${data.id}`}
+              className="feature-item"
+              key={index}
+            >
+              <Carousel autoplay>
+                <div className="home-featureproducts-carousal-image-container">
+                  <img
+                    src={data.api_featured_image}
+                    // className="mx-auto"
+                    // width="100%"
+                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
+                    // height="400px"
+                    alt="carousel1"
+                  />
+                </div>
+                <div className="home-featureproducts-carousal-image-container">
+                  <img
+                    src={data.api_featured_image}
+                    // className="mx-auto"
+                    // width="100%"
+                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
+                    // height="400px"
+                    alt="carousel2"
+                  />
+                </div>
+              </Carousel>
+            </Link>
+          </div>
+        ))}
+      </div>
+
+      <CustomChatbot />
+
+      {/* <hr className="Home__Hr" /> */}
       <h1 className="About__us">About Us</h1>
       <p className="About__text">
         We are a team with high criteria. We dedicate ourselves fully each day.
@@ -221,6 +206,28 @@ function HomePage(props) {
         body, mind and emotions.
       </p>
       <hr className="Home__Hr" />
+
+      <div className="News">
+        <div className="News_div">
+          <h1>Subscribe to our newsletter!</h1>
+          <p className="News__Text">
+            Signup for our weekly newsletter to get the latset news, updates and
+            amazing offers delivered directly to your inbox.
+          </p>
+        </div>
+        <form className="NewsLetterInput">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="Email_input"
+            placeholder="Email Address"
+          />
+          <button className="Email-button" type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
 
       {/* ------------------footer---------------------------------- */}
     </div>
