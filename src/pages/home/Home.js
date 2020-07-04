@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from '@reach/router';
-import { StarOutlined, StarFilled } from '@ant-design/icons';
+// import { StarOutlined, StarFilled } from '@ant-design/icons';
 // import { Button } from 'antd';
 // import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
-import { Card } from 'antd';
+// import { Card } from 'antd';
 import './Home.scss';
 import CustomChatbot from '../../components/chatbot/Chatbot';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
@@ -15,7 +15,7 @@ import ProductCard from '../../components/product-card/Product-card';
 function onChange(a, b, c) {
   console.log(a, b, c);
 }
-const { Meta } = Card;
+// const { Meta } = Card;
 function HomePage(props) {
   return (
     <div className="Home-Main">
