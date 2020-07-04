@@ -10,7 +10,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { AuthContext } from '../../auth/Auth';
-import './NavBar.scss';
+import './navBar.scss';
 import PropTypes from 'prop-types';
 
 const NavBar = ({ itemsInCart }) => {
