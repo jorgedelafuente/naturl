@@ -72,7 +72,10 @@ function HomePage(props) {
           </Link>
         </button>
       </div>
-      <h2 style={{ textAlign: 'center', fontSize: '35px' }}>
+      <h2
+        className="home-featuredproducts-header"
+        style={{ textAlign: 'center', fontSize: '35px' }}
+      >
         Featured Products
       </h2>
 
