@@ -9,6 +9,8 @@ import { signOut, getUserDocument } from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
 // import { FormButton } from '../../../components/common/button/FormButton';
 import { Alert } from "antd";
+import { Spin } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 // import { Tabs } from 'antd';
 // const { TabPane } = Tabs;
 import "../FormContainer.scss";
@@ -41,12 +43,25 @@ const Profile = () => {
   //   console.log(key);
   // }
 
+  const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+
   return (
     <div className="form-container">
       <div className="Logo">
         <h3>NATURL</h3>
       </div>
-      <div>{currentUser && <h2>Welcome Back {displayName}</h2>}</div>
+      <div>
+        <h2>
+          Welcome Back{" "}
+          {currentUser ? (
+            <>{displayName}</>
+          ) : (
+            <>
+              <Spin indicator={antIcon} />
+            </>
+          )}
+        </h2>
+      </div>
 
       <div>
         <h4>Wishlist</h4>

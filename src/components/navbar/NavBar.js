@@ -28,7 +28,7 @@ const NavBar = ({ itemsInCart }) => {
     0
   );
 
-  console.log("BADGE COUNT", badgeCount);
+  // console.log("BADGE COUNT", badgeCount);
 
   return (
     <div className="navbar">

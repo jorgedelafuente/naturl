@@ -1,7 +1,7 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
-import 'firebase/firebase-storage';
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+import "firebase/firebase-storage";
 
 const config = {
   apiKey: process.env.REACT_APP_FIREBASE_KEY,
@@ -19,7 +19,7 @@ export const auth = firebase.auth();
 export const storage = firebase.storage();
 
 export const provider = new firebase.auth.GoogleAuthProvider();
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+// export const signInWithGoogle = () => auth.signInWithPopup(provider);
 export const signOut = () => auth.signOut();
 
 // firestore.settings({ timestampsInSnapshots: true });
@@ -28,18 +28,18 @@ window.firebase = firebase;
 
 export const createUserProfileDocument = async (user, additionalData) => {
   if (!user) return;
-  console.log(user);
+  // console.log(user);
 
   const userRef = firestore.doc(`publicProfiles/${user.uid}`);
 
-  console.log(userRef);
+  // console.log(userRef);
   const snapshot = await userRef.get();
 
-  console.log(snapshot);
+  // console.log(snapshot);
 
   if (!snapshot.exist) {
     const { displayName, email } = user;
-    let photoUrl = 'testhello';
+    let photoUrl = "testhello";
     const createdAt = new Date();
     try {
       await userRef.set({
@@ -50,7 +50,7 @@ export const createUserProfileDocument = async (user, additionalData) => {
         ...additionalData,
       });
     } catch (error) {
-      console.error('Error creating user', error.message);
+      console.error("Error creating user", error.message);
     }
   }
   return getUserDocument(user.uid);
@@ -60,7 +60,7 @@ export const getUserDocument = async (uid) => {
   if (!uid) return null;
   try {
     const userDocument = await firestore
-      .collection('publicProfiles')
+      .collection("publicProfiles")
       .doc(uid)
       .get();
     return {
@@ -68,7 +68,7 @@ export const getUserDocument = async (uid) => {
       ...userDocument.data(),
     };
   } catch (error) {
-    console.error('Error fetching user', error.message);
+    console.error("Error fetching user", error.message);
   }
 
   // return getUserDocument(user.uid);
