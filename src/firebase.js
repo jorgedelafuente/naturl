@@ -18,7 +18,7 @@ export const firestore = firebase.firestore();
 export const auth = firebase.auth();
 export const storage = firebase.storage();
 
-export const provider = new firebase.auth.GoogleAuthProvider();
+// export const provider = new firebase.auth.GoogleAuthProvider();
 // export const signInWithGoogle = () => auth.signInWithPopup(provider);
 export const signOut = () => auth.signOut();
 
@@ -26,28 +26,22 @@ export const signOut = () => auth.signOut();
 
 window.firebase = firebase;
 
-export const createUserProfileDocument = async (user, additionalData) => {
+export const createUserProfileDocument = async (user, displayName) => {
+  console.log("test3", user, displayName);
   if (!user) return;
-  // console.log(user);
-
   const userRef = firestore.doc(`publicProfiles/${user.uid}`);
-
-  // console.log(userRef);
   const snapshot = await userRef.get();
 
-  // console.log(snapshot);
-
   if (!snapshot.exist) {
-    const { displayName, email } = user;
-    let photoUrl = "testhello";
+    const { email } = user;
     const createdAt = new Date();
     try {
       await userRef.set({
         displayName,
         email,
-        photoUrl,
         createdAt,
-        ...additionalData,
+        wishList: [],
+        purchaseHistory: [],
       });
     } catch (error) {
       console.error("Error creating user", error.message);
@@ -84,3 +78,33 @@ export const getUserDocument = async (uid) => {
 // };
 
 export default firebase;
+
+// export const createUserProfileDocument = async (user, additionalData) => {
+//   if (!user) return;
+//   // console.log(user);
+
+//   const userRef = firestore.doc(`publicProfiles/${user.uid}`);
+
+//   // console.log(userRef);
+//   const snapshot = await userRef.get();
+
+//   console.log("snapshot", snapshot);
+
+//   if (!snapshot.exist) {
+//     const { displayName, email } = user;
+
+//     const createdAt = new Date();
+//     try {
+//       await userRef.set({
+//         displayName,
+//         email,
+
+//         createdAt,
+//         ...additionalData,
+//       });
+//     } catch (error) {
+//       console.error("Error creating user", error.message);
+//     }
+//   }
+//   return getUserDocument(user.uid);
+// };

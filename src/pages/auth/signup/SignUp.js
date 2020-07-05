@@ -5,49 +5,89 @@ import "../FormContainer.scss";
 import { Alert } from "antd";
 
 const SignUp = () => {
-  const [errorAlert, setErrorAlert] = useState("none");
+  const [passwordErrorAlert, setPasswordErrorAlert] = useState("none");
+  const [serverErrorAlert, setServerErrorAlert] = useState("none");
   const [successAlert, setSuccessAlert] = useState("none");
 
   const handleSignUp = useCallback(async (event) => {
     event.preventDefault();
     const { email, password, password2, displayName } = event.target.elements;
 
+    // console.log(displayName.value, email.value);
+
     if (password.value === password2.value) {
-      // console.log('passwords match');
+      setSuccessAlert("block");
+      setTimeout(() => {
+        setSuccessAlert("none");
+      }, 3000);
+
       try {
-        const { user } = await firebase.auth.createUserWithEmailAndPassword(
-          email,
-          password
-        );
+        const { user } = await firebase
+          .auth()
+          .createUserWithEmailAndPassword(email.value, password.value);
         console.log(user);
-        const consoleUser = await createUserProfileDocument(user, {
-          displayName,
-        });
+        const consoleUser = await createUserProfileDocument(
+          user,
+          displayName.value
+        );
         console.log(consoleUser);
+        navigate(`/`);
+        // await firebase.auth
+        //   .createUserWithEmailAndPassword(email.value, password.value)
+        //   .then((user) => {
+        //     console.log("check12", user);
+        //   });
+        // console.log("user", user);
+        // const consoleUser = await createUserProfileDocument(
+        //   user,
+        //   displayName.value
+        // );
+        // const consoleUser = await createUserProfileDocument(user, {
+        //   displayName: displayName.value,
+        // });
+        // console.log(consoleUser);
+        //BREAK
         // await firebase
         //   .auth()
         //   .createUserWithEmailAndPassword(email.value, password.value);
         // navigate(`/`);
       } catch (error) {
-        alert(error);
+        // console.error(error);
+        setServerErrorAlert("block");
+        setTimeout(() => {
+          setServerErrorAlert("none");
+        }, 3000);
       }
     } else {
-      alert("passwords do not match");
+      setPasswordErrorAlert("block");
+      setTimeout(() => {
+        setPasswordErrorAlert("none");
+      }, 3000);
     }
   }, []);
 
-  // const showError = () => {
-  //   setErrorAlert("block");
-  //   setTimeout(() => {
-  //     setErrorAlert("none");
-  //   }, 3000);
-  // };
-  // const showSuccess = () => {
-  //   setSuccessAlert("block");
-  //   setTimeout(() => {
-  //     setSuccessAlert("none");
-  //     navigate(`/`);
-  //   }, 2000);
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+
+  //   const { email, password, password2, displayName } = event.target.elements;
+
+  //   console.log(displayName.value, email.value);
+
+  //   // const { email, password, displayName } = this.state;
+
+  //   try {
+  //     const { user } = await firebase
+  //       .auth()
+  //       .createUserWithEmailAndPassword(email, password);
+  //     console.log(user);
+
+  //     // const consoleUser = await createUserProfileDocument(user, {
+  //     //   displayName,
+  //     // });
+  //     // console.log(consoleUser);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
   // };
 
   return (
@@ -64,41 +104,61 @@ const SignUp = () => {
           showIcon={true}
           closable
         />
+
         <Alert
-          message="Credentials Incorrect"
+          message="Server Error"
           type="error"
-          style={{ display: errorAlert }}
+          style={{ display: serverErrorAlert }}
+          showIcon={true}
+          closable
+        />
+
+        <Alert
+          message="Passwords Do not Match"
+          type="error"
+          style={{ display: passwordErrorAlert }}
           showIcon={true}
           closable
         />
       </div>
 
       <form onSubmit={handleSignUp}>
+        {/* <form onSubmit={handleSubmit}> */}
         <div className="InputGroup">
           <label>
             <span>Name</span>
-            <input name="displayName" type="text" placeholder="Name" />
+            <input required name="displayName" type="text" placeholder="Name" />
           </label>
         </div>
 
         <div className="InputGroup">
           <label>
             <span>Email</span>
-            <input name="email" type="email" placeholder="Email" />
+            <input required name="email" type="email" placeholder="Email" />
           </label>
         </div>
 
         <div className="InputGroup">
           <label>
             <span>Password</span>
-            <input name="password" type="password" placeholder="Password" />
+            <input
+              required
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
           </label>
         </div>
 
         <div className="InputGroup">
           <label>
             <span>Re-Enter Password</span>
-            <input name="password2" type="password" placeholder="Password" />
+            <input
+              required
+              name="password2"
+              type="password"
+              placeholder="Password"
+            />
           </label>
         </div>
 

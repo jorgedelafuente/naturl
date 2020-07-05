@@ -74,13 +74,18 @@ const Login = () => {
         <div className="InputGroup">
           <label>
             <span>Email</span>
-            <input name="email" type="email" placeholder="Email" />
+            <input required name="email" type="email" placeholder="Email" />
           </label>
         </div>
         <div className="InputGroup">
           <label>
             <span>Password</span>
-            <input name="password" type="password" placeholder="Password" />
+            <input
+              required
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
           </label>
         </div>
         <button className="form-button" type="submit">
