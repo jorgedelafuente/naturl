@@ -65,7 +65,7 @@ const NavBar = ({ itemsInCart }) => {
         {currentUser ? (
           <span>
             <Link to="/profile">
-              <UserOutlined style={{ fontSize: '20px' }} />
+              <UserOutlined style={{ fontSize: "20px" }} />
             </Link>
           </span>
         ) : (

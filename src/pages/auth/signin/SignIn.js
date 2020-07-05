@@ -1,9 +1,9 @@
-import React, { useCallback, useContext } from 'react';
-import firebase from '../../../firebase';
-import { AuthContext } from '../../../auth/Auth';
-import { navigate, Link } from '@reach/router';
+import React, { useCallback, useContext } from "react";
+import firebase from "../../../firebase";
+import { AuthContext } from "../../../auth/Auth";
+import { navigate, Link } from "@reach/router";
 // import { FormButton } from '../../../components/common/button/FormButton';
-import '../FormContainer.scss';
+import "../FormContainer.scss";
 
 const Login = () => {
   const handleLogin = useCallback(async (event) => {

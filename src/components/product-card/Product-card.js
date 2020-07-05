@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from '@reach/router';
-import { Card } from 'antd';
-import Title from './product-card-properties/card-title';
-import 'antd/dist/antd.css';
-import './product-card.scss';
+import React from "react";
+import { Link } from "@reach/router";
+import { Card } from "antd";
+import Title from "./product-card-properties/card-title";
+import "antd/dist/antd.css";
+import "./product-card.scss";
 
 function ProductCard(props) {
   const { Meta } = Card;
