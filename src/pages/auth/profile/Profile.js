@@ -7,16 +7,15 @@ import React, { useContext, useState } from "react";
 // } from '../../firebase';
 import { signOut, getUserDocument } from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
-// import { FormButton } from '../../../components/common/button/FormButton';
+import { navigate } from "@reach/router";
 import { Alert } from "antd";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-// import { Tabs } from 'antd';
-// const { TabPane } = Tabs;
 import "../FormContainer.scss";
 
 const Profile = () => {
   const [displayName, setDisplayName] = useState("");
+  const [spinner, setSpinner] = useState(true);
   const [displayAlert, setDisplayAlert] = useState("none");
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
@@ -27,6 +26,7 @@ const Profile = () => {
     console.log(currentUser.id);
     Promise.resolve(getUserDocument(currentUser.uid)).then((profile) => {
       setDisplayName(profile.displayName);
+      setSpinner(false);
     });
   }
 
@@ -36,7 +36,13 @@ const Profile = () => {
 
   const handleSignOut = () => {
     setDisplayAlert("block");
+
     signOut();
+
+    setTimeout(() => {
+      navigate(`/`);
+      setDisplayAlert("none");
+    }, 2000);
   };
 
   // function callback(key) {
@@ -50,26 +56,43 @@ const Profile = () => {
       <div className="Logo">
         <h3>NATURL</h3>
       </div>
-      <div>
-        <h2>
-          Welcome Back{" "}
-          {currentUser ? (
-            <>{displayName}</>
-          ) : (
-            <>
-              <Spin indicator={antIcon} />
-            </>
-          )}
-        </h2>
+
+      <div className="form-alerts">
+        <Alert
+          banner
+          message="Sign Out Successful"
+          type="success"
+          showIcon={true}
+          closable
+          style={{ display: displayAlert }}
+        />
       </div>
 
-      <div>
-        <h4>Wishlist</h4>
-      </div>
+      {currentUser && (
+        <>
+          <div>
+            <h2>
+              Welcome Back <>{displayName}</>
+            </h2>
+          </div>
 
-      <div>
-        <h4>Purchase History</h4>
-      </div>
+          <div>
+            <h4>Wishlist</h4>
+          </div>
+
+          <div>
+            <h4>Purchase History</h4>
+          </div>
+        </>
+      )}
+
+      {spinner && (
+        <>
+          <div className="form-spinner">
+            <Spin indicator={antIcon} />
+          </div>
+        </>
+      )}
 
       {/* <form onSubmit={handleUpdate}>
         <div className="InputGroup">
@@ -99,25 +122,6 @@ const Profile = () => {
       <button className="form-button" onClick={handleSignOut}>
         Sign out
       </button>
-      <Alert
-        banner
-        message="Sign Out Successful"
-        type="success"
-        showIcon={true}
-        closable
-        style={{ display: displayAlert }}
-      />
-      {/* <Tabs defaultActiveKey="1" onChange={callback}>
-        <TabPane tab="Tab 1" key="1">
-          Content of Tab Pane 1
-        </TabPane>
-        <TabPane tab="Tab 2" key="2">
-          Content of Tab Pane 2
-        </TabPane>
-        <TabPane tab="Tab 3" key="3">
-          Content of Tab Pane 3
-        </TabPane>
-      </Tabs> */}
     </div>
   );
 };

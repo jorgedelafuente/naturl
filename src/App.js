@@ -117,7 +117,7 @@ function App() {
 
             <Success path="/success" />
 
-            <Profile path="/profile" />
+            <Profile data={productData} path="/profile" />
 
             <NotFound default />
           </Router>
