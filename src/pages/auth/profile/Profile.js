@@ -67,6 +67,10 @@ const Profile = () => {
         <h4>Wishlist</h4>
       </div>
 
+      <div>
+        <h4>Purchase History</h4>
+      </div>
+
       {/* <form onSubmit={handleUpdate}>
         <div className="InputGroup">
           <label>
