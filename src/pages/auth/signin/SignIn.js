@@ -42,7 +42,7 @@ const Login = () => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    console.log(currentUser);
+    console.log(currentUser.uid);
   }
 
   return (

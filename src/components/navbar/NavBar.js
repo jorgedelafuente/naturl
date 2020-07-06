@@ -2,8 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "@reach/router";
 // import firebase from '../../firebase';
 // import { signInWithGoogle } from '../../firebase';
-import { Badge } from "antd";
-import { Drawer } from "antd";
+import { Badge, Drawer } from "antd";
 import {
   MenuOutlined,
   ShoppingCartOutlined,

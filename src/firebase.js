@@ -22,8 +22,6 @@ export const storage = firebase.storage();
 // export const signInWithGoogle = () => auth.signInWithPopup(provider);
 export const signOut = () => auth.signOut();
 
-// firestore.settings({ timestampsInSnapshots: true });
-
 window.firebase = firebase;
 
 export const createUserProfileDocument = async (user, displayName) => {
@@ -64,18 +62,43 @@ export const getUserDocument = async (uid) => {
   } catch (error) {
     console.error("Error fetching user", error.message);
   }
-
-  // return getUserDocument(user.uid);
 };
 
-// export const getUserDocument = async (uid) => {
-//   if (!uid) return null;
-//   try {
-//     return firestore.collection('users').doc(uid);
-//   } catch (error) {
-//     console.error('Error fetching user', error.message);
-//   }
-// };
+export const addWishList = async (uid, itemId) => {
+  if (!uid) return;
+  const wishListRef = firestore.doc(`publicProfiles/${uid}`);
+  const snapshot = await wishListRef.get();
+
+  if (!snapshot.exist) {
+    try {
+      await wishListRef.update({
+        wishList: firebase.firestore.FieldValue.arrayUnion(itemId),
+      });
+    } catch (error) {
+      console.error("Error creating user", error.message);
+    }
+  }
+
+  return getUserDocument(uid);
+};
+
+export const removeWishList = async (uid, itemId) => {
+  if (!uid) return;
+  const wishListRef = firestore.doc(`publicProfiles/${uid}`);
+  const snapshot = await wishListRef.get();
+
+  if (!snapshot.exist) {
+    try {
+      await wishListRef.update({
+        wishList: firebase.firestore.FieldValue.arrayRemove(itemId),
+      });
+    } catch (error) {
+      console.error("Error creating user", error.message);
+    }
+  }
+
+  return getUserDocument(uid);
+};
 
 export default firebase;
 

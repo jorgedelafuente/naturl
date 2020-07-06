@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Router } from "@reach/router";
 import { AuthProvider } from "./auth/Auth";
 import ApiClient from "./services/ApiClient";
@@ -21,6 +21,7 @@ function App() {
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
+  const [userProfile, setUserProfile] = useState({});
 
   useEffect(() => {
     ApiClient.getData().then((data) => {
@@ -80,6 +81,8 @@ function App() {
     localStorage.removeItem("cart");
   };
 
+  console.log(userProfile);
+
   return (
     <React.StrictMode>
       <AuthProvider>
@@ -89,6 +92,11 @@ function App() {
             <Home data={productData} path="/" />
             <SignIn path="/signin" />
             <SignUp path="/signup" />
+            <Profile
+              setUserProfile={setUserProfile}
+              data={productData}
+              path="/profile"
+            />
 
             <Product
               data={productData}
@@ -116,8 +124,6 @@ function App() {
             />
 
             <Success path="/success" />
-
-            <Profile data={productData} path="/profile" />
 
             <NotFound default />
           </Router>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
 // import { StarOutlined, StarFilled } from '@ant-design/icons';
 // import { Button } from 'antd';
 // import { Row, Col } from 'antd';
@@ -7,15 +7,15 @@ import { Link } from '@reach/router';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 // const { Meta } = Card;
 
-import 'antd/dist/antd.css';
-import './Home.scss';
+import "antd/dist/antd.css";
+import "./Home.scss";
 
-import { Carousel } from 'antd';
-import CustomChatbot from '../../components/chatbot/Chatbot';
-import ProductCard from '../../components/product-card/Product-card';
+import { Carousel } from "antd";
+import CustomChatbot from "../../components/chatbot/Chatbot";
+import ProductCard from "../../components/product-card/Product-card";
 
 function onChange(a, b, c) {
-  console.log(a, b, c);
+  // console.log(a, b, c);
 }
 
 function HomePage(props) {
@@ -26,7 +26,7 @@ function HomePage(props) {
       <Carousel autoplay afterChange={onChange}>
         <div className="HeroCarouselImage">
           <div className="Carousel_Text">
-            <h2 style={{ color: 'white' }}>Naturl Los Angeles</h2>
+            <h2 style={{ color: "white" }}>Naturl Los Angeles</h2>
             <p>
               “My dad used to say makeup was a shallow girl's sport, but it's
               not. It's armor.” ― Courtney Summers
@@ -35,7 +35,7 @@ function HomePage(props) {
         </div>
         <div className="HeroCarouselImage HeroCarouselImage1">
           <div className="Carousel_Text">
-            <h2 style={{ color: 'white' }}>Naturl Paris</h2>
+            <h2 style={{ color: "white" }}>Naturl Paris</h2>
             <p>
               “Beneath the makeup and behind the smile I am just a girl who
               wishes for the world.” ― Marilyn Monroe
@@ -45,7 +45,7 @@ function HomePage(props) {
 
         <div className="HeroCarouselImage HeroCarouselImage2">
           <div className="Carousel_Text">
-            <h2 style={{ color: 'white' }}>Naturl Global</h2>
+            <h2 style={{ color: "white" }}>Naturl Global</h2>
             <p>
               “Beauty, to me, is about being comfortable in your own skin. That,
               or a kick-ass red lipstick.” ― Gwyneth Paltrow
@@ -75,7 +75,7 @@ function HomePage(props) {
       </div> */}
       <h2
         className="home-page-featured-products"
-        style={{ textAlign: 'center', fontSize: '35px' }}
+        style={{ textAlign: "center", fontSize: "35px" }}
       >
         Featured Products
       </h2>
@@ -153,15 +153,15 @@ function HomePage(props) {
 
       <h2
         className="home-featuredproducts-header"
-        style={{ textAlign: 'center', fontSize: '35px' }}
+        style={{ textAlign: "center", fontSize: "35px" }}
       >
         New Arrivals
       </h2>
 
       <div className="category__Main_feature carousal-column">
         {props.data.slice(0, 4).map((data, index) => (
-          <div style={{ width: '300px' }} key={index}>
-            {' '}
+          <div style={{ width: "300px" }} key={index}>
+            {" "}
             <Link
               to={`/product/${data.id}`}
               className="feature-item"
