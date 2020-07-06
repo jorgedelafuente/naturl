@@ -82,7 +82,7 @@ function App() {
     localStorage.removeItem("cart");
   };
 
-  console.log(userProfile);
+  // console.log(userProfile);
 
   return (
     <React.StrictMode>

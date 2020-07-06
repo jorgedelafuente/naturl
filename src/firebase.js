@@ -100,35 +100,4 @@ export const removeWishList = async (uid, itemId) => {
   return getUserDocument(uid);
 };
 
-
 export default firebase;
-
-// export const createUserProfileDocument = async (user, additionalData) => {
-//   if (!user) return;
-//   // console.log(user);
-
-//   const userRef = firestore.doc(`publicProfiles/${user.uid}`);
-
-//   // console.log(userRef);
-//   const snapshot = await userRef.get();
-
-//   console.log("snapshot", snapshot);
-
-//   if (!snapshot.exist) {
-//     const { displayName, email } = user;
-
-//     const createdAt = new Date();
-//     try {
-//       await userRef.set({
-//         displayName,
-//         email,
-
-//         createdAt,
-//         ...additionalData,
-//       });
-//     } catch (error) {
-//       console.error("Error creating user", error.message);
-//     }
-//   }
-//   return getUserDocument(user.uid);
-// };
