@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import ProductItem from './ProductItem';
-import './productItem.scss';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from "react";
+import ProductItem from "./ProductItem";
+import "./productItem.scss";
+import PropTypes from "prop-types";
 
 const Product = ({ data, handleAddToCartClick, id }) => {
   const [originalData, setOriginalData] = useState([]);

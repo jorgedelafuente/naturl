@@ -4,7 +4,11 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT_PK);
 
-export default function Checkout({ itemsInCart, handleClearCartClick }) {
+export default function Checkout({
+  itemsInCart,
+  handleClearCartClick,
+  handleRemoveItemFromCartClick,
+}) {
   const totalCost = itemsInCart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -39,6 +43,7 @@ export default function Checkout({ itemsInCart, handleClearCartClick }) {
         totalCost={totalCost}
         handleClearCartClick={handleClearCartClick}
         onCheckoutClick={handleCheckoutClick}
+        handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
       />
     </>
   );

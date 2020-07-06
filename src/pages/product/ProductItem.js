@@ -1,12 +1,19 @@
-import React from 'react';
-import './productItem.scss';
+import React, { useState } from "react";
+import "./productItem.scss";
 
-import { Rate } from 'antd';
+import { Rate } from "antd";
 
 // import ProductColor from '../../components/product-details/product-colors';
-import ProductTags from '../../components/product-details/product-tags';
+import ProductTags from "../../components/product-details/product-tags";
 
 function ProductItem(props) {
+  const [itemQuantity, setItemQuantity] = useState(1);
+
+  const handleUpdateItemQuantity = (e) => {
+    const quantityToInt = parseInt(e.target.value, 10);
+    setItemQuantity(quantityToInt);
+  };
+
   return (
     props.data !== undefined && (
       <>
@@ -23,15 +30,21 @@ function ProductItem(props) {
 
           <div className="product-details-shopinfo">
             <h2>${props.data.price} </h2>
-            {/* <input
+            <input
               className="product-details-quantity-input"
               type="number"
               name="discountInstant"
-              min="0"
-              max="100"
+              min="1"
+              max="10"
+              placeholder="1"
+              onChange={handleUpdateItemQuantity}
               autoComplete="off"
-            ></input> */}
-            <button onClick={() => props.onAddToCartClick(props.data.id)}>
+            ></input>
+            <button
+              onClick={() =>
+                props.onAddToCartClick(props.data.id, itemQuantity)
+              }
+            >
               Add to cart
             </button>
           </div>

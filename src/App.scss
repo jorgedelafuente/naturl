@@ -4,8 +4,8 @@ $purple-color: #63418f;
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   // font-family: 'Roboto', Helvetica, monospace;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,8 @@ body {
 main {
   // width: 90%;
   margin: 0 auto;
-  margin-top: 40px; // This ensure the space between the navbar and the start of the page is always 40px
+  margin-top: 101px; // This ensure the space between the navbar and the start of the page is always 40px
+  margin-bottom: 100px;
 }
 
 button {

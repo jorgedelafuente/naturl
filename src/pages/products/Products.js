@@ -1,49 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from '@reach/router';
-import PropTypes from 'prop-types';
-import ProductCard from '../../components/product-card/Product-card';
-import { Affix, Drawer, Tag } from 'antd';
-import { NodeExpandOutlined } from '@ant-design/icons';
-import './products.scss';
-import './filters.scss';
+import React, { useState, useEffect } from "react";
+import { Link } from "@reach/router";
+import PropTypes from "prop-types";
+import ProductCard from "../../components/product-card/Product-card";
+import { Affix, Drawer, Tag } from "antd";
+import { NodeExpandOutlined } from "@ant-design/icons";
+import "./products.scss";
+import "./filters.scss";
 // import { Slider } from 'antd';
 
 const { CheckableTag } = Tag;
 
 const productTags = [
-  'blush',
-  'bronzer',
-  'eyeliner',
-  'eyeshadow',
-  'foundation',
-  'lip_liner',
-  'lipstick',
-  'mascara',
-  'nail_polish',
+  "blush",
+  "bronzer",
+  "eyeliner",
+  "eyeshadow",
+  "foundation",
+  "lip_liner",
+  "lipstick",
+  "mascara",
+  "nail_polish",
 ];
 
 const brandTags = [
-  'mineral fusion',
-  'marcelle',
-  'cargo cosmetics',
-  'pure anada',
-  'w3llpeople',
-  'rejuva minerals',
-  'marienatie',
-  'physicians formula',
-  'sante',
-  'pacifica',
-  'zorah',
-  'moov',
-  'colourpop',
-  'penny lane organics',
-  'alva',
-  'milani',
-  'e.l.f.',
-  'dr. hauschka',
-  'suncoat',
-  'misa',
-  'butter london',
+  "mineral fusion",
+  "marcelle",
+  "cargo cosmetics",
+  "pure anada",
+  "w3llpeople",
+  "rejuva minerals",
+  "marienatie",
+  "physicians formula",
+  "sante",
+  "pacifica",
+  "zorah",
+  "moov",
+  "colourpop",
+  "penny lane organics",
+  "alva",
+  "milani",
+  "e.l.f.",
+  "dr. hauschka",
+  "suncoat",
+  "misa",
+  "butter london",
 ];
 
 const Products = ({ data, title }) => {
@@ -61,20 +61,20 @@ const Products = ({ data, title }) => {
   }, [data]);
 
   const formatProductText = (tag) => {
-    let wordsArr = tag.split('_');
+    let wordsArr = tag.split("_");
     for (let i = 0; i < wordsArr.length; i++) {
       wordsArr[i] =
         wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
     }
-    return wordsArr.join(' ');
+    return wordsArr.join(" ");
   };
   const formatBrandText = (tag) => {
-    let wordsArr = tag.split(' ');
+    let wordsArr = tag.split(" ");
     for (let i = 0; i < wordsArr.length; i++) {
       wordsArr[i] =
         wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
     }
-    return wordsArr.join(' ');
+    return wordsArr.join(" ");
   };
 
   const showDrawer = () => {
@@ -136,11 +136,85 @@ const Products = ({ data, title }) => {
 
   return (
     <div className="products-page-container">
-      <div className="products-title">
+      <div className="products-title wow zoomIn">
         <h1>{title}</h1>
       </div>
 
-      <FixedFilterHeader title={props.title} />
+      <Affix offsetTop={top}>
+        <div
+          className="fixedHeaderButton wow zoomIn"
+          onClick={() => setTop(top)}
+        >
+          <div>
+            <Link to="/products">All products</Link>
+          </div>
+          <div className="filter-product-types-link">
+            <span
+              onClick={showDrawer}
+              style={{ fontSize: 18, cursor: "pointer" }}
+            >
+              Filter <NodeExpandOutlined />
+            </span>
+          </div>
+
+          <Drawer
+            title="Filter"
+            placement="left"
+            closable={true}
+            onClose={onClose}
+            visible={visible}
+          >
+            {/* <ProductTypeTags /> */}
+
+            <div
+              className="drawer-product-type-title"
+              style={{ marginRight: 8 }}
+            >
+              <p>Product types:</p>
+            </div>
+
+            {/* PRODUCT_TYPE */}
+
+            <div className="drawer-product-type-tags">
+              {productTags.map((tag) => (
+                <CheckableTag
+                  className="producttype-tags"
+                  key={tag}
+                  checked={selectedTags.indexOf(tag) > -1}
+                  onChange={(checked) => handleChange(tag, checked)}
+                  onClick={onClose}
+                >
+                  {formatProductText(tag)}
+                </CheckableTag>
+              ))}
+            </div>
+
+            <br />
+
+            <div
+              className="drawer-product-type-title"
+              style={{ marginRight: 8 }}
+            >
+              <p>Brands:</p>
+            </div>
+            {/* BRANDS */}
+            <div className="drawer-product-type-tags">
+              {brandTags.map((tag) => (
+                <CheckableTag
+                  className="producttype-tags"
+                  key={tag}
+                  checked={selectedTags.indexOf(tag) > -1}
+                  onChange={(checked) => handleChange(tag, checked)}
+                >
+                  {formatBrandText(tag)}
+                </CheckableTag>
+              ))}
+            </div>
+            {/* <p className="products-drawer-price-filter">Price filter</p>
+            <Slider range defaultValue={[0, 50]} tipFormatter={formatter} /> */}
+          </Drawer>
+        </div>
+      </Affix>
 
       <div className="products-categories-container">
         {filtered(originalData).length > 0 ? (

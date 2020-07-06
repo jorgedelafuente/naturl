@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import firebase from './../firebase';
+import React, { useEffect, useState } from "react";
+import firebase from "./../firebase";
 
 export const AuthContext = React.createContext();
 
@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
       // console.log(user.email);
       setCurrentUser(user);
       // if (user.email) {
-      //   console.log('user-email:', user.email);
+      //   console.log("user-email:", user.email);
       // }
       // setPending(false);
     });
@@ -26,6 +26,7 @@ export const AuthProvider = ({ children }) => {
     <AuthContext.Provider
       value={{
         currentUser,
+        setCurrentUser,
       }}
     >
       {children}
