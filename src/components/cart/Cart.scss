@@ -5,6 +5,10 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
+
+  @media (max-width: 480px) {
+    margin: 1rem;
+  }
 }
 
 .Cart-title {
@@ -68,6 +72,10 @@
   transition-duration: 0.25s;
   transition-timing-function: ease-out;
   -webkit-appearance: none;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 }
 
 .Cart-button-cancel:hover,
@@ -78,6 +86,10 @@
 .Cart-navigation {
   display: flex;
   justify-content: space-evenly;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 .Cart-message-empty{
