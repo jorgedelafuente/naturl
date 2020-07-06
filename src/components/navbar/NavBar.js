@@ -2,8 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "@reach/router";
 // import firebase from '../../firebase';
 // import { signInWithGoogle } from '../../firebase';
-import { Badge } from "antd";
-import { Drawer } from "antd";
+import { Badge, Drawer } from "antd";
 import {
   MenuOutlined,
   ShoppingCartOutlined,
@@ -28,7 +27,7 @@ const NavBar = ({ itemsInCart }) => {
     0
   );
 
-  console.log("BADGE COUNT", badgeCount);
+  // console.log("BADGE COUNT", badgeCount);
 
   return (
     <div className="navbar">
@@ -44,6 +43,9 @@ const NavBar = ({ itemsInCart }) => {
         </span>
         <span className="navbar-links">
           <Link to="/products-gluten-free">Gluten Free</Link>
+        </span>
+        <span className="navbar-links">
+          <Link to="/about">About</Link>
         </span>
         <span>
           <Link to="/checkout">
@@ -65,7 +67,7 @@ const NavBar = ({ itemsInCart }) => {
         {currentUser ? (
           <span>
             <Link to="/profile">
-              <UserOutlined style={{ fontSize: '20px' }} />
+              <UserOutlined style={{ fontSize: "20px" }} />
             </Link>
           </span>
         ) : (

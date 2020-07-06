@@ -5,10 +5,6 @@
     .navbar-links {
       display: none;
     }
-    // .Burger-Icon {
-    //   // display: block;
-    //   visibility: visible;
-    // }
   }
   /* mobile */
   @media (max-width: 480px) {
@@ -16,10 +12,9 @@
     .navbar-links {
       display: none;
     }
-    // .Burger-Icon {
-    //   // display: block;
-    //   visibility: visible;
-    // }
+    // background-color: red;
+    display: flex;
+    justify-content: flex-start;
   }
   font-size: 1.1rem;
   display: flex;

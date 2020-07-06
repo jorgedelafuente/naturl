@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Router } from '@reach/router';
-import { AuthProvider } from './auth/Auth';
-import ApiClient from './services/ApiClient';
-import NavBar from './components/navbar/NavBar';
-import Footer from './components/footer/Footer';
-import Home from './pages/home/Home';
-import CheckOut from './pages/checkout/CheckOut';
-import SignIn from './pages/auth/signin/SignIn';
-import SignUp from './pages/auth/signup/SignUp';
-import Products from './pages/products/Products';
-import Profile from './pages/auth/profile/Profile';
-import NotFound from './pages/notfound/NotFound';
-import Product from './pages/product/Product';
-import Success from './pages/success/Success';
-import './App.scss';
+import React, { useEffect, useState } from "react";
+import { Router } from "@reach/router";
+import { AuthProvider } from "./auth/Auth";
+import ApiClient from "./services/ApiClient";
+import NavBar from "./components/navbar/NavBar";
+import Footer from "./components/footer/Footer";
+import Home from "./pages/home/Home";
+import CheckOut from "./pages/checkout/CheckOut";
+import SignIn from "./pages/auth/signin/SignIn";
+import SignUp from "./pages/auth/signup/SignUp";
+import Products from "./pages/products/Products";
+import Profile from "./pages/auth/profile/Profile";
+import NotFound from "./pages/notfound/NotFound";
+import Product from "./pages/product/Product";
+import Success from "./pages/success/Success";
+import About from "./pages/about";
+import "./App.scss";
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,7 @@ function App() {
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
+  const [userProfile, setUserProfile] = useState({});
 
   useEffect(() => {
     ApiClient.getData().then((data) => {
@@ -80,6 +82,8 @@ function App() {
     localStorage.removeItem("cart");
   };
 
+  console.log(userProfile);
+
   return (
     <React.StrictMode>
       <AuthProvider>
@@ -89,6 +93,12 @@ function App() {
             <Home data={productData} path="/" />
             <SignIn path="/signin" />
             <SignUp path="/signup" />
+            <About path="/about" />
+            <Profile
+              setUserProfile={setUserProfile}
+              data={productData}
+              path="/profile"
+            />
 
             <Product
               data={productData}
@@ -101,10 +111,11 @@ function App() {
               title={"All Products"}
               path="/products"
             />
-            <Products data={veganData} title={'Vegan'} path="/products-vegan" />
+
+            <Products data={veganData} title={"Vegan"} path="/products-vegan" />
             <Products
               data={glutenData}
-              title={'Gluten Free'}
+              title={"Gluten Free"}
               path="/products-gluten-free"
             />
 
@@ -116,9 +127,6 @@ function App() {
             />
 
             <Success path="/success" />
-
-            <Profile path="/profile" />
-
             <NotFound default />
           </Router>
         </main>
