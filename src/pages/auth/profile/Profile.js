@@ -1,21 +1,21 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState } from 'react';
 // import {
 //   auth,
 //   createUserProfileDocument,
 //   signOut,
 //   getUserDocument,
 // } from '../../firebase';
-import { signOut, getUserDocument } from "../../../firebase";
-import { AuthContext } from "../../../auth/Auth";
+import { signOut, getUserDocument } from '../../../firebase';
+import { AuthContext } from '../../../auth/Auth';
 // import { FormButton } from '../../../components/common/button/FormButton';
-import { Alert } from "antd";
+import { Alert } from 'antd';
 // import { Tabs } from 'antd';
 // const { TabPane } = Tabs;
-import "../FormContainer.scss";
+import '../FormContainer.scss';
 
 const Profile = () => {
-  const [displayName, setDisplayName] = useState("");
-  const [displayAlert, setDisplayAlert] = useState("none");
+  const [displayName, setDisplayName] = useState('');
+  const [displayAlert, setDisplayAlert] = useState('none');
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
 
@@ -33,7 +33,7 @@ const Profile = () => {
   // };
 
   const handleSignOut = () => {
-    setDisplayAlert("block");
+    setDisplayAlert('block');
     signOut();
   };
 

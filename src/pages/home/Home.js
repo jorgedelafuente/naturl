@@ -15,7 +15,7 @@ import CustomChatbot from "../../components/chatbot/Chatbot";
 import ProductCard from "../../components/product-card/Product-card";
 
 function onChange(a, b, c) {
-  console.log(a, b, c);
+  // console.log(a, b, c);
 }
 
 function HomePage(props) {
@@ -24,7 +24,7 @@ function HomePage(props) {
       <Carousel autoplay afterChange={onChange}>
         <div className="HeroCarouselImage">
           <div className="Carousel_Text">
-            <h2 style={{ color: "white" }}>Naturl Los Angeles</h2>
+            <h2 style={{ color: "white" }}>Naturl Toronto</h2>
             <p>
               “My dad used to say makeup was a shallow girl's sport, but it's
               not. It's armor.” ― Courtney Summers

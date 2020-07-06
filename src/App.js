@@ -13,6 +13,7 @@ import Profile from "./pages/auth/profile/Profile";
 import NotFound from "./pages/notfound/NotFound";
 import Product from "./pages/product/Product";
 import Success from "./pages/success/Success";
+import About from "./pages/about";
 import "./App.scss";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
+  const [userProfile, setUserProfile] = useState({});
 
   useEffect(() => {
     ApiClient.getData().then((data) => {
@@ -80,6 +82,8 @@ function App() {
     localStorage.removeItem("cart");
   };
 
+  console.log(userProfile);
+
   return (
     <React.StrictMode>
       <AuthProvider>
@@ -89,6 +93,12 @@ function App() {
             <Home data={productData} path="/" />
             <SignIn path="/signin" />
             <SignUp path="/signup" />
+            <About path="/about" />
+            <Profile
+              setUserProfile={setUserProfile}
+              data={productData}
+              path="/profile"
+            />
 
             <Product
               data={productData}
@@ -101,6 +111,7 @@ function App() {
               title={"All Products"}
               path="/products"
             />
+
             <Products data={veganData} title={"Vegan"} path="/products-vegan" />
             <Products
               data={glutenData}
@@ -116,9 +127,6 @@ function App() {
             />
 
             <Success path="/success" />
-
-            <Profile path="/profile" />
-
             <NotFound default />
           </Router>
         </main>

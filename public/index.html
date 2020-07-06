@@ -9,6 +9,11 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <!--load amimate.css from CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"> 
+
+    <!--load WOW js from CDN-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link
@@ -45,5 +50,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+<script>
+  wow = new WOW(
+    {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // change this if you are not using animate.css
+        offset:       10,          // default
+        mobile:       true,       // keep it on mobile
+        live:         true        // track if element updates
+      }
+    )
+   wow.init();
+</script>
   </body>
 </html>

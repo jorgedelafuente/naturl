@@ -1,8 +1,8 @@
-import React, { useCallback } from "react";
-import firebase from "../../../firebase";
-import { navigate, Link } from "@reach/router";
+import React, { useCallback } from 'react';
+import firebase from '../../../firebase';
+import { navigate, Link } from '@reach/router';
 // import { FormButton } from '../../../components/common/button/FormButton';
-import "../FormContainer.scss";
+import '../FormContainer.scss';
 
 const SignUp = () => {
   const handleSignUp = useCallback(async (event) => {
@@ -20,7 +20,7 @@ const SignUp = () => {
         alert(error);
       }
     } else {
-      alert("passwords do not match");
+      alert('passwords do not match');
     }
   }, []);
 
