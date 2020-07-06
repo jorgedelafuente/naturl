@@ -1,4 +1,4 @@
-import mockData from './mockDataWithStripe.json'; // Import mock data.
+import mockData from "./mockDataWithStripe.json"; // Import mock data.
 // const BASE_URL = process.env.REACT_APP_API_URL;
 
 function getData() {
