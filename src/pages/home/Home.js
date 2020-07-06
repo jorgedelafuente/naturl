@@ -15,7 +15,7 @@ import CustomChatbot from "../../components/chatbot/Chatbot";
 import ProductCard from "../../components/product-card/Product-card";
 
 function onChange(a, b, c) {
-  console.log(a, b, c);
+  // console.log(a, b, c);
 }
 
 function HomePage(props) {

@@ -40,7 +40,11 @@ function ProductItem(props) {
               onChange={handleUpdateItemQuantity}
               autoComplete="off"
             ></input>
-            <button onClick={() =>props.onAddToCartClick(props.data.id, itemQuantity)}>
+            <button
+              onClick={() =>
+                props.onAddToCartClick(props.data.id, itemQuantity)
+              }
+            >
               Add to cart
             </button>
           </div>

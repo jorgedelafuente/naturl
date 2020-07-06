@@ -1,7 +1,7 @@
 import React from "react";
 import { CloseCircleOutlined } from "@ant-design/icons";
 import "./CartItem.scss";
-import { Link } from "@reach/router";
+// import { Link } from "@reach/router";
 
 export default function CartItem({
   thumbnail,
@@ -15,9 +15,9 @@ export default function CartItem({
       <div className="CartItem-thumbnail">
         <img
           className="CartItem-thumbnail-img"
-          alt="image"
+          alt="product-thumbnail"
           src={thumbnail}
-        ></img>
+        />
       </div>
       <div>{name}</div>
       <div className="CartItem-details">

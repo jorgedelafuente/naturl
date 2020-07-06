@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+
+import { Tag } from "antd";
 
 import { Tag } from 'antd';
 

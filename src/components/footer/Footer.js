@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
 import {
   InstagramOutlined,
   FacebookOutlined,
   YoutubeOutlined,
-} from '@ant-design/icons';
-import './Footer.scss';
+} from "@ant-design/icons";
+import "./Footer.scss";
 
 // const StyledFooter = styled.div``;
 

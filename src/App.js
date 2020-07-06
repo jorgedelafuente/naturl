@@ -22,6 +22,7 @@ function App() {
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
+  const [userProfile, setUserProfile] = useState({});
 
   useEffect(() => {
     ApiClient.getData().then((data) => {
@@ -81,6 +82,8 @@ function App() {
     localStorage.removeItem("cart");
   };
 
+  console.log(userProfile);
+
   return (
     <React.StrictMode>
       <AuthProvider>
@@ -90,6 +93,12 @@ function App() {
             <Home data={productData} path="/" />
             <SignIn path="/signin" />
             <SignUp path="/signup" />
+            <About path="/about" />
+            <Profile
+              setUserProfile={setUserProfile}
+              data={productData}
+              path="/profile"
+            />
 
             <Product
               data={productData}
@@ -102,6 +111,7 @@ function App() {
               title={"All Products"}
               path="/products"
             />
+
             <Products data={veganData} title={"Vegan"} path="/products-vegan" />
             <Products
               data={glutenData}
@@ -117,9 +127,6 @@ function App() {
             />
 
             <Success path="/success" />
-
-            <Profile path="/profile" />
-            <About path="/about" />
             <NotFound default />
           </Router>
         </main>
