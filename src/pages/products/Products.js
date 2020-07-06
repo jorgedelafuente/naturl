@@ -136,12 +136,15 @@ const Products = ({ data, title }) => {
 
   return (
     <div className="products-page-container">
-      <div className="products-title">
+      <div className="products-title wow zoomIn">
         <h1>{title}</h1>
       </div>
 
       <Affix offsetTop={top}>
-        <div className="fixedHeaderButton" onClick={() => setTop(top)}>
+        <div
+          className="fixedHeaderButton wow zoomIn"
+          onClick={() => setTop(top)}
+        >
           <div>
             <Link to="/products">All products</Link>
           </div>

@@ -44,6 +44,9 @@ const NavBar = ({ itemsInCart }) => {
         <span className="navbar-links">
           <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
+        <span className="navbar-links">
+          <Link to="/about">About</Link>
+        </span>
         <span>
           <Link to="/checkout">
             <Badge

@@ -13,6 +13,7 @@ import Profile from "./pages/auth/profile/Profile";
 import NotFound from "./pages/notfound/NotFound";
 import Product from "./pages/product/Product";
 import Success from "./pages/success/Success";
+import About from "./pages/about";
 import "./App.scss";
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
             <Home data={productData} path="/" />
             <SignIn path="/signin" />
             <SignUp path="/signup" />
+            <About path="/about" />
             <Profile
               setUserProfile={setUserProfile}
               data={productData}
@@ -109,6 +111,7 @@ function App() {
               title={"All Products"}
               path="/products"
             />
+
             <Products data={veganData} title={"Vegan"} path="/products-vegan" />
             <Products
               data={glutenData}
@@ -124,7 +127,6 @@ function App() {
             />
 
             <Success path="/success" />
-
             <NotFound default />
           </Router>
         </main>

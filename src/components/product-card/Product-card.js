@@ -8,7 +8,7 @@ import "./product-card.scss";
 function ProductCard(props) {
   const { Meta } = Card;
   return (
-    <div className="products-categories-container-item">
+    <div className="products-categories-container-item wow fadeInUp" >
       <Link to={`/product/${props.id}`}>
         <Card className="product-card-style" hoverable style={{ width: 240 }}>
           <div className="product-card-image-container">

@@ -26,7 +26,7 @@ function HomePage(props) {
       <Carousel autoplay afterChange={onChange}>
         <div className="HeroCarouselImage">
           <div className="Carousel_Text">
-            <h2 style={{ color: "white" }}>Naturl Los Angeles</h2>
+            <h2 style={{ color: "white" }}>Naturl Toronto</h2>
             <p>
               “My dad used to say makeup was a shallow girl's sport, but it's
               not. It's armor.” ― Courtney Summers

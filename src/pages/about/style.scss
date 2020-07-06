@@ -1,0 +1,187 @@
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+.flex-box-about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-margin {
+  margin-top: 140px;
+  margin-bottom: 140px;
+  padding-right: 5%;
+}
+.about-margin-1 {
+  padding-left: 5%;
+}
+.about-heading {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+
+.About-Wrapper > p {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  color: #000000;
+  animation-delay: .3s;
+}
+//Simple Text Card CSS
+.Simple-text-Card {
+  background-color: #f1ede5;
+  width: 35%;
+  padding: 0px 3% 3% 3%;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+.Simple-text-Card-1 {
+  height: 1180px;
+  background-color: #63418f;
+  position: relative;
+}
+.Simple-text-Card-2 {
+  height: 600px;
+  background-color: #00677d;
+  position: relative;
+}
+.sticky-text {
+  position: sticky;
+  top: 50px;
+}
+.simpleCard-heading {
+  font-size: 3rem;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+//Image Card
+.Simple-image-Card {
+  width: 30%;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+.Simple-Image-Right {
+  width: 48%;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+.Simple-image-Card > img {
+  width: 70%;
+}
+.simpleImage-heading {
+  font-size: 2rem;
+  position: relative;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.simpleImage-heading::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  left: 0;
+  top: 125%;
+  color: blue;
+  text-align: left;
+  border-bottom: 3px solid black;
+}
+.show-two-cards-right {
+  width: 60%;
+}
+.bottom-text {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.subscribe-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.input-bottom {
+  height: 48px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 2px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #e2e4eb;
+}
+.subscribe {
+  height: 48px;
+  width: 150px;
+  background-color: #000000;
+  color: #fff;
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .About-Wrapper > p {
+    width: 70%;
+  }
+  .simpleCard-heading {
+    font-size: 2rem;
+  }
+  .simpleImage-heading {
+    font-size: 1.5rem !important;
+  }
+  .show-two-cards-right {
+    width: 100%;
+  }
+  .Simple-text-Card {
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+  }
+  .Simple-image-Card {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .Simple-image-Card > img {
+    width: 100%;
+  }
+  .Simple-Image-Right {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .about-margin {
+    padding: 0;
+  }
+  .about-margin-1 {
+    padding: 0;
+  }
+  .simpleImage-heading {
+    margin-top: 20px;
+  }
+  .bottom-text {
+    font-size: 2rem;
+  }
+  .about-heading {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .subscribe-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe {
+    margin-top: 20px;
+  }
+  .About-Wrapper > p {
+    width: 90%;
+    text-align: justify;
+  }
+}

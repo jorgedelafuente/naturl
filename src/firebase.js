@@ -100,6 +100,7 @@ export const removeWishList = async (uid, itemId) => {
   return getUserDocument(uid);
 };
 
+
 export default firebase;
 
 // export const createUserProfileDocument = async (user, additionalData) => {
