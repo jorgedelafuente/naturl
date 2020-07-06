@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Router } from "@reach/router";
 import { AuthProvider } from "./auth/Auth";
 import ApiClient from "./services/ApiClient";
