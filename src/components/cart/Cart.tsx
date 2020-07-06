@@ -18,6 +18,7 @@ export default function Cart({
           {itemsInCart.map((item) => (
             <CartItem
               key={item.id}
+              itemId={item.id}
               thumbnail={item.image_link}
               name={item.name}
               cost={item.price * item.quantity}
