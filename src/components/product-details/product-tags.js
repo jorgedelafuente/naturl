@@ -2,8 +2,6 @@ import React from "react";
 
 import { Tag } from "antd";
 
-import { Tag } from 'antd';
-
 function ProductTags(props) {
   const tagsArr = props.objItem.tag_list;
   return (
