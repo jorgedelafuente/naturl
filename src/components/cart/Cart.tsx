@@ -1,9 +1,15 @@
-import React from 'react';
-import CartItem from '../cartItem/CartItem';
-import './Cart.scss';
-import { Link } from '@reach/router';
+import React from "react";
+import CartItem from "../cartItem/CartItem";
+import "./Cart.scss";
+import { Link } from "@reach/router";
 
-export default function Cart({ handleClearCartClick, onCheckoutClick, itemsInCart, totalCost }) {
+export default function Cart({
+  handleClearCartClick,
+  handleRemoveItemFromCartClick,
+  onCheckoutClick,
+  itemsInCart,
+  totalCost,
+}) {
   return (
     <div className="Cart">
       <h2 className="Cart-title">Your shopping cart</h2>
@@ -12,9 +18,13 @@ export default function Cart({ handleClearCartClick, onCheckoutClick, itemsInCar
           {itemsInCart.map((item) => (
             <CartItem
               key={item.id}
+              thumbnail={item.image_link}
               name={item.name}
               cost={item.price * item.quantity}
               quantity={item.quantity}
+              onRemoveItemFromCartClick={() =>
+                handleRemoveItemFromCartClick(item.id)
+              }
             />
           ))}
           <div className="Cart-total-cost">
@@ -28,7 +38,7 @@ export default function Cart({ handleClearCartClick, onCheckoutClick, itemsInCar
           </div>
           <div className="Cart-navigation">
             <button className="Cart-button-purchase" onClick={onCheckoutClick}>
-              Checkout
+              Proceed To Checkout
             </button>
             <Link to="/products">
               <button className="Cart-button-cancel">Continue Shopping</button>

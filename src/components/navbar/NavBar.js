@@ -1,67 +1,17 @@
-import React, { useState, useContext } from 'react';
-import { Link } from '@reach/router';
+import React, { useState, useContext } from "react";
+import { Link } from "@reach/router";
 // import firebase from '../../firebase';
 // import { signInWithGoogle } from '../../firebase';
-import styled from 'styled-components';
-import { Badge } from 'antd';
-import { Drawer } from 'antd';
+import { Badge } from "antd";
+import { Drawer } from "antd";
 import {
   MenuOutlined,
   ShoppingCartOutlined,
   UserOutlined,
-} from '@ant-design/icons';
-import { AuthContext } from '../../auth/Auth';
-
-const StyledNavBar = styled.div`
-  /* tablet */
-  @media (max-width: 700px) and (min-width: 480px) {
-    font-size: 0.75rem;
-    .navbar-links {
-      display: none;
-    }
-  }
-  /* mobile */
-  @media (max-width: 480px) {
-    font-size: 0.7rem;
-    .navbar-links {
-      display: none;
-    }
-  }
-  font-size: 1.1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 40px;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  & a,
-  & span {
-    margin-right: 1.25rem;
-    color: black;
-    text-decoration: none;
-    &:hover {
-      color: #00677d;
-    }
-  }
-  div:nth-child(1) {
-    margin-left: 1.25rem;
-  }
-  div:nth-child(2) {
-    margin-right: 1.25rem;
-  }
-
-  .Burger-Icon {
-    &:hover {
-      color: #00677d;
-    }
-  }
-
-  z-index: 100;
-`;
+} from "@ant-design/icons";
+import { AuthContext } from "../../auth/Auth";
+import "./NavBar.scss";
+import PropTypes from "prop-types";
 
 const NavBar = ({ itemsInCart }) => {
   const [visible, setVisible] = useState(false);
@@ -78,19 +28,14 @@ const NavBar = ({ itemsInCart }) => {
     0
   );
 
+  console.log("BADGE COUNT", badgeCount);
+
   return (
-    <StyledNavBar>
-      <div>
-        <span>
-          <Link to="/">NATURL</Link>
-        </span>
+    <div className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">NATURL</Link>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-        <span className="navbar-links">
-          {/* <Link to="/category"
-          onClick={()=>filter("Vegan")}
-          >Vegan</Link> */}
-        </span>
+      <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
         <span className="navbar-links">
           <Link to="/products">Products</Link>
         </span>
@@ -100,11 +45,30 @@ const NavBar = ({ itemsInCart }) => {
         <span className="navbar-links">
           <Link to="/products-gluten-free">Gluten Free</Link>
         </span>
+        <span className="navbar-links">
+          <Link to="/about">About</Link>
+        </span>
+        <span>
+          <Link to="/checkout">
+            <Badge
+              count={badgeCount}
+              title={"Number of Cart Items"}
+              offset={[0, 5]}
+              style={{
+                backgroundColor: "#a1a1a1",
+                maxWidth: 2,
+                color: "#000000",
+              }}
+            >
+              <ShoppingCartOutlined style={{ fontSize: "20px" }} />
+            </Badge>
+          </Link>
+        </span>
 
         {currentUser ? (
           <span>
             <Link to="/profile">
-              <UserOutlined style={{ fontSize: '20px' }} />
+              <UserOutlined style={{ fontSize: "20px" }} />
             </Link>
           </span>
         ) : (
@@ -113,24 +77,8 @@ const NavBar = ({ itemsInCart }) => {
           </span>
         )}
 
-        <span>
-          <Link to="/checkout">
-            <Badge
-              count={badgeCount}
-              title={'Number of Cart Items'}
-              offset={[0, 5]}
-              style={{
-                backgroundColor: '#a1a1a1',
-                maxWidth: 2,
-                color: '#000000',
-              }}
-            >
-              <ShoppingCartOutlined style={{ fontSize: '20px' }} />
-            </Badge>
-          </Link>
-        </span>
-
         <MenuOutlined className="Burger-Icon" onClick={showDrawer} />
+
         <Drawer
           title="NATURL"
           placement="right"
@@ -139,7 +87,7 @@ const NavBar = ({ itemsInCart }) => {
           visible={visible}
         >
           <span>
-            <Link onClick={onClose} to="/products">
+            <Link onClick={onClose} to="/all-products">
               Products
             </Link>
           </span>
@@ -169,8 +117,12 @@ const NavBar = ({ itemsInCart }) => {
           </span>
         </Drawer>
       </div>
-    </StyledNavBar>
+    </div>
   );
+};
+
+NavBar.propTypes = {
+  itemsInCart: PropTypes.array,
 };
 
 export default NavBar;

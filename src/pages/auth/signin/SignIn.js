@@ -1,9 +1,9 @@
 import React, { useCallback, useContext } from 'react';
-import firebase from '../../firebase';
-import { AuthContext } from '../../auth/Auth';
+import firebase from '../../../firebase';
+import { AuthContext } from '../../../auth/Auth';
 import { navigate, Link } from '@reach/router';
-import { FormButton } from '../../components/common/button/Button';
-import { FormContainer } from '../../components/common/container/Container';
+// import { FormButton } from '../../../components/common/button/FormButton';
+import '../FormContainer.scss';
 
 const Login = () => {
   const handleLogin = useCallback(async (event) => {
@@ -26,7 +26,7 @@ const Login = () => {
   }
 
   return (
-    <FormContainer>
+    <div className="form-container">
       <div className="Logo">
         <h3>NATURL</h3>
       </div>
@@ -46,13 +46,15 @@ const Login = () => {
             <input name="password" type="password" placeholder="Password" />
           </label>
         </div>
-        <FormButton type="submit">Sign In</FormButton>
+        <button className="form-button" type="submit">
+          Sign In
+        </button>
       </form>
 
-      <div className="Links">
+      <div className="form-links">
         <Link to="/signup">Create a new account</Link>
       </div>
-    </FormContainer>
+    </div>
   );
 };
 

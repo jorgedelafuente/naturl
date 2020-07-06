@@ -1,5 +1,3 @@
-
-
 .products-page-container {
   display: flex;
   flex-direction: column;
@@ -8,13 +6,9 @@
 
 .products-title {
   display: flex;
-  align-items:  center;
-  margin-top: 60px;
+  align-items: center;
+  margin-top: 150px;
 }
-
-
-
-
 
 .products-labels-and-filter {
   display: flex;
@@ -32,14 +26,8 @@
   margin-right: 30px;
 }
 .products-labels-and-filter a:hover {
-  color: #00677D;
+  color: #00677d;
 }
-
-
-
-
-
-
 
 .products-categories-container {
   width: 80%;
@@ -52,4 +40,3 @@
 .products-categories-container-item {
   margin-bottom: 50px;
 }
-

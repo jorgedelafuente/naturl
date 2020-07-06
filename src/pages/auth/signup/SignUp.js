@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
-import firebase from '../../firebase';
+import firebase from '../../../firebase';
 import { navigate, Link } from '@reach/router';
-import { FormButton } from '../../components/common/button/Button';
-import { FormContainer } from '../../components/common/container/Container';
+// import { FormButton } from '../../../components/common/button/FormButton';
+import '../FormContainer.scss';
 
 const SignUp = () => {
   const handleSignUp = useCallback(async (event) => {
@@ -25,7 +25,7 @@ const SignUp = () => {
   }, []);
 
   return (
-    <FormContainer>
+    <div className="form-container">
       <div className="Logo">
         <h3>NATURL</h3>
       </div>
@@ -52,13 +52,15 @@ const SignUp = () => {
           </label>
         </div>
 
-        <FormButton type="submit">Sign Up</FormButton>
+        <button className="form-button" type="submit">
+          Sign Up
+        </button>
       </form>
 
-      <div className="Links">
+      <div className="form-links">
         <Link to="/signin">Already have an account</Link>
       </div>
-    </FormContainer>
+    </div>
   );
 };
 

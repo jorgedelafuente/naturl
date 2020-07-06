@@ -4,7 +4,11 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_CHECKOUT_PK);
 
-export default function Checkout({ itemsInCart, handleClearCartClick }) {
+export default function Checkout({
+  itemsInCart,
+  handleClearCartClick,
+  handleRemoveItemFromCartClick,
+}) {
   const totalCost = itemsInCart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -21,8 +25,8 @@ export default function Checkout({ itemsInCart, handleClearCartClick }) {
     const { error } = await stripe.redirectToCheckout({
       lineItems: currentLineItems,
       mode: 'payment',
-      successUrl: 'http://localhost:3000/success',
-      cancelUrl: 'http://localhost:3000/checkout',
+      successUrl: process.env.REACT_APP_DOMAIN + '/success',
+      cancelUrl: process.env.REACT_APP_DOMAIN + '/checkout',
       shippingAddressCollection: {
         allowedCountries: ['US', 'CA', 'DE', 'ES', 'GB', 'MX'],
       },
@@ -39,6 +43,7 @@ export default function Checkout({ itemsInCart, handleClearCartClick }) {
         totalCost={totalCost}
         handleClearCartClick={handleClearCartClick}
         onCheckoutClick={handleCheckoutClick}
+        handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
       />
     </>
   );
