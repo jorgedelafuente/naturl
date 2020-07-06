@@ -21,8 +21,6 @@ function onChange(a, b, c) {
 function HomePage(props) {
   return (
     <div className="Home-Main">
-      {/* <h1 className="Main_Logo">Naturl</h1> */}
-
       <Carousel autoplay afterChange={onChange}>
         <div className="HeroCarouselImage">
           <div className="Carousel_Text">
@@ -53,26 +51,6 @@ function HomePage(props) {
           </div>
         </div>
       </Carousel>
-
-      {/* <hr className="Home__Hr" /> */}
-      {/* END OF CAROSEL */}
-
-      {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <button
-          style={{
-            cursor: 'pointer',
-            padding: '29px 48px',
-            fontSize: '2rem',
-            backgroundColor: '#000000',
-            borderRadius: '31px',
-            color: '#ffffff',
-            margin: 'auto',
-            outline: 'none',
-          }}
-        >
-          <Link to="/products">Shop Now</Link>
-        </button>
-      </div> */}
       <h2
         className="home-page-featured-products"
         style={{ textAlign: "center", fontSize: "35px" }}
@@ -80,40 +58,6 @@ function HomePage(props) {
         Featured Products
       </h2>
       <div className="category__Main">
-        {/* <div className="Left-Cards">
-          {props.data.slice(6, 7).map((data, index) => {
-            return (
-              <ProductCard
-                key={index}
-                image={data.api_featured_image}
-                name={data.name}
-                price={data.price}
-                id={data.id}
-              />
-              // <Link to={`/product/${data.id}`} key={index}>
-              //   {' '}
-              //   <Card
-              //     hoverable
-              //     key={index}
-              //     className="column-card column-card-left"
-              //   >
-              //     <img
-              //       src={data.api_featured_image}
-              //       className="left-Card-main-image"
-              //       alt="product1"
-              //     />{' '}
-              //     <Meta title={data.name} /> <p></p>
-              //     <Meta title={`$ ${data.price}`} />
-              //     <StarFilled />
-              //     <StarFilled />
-              //     <StarFilled />
-              //     <StarFilled />
-              //     <StarOutlined />
-              //   </Card>
-              // </Link>
-            );
-          })}
-        </div> */}
         <div className="Right-Cards">
           {props.data.slice(102, 110).map((data, index) => {
             return (
@@ -125,26 +69,6 @@ function HomePage(props) {
                   price={data.price}
                   id={data.id}
                 />
-                {/* // <Link
-              //   to={`/product/${data.id}`}
-              //   className="column-card"
-              //   key={index}
-              // >
-              //   <Card hoverable className="column-card">
-              //     <img
-              //       src={data.api_featured_image}
-              //       className="right-Card-main-image"
-              //       alt="product2"
-              //     />
-              //     <Meta title={data.name} /> <p></p>
-              //     <Meta title={`$ ${data.price}`} />
-              //     <StarFilled />
-              //     <StarFilled />
-              //     <StarFilled />
-              //     <StarOutlined />
-              //     <StarOutlined />
-              //   </Card>
-              // </Link> */}
               </>
             );
           })}
@@ -169,24 +93,10 @@ function HomePage(props) {
             >
               <Carousel autoplay>
                 <div className="home-featureproducts-carousal-image-container">
-                  <img
-                    src={data.api_featured_image}
-                    // className="mx-auto"
-                    // width="100%"
-                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
-                    // height="400px"
-                    alt="carousel1"
-                  />
+                  <img src={data.api_featured_image} alt="carousel1" />
                 </div>
                 <div className="home-featureproducts-carousal-image-container">
-                  <img
-                    src={data.api_featured_image}
-                    // className="mx-auto"
-                    // width="100%"
-                    // style={{ backgroundColor: 'rgba(0,0,0,1)' }}
-                    // height="400px"
-                    alt="carousel2"
-                  />
+                  <img src={data.api_featured_image} alt="carousel2" />
                 </div>
               </Carousel>
             </Link>
@@ -196,7 +106,6 @@ function HomePage(props) {
 
       <CustomChatbot />
 
-      {/* <hr className="Home__Hr" /> */}
       <h1 className="About__us">About Us</h1>
       <p className="About__text">
         We are a team with high criteria. We dedicate ourselves fully each day.
@@ -205,7 +114,6 @@ function HomePage(props) {
         beautiful. We are convinced that it is equally important to nourish your
         body, mind and emotions.
       </p>
-      <hr className="Home__Hr" />
 
       <div className="News">
         <div className="News_div">
@@ -228,8 +136,6 @@ function HomePage(props) {
           </button>
         </form>
       </div>
-
-      {/* ------------------footer---------------------------------- */}
     </div>
   );
 }
