@@ -82,6 +82,41 @@ function App() {
     localStorage.removeItem("cart");
   };
 
+
+  //TODO: optimize
+  const listRelatedProducts = (
+    itemsInCart,
+    productData,
+    numberOfSuggestions
+  ) => {
+    if (!productData) return [];
+
+    const purchasedCategories = itemsInCart.map((purchasedItem) => {
+      if (purchasedItem.category) return purchasedItem.category;
+    });
+
+    const purchasedItems = itemsInCart.map((purchasedItem) => {
+      if (purchasedItem.id) return purchasedItem.id;
+    });
+
+    const relatedProducts = productData.filter((relatedProduct) => {
+      if (
+        purchasedCategories.includes(relatedProduct.category) &&
+        !purchasedItems.includes(relatedProduct.id)
+      )
+        return relatedProduct;
+    });
+
+    const selectedSuggestions = Array.from(
+      { length: numberOfSuggestions },
+      () => Math.floor(Math.random() * relatedProducts.length)
+    );
+
+    return relatedProducts.filter((product, index) => {
+      if (selectedSuggestions.includes(index)) return product;
+    });
+  };
+  
   // console.log(userProfile);
 
   return (
@@ -120,13 +155,20 @@ function App() {
             />
 
             <CheckOut
+              data={productData}
               itemsInCart={itemsInCart}
               handleClearCartClick={handleClearCartClick}
               handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
+              listRelatedProducts={listRelatedProducts}
               path="/checkout"
             />
 
-            <Success path="/success" />
+            <Success
+              data={productData}
+              itemsInCart={itemsInCart}
+              listRelatedProducts={listRelatedProducts}
+              path="/success"
+            />
             <NotFound default />
           </Router>
         </main>

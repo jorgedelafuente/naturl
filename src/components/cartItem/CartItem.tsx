@@ -1,25 +1,31 @@
 import React from "react";
 import { CloseCircleOutlined } from "@ant-design/icons";
 import "./CartItem.scss";
-// import { Link } from "@reach/router";
+import { Link } from "@reach/router";
 
 export default function CartItem({
+  itemId,
   thumbnail,
   name,
   cost,
   quantity,
   onRemoveItemFromCartClick,
 }) {
+  const productPath = `/product/${itemId}`;
   return (
     <div className="CartItem">
-      <div className="CartItem-thumbnail">
-        <img
-          className="CartItem-thumbnail-img"
-          alt="product-thumbnail"
-          src={thumbnail}
-        />
+      <div className="CartItem-description">
+        <div className="CartItem-thumbnail">
+          <img
+            className="CartItem-thumbnail-img"
+            alt="product-thumbnail"
+            src={thumbnail}
+          />
+        </div>
+        <Link to={productPath} className="CartItem-product-link">
+          {name}
+        </Link>
       </div>
-      <div>{name}</div>
       <div className="CartItem-details">
         <div className="CartItem-quantity">Qty: {quantity}</div>
         <div>${cost.toFixed(2)}</div>
