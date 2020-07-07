@@ -103,7 +103,7 @@ const About = () => {
           <div className="Simple-image-Card Simple-Image-Right">
             <img
               src={require("../../images/about5.jpg")}
-              alt="photo"
+              alt="about5"
               className="wow zoomIn"
             />
             <div className="about-heading simpleImage-heading wow zoomIn">

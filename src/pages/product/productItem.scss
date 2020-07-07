@@ -13,12 +13,11 @@
   margin-top: 100px;
 
   /* tablet */
-  @media (max-width: 700px) and (min-width: 480px) {
+  @media (max-width: 768px) and (min-width: 480px) {
     width: 100vw;
     display: flex;
     justify-content: center;
     margin-top: 0px;
-    background-color: blue;
   }
 
   /* mobile */
@@ -34,6 +33,9 @@
   display: flex;
   justify-content: flex-end;
   margin-right: 40px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-right: 0px;
+  }
   @media (max-width: 480px) {
     margin-right: 0px;
   }
@@ -43,6 +45,11 @@
   width: 300px;
   height: 400px;
   object-fit: scale-down;
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 300px;
+    height: 300px;
+    object-fit: scale-down;
+  }
   @media (max-width: 480px) {
     width: 300px;
     height: 300px;
@@ -58,7 +65,7 @@
   width: 55%;
   margin-bottom: 100px;
 
-  @media (max-width: 700px) and (min-width: 480px) {
+  @media (max-width: 768px) and (min-width: 480px) {
     margin-left: 0px;
     width: 80vw;
   }
@@ -72,7 +79,7 @@
   margin-top: 100px;
   margin-bottom: 30px;
 
-  @media (max-width: 700px) and (min-width: 480px) {
+  @media (max-width: 768px) and (min-width: 480px) {
     margin-top: 20px;
   }
   @media (max-width: 480px) {
@@ -82,7 +89,7 @@
 
 .singleproduct-page-description {
   margin-bottom: 50px;
-  @media (max-width: 700px) and (min-width: 480px) {
+  @media (max-width: 768px) and (min-width: 480px) {
     margin-top: 20px;
     text-align: center;
   }
@@ -104,7 +111,7 @@
   color: black;
   margin-top: 20px;
   margin-bottom: 50px;
-  @media (max-width: 700px) and (min-width: 480px) {
+  @media (max-width: 768px) and (min-width: 480px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -132,7 +139,7 @@
   margin-bottom: 50px;
   margin-top: 40px;
 
-  @media (max-width: 700px) and (min-width: 480px) {
+  @media (max-width: 768px) and (min-width: 480px) {
     margin-top: 0px;
     justify-content: center;
   }
@@ -166,6 +173,10 @@
   width: 100px;
   height: 35px;
   cursor: pointer;
+}
+
+.product-details-shopinfo button:hover {
+  background-color: cadetblue;
 }
 
 .productitem-description-rating {

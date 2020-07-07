@@ -31,90 +31,111 @@ const NavBar = ({ itemsInCart }) => {
 
   return (
     <div className="navbar">
-      <div className="navbar-logo">
-        <Link to="/">NATURL</Link>
-      </div>
-      <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-        <span className="navbar-links">
-          <Link to="/products">Products</Link>
-        </span>
-        <span className="navbar-links">
-          <Link to="/products-vegan">Vegan</Link>
-        </span>
-        <span className="navbar-links">
-          <Link to="/products-gluten-free">Gluten Free</Link>
-        </span>
-        <span className="navbar-links">
-          <Link to="/about">About</Link>
-        </span>
-        <span>
-          <Link to="/checkout">
-            <Badge
-              count={badgeCount}
-              title={"Number of Cart Items"}
-              offset={[0, 5]}
-              style={{
-                backgroundColor: "#a1a1a1",
-                maxWidth: 2,
-                color: "#000000",
-              }}
-            >
-              <ShoppingCartOutlined style={{ fontSize: "20px" }} />
-            </Badge>
-          </Link>
-        </span>
-
-        {currentUser ? (
-          <span>
-            <Link to="/profile">
-              <UserOutlined style={{ fontSize: "20px" }} />
-            </Link>
-          </span>
-        ) : (
-          <span>
-            <Link to="/signin">Sign In</Link>
-          </span>
-        )}
-
-        <MenuOutlined className="Burger-Icon" onClick={showDrawer} />
-
-        <Drawer
-          title="NATURL"
-          placement="right"
-          closable={true}
-          onClose={onClose}
-          visible={visible}
+      <div className="navbar-container">
+        <div className="navbar-logo">
+          <Link to="/">NATURL</Link>
+        </div>
+        <div
+          style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
         >
-          <span>
-            <Link onClick={onClose} to="/all-products">
-              Products
+          <div className="navbar-links-group">
+            <span className="navbar-links">
+              <Link to="/products">Products</Link>
+            </span>
+            <span className="navbar-links">
+              <Link to="/products-vegan">Vegan</Link>
+            </span>
+            <span className="navbar-links">
+              <Link to="/products-gluten-free">Gluten Free</Link>
+            </span>
+            <span className="navbar-links">
+              <Link to="/about">About</Link>
+            </span>
+          </div>
+
+          <div className="mobile-menuitems">
+            {/* <span> */}
+            <Link to="/checkout">
+              <Badge
+                count={badgeCount}
+                title={"Number of Cart Items"}
+                offset={[0, 5]}
+                style={{
+                  backgroundColor: "white",
+                  maxWidth: 2,
+                  color: "cadetblue",
+                  // textColor: "blue",
+                }}
+              >
+                <ShoppingCartOutlined
+                  // classname="cart-icon"
+                  style={{ fontSize: "20px", marginRight: "10px" }}
+                />
+              </Badge>
             </Link>
-          </span>
-          <br />
-          <span>
-            <Link onClick={onClose} to="/products-vegan">
-              Vegan
-            </Link>
-          </span>
-          <br />
-          <span>
-            <Link onClick={onClose} to="/products-gluten-free">
-              Gluten Free
-            </Link>
-          </span>
-          <br />
-          <span>
-            <Link onClick={onClose} to="/profile">
-              Wishlist
-            </Link>
-          </span>
-          <br />
-          <span>
-            <Link onClick={onClose} to="/checkout">
-              Cart
-            </Link>
-          </span>
-        </Drawer>
+            {/* </span> */}
+
+            {currentUser ? (
+              <span>
+                <Link to="/profile">
+                  <UserOutlined style={{ fontSize: "20px" }} />
+                </Link>
+              </span>
+            ) : (
+              <span>
+                <Link to="/signin">Sign In</Link>
+              </span>
+            )}
+
+            <MenuOutlined className="Burger-Icon" onClick={showDrawer} />
+
+            <Drawer
+              title="NATURL"
+              placement="right"
+              closable={true}
+              onClose={onClose}
+              visible={visible}
+            >
+              <div className="navbar-drawer-hamburguer">
+                <span>
+                  <Link onClick={onClose} to="/all-products">
+                    Products
+                  </Link>
+                </span>
+                <br />
+                <span>
+                  <Link onClick={onClose} to="/products-vegan">
+                    Vegan
+                  </Link>
+                </span>
+                <br />
+                <span>
+                  <Link onClick={onClose} to="/products-gluten-free">
+                    Gluten Free
+                  </Link>
+                </span>
+                <br />
+                <span>
+                  <Link onClick={onClose} to="/about">
+                    About
+                  </Link>
+                </span>
+                <br />
+                <span>
+                  <Link onClick={onClose} to="/profile">
+                    Wishlist
+                  </Link>
+                </span>
+                <br />
+                <span>
+                  <Link onClick={onClose} to="/checkout">
+                    Cart
+                  </Link>
+                </span>
+              </div>
+            </Drawer>
+          </div>
+        </div>
       </div>
     </div>
   );

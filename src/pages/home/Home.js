@@ -7,7 +7,7 @@ import { Link } from "@reach/router";
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 // const { Meta } = Card;
 
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 import "./Home.scss";
 
 import { Carousel } from "antd";
@@ -24,6 +24,9 @@ function HomePage(props) {
       <Carousel autoplay afterChange={onChange}>
         <div className="HeroCarouselImage">
           <div className="Carousel_Text">
+            <Link className="carousel-button" to={`/products`}>
+              SHOP NOW
+            </Link>
             <h2 style={{ color: "white" }}>Naturl Toronto</h2>
             <p>
               “My dad used to say makeup was a shallow girl's sport, but it's
@@ -33,6 +36,9 @@ function HomePage(props) {
         </div>
         <div className="HeroCarouselImage HeroCarouselImage1">
           <div className="Carousel_Text">
+            <Link className="carousel-button" to={`/products`}>
+              SHOP NOW
+            </Link>
             <h2 style={{ color: "white" }}>Naturl Paris</h2>
             <p>
               “Beneath the makeup and behind the smile I am just a girl who
@@ -43,6 +49,9 @@ function HomePage(props) {
 
         <div className="HeroCarouselImage HeroCarouselImage2">
           <div className="Carousel_Text">
+            <Link className="carousel-button" to={`/products`}>
+              SHOP NOW
+            </Link>
             <h2 style={{ color: "white" }}>Naturl Global</h2>
             <p>
               “Beauty, to me, is about being comfortable in your own skin. That,

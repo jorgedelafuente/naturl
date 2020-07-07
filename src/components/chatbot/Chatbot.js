@@ -13,8 +13,8 @@ const theme = {
   botFontColor: "#fff",
   userBubbleColor: "#fff",
   userFontColor: "#4c4c4c",
-};
-var lipstick = {};
+}; // eslint-disable-next-line
+var lipstick = {}; // eslint-disable-next-line
 var powder = {};
 var item = {};
 function CustomChatbot(props) {

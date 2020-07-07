@@ -37,22 +37,51 @@
 }
 .HeroCarouselImage1 {
   background-image: url(../../images/photo-1498746163870-51e3223d85a2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
 }
 .HeroCarouselImage2 {
   background-image: url(../../images/photo-1470072508653-1be229b63562.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
 }
 .Carousel_Text {
-  position: absolute;
-  top: 90%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.Carousel_Text a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: white;
+  margin-top: 300px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-top: 250px;
+    font-size: 45px;
+  }
+  /* mobile */
+  @media (max-width: 480px) {
+    margin-top: 250px;
+    font-size: 45px;
+  }
+}
+.Carousel_Text a:hover {
+  color: black;
+}
+
 .Carousel_Text p {
   color: #fff;
   padding: 0;
-  margin-top: -70px;
+  margin-top: 0px;
 }
+
 .column-card {
   margin-bottom: 20px;
   flex: 1 0 40%;
@@ -90,10 +119,6 @@
   text-align: left;
   padding-left: 30px;
 }
-.NewsLetterInput {
-  display: flex;
-  align-items: center;
-}
 .News__Text {
   letter-spacing: 2%;
   text-align: justify;
@@ -102,24 +127,33 @@
   font-size: 15pt;
   color: gray;
 }
+.NewsLetterInput {
+  display: flex;
+  align-items: center;
+}
 .Email-button {
-  height: 48px;
+  height: 50px;
   padding: 0px 10px;
   background-color: #000000;
   color: #fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  font-weight: 550;
   cursor: pointer;
 }
 .Email_input {
   height: 48px;
-  padding-left: 10px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-right: black;
+  height: 50px;
 }
 .About__us {
   text-align: center;
   margin-top: 100px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-top: 20px;
+  }
+  /* mobile */
+  @media (max-width: 480px) {
+    margin-top: 20px;
+  }
 }
 
 .About__text {
@@ -180,7 +214,7 @@
   }
 }
 
-@media (max-width: 700px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 480px) {
   .column-card-left {
     min-width: 300px;
   }
