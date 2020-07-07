@@ -14,6 +14,7 @@ import NotFound from "./pages/notfound/NotFound";
 import Product from "./pages/product/Product";
 import Success from "./pages/success/Success";
 import About from "./pages/about";
+import Contact from "./pages/contact";
 import "./App.scss";
 
 function App() {
@@ -132,6 +133,7 @@ function App() {
             <SignIn path="/signin" />
             <SignUp path="/signup" />
             <About path="/about" />
+            <Contact path="/contact" />
             <Profile
               setUserProfile={setUserProfile}
               data={productData}

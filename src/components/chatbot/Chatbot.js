@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-import history from "../../history";
+import { navigate } from "@reach/router";
 
 const theme = {
   background: "#fff",
@@ -13,8 +13,9 @@ const theme = {
   botFontColor: "#fff",
   userBubbleColor: "#fff",
   userFontColor: "#4c4c4c",
-}; // eslint-disable-next-line
-var lipstick = {}; // eslint-disable-next-line
+};
+
+var lipstick = {};
 var powder = {};
 var item = {};
 function CustomChatbot(props) {
@@ -24,6 +25,7 @@ function CustomChatbot(props) {
     height: "400px",
     floating: true,
   };
+
   useEffect(() => {
     if (props.data && props.data.length) {
       let d = props.data;
@@ -36,8 +38,8 @@ function CustomChatbot(props) {
   useEffect(() => {
     if (props.data && props.data.length) {
       let d = props.data;
-      let pencils = d.filter((item) => item.category === "powder");
-      let finalItem = pencils[Math.floor(Math.random() * pencils.length - 1)];
+      let powder = d.filter((item) => item.category === "powder");
+      let finalItem = powder[Math.floor(Math.random() * powder.length - 1)];
       powder = finalItem;
     }
   }, [props.data]);
@@ -45,15 +47,22 @@ function CustomChatbot(props) {
   useEffect(() => {
     if (props.data && props.data.length) {
       let d = props.data;
-      let pencils = d.filter((item) => item.category === "lipstick");
-      let finalItem = pencils[Math.floor(Math.random() * pencils.length - 1)];
+      let lipstick = d.filter((item) => item.category === "lipstick");
+      let finalItem = lipstick[Math.floor(Math.random() * lipstick.length - 1)];
       lipstick = finalItem;
     }
   }, [props.data]);
 
-  function redirectToProduct() {
-    console.log("Final Item: ", item);
-    history.push(`/product/${item.id}`);
+  function redirectToLipstick() {
+    navigate(`/product/98`);
+  }
+
+  function redirectToPowder() {
+    navigate(`/product/1039`);
+  }
+
+  function redirectToPencil() {
+    navigate(`/product/182`);
   }
 
   const steps = [
@@ -83,17 +92,17 @@ function CustomChatbot(props) {
         {
           value: "Pencil",
           label: "A Pencil",
-          trigger: () => redirectToProduct(),
+          trigger: () => redirectToPencil(),
         },
         {
           value: "Lipstick",
           label: "A Lipstick",
-          trigger: "5",
+          trigger: () => redirectToLipstick(),
         },
         {
           value: "Powder",
           label: "A Powder",
-          trigger: "5",
+          trigger: () => redirectToPowder(),
         },
       ],
     },
