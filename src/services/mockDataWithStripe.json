@@ -25,8 +25,8 @@
       { "hex_value": "#793041", "colour_name": "Blush - Earthy Purple " },
       { "hex_value": "#54281F", "colour_name": "Adorn - Rich Plum " }
     ],
-    "stripe_product_id": "prod_HZbWuDVyG2FFzx",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLjruDmlh0"
+    "stripe_product_id": "prod_Ha4qIMIOGyudtl",
+    "stripe_price_id": "price_1H0uhBCzjdOYYybLB4TZDrGK"
   },
   {
     "id": 98,
@@ -70,8 +70,8 @@
       { "hex_value": "#903459", "colour_name": "Cleopatra " },
       { "hex_value": "#b22a4a", "colour_name": "Amour " }
     ],
-    "stripe_product_id": "prod_HZbWsHSeZ0nuIE",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLaxbu9zzU"
+    "stripe_product_id": "prod_Ha4qajoIR4Felp",
+    "stripe_price_id": "price_1H0uhBCzjdOYYybLlliAixe2"
   },
   {
     "id": 92,
@@ -106,8 +106,8 @@
       { "hex_value": "#E07875", "colour_name": "Bombay (Shimmery Rose) " },
       { "hex_value": "#EBACA3", "colour_name": "Bermuda (Nude Pink) " }
     ],
-    "stripe_product_id": "prod_HZbW5gc0NOSBuT",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLF7Gfw5Sb"
+    "stripe_product_id": "prod_Ha4qJmMIjQkCjK",
+    "stripe_price_id": "price_1H0uhBCzjdOYYybLOrviQiBH"
   },
   {
     "id": 55,
@@ -150,8 +150,8 @@
       { "hex_value": "#6D333A", "colour_name": "Bordeaux Cherry " },
       { "hex_value": "#A16157", "colour_name": "Autumn " }
     ],
-    "stripe_product_id": "prod_HZbWoXLXDTWjUk",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLGFcbkkYp"
+    "stripe_product_id": "prod_Ha4q3Y3s2sc1xP",
+    "stripe_price_id": "price_1H0uhBCzjdOYYybLyB8f0C12"
   },
   {
     "id": 1039,
@@ -175,8 +175,8 @@
     "product_colors": [
       { "hex_value": "#E8E6E7", "colour_name": "Translucent" }
     ],
-    "stripe_product_id": "prod_HZbWIviEA3U3iq",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybL9Cn0Xu9D"
+    "stripe_product_id": "prod_Ha4q82AV08Fnkp",
+    "stripe_price_id": "price_1H0uhBCzjdOYYybLoF5SCMR0"
   },
   {
     "id": 1031,
@@ -201,8 +201,8 @@
       { "hex_value": "#9C7248", "colour_name": "Bahama Mama" },
       { "hex_value": "#DDA983", "colour_name": "St Tropez" }
     ],
-    "stripe_product_id": "prod_HZbWQI2n2U0tLI",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLpinNrWn1"
+    "stripe_product_id": "prod_Ha4q4UNHgR98n5",
+    "stripe_price_id": "price_1H0uhBCzjdOYYybLWQewMKQS"
   },
   {
     "id": 1023,
@@ -229,8 +229,8 @@
       { "hex_value": "#B03B3E", "colour_name": "Rosie" },
       { "hex_value": "#9D5E4F", "colour_name": "Evelyn" }
     ],
-    "stripe_product_id": "prod_HZbW79tHwmJWuS",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLevfLfmeQ"
+    "stripe_product_id": "prod_Ha4qd3Utk60dqD",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLPBDwojw0"
   },
   {
     "id": 507,
@@ -255,8 +255,8 @@
       { "hex_value": "#B98963", "colour_name": "On Cloud 9 " },
       { "hex_value": "#B77C59", "colour_name": "Glowing Halo " }
     ],
-    "stripe_product_id": "prod_HZbWUPYPyUN8mQ",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLpiKTby3J"
+    "stripe_product_id": "prod_Ha4qwFoATdcCIx",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLR1yQeuMj"
   },
   {
     "id": 503,
@@ -278,8 +278,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/503.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/503/original/open-uri20171223-4-mxlhbm?1514063331",
     "product_colors": [{ "hex_value": "#AD8C79", "colour_name": null }],
-    "stripe_product_id": "prod_HZbWqA32eaHnYt",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybLbKjzJc3P"
+    "stripe_product_id": "prod_Ha4qcFcjLsu06D",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybL7s3iopWx"
   },
   {
     "id": 497,
@@ -301,8 +301,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/497.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/497/original/open-uri20171223-4-106cc2w?1514063330",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWKw6qOz98Mx",
-    "stripe_price_id": "price_1H0SIyCzjdOYYybL19PmZ6Qw"
+    "stripe_product_id": "prod_Ha4qLEMzLf3X9K",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLRPDjDoOi"
   },
   {
     "id": 487,
@@ -326,8 +326,8 @@
     "product_colors": [
       { "hex_value": "#e0a576", "colour_name": "Light to Medium (7853C) " }
     ],
-    "stripe_product_id": "prod_HZbWAizqgu2fj2",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLbY7SkqUp"
+    "stripe_product_id": "prod_Ha4qoKWD2zDVzX",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLXjk1IvwR"
   },
   {
     "id": 484,
@@ -352,8 +352,8 @@
       { "hex_value": "#BA9569", "colour_name": "Light" },
       { "hex_value": "#B38864", "colour_name": "Medium" }
     ],
-    "stripe_product_id": "prod_HZbW2WEHoem5he",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLRW1CaoVF"
+    "stripe_product_id": "prod_Ha4qPDDjDvyjNW",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLVJyKoM85"
   },
   {
     "id": 479,
@@ -375,8 +375,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/479.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/479/original/data?1514063328",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW2L3ViBIO1s",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLNuCOakIH"
+    "stripe_product_id": "prod_Ha4qmTlpapGohJ",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLXr12O2Ul"
   },
   {
     "id": 462,
@@ -398,8 +398,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/462.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/462/original/open-uri20171223-4-4rpirw?1514063330",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWL78qYI5XLN",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLa42fSKni"
+    "stripe_product_id": "prod_Ha4qg5DL5XgGOj",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybL51SMPWhG"
   },
   {
     "id": 459,
@@ -425,8 +425,8 @@
       { "hex_value": "#C88481", "colour_name": "Creation - Matte Rosy-pink " },
       { "hex_value": "#BC7070", "colour_name": "Airy - Shimmering Mauve " }
     ],
-    "stripe_product_id": "prod_HZbW1mj0QlXXCS",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLKCn2SiLR"
+    "stripe_product_id": "prod_Ha4qkckdia253y",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLRR5WPcW9"
   },
   {
     "id": 456,
@@ -448,8 +448,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/456.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/456/original/open-uri20171223-4-c79x3p?1514062292",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWhhp4CqPXIC",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybL7vOCRc4D"
+    "stripe_product_id": "prod_Ha4qI4B3VDfzPI",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybL1rSyr3bT"
   },
   {
     "id": 451,
@@ -471,8 +471,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/451.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/451/original/open-uri20171223-4-1nhe8k?1514063325",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWFixxEDUXJT",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLGm4es3EA"
+    "stripe_product_id": "prod_Ha4qFjbnjDERGU",
+    "stripe_price_id": "price_1H0uhCCzjdOYYybLB6juebe3"
   },
   {
     "id": 446,
@@ -494,8 +494,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/446.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/446/original/data?1514063326",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWKUVBH8Jlm2",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLGgQk8BZR"
+    "stripe_product_id": "prod_Ha4q3NU7YrB5N7",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLOcejZJWO"
   },
   {
     "id": 444,
@@ -520,8 +520,8 @@
       { "hex_value": "#faaab5", "colour_name": "Rose (7860C) " },
       { "hex_value": "#e19792", "colour_name": "Natural (7859C) " }
     ],
-    "stripe_product_id": "prod_HZbWvM39UgVBis",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybLthGcHTUG"
+    "stripe_product_id": "prod_Ha4qZKzzgL9C2H",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLvCdcOr18"
   },
   {
     "id": 442,
@@ -543,8 +543,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/442.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/442/original/open-uri20171223-4-dmq85z?1514063325",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWkoNkFPUjke",
-    "stripe_price_id": "price_1H0SIzCzjdOYYybL04NJGcwM"
+    "stripe_product_id": "prod_Ha4qFUz7wCZFg2",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLvZHwU2YR"
   },
   {
     "id": 438,
@@ -569,8 +569,8 @@
       { "hex_value": "#C3A17C", "colour_name": null },
       { "hex_value": "#C08879", "colour_name": null }
     ],
-    "stripe_product_id": "prod_HZbW23TLpG4nL5",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLEwUk3dnz"
+    "stripe_product_id": "prod_Ha4qCFQIiaBuFq",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLn44XaZtM"
   },
   {
     "id": 437,
@@ -610,8 +610,8 @@
       },
       { "hex_value": "#d88a66", "colour_name": "Bronzed Clove " }
     ],
-    "stripe_product_id": "prod_HZbWQivnAunRPU",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLS0zdjO9V"
+    "stripe_product_id": "prod_Ha4qKzrr5FaTrt",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLm5ZvZO0P"
   },
   {
     "id": 429,
@@ -633,8 +633,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/429.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/429/original/open-uri20171223-4-156cku8?1514063323",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWgdMc26bpPO",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLwN52oVOa"
+    "stripe_product_id": "prod_Ha4qMVM9hAjQ44",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLfQ4jLLYZ"
   },
   {
     "id": 415,
@@ -656,8 +656,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/415.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/415/original/data?1514063320",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWwxFV7y13vj",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLYC5SYyWG"
+    "stripe_product_id": "prod_Ha4qtEkL9nKneS",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybL34L9eOKC"
   },
   {
     "id": 405,
@@ -686,8 +686,8 @@
       { "hex_value": "#a6636a", "colour_name": "Nude " },
       { "hex_value": "#b8676e", "colour_name": "Jewel " }
     ],
-    "stripe_product_id": "prod_HZbWMKQTVlK0wC",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLAYkEjE13"
+    "stripe_product_id": "prod_Ha4qoTpiM6c0DX",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLC4fgqd82"
   },
   {
     "id": 403,
@@ -716,8 +716,8 @@
       { "hex_value": "#863e4c", "colour_name": "Cool Berry " },
       { "hex_value": "#a25d60", "colour_name": "Cinnamon " }
     ],
-    "stripe_product_id": "prod_HZbWvOf8rPwjir",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLsjv7n0jP"
+    "stripe_product_id": "prod_Ha4qefPy3rhY3B",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybLllF5CQdp"
   },
   {
     "id": 388,
@@ -742,8 +742,8 @@
       { "hex_value": "#f4c1a4", "colour_name": "Light / Medium " },
       { "hex_value": "#fbd0bd", "colour_name": "Light " }
     ],
-    "stripe_product_id": "prod_HZbWLPhai3DybL",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLd5D2LrrS"
+    "stripe_product_id": "prod_Ha4q8X5jCvmVsT",
+    "stripe_price_id": "price_1H0uhDCzjdOYYybL9ec0uTpy"
   },
   {
     "id": 387,
@@ -765,8 +765,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/387.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/387/original/data?1514063316",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWE0gV6am5hi",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLoUEsYidt"
+    "stripe_product_id": "prod_Ha4qqJRPdVlvWP",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLpOmeITA3"
   },
   {
     "id": 377,
@@ -788,8 +788,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/377.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/377/original/data?1514063317",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWkcjSoydKXF",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLEdhvVtfw"
+    "stripe_product_id": "prod_Ha4qaZpTmlnwnj",
+    "stripe_price_id": "price_1H0uhECzjdOYYybL6ZUdha0W"
   },
   {
     "id": 374,
@@ -815,8 +815,8 @@
       { "hex_value": "#E1AF7E", "colour_name": "Light/Medium " },
       { "hex_value": "#F1CEAF", "colour_name": "Light  " }
     ],
-    "stripe_product_id": "prod_HZbWF7dmEBeGQa",
-    "stripe_price_id": "price_1H0SJ0CzjdOYYybLOt4zEjJP"
+    "stripe_product_id": "prod_Ha4qCb71Rp6WuL",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLMgGHROtU"
   },
   {
     "id": 370,
@@ -838,8 +838,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/370.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/370/original/open-uri20171223-4-ev2twx?1514063310",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW1AxABECKjG",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybL53ivvYRG"
+    "stripe_product_id": "prod_Ha4qY6zpxL9VTN",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLP2LFamk9"
   },
   {
     "id": 369,
@@ -861,8 +861,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/369.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/369/original/open-uri20171223-4-1dnyc8c?1514063310",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWZ2lkArDyoT",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLrNzytfwT"
+    "stripe_product_id": "prod_Ha4qhaiLJ57zaN",
+    "stripe_price_id": "price_1H0uhECzjdOYYybL6Kd1YaiB"
   },
   {
     "id": 368,
@@ -887,8 +887,8 @@
       { "hex_value": "#ecc9a3", "colour_name": "Creamy Natural (7587C) " },
       { "hex_value": "#ffffee", "colour_name": "Translucent (7586C) " }
     ],
-    "stripe_product_id": "prod_HZbW8aeYXgYVs4",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLaYsXb9vR"
+    "stripe_product_id": "prod_Ha4qloorutHK2K",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLrHUImMD5"
   },
   {
     "id": 365,
@@ -914,8 +914,8 @@
       { "hex_value": "#fce3d6", "colour_name": "Creamy Natural (7315C) " },
       { "hex_value": "#f3e2dc", "colour_name": "Translucent Light (7314C) " }
     ],
-    "stripe_product_id": "prod_HZbWdQa0pUdDb9",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybL0Fi3Rirz"
+    "stripe_product_id": "prod_Ha4qR0sp26YSfk",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLKMXDIn8G"
   },
   {
     "id": 356,
@@ -946,8 +946,8 @@
         "colour_name": "Olive 2 - for olive skin with green undertones "
       }
     ],
-    "stripe_product_id": "prod_HZbWKv2NRokOSt",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLUDaAtfQA"
+    "stripe_product_id": "prod_Ha4q1oTsxmZRfS",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLNd1DfSVS"
   },
   {
     "id": 340,
@@ -969,8 +969,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/340.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/340/original/data?1514063302",
     "product_colors": [{ "hex_value": "#f2d7c2", "colour_name": "Light " }],
-    "stripe_product_id": "prod_HZbWQc9wYPQuUU",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLVczqMYuv"
+    "stripe_product_id": "prod_Ha4qJknltD7UyV",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLO4mVkS3d"
   },
   {
     "id": 333,
@@ -995,8 +995,8 @@
       { "hex_value": "#E4A788", "colour_name": "Medium (6224C) " },
       { "hex_value": "#F6C9A0", "colour_name": "Light (6223C) " }
     ],
-    "stripe_product_id": "prod_HZbWKyoQRy7ZNs",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLdsT2QxTg"
+    "stripe_product_id": "prod_Ha4qCA8lvt344P",
+    "stripe_price_id": "price_1H0uhECzjdOYYybLatiTKlci"
   },
   {
     "id": 308,
@@ -1022,8 +1022,8 @@
       { "hex_value": "#908F7D", "colour_name": "color 2" },
       { "hex_value": "#C3B098", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWIztXFb128r",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLnhSWDyYV"
+    "stripe_product_id": "prod_Ha4qZEwtfUTDa4",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLCQLVvvW9"
   },
   {
     "id": 306,
@@ -1045,8 +1045,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/306.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/306/original/data?1514063298",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWKeVrCTAmwx",
-    "stripe_price_id": "price_1H0SJ1CzjdOYYybLQjxkFFuV"
+    "stripe_product_id": "prod_Ha4qlvm54bRCrx",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybL3eWH5hpa"
   },
   {
     "id": 301,
@@ -1068,8 +1068,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/301.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/301/original/data?1514063297",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW6CPsyZB4T4",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybL15BSPuPx"
+    "stripe_product_id": "prod_Ha4qZf0E4pXO8K",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLViEw1KMG"
   },
   {
     "id": 296,
@@ -1091,8 +1091,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/296.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/296/original/open-uri20171223-4-1hk1jtx?1514063296",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW8cLQDmINtp",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLg4IdsfE4"
+    "stripe_product_id": "prod_Ha4qLaFobKiDw6",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLaOajQyRr"
   },
   {
     "id": 278,
@@ -1118,8 +1118,8 @@
       { "hex_value": "#BC8A88", "colour_name": "color 2" },
       { "hex_value": "#7E554A", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWziiw2IwZmh",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLbmUmwZaz"
+    "stripe_product_id": "prod_Ha4qBsm1GXPxNR",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLlYCoybgy"
   },
   {
     "id": 277,
@@ -1141,8 +1141,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/277.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/277/original/open-uri20171223-4-a17eci?1514063291",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWIjlYvwnDCz",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLXH0Ay3io"
+    "stripe_product_id": "prod_Ha4q8KeQzpeXPG",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLAUCzxyqO"
   },
   {
     "id": 262,
@@ -1164,8 +1164,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/262.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/262/original/open-uri20171223-4-vppdxb?1514063288",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW3QRXJVsdUz",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybL05iJL0MA"
+    "stripe_product_id": "prod_Ha4qJZPt5qz6RZ",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLszyITJA0"
   },
   {
     "id": 259,
@@ -1187,8 +1187,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/259.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/259/original/data?1514063284",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW5GDF4A1pKf",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLrqzkbQV6"
+    "stripe_product_id": "prod_Ha4quxcIvznie7",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybL7jWkWaDX"
   },
   {
     "id": 252,
@@ -1212,8 +1212,8 @@
     "product_colors": [
       { "hex_value": "#48445C", "colour_name": "Azure - Navy Blue " }
     ],
-    "stripe_product_id": "prod_HZbWGRpUl1DneC",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLb1ruPbRo"
+    "stripe_product_id": "prod_Ha4q06L2RVmMVj",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLUgSCQoD8"
   },
   {
     "id": 248,
@@ -1235,8 +1235,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/248.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/248/original/data?1514063284",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWJubYfozZjS",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybL3SrYLaif"
+    "stripe_product_id": "prod_Ha4qGUvg9esrOZ",
+    "stripe_price_id": "price_1H0uhFCzjdOYYybLBaoeV6Sx"
   },
   {
     "id": 243,
@@ -1258,8 +1258,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/243.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/243/original/data?1514062293",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWkIkNhnh0Zj",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLmfMA3NKc"
+    "stripe_product_id": "prod_Ha4q3smYiSl4XY",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybL5jO5WkJA"
   },
   {
     "id": 238,
@@ -1281,8 +1281,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/238.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/238/original/data?1514063284",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWz9gwIObTuH",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLbGs7LKHh"
+    "stripe_product_id": "prod_Ha4quVKY55gpja",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLfVxWYQua"
   },
   {
     "id": 210,
@@ -1304,8 +1304,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/210.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/210/original/open-uri20171223-4-5m9ed8?1514062285",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW7zMUfXBHJc",
-    "stripe_price_id": "price_1H0SJ2CzjdOYYybLtRWDcILl"
+    "stripe_product_id": "prod_Ha4qvZyLkfTnZ3",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLeMA9XJmd"
   },
   {
     "id": 204,
@@ -1327,8 +1327,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/204.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/204/original/data?1514062280",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWCt7GeXOFKd",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLf47oD6cH"
+    "stripe_product_id": "prod_Ha4qC2e1MNpeYF",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLuCzXEvGY"
   },
   {
     "id": 201,
@@ -1350,8 +1350,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/201.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/201/original/data?1514062284",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWycKlkIyqaJ",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLLWbSVy98"
+    "stripe_product_id": "prod_Ha4qClg5SW5IEe",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLFmnUiAcI"
   },
   {
     "id": 198,
@@ -1378,8 +1378,8 @@
       { "hex_value": "#403227", "colour_name": "Dark Brown " },
       { "hex_value": "#36312d", "colour_name": "Blackest Black " }
     ],
-    "stripe_product_id": "prod_HZbWbQZ6r6TbtA",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybL84x3Pc0j"
+    "stripe_product_id": "prod_Ha4qJevmvqnW1S",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLN8OoTaXp"
   },
   {
     "id": 197,
@@ -1401,8 +1401,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/197.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/197/original/data?1514062283",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWaMH2n7zfnn",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLgKefDyGC"
+    "stripe_product_id": "prod_Ha4q7MrU8tMUfb",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybL7AZRtu0M"
   },
   {
     "id": 196,
@@ -1424,8 +1424,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/196.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/196/original/open-uri20171223-4-p5h931?1514062283",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWN7ER9ilkko",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLbfW1TdiY"
+    "stripe_product_id": "prod_Ha4qFtVQdVJQkh",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLtNICYKd6"
   },
   {
     "id": 192,
@@ -1447,8 +1447,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/192.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/192/original/data?1514062281",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW6bTrixJumH",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLMH5rPDew"
+    "stripe_product_id": "prod_Ha4q6WptdtF2Pi",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLoO5EHljs"
   },
   {
     "id": 191,
@@ -1473,8 +1473,8 @@
       { "hex_value": "#74482f", "colour_name": "Brown " },
       { "hex_value": "#000000", "colour_name": "Black " }
     ],
-    "stripe_product_id": "prod_HZbWRPc8UROFAS",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybL2QQldzQI"
+    "stripe_product_id": "prod_Ha4q8KXvTbpQbU",
+    "stripe_price_id": "price_1H0uhGCzjdOYYybLc4oI4Fzg"
   },
   {
     "id": 189,
@@ -1496,8 +1496,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/189.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/189/original/data?1514062281",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWJ14m3oXcxA",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLw3wx9qBf"
+    "stripe_product_id": "prod_Ha4qruq2XP4D3m",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLjmI3IOHf"
   },
   {
     "id": 173,
@@ -1523,8 +1523,8 @@
       { "hex_value": "#40272B", "colour_name": "Deep Brown (7366C) " },
       { "hex_value": "#332A30", "colour_name": "Black (7367C) " }
     ],
-    "stripe_product_id": "prod_HZbWwBpqfnwFfE",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLCE1o3Z4z"
+    "stripe_product_id": "prod_Ha4qSYgxjE2ZZz",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLXUeMeHUq"
   },
   {
     "id": 165,
@@ -1559,8 +1559,8 @@
       { "hex_value": "#DDA4B3", "colour_name": "I Do " },
       { "hex_value": "#E4A993", "colour_name": "Blush Bouquet " }
     ],
-    "stripe_product_id": "prod_HZbWTWgERjzfkX",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLRtBJUkZx"
+    "stripe_product_id": "prod_Ha4qDUmRnzoXOU",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLWkCCXG4o"
   },
   {
     "id": 124,
@@ -1595,8 +1595,8 @@
         "colour_name": "Blushing Crystal - Pale pink (sheer finish) "
       }
     ],
-    "stripe_product_id": "prod_HZbWGD3NmZYUi5",
-    "stripe_price_id": "price_1H0SJ3CzjdOYYybLiIl2RclJ"
+    "stripe_product_id": "prod_Ha4qQBFzlb3gKX",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLQqvpdDjJ"
   },
   {
     "id": 54,
@@ -1621,8 +1621,8 @@
       { "hex_value": "#452319", "colour_name": "Rock (Brown) " },
       { "hex_value": "#000000", "colour_name": "Graphite (Black) " }
     ],
-    "stripe_product_id": "prod_HZbW72S9bLwQ7F",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybLPf5uwQW3"
+    "stripe_product_id": "prod_Ha4qYQ4UVDBerW",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLa6FFs4hA"
   },
   {
     "id": 50,
@@ -1644,8 +1644,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/50.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/050/original/data?1514062254",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWdwvOg3ZgO1",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybLh5bS99uu"
+    "stripe_product_id": "prod_Ha4qOznTZuM96E",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLJQRS7pGF"
   },
   {
     "id": 48,
@@ -1667,8 +1667,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/48.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/048/original/data?1514062254",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWFSSxQdyfjK",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybLkuRIKKGz"
+    "stripe_product_id": "prod_Ha4qRs07fbJsDb",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLPjUNBRwX"
   },
   {
     "id": 39,
@@ -1693,8 +1693,8 @@
       { "hex_value": "#000000", "colour_name": "Ultra Black " },
       { "hex_value": "#1B1B1B", "colour_name": "Black " }
     ],
-    "stripe_product_id": "prod_HZbW9gE4D2cqxO",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybL7rYd5NPj"
+    "stripe_product_id": "prod_Ha4qeKJFTZNLfi",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybL5fPdlnuK"
   },
   {
     "id": 38,
@@ -1719,8 +1719,8 @@
       { "hex_value": "#403426", "colour_name": "Dark Brown " },
       { "hex_value": "#000000", "colour_name": "Black " }
     ],
-    "stripe_product_id": "prod_HZbWGy7WbdqoAn",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybLWbiQlIWl"
+    "stripe_product_id": "prod_Ha4qI9q54CCm20",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybLYxaQk6P2"
   },
   {
     "id": 28,
@@ -1745,8 +1745,8 @@
       { "hex_value": "#282828", "colour_name": "Black Organics " },
       { "hex_value": "#000000", "colour_name": "Ultra Black Organics " }
     ],
-    "stripe_product_id": "prod_HZbWbRBUo2XCTF",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybL9s5xVUZA"
+    "stripe_product_id": "prod_Ha4qSTKIafSsV7",
+    "stripe_price_id": "price_1H0uhHCzjdOYYybL2E5J3U8U"
   },
   {
     "id": 15,
@@ -1771,8 +1771,8 @@
       { "hex_value": "#282828", "colour_name": "Black Organics (1063C) " },
       { "hex_value": "#000000", "colour_name": "Ultra Black Organics (1062C) " }
     ],
-    "stripe_product_id": "prod_HZbW648ATpNGuF",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybLn2TkKZop"
+    "stripe_product_id": "prod_Ha4qysdygfUlWA",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLjXvOv3uX"
   },
   {
     "id": 4,
@@ -1797,8 +1797,8 @@
       { "hex_value": "#2d2d2d", "colour_name": "Black (7884C) " },
       { "hex_value": "#000000", "colour_name": "Ultra Black (7883C) " }
     ],
-    "stripe_product_id": "prod_HZbWjdiGDQVJxy",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybLD3E1S8tE"
+    "stripe_product_id": "prod_Ha4qwFr4zuZluF",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLdIW02VwR"
   },
   {
     "id": 3,
@@ -1823,8 +1823,8 @@
       { "hex_value": "#282828", "colour_name": "Black Organics (7562C) " },
       { "hex_value": "#000000", "colour_name": "Ultra Black Organics (7561C) " }
     ],
-    "stripe_product_id": "prod_HZbWfJtZ8CI5Uf",
-    "stripe_price_id": "price_1H0SJ4CzjdOYYybLcOlWOl4N"
+    "stripe_product_id": "prod_Ha4rJ5nDEnnWdO",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLYsCwvEMC"
   },
   {
     "id": 1,
@@ -1849,8 +1849,8 @@
       { "hex_value": "#3E2829", "colour_name": "Brown " },
       { "hex_value": "#000000", "colour_name": "Black " }
     ],
-    "stripe_product_id": "prod_HZbWPBJT96SIcN",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybL98SjagYL"
+    "stripe_product_id": "prod_Ha4r6fdLZV3wao",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLwf2zP3e6"
   },
   {
     "id": 1048,
@@ -1907,8 +1907,8 @@
       { "hex_value": "#A36B5E", "colour_name": "951 Pencil" },
       { "hex_value": "#B28378", "colour_name": "BFF Pencil" }
     ],
-    "stripe_product_id": "prod_HZbWXFLVVIN8cW",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybLKk31HhjC"
+    "stripe_product_id": "prod_Ha4r2tlhpXefsN",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLxxq9RHCZ"
   },
   {
     "id": 1047,
@@ -1938,8 +1938,8 @@
       { "hex_value": "#BB656B", "colour_name": "Brain Freeze" },
       { "hex_value": "#b72227", "colour_name": "Bee's Knees" }
     ],
-    "stripe_product_id": "prod_HZbWquQMRUp2RF",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybLqmFbLrqM"
+    "stripe_product_id": "prod_Ha4rGvnRQn9Y5c",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLKOr0KPks"
   },
   {
     "id": 1046,
@@ -2008,8 +2008,8 @@
       { "hex_value": "#793C36", "colour_name": "Ziggie" },
       { "hex_value": "#F2DEC3", "colour_name": "Fair 05" }
     ],
-    "stripe_product_id": "prod_HZbWTnPHrFcAIB",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybLi29LpsRi"
+    "stripe_product_id": "prod_Ha4rs2hXulvg9h",
+    "stripe_price_id": "price_1H0uhICzjdOYYybL6I7PV9sd"
   },
   {
     "id": 1034,
@@ -2039,8 +2039,8 @@
       { "hex_value": "#E8B49B", "colour_name": "Tropical Sunset" },
       { "hex_value": "#F7F8F3", "colour_name": "White Diamond" }
     ],
-    "stripe_product_id": "prod_HZbWsWlzRSd2UD",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybLijZ6DZ77"
+    "stripe_product_id": "prod_Ha4rHJCC20WVZL",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLTWqrjVE2"
   },
   {
     "id": 1032,
@@ -2062,8 +2062,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1032.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/032/original/open-uri20180630-4-1bl3btv?1530390381",
     "product_colors": [{ "hex_value": "#A37948", "colour_name": "Caribbean" }],
-    "stripe_product_id": "prod_HZbWJ99r2keYxe",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybLtwie63PC"
+    "stripe_product_id": "prod_Ha4rGx8ffNorPw",
+    "stripe_price_id": "price_1H0uhICzjdOYYybL4BA3fKV4"
   },
   {
     "id": 1030,
@@ -2099,8 +2099,8 @@
       { "hex_value": "#4F1314", "colour_name": "Fiery Red" },
       { "hex_value": "#2F1513", "colour_name": "Black Cherry" }
     ],
-    "stripe_product_id": "prod_HZbWt130PZIyI3",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybLPa7PrrGO"
+    "stripe_product_id": "prod_Ha4rPQOiNkyJec",
+    "stripe_price_id": "price_1H0uhICzjdOYYybLtlreqolu"
   },
   {
     "id": 1021,
@@ -2122,8 +2122,33 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1021.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/021/original/open-uri20180630-4-10sgmvz?1530390373",
     "product_colors": [{ "hex_value": "#000000", "colour_name": "Black" }],
-    "stripe_product_id": "prod_HZbWQjrYzHvJZN",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybL0caxhxQ2"
+    "stripe_product_id": "prod_Ha4rE8D8rXHz14",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybLQa1XjSW9"
+  },
+  {
+    "id": 1005,
+    "brand": "alva",
+    "name": "Liquid Eye Shadow",
+    "price": "9.95",
+    "price_sign": "$",
+    "currency": "USD",
+    "image_link": "http://www.purpicks.com/wp-content/uploads/2018/06/Alva-Liquid-Eye-Shadow-1-Pale-Almond.png",
+    "product_link": "http://www.purpicks.com/product/alva-liquid-eye-shadow-1-pale-almond/",
+    "website_link": "https://purpicks.com/",
+    "description": "Our Liquid Edition Eye Shadows have been a real winner since their launch and are a real first of their kind in natural and organic make-up. Whether you're looking for a striking or glamorous look for night time, or something more subtle and natural for wearing during the day, there is a shade for everyone. They dry quickly, and depending on the depth of colour desired, can be blended in on application or left to dry before blending for a more vivid look. Layering is also possible, but however you choose to use these liquid eye shadows they won't gather in crow's feet or fine lines around the eyes. The inclusion of patented beta glucan also means they're perfect for sensitive eyes. Pale Almond is subtle, natural, and perfect for daytime wear, and compliments our Bronzed Hazel liquid eye shadow if a duo tone is desired.",
+    "rating": null,
+    "category": "cream",
+    "product_type": "eyeshadow",
+    "tag_list": ["Organic", "Vegan", "purpicks"],
+    "created_at": "2018-06-30T19:19:29.708Z",
+    "updated_at": "2018-09-02T22:52:06.744Z",
+    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1005.json",
+    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/005/original/open-uri20180630-4-1eau5wj?1530390360",
+    "product_colors": [
+      { "hex_value": "#B8A89A", "colour_name": "Pale Almond" }
+    ],
+    "stripe_product_id": "prod_Ha4rkgZF8hGZEC",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybLN6vCe6rK"
   },
   {
     "id": 485,
@@ -2151,8 +2176,8 @@
         "colour_name": "Soleil (Medium Bronzed Tan with Gold Shimmer)  "
       }
     ],
-    "stripe_product_id": "prod_HZbWUMxIDf30xX",
-    "stripe_price_id": "price_1H0SJ5CzjdOYYybLSSkpY3l9"
+    "stripe_product_id": "prod_Ha4rKtNGthNGHW",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybLZVF8if9h"
   },
   {
     "id": 478,
@@ -2179,8 +2204,8 @@
       { "hex_value": "#DBBDAD", "colour_name": "color 2" },
       { "hex_value": "#C3A785", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWTU68T0jFv2",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybLZi2DsDUn"
+    "stripe_product_id": "prod_Ha4rxg3AczwPHI",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybLM2ttl7cb"
   },
   {
     "id": 469,
@@ -2208,8 +2233,8 @@
       { "hex_value": "#E88C90", "colour_name": "Get Me To The Alter " },
       { "hex_value": "#F591A6", "colour_name": "Cheeky Cherub " }
     ],
-    "stripe_product_id": "prod_HZbWfsQucDCCM6",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybLip2TxiJw"
+    "stripe_product_id": "prod_Ha4rrvxKzbp6mg",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybL5ewUq8EY"
   },
   {
     "id": 454,
@@ -2236,8 +2261,8 @@
       { "hex_value": "#D67088", "colour_name": "color 2" },
       { "hex_value": "#DE7E73", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWqDxrKhJyOi",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybL29cH2RGY"
+    "stripe_product_id": "prod_Ha4rwNCgdGc1DU",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybLBhyv7xAP"
   },
   {
     "id": 441,
@@ -2264,8 +2289,8 @@
       { "hex_value": "#D58A68", "colour_name": "color 2" },
       { "hex_value": "#EA8DA4", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWuETpEPqqWo",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybLTMPPV3f1"
+    "stripe_product_id": "prod_Ha4rtSPBycvdo7",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybLXQyXlHJh"
   },
   {
     "id": 431,
@@ -2290,8 +2315,8 @@
       { "hex_value": "#876A51", "colour_name": "color 2" },
       { "hex_value": "#C89282", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbW9wnntZNzTY",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybL5Zd2klXZ"
+    "stripe_product_id": "prod_Ha4rc8SiphUcfW",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybLbcvhHAAh"
   },
   {
     "id": 395,
@@ -2313,8 +2338,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/395.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/395/original/data?1514063318",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW1r9QvX29qO",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybL1xaFHhOg"
+    "stripe_product_id": "prod_Ha4ry9K3wSTEPt",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybL4vW08drI"
   },
   {
     "id": 392,
@@ -2338,8 +2363,8 @@
     "product_colors": [
       { "hex_value": "#93474f", "colour_name": "No.3 Glamorous Look " }
     ],
-    "stripe_product_id": "prod_HZbWwtIaJjTIha",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybLTiqxvFFo"
+    "stripe_product_id": "prod_Ha4rdfMT2ktYWs",
+    "stripe_price_id": "price_1H0uhJCzjdOYYybL621gYfm5"
   },
   {
     "id": 378,
@@ -2361,8 +2386,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/378.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/378/original/data?1514063313",
     "product_colors": [{ "hex_value": "#ECB78F", "colour_name": "Sand " }],
-    "stripe_product_id": "prod_HZbWR8ch3EGGwt",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybLKcm6qFuF"
+    "stripe_product_id": "prod_Ha4rci8kB4flw5",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLITnP2qAv"
   },
   {
     "id": 323,
@@ -2390,8 +2415,8 @@
       { "hex_value": "#dab394", "colour_name": "02 Almond " },
       { "hex_value": "#eac9a6", "colour_name": "01 Macadamia " }
     ],
-    "stripe_product_id": "prod_HZbWT9Es5z47tl",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybLrNwVpvzb"
+    "stripe_product_id": "prod_Ha4rHMAx8vXztl",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLqdhHnAMd"
   },
   {
     "id": 322,
@@ -2416,8 +2441,8 @@
       { "hex_value": "#E7B88E", "colour_name": "Sand  " },
       { "hex_value": "#F1C6A3", "colour_name": "Porecelain " }
     ],
-    "stripe_product_id": "prod_HZbWC0ePxLzZu4",
-    "stripe_price_id": "price_1H0SJ6CzjdOYYybL0CvK9gGc"
+    "stripe_product_id": "prod_Ha4rv6OvErMjeM",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLAlOz6rug"
   },
   {
     "id": 315,
@@ -2443,8 +2468,8 @@
       { "hex_value": "#EBB579", "colour_name": "Nude " },
       { "hex_value": "#EFC698", "colour_name": "Porecelain " }
     ],
-    "stripe_product_id": "prod_HZbWuno8fH0fQa",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLhqbTIah6"
+    "stripe_product_id": "prod_Ha4r1vX5QIE2z9",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLfedIFrDo"
   },
   {
     "id": 312,
@@ -2470,8 +2495,8 @@
       { "hex_value": "#96789F", "colour_name": "color 2" },
       { "hex_value": "#A28D95", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWUYyYMA51nG",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLSvBlED8s"
+    "stripe_product_id": "prod_Ha4rhhNETxDmfw",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLVGckpOap"
   },
   {
     "id": 304,
@@ -2493,8 +2518,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/304.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/304/original/data?1514063297",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWMJuGn3hFy4",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLrR6ezsxh"
+    "stripe_product_id": "prod_Ha4rrryhxFTKm3",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLoGgeeZwP"
   },
   {
     "id": 294,
@@ -2520,8 +2545,8 @@
       { "hex_value": "#886649", "colour_name": "color 2" },
       { "hex_value": "#A3866F", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWLoh0Tck53w",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLnmYfh9EZ"
+    "stripe_product_id": "prod_Ha4rNWZ7UU3Ror",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLeBSviswd"
   },
   {
     "id": 292,
@@ -2543,8 +2568,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/292.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/292/original/data?1514063297",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWr1p1wWLl6e",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLUFZOqODX"
+    "stripe_product_id": "prod_Ha4rg0yc3N7xPj",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLtrA8zz2h"
   },
   {
     "id": 288,
@@ -2571,8 +2596,8 @@
       { "hex_value": "#AD8466", "colour_name": "color 2" },
       { "hex_value": "#DAC4B4", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWsFdCaMwBPR",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLM9cLnuKy"
+    "stripe_product_id": "prod_Ha4rmRyaSlSbvO",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybLtZEykuzr"
   },
   {
     "id": 284,
@@ -2601,8 +2626,8 @@
       { "hex_value": "#E0CBB0", "colour_name": "color 2" },
       { "hex_value": "#D9CFC2", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWd6754NOrsj",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLNNeouFjy"
+    "stripe_product_id": "prod_Ha4r8gjUoXR7Jz",
+    "stripe_price_id": "price_1H0uhKCzjdOYYybL9JSHWpUg"
   },
   {
     "id": 283,
@@ -2629,8 +2654,8 @@
       { "hex_value": "#BE866B", "colour_name": "color 2" },
       { "hex_value": "#BF9D87", "colour_name": "color 1" }
     ],
-    "stripe_product_id": "prod_HZbWx5P6QMYyvL",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLf6ZEAbz3"
+    "stripe_product_id": "prod_Ha4roMuAmO69Ju",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLN9S7OAun"
   },
   {
     "id": 275,
@@ -2682,8 +2707,8 @@
       { "hex_value": "#8CA7B5", "colour_name": "Breeze (Demi-Matte) " },
       { "hex_value": "#533C5D", "colour_name": "Blackberry (Demi-Matte) " }
     ],
-    "stripe_product_id": "prod_HZbWKZGh0sA7xt",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLS5rDUmRu"
+    "stripe_product_id": "prod_Ha4rzv1oNSaxw8",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLZhR4C41V"
   },
   {
     "id": 274,
@@ -2705,8 +2730,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/274.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/274/original/data?1514063328",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW4AzlhGpy06",
-    "stripe_price_id": "price_1H0SJ7CzjdOYYybLnNZLellR"
+    "stripe_product_id": "prod_Ha4rjOTPbeyF52",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLpgovh2VQ"
   },
   {
     "id": 234,
@@ -2732,8 +2757,8 @@
       { "hex_value": "#5f769c", "colour_name": "No.4 Night Blue " },
       { "hex_value": "#386e6e", "colour_name": "No. 10 Petrol " }
     ],
-    "stripe_product_id": "prod_HZbW5G2b6QGWB6",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLC4frbamx"
+    "stripe_product_id": "prod_Ha4rXVRNG7sKl4",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLMbGWDY3b"
   },
   {
     "id": 227,
@@ -2755,8 +2780,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/227.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/227/original/data?1514062290",
     "product_colors": [{ "hex_value": "#322423", "colour_name": "Espresso " }],
-    "stripe_product_id": "prod_HZbW3pizODrfUQ",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLp4u7TrCV"
+    "stripe_product_id": "prod_Ha4rPvSZxXlIBE",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLTHk8h8sW"
   },
   {
     "id": 188,
@@ -2784,8 +2809,8 @@
       },
       { "hex_value": "#141936", "colour_name": "Midnight - Deep Navy " }
     ],
-    "stripe_product_id": "prod_HZbWF21DjY9HKT",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLsqShmRDA"
+    "stripe_product_id": "prod_Ha4rJpUZLQq6lc",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLij3LJUAR"
   },
   {
     "id": 187,
@@ -2807,8 +2832,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/187.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/187/original/data?1514062279",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWnZ9mvNLD7l",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLtbTXGPPP"
+    "stripe_product_id": "prod_Ha4rWu1UMnkA0b",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybL6gE50HKH"
   },
   {
     "id": 182,
@@ -2830,8 +2855,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/182.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/182/original/data?1514063295",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW1hoUfIaAzQ",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLzSB7GzLr"
+    "stripe_product_id": "prod_Ha4r3afriWZR2x",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLnNCvEYo8"
   },
   {
     "id": 180,
@@ -2853,8 +2878,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/180.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/180/original/data?1514062276",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWmM2Y77cdDu",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLys7ewt5I"
+    "stripe_product_id": "prod_Ha4rpnOpgIS7R4",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybL4Qpwhzwf"
   },
   {
     "id": 176,
@@ -2876,8 +2901,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/176.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/176/original/data?1514062275",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWFTg8Mj5DU1",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLKJAXKgXt"
+    "stripe_product_id": "prod_Ha4rgbjHf60LuL",
+    "stripe_price_id": "price_1H0uhLCzjdOYYybLDpFmxmmC"
   },
   {
     "id": 171,
@@ -2902,8 +2927,8 @@
       { "hex_value": "#5B392D", "colour_name": "Coffee " },
       { "hex_value": "#000000", "colour_name": "Black " }
     ],
-    "stripe_product_id": "prod_HZbWGzePLNNRzi",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLHNG21aJX"
+    "stripe_product_id": "prod_Ha4rN9uniE01Jy",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLVRUzjeVC"
   },
   {
     "id": 168,
@@ -2936,8 +2961,8 @@
     "product_colors": [
       { "hex_value": "#DAC3B1", "colour_name": "Lace Camisole " }
     ],
-    "stripe_product_id": "prod_HZbWgLBtVotLjh",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLa2v3YJS4"
+    "stripe_product_id": "prod_Ha4ri6bIZSnWsL",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLGnPcu7ku"
   },
   {
     "id": 161,
@@ -2976,8 +3001,8 @@
       { "hex_value": "#7B113A", "colour_name": "Summer Love " },
       { "hex_value": "#D5A026", "colour_name": "Under My Sunbrella " }
     ],
-    "stripe_product_id": "prod_HZbWvHwrXlaYbJ",
-    "stripe_price_id": "price_1H0SJ8CzjdOYYybLt51qdFTd"
+    "stripe_product_id": "prod_Ha4r2N6QBFuvXr",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLVdIkYeNq"
   },
   {
     "id": 156,
@@ -3014,8 +3039,8 @@
       { "hex_value": "#521B3E", "colour_name": "Canadian Wildberries " },
       { "hex_value": "#251414", "colour_name": "Deep Creek " }
     ],
-    "stripe_product_id": "prod_HZbWiyIcYxL65I",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLRMH3Hfwc"
+    "stripe_product_id": "prod_Ha4rUrcIIxOAxp",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLBNsowB3q"
   },
   {
     "id": 144,
@@ -3037,8 +3062,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/144.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/144/original/data?1514062264",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWRsVrMf71WC",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLY5djKKAh"
+    "stripe_product_id": "prod_Ha4rcOeNJFmvnr",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLzasFAVaG"
   },
   {
     "id": 140,
@@ -3060,8 +3085,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/140.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/140/original/data?1514061109",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW2MQT3tS5uy",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLJMWC5FCj"
+    "stripe_product_id": "prod_Ha4rCAJdFgoBF5",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLqO2PyUv9"
   },
   {
     "id": 129,
@@ -3108,8 +3133,8 @@
       { "hex_value": "#45060F", "colour_name": "Afters " },
       { "hex_value": "#832A66", "colour_name": "Ace " }
     ],
-    "stripe_product_id": "prod_HZbWBN8K3ltDt9",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLaV3kaRaE"
+    "stripe_product_id": "prod_Ha4ray3TeaHVCy",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLxHCwdjNT"
   },
   {
     "id": 126,
@@ -3178,8 +3203,8 @@
         "colour_name": "Baroque Beauty\t- Medium Taupe "
       }
     ],
-    "stripe_product_id": "prod_HZbWnWg3gDBvBu",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLE3NNtSTK"
+    "stripe_product_id": "prod_Ha4rIqEcU11x5U",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLd8HtTGUO"
   },
   {
     "id": 71,
@@ -3201,8 +3226,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/71.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/071/original/open-uri20171223-4-1b53nbg?1514062255",
     "product_colors": [{ "hex_value": "#EB7583", "colour_name": "XOX " }],
-    "stripe_product_id": "prod_HZbWsGXVomeKPM",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLKaWKbT8F"
+    "stripe_product_id": "prod_Ha4rOK35ZNKQud",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLeKWNng9y"
   },
   {
     "id": 61,
@@ -3232,8 +3257,8 @@
       { "hex_value": "#9B3F4A", "colour_name": "Cranberry " },
       { "hex_value": "#AA2A63", "colour_name": "Berry Sorbet " }
     ],
-    "stripe_product_id": "prod_HZbWgG8F1OTUAd",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLiKCUeql6"
+    "stripe_product_id": "prod_Ha4rwoRzPzMBx7",
+    "stripe_price_id": "price_1H0uhMCzjdOYYybLWNm4MWA8"
   },
   {
     "id": 56,
@@ -3262,8 +3287,8 @@
       { "hex_value": "#7D2D3A", "colour_name": "Wine Tour " },
       { "hex_value": "#FCAE98", "colour_name": "Party in the Buff " }
     ],
-    "stripe_product_id": "prod_HZbW416JK7lyeR",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLA61XPyLB"
+    "stripe_product_id": "prod_Ha4ru4LMg14Aji",
+    "stripe_price_id": "price_1H0uhNCzjdOYYybLzL3mbOO4"
   },
   {
     "id": 37,
@@ -3285,8 +3310,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/37.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/037/original/data?1514062252",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW2rNHHEYOMG",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLwiDqWnVt"
+    "stripe_product_id": "prod_Ha4rI7biKFLUiw",
+    "stripe_price_id": "price_1H0uhNCzjdOYYybLbDqMullx"
   },
   {
     "id": 26,
@@ -3308,8 +3333,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/26.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/026/original/data?1514061111",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWhsOqM2gbBn",
-    "stripe_price_id": "price_1H0SJ9CzjdOYYybLpX3Nq9V9"
+    "stripe_product_id": "prod_Ha4r9Guq5pN0d2",
+    "stripe_price_id": "price_1H0uhNCzjdOYYybLSIgTS2N0"
   },
   {
     "id": 22,
@@ -3331,8 +3356,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/22.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/022/original/data?1514061108",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWnwbrQ1Zyyu",
-    "stripe_price_id": "price_1H0SJACzjdOYYybLOUFtaepX"
+    "stripe_product_id": "prod_Ha4rUgPcu3LsGl",
+    "stripe_price_id": "price_1H0uhNCzjdOYYybLrbXA6hy0"
   },
   {
     "id": 17,
@@ -3354,8 +3379,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/17.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/017/original/data?1514061110",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWEQIBjrcsr6",
-    "stripe_price_id": "price_1H0SJACzjdOYYybL32XZ4Wxq"
+    "stripe_product_id": "prod_Ha4retzZyUriXO",
+    "stripe_price_id": "price_1H0uhNCzjdOYYybLGr5ieb3t"
   },
   {
     "id": 16,
@@ -3377,8 +3402,8 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/16.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/016/original/data?1514063333",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbW9R2CLxg7M4",
-    "stripe_price_id": "price_1H0SJACzjdOYYybL7q8BqIZ8"
+    "stripe_product_id": "prod_Ha4rRf4xsU72KC",
+    "stripe_price_id": "price_1H0uhNCzjdOYYybLKzg7WqEw"
   },
   {
     "id": 5,
@@ -3400,7 +3425,7 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/5.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/005/original/data?1514061107",
     "product_colors": [],
-    "stripe_product_id": "prod_HZbWwosVO1ETSW",
-    "stripe_price_id": "price_1H0SJACzjdOYYybLjyLktzTQ"
+    "stripe_product_id": "prod_Ha4rNSnRsZLFMB",
+    "stripe_price_id": "price_1H0uhNCzjdOYYybLUaN3n9Q5"
   }
 ]
