@@ -16,6 +16,7 @@ import Success from "./pages/success/Success";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import "./App.scss";
+import ManageScroll from "./scroll";
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true);
@@ -176,6 +177,7 @@ function App() {
             />
             <NotFound default />
           </Router>
+          <ManageScroll />
         </main>
         <Footer />
       </AuthProvider>
