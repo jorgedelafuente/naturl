@@ -14,7 +14,11 @@ export default function PurchasedItem({
     <div className="PurchasedItem">
       <div className="PurchasedItem-description">
         <div className="PurchasedItem-thumbnail">
-          <img className="PurchasedItem-thumbnail-img" src={thumbnail} />
+          <img
+            className="PurchasedItem-thumbnail-img"
+            alt={name}
+            src={thumbnail}
+          />
         </div>
         <Link to={productPath} className="PurchasedItem-product-link">
           {name}
