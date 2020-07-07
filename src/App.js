@@ -122,7 +122,7 @@ function App() {
     });
   };
 
-  // console.log(userProfile);
+  console.log(userProfile);
 
   return (
     <React.StrictMode>
@@ -131,11 +131,12 @@ function App() {
         <main className="main-container">
           <Router primary={false}>
             <Home data={productData} path="/" />
-            <SignIn path="/signin" />
+            <SignIn path="/signin" setUserProfile={setUserProfile} />
             <SignUp path="/signup" />
             <About path="/about" />
             <Contact path="/contact" />
             <Profile
+              userProfile={userProfile}
               setUserProfile={setUserProfile}
               data={productData}
               path="/profile"

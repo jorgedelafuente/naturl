@@ -93,6 +93,7 @@ const SignUp = () => {
               name="password"
               type="password"
               placeholder="Password"
+              minLength="6"
             />
           </label>
         </div>
@@ -105,6 +106,7 @@ const SignUp = () => {
               name="password2"
               type="password"
               placeholder="Password"
+              minLength="6"
             />
           </label>
         </div>

@@ -1,29 +1,36 @@
 import React, { useCallback, useContext, useState } from "react";
-import firebase from "../../../firebase";
+import firebase, { getUserDocument } from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
 import { Link } from "@reach/router";
 import "../FormContainer.scss";
 import { Alert } from "antd";
+import PropTypes from "prop-types";
 
-const Login = () => {
+const Login = ({ setUserProfile }) => {
   const [errorAlert, setErrorAlert] = useState("none");
   const [successAlert, setSuccessAlert] = useState("none");
 
-  const handleLogin = useCallback(async (event) => {
-    event.preventDefault();
-    const { email, password } = event.target.elements;
-    try {
-      await firebase
-        .auth()
-        .signInWithEmailAndPassword(email.value, password.value)
-        .then(() => {
-          showSuccess();
-        });
-    } catch (error) {
-      console.log(error);
-      showError();
-    }
-  }, []);
+  const handleLogin = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const { email, password } = event.target.elements;
+      try {
+        await firebase
+          .auth()
+          .signInWithEmailAndPassword(email.value, password.value)
+          .then((data) => {
+            getUserDocument(data.user.uid).then((userInfo) =>
+              setUserProfile({ ...userInfo })
+            );
+            showSuccess();
+          });
+      } catch (error) {
+        console.log(error);
+        showError();
+      }
+    },
+    [setUserProfile]
+  );
 
   const showError = () => {
     setErrorAlert("block");
@@ -97,6 +104,10 @@ const Login = () => {
       </div>
     </div>
   );
+};
+
+Login.propTypes = {
+  setUserProfile: PropTypes.func,
 };
 
 export default Login;
