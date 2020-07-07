@@ -1,19 +1,29 @@
 import React, { useState } from "react";
-import "./productItem.scss";
-
-import { Rate } from "antd";
-import { HeartOutlined } from "@ant-design/icons";
-
+import { addWishList } from "../../firebase";
 import ProductColor from "../../components/product-details/product-colors";
 import ProductTags from "../../components/product-details/product-tags";
+import "./productItem.scss";
+import { Rate } from "antd";
+import { HeartOutlined } from "@ant-design/icons";
 
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
   // const [itemQuantity, setItemQuantity] = useState(1);
+  // console.log(props.userData.wishList);
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
     setItemQuantity(quantityToInt);
+  };
+
+  // console.log(props.setWishList);
+
+  const addToWishList = () => {
+    console.log("wishlist");
+    // console.log(props.productId);
+    // console.log(props.userId);
+    addWishList(props.userId, parseInt(props.productId));
+    props.setWishList([...props.wishList, props.productId]);
   };
 
   return (
@@ -51,7 +61,14 @@ function ProductItem(props) {
             </button>
 
             <div className="wishlist-icon-heart">
-              <HeartOutlined />
+              <HeartOutlined
+                onClick={addToWishList}
+                style={{
+                  color: props.wishList.includes(props.data.id)
+                    ? "red"
+                    : "black",
+                }}
+              />
             </div>
           </div>
 

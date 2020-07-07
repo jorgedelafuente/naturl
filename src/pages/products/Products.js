@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "@reach/router";
 import PropTypes from "prop-types";
 import ProductCard from "../../components/product-card/Product-card";
@@ -6,6 +6,7 @@ import { Affix, Drawer, Tag } from "antd";
 import { NodeExpandOutlined } from "@ant-design/icons";
 import "./products.scss";
 import "./filters.scss";
+import { AuthContext } from "../../auth/Auth";
 // import { Slider } from 'antd';
 
 const { CheckableTag } = Tag;
@@ -47,18 +48,24 @@ const brandTags = [
 ];
 
 const Products = ({ data, title }) => {
-  // const [filteredData, setFilteredData] = useState([]);
   const [originalData, setOriginalData] = useState([]);
-  // const [filteredData, setFilteredData] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
-  // const [selectedTags, setSelectedTags] = useState([]);
+  const [wishList, setWishList] = useState([]);
+  const [userId, setUserId] = useState("");
   const [top, setTop] = useState(0);
   const [visible, setVisible] = useState(false);
+  const { currentUserProfile } = useContext(AuthContext);
 
   useEffect(() => {
-    // setFilteredData([...data]);
+    if (currentUserProfile) {
+      // setWishList([...currentUserProfile.wishList]);
+      // console.log(currentUserProfile.wishList);
+      setWishList(currentUserProfile.wishList);
+      // console.log(wishList);
+      setUserId(currentUserProfile.uid);
+    }
     setOriginalData([...data]);
-  }, [data]);
+  }, [data, currentUserProfile]);
 
   const formatProductText = (tag) => {
     let wordsArr = tag.split("_");
@@ -90,7 +97,7 @@ const Products = ({ data, title }) => {
     const nextSelectedTags = checked
       ? [...selectedTags, tag]
       : selectedTags.filter((t) => t !== tag);
-      window.scrollTo(0, 300);
+    window.scrollTo(0, 300);
     setSelectedTags([...nextSelectedTags]);
   };
 
@@ -140,7 +147,6 @@ const Products = ({ data, title }) => {
         <h1>{title}</h1>
       </div>
 
-      {/* <div className=""> */}
       <Affix offsetTop={top}>
         <div
           className="fixedHeaderButton wow zoomIn"
@@ -229,6 +235,8 @@ const Products = ({ data, title }) => {
                 name={item.name}
                 price={item.price}
                 id={item.id}
+                wishList={wishList.includes(item.id)}
+                userId={userId}
               />
             ))}
           </>

@@ -1,18 +1,47 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import PropTypes from "prop-types";
+// import { AuthContext } from "../../auth/Auth";
 import ProductItem from "./ProductItem";
 import "./productItem.scss";
-import PropTypes from "prop-types";
 
-const Product = ({ data, handleAddToCartClick, id }) => {
-  const [originalData, setOriginalData] = useState([]);
+const Product = ({
+  data,
+  handleAddToCartClick,
+  id,
+  wishList,
+  setWishList,
+  userId,
+}) => {
+  const [productData, setProductData] = useState([]);
+  // const [userId, setUserId] = useState(null);
+  // const [wishList, setWishList] = useState([]);
+  // const { currentUserProfile } = useContext(AuthContext);
+
   useEffect(() => {
-    setOriginalData([...data]);
+    setProductData([...data]);
   }, [data]);
+  // useEffect(() => {
+  //   setProductData([...data]);
+  //   if (currentUserProfile) {
+  //     setUserId(currentUserProfile.uid);
+  //     setWishList(currentUserProfile.wishList);
+  //   }
+  // }, [data, currentUserProfile]);
 
-  const foundItem = originalData.find((item) => item.id === parseInt(id));
+  // console.log(currentUserProfile);
+
+  const foundItem = productData.find((item) => item.id === parseInt(id));
   return (
     <div className="product-page-container">
-      <ProductItem data={foundItem} onAddToCartClick={handleAddToCartClick} />
+      <ProductItem
+        data={foundItem}
+        onAddToCartClick={handleAddToCartClick}
+        // userData={currentUserProfile}
+        userId={userId}
+        productId={id}
+        wishList={wishList}
+        setWishList={setWishList}
+      />
     </div>
   );
 };

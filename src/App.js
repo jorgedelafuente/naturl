@@ -24,7 +24,8 @@ function App() {
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]); // eslint-disable-next-line
-  const [userProfile, setUserProfile] = useState({});
+  const [wishList, setWishList] = useState([]);
+  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     ApiClient.getData().then((data) => {
@@ -122,39 +123,54 @@ function App() {
     });
   };
 
-  console.log(userProfile);
-
   return (
     <React.StrictMode>
-      <AuthProvider>
+      <AuthProvider setWishList={setWishList} setUserId={setUserId}>
         <NavBar itemsInCart={itemsInCart} />
         <main className="main-container">
           <Router primary={false}>
-            <Home data={productData} path="/" />
-            <SignIn path="/signin" setUserProfile={setUserProfile} />
+            <Home
+              data={productData}
+              path="/"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
+            />
+            {/* <SignIn path="/signin" setUserProfile={setUserProfile} /> */}
+            <SignIn path="/signin" />
             <SignUp path="/signup" />
             <About path="/about" />
             <Contact path="/contact" />
+
+            {/* //FIX */}
             <Profile
-              userProfile={userProfile}
-              setUserProfile={setUserProfile}
+              // userProfile={userProfile}
+              // setUserProfile={setUserProfile}
+              setWishList={setWishList}
               data={productData}
               path="/profile"
             />
-
+            {/* //FIX */}
             <Product
               data={productData}
               handleAddToCartClick={handleAddToCartClick}
               path="/product/:id"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
             />
-
+            {/* //FIX */}
             <Products
               data={productData}
               title={"All Products"}
               path="/products"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
             />
-
+            {/* //FIX */}
             <Products data={veganData} title={"Vegan"} path="/products-vegan" />
+            {/* //FIX */}
             <Products
               data={glutenData}
               title={"Gluten Free"}

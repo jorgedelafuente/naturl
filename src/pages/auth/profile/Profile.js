@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { signOut, getUserDocument, removeWishList } from "../../../firebase";
+import { signOut, removeWishList } from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
 import { Link, navigate } from "@reach/router";
 import { Alert } from "antd";
@@ -19,24 +19,32 @@ const Profile = ({ data }) => {
   //     { item: "eyeliner2", quantity: 3, price: 20.3, id: 1021 },
   //   ],
   // });
+
   const [wishList, setWishlist] = useState([]);
   const [wishListRemoveAlert, setWishListRemoveAlert] = useState("none");
   const [displayAlert, setDisplayAlert] = useState("none");
-  const { currentUser } = useContext(AuthContext);
+  const { currentUserProfile } = useContext(AuthContext);
+
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     Promise.resolve(getUserDocument(currentUser.uid))
+  //       .then((profile) => {
+  //         setProfileInfo(profile);
+  //         setWishlist([...profile.wishList]);
+  //         // setUserProfile(profile);
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  //   }
+  // }, [currentUser]);
 
   useEffect(() => {
-    if (currentUser) {
-      Promise.resolve(getUserDocument(currentUser.uid))
-        .then((profile) => {
-          setProfileInfo(profile);
-          setWishlist([...profile.wishList]);
-          // setUserProfile(profile);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    if (currentUserProfile) {
+      setProfileInfo(currentUserProfile);
+      setWishlist([...currentUserProfile.wishList]);
     }
-  }, [currentUser]);
+  }, [currentUserProfile]);
 
   const handleSignOut = () => {
     setDisplayAlert("block");
@@ -46,7 +54,7 @@ const Profile = ({ data }) => {
 
   const removeFromWishList = (itemId) => {
     console.log(itemId);
-    removeWishList(currentUser.uid, itemId).then((res) => {
+    removeWishList(currentUserProfile.uid, itemId).then((res) => {
       setWishlist([...res.wishList]);
       setWishListRemoveAlert("block");
       setTimeout(() => {
@@ -64,7 +72,7 @@ const Profile = ({ data }) => {
 
   return (
     <>
-      {!currentUser ? (
+      {!currentUserProfile ? (
         <>
           <SignIn />
         </>

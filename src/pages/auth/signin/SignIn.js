@@ -1,36 +1,29 @@
-import React, { useCallback, useContext, useState } from "react";
-import firebase, { getUserDocument } from "../../../firebase";
-import { AuthContext } from "../../../auth/Auth";
-import { Link } from "@reach/router";
-import "../FormContainer.scss";
-import { Alert } from "antd";
+import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
+import firebase from "../../../firebase";
+import { Link } from "@reach/router";
+import { Alert } from "antd";
+import "../FormContainer.scss";
 
-const Login = ({ setUserProfile }) => {
+const Login = () => {
   const [errorAlert, setErrorAlert] = useState("none");
   const [successAlert, setSuccessAlert] = useState("none");
 
-  const handleLogin = useCallback(
-    async (event) => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-        await firebase
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value)
-          .then((data) => {
-            getUserDocument(data.user.uid).then((userInfo) =>
-              setUserProfile({ ...userInfo })
-            );
-            showSuccess();
-          });
-      } catch (error) {
-        console.log(error);
-        showError();
-      }
-    },
-    [setUserProfile]
-  );
+  const handleLogin = useCallback(async (event) => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    try {
+      await firebase
+        .auth()
+        .signInWithEmailAndPassword(email.value, password.value)
+        .then(() => {
+          showSuccess();
+        });
+    } catch (error) {
+      console.error(error);
+      showError();
+    }
+  }, []);
 
   const showError = () => {
     setErrorAlert("block");
@@ -44,12 +37,6 @@ const Login = ({ setUserProfile }) => {
       setSuccessAlert("none");
     }, 2000);
   };
-
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    // console.log(currentUser.uid);
-  }
 
   return (
     <div className="form-container">
@@ -73,8 +60,6 @@ const Login = ({ setUserProfile }) => {
           closable
         />
       </div>
-
-      {/* {currentUser && <div>{currentUser.email}</div>} */}
 
       <form onSubmit={handleLogin}>
         <div className="InputGroup">

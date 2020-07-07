@@ -70,7 +70,6 @@ const SignUp = () => {
       </div>
 
       <form onSubmit={handleSignUp}>
-        {/* <form onSubmit={handleSubmit}> */}
         <div className="InputGroup">
           <label>
             <span>Name</span>

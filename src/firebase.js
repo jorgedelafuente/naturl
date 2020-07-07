@@ -25,7 +25,6 @@ export const signOut = () => auth.signOut();
 window.firebase = firebase;
 
 export const createUserProfileDocument = async (user, displayName) => {
-  console.log("test3", user, displayName);
   if (!user) return;
   const userRef = firestore.doc(`publicProfiles/${user.uid}`);
   const snapshot = await userRef.get();
@@ -62,6 +61,25 @@ export const getUserDocument = async (uid) => {
   } catch (error) {
     console.error("Error fetching user", error.message);
   }
+};
+
+export const addOrderHistory = async (uid, order) => {
+  if (!uid) return;
+  const wishListRef = firestore.doc(`publicProfiles/${uid}`);
+  const snapshot = await wishListRef.get();
+  // const createdAt = new Date();
+
+  if (!snapshot.exist) {
+    try {
+      await wishListRef.update({
+        purchaseHistory: firebase.firestore.FieldValue.arrayUnion(order),
+      });
+    } catch (error) {
+      console.error("Error creating user", error.message);
+    }
+  }
+
+  return getUserDocument(uid);
 };
 
 export const addWishList = async (uid, itemId) => {
