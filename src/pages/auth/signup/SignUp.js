@@ -24,7 +24,7 @@ const SignUp = () => {
         const { user } = await firebase
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
-        // console.log(user);
+        // eslint-disable-next-line
         const consoleUser = await createUserProfileDocument(
           user,
           displayName.value

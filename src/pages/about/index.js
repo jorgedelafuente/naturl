@@ -6,7 +6,9 @@ import SimpleImageCard from "./SimpleImageCard";
 const About = () => {
   return (
     <div className="About-Wrapper">
-      <div className="about-heading wow zoomIn ">OUR STORY</div>
+      <div className="about-heading wow zoomIn " id="about-page-header">
+        OUR STORY
+      </div>
       <p className="wow zoomIn">
         Naturl is a culture and movement founded in Los Angeles inspired by
         musicians in the studio, surfers at the beach, and athletes before/after
@@ -103,7 +105,7 @@ const About = () => {
           <div className="Simple-image-Card Simple-Image-Right">
             <img
               src={require("../../images/about5.jpg")}
-              alt="photo2"
+              alt="about5"
               className="wow zoomIn"
             />
             <div className="about-heading simpleImage-heading wow zoomIn">

@@ -5,6 +5,7 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
+  margin-top: 200px;
 }
 
 .Cart-title {
@@ -12,14 +13,17 @@
 }
 
 .Cart-clear-button {
-  border-bottom: 1px solid #eee;
+  // border-bottom: 1px solid #eee;
   margin: 1rem;
   cursor: pointer;
+  color: cadetblue;
+  font-weight: 550;
+  font-size: 16px;
 }
 
 .Cart-clear-button:hover,
-.Cart-clear-button:focus { 
-  color: #00677D;
+.Cart-clear-button:focus {
+  color: #00677d;
 }
 
 .Cart-total-cost {
@@ -48,7 +52,7 @@
 
 .Cart-button-purchase:hover,
 .Cart-button-purchase:focus {
-  background-color: #00677D;
+  background-color: #00677d;
 }
 
 .Cart-button-cancel {
@@ -61,7 +65,7 @@
   font-weight: 700;
   line-height: 1;
   text-align: center;
-  background-color: #757575;
+  background-color: cadetblue;
   color: #fff;
   cursor: pointer;
   transition-property: background-color, color;
@@ -72,7 +76,7 @@
 
 .Cart-button-cancel:hover,
 .Cart-button-cancel:focus {
-  background-color: #a1a1a1;
+  background-color: #00677d;
 }
 
 .Cart-navigation {
@@ -80,6 +84,6 @@
   justify-content: space-evenly;
 }
 
-.Cart-message-empty{
+.Cart-message-empty {
   margin: 2rem;
 }
