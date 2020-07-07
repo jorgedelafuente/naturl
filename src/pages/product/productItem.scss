@@ -154,10 +154,22 @@
   width: 3rem;
   height: 2rem;
   margin-right: 40px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-right: 20px;
+  }
+  @media (max-width: 480px) {
+    margin-right: 20px;
+  }
 }
 
 .product-details-shopinfo h2 {
   margin-right: 30px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-right: 15px;
+  }
+  @media (max-width: 480px) {
+    margin-right: 15px;
+  }
 }
 
 .productpage-details-price {
@@ -177,6 +189,22 @@
 
 .product-details-shopinfo button:hover {
   background-color: cadetblue;
+}
+
+.wishlist-icon-heart {
+  margin-left: 40px;
+  font-size: 35px;
+  color: black;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 480px) {
+    margin-left: 20px;
+  }
+}
+.wishlist-icon-heart:hover {
+  color: red;
+  cursor: pointer;
 }
 
 .productitem-description-rating {

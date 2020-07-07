@@ -1,10 +1,6 @@
 .product-card-style {
   height: 480px;
-}
-
-.cardBodyStyle {
-  display: flex;
-  align-items: flex-end;
+  margin: 10px;
 }
 
 .product-card-image-container {
@@ -27,36 +23,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: red;
 }
 
 .products-card-nameprice-container {
-  // background-color: red;
   color: black;
   font-weight: 900;
 }
 
 .products-card-nametitle-container p {
   text-align: center;
-  // color: gray;
 }
 
 .product-card-title-container {
-  // background-color: red;
   height: 150px;
-  width: 190px;
+  width: 230px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .products-card-price-buy {
-  // background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // color: black;
-  // color: #00677d;
 }
 
 .card-button {
@@ -71,7 +60,17 @@
   background-color: cadetblue;
 }
 
-// .products-card-price-buy button {
-//   // background-color: black;
-//   color: #00677d;
-// }
+.wishlist-icon-heart-card {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wishlist-icon-heart-card {
+  font-size: 20px;
+  color: black;
+}
+
+.wishlist-icon-heart-card:hover {
+  color: red;
+  cursor: pointer;
+}

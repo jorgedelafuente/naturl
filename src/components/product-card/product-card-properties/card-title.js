@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from '@reach/router';
+import { HeartOutlined } from "@ant-design/icons";
 
 function CardTitle(props) {
   return (
@@ -10,6 +10,9 @@ function CardTitle(props) {
       <div className="products-card-price-buy">
         <p className="products-card-nameprice-container">{"$" + props.price}</p>
         <button className="card-button">Add to cart</button>
+        <div className="wishlist-icon-heart-card">
+          <HeartOutlined />
+        </div>
       </div>
     </div>
   );

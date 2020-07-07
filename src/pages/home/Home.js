@@ -68,7 +68,7 @@ function HomePage(props) {
       </h2>
       <div className="category__Main">
         <div className="Right-Cards">
-          {props.data.slice(102, 110).map((data, index) => {
+          {props.data.slice(104, 110).map((data, index) => {
             return (
               <>
                 <ProductCard
