@@ -9,17 +9,18 @@
 }
 
 .form-container {
-  margin: 125px auto;
+  margin: 250px auto;
   padding: 20px;
   text-align: center;
-
+  // background-color: blue;
   max-width: 350px;
   // width: 20%;
   height: auto;
   box-shadow: 0 0 5px 0px #cecece;
-  border-radius: 5px;
   .Logo {
     margin: 0 auto;
+    // background-color: red;
+    font-size: 25px;
   }
 
   label > span {
@@ -62,6 +63,15 @@
   .form-links {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
+  }
+  .form-links a {
+    color: cadetblue;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .form-links a:hover {
+    color: gray;
   }
 }
 
@@ -75,7 +85,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-radius: 40px;
+  // border-radius: 40px;
   cursor: pointer;
 
   background: -moz-linear-gradient(

@@ -98,7 +98,7 @@ const NavBar = ({ itemsInCart }) => {
             >
               <div className="navbar-drawer-hamburguer">
                 <span>
-                  <Link onClick={onClose} to="/all-products">
+                  <Link onClick={onClose} to="/products">
                     Products
                   </Link>
                 </span>
