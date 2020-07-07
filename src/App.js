@@ -83,7 +83,6 @@ function App() {
     localStorage.removeItem("cart");
   };
 
-
   //TODO: optimize
   const listRelatedProducts = (
     itemsInCart,
@@ -92,14 +91,17 @@ function App() {
   ) => {
     if (!productData) return [];
 
+    // eslint-disable-next-line
     const purchasedCategories = itemsInCart.map((purchasedItem) => {
       if (purchasedItem.category) return purchasedItem.category;
     });
 
+    // eslint-disable-next-line
     const purchasedItems = itemsInCart.map((purchasedItem) => {
       if (purchasedItem.id) return purchasedItem.id;
     });
 
+    // eslint-disable-next-line
     const relatedProducts = productData.filter((relatedProduct) => {
       if (
         purchasedCategories.includes(relatedProduct.category) &&
@@ -113,11 +115,12 @@ function App() {
       () => Math.floor(Math.random() * relatedProducts.length)
     );
 
+    // eslint-disable-next-line
     return relatedProducts.filter((product, index) => {
       if (selectedSuggestions.includes(index)) return product;
     });
   };
-  
+
   // console.log(userProfile);
 
   return (
