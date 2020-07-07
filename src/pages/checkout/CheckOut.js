@@ -14,7 +14,6 @@ export default function Checkout({
   handleClearCartClick,
   handleRemoveItemFromCartClick,
 }) {
-
   const { currentUser } = useContext(AuthContext);
 
   const currentLineItems = itemsInCart.map((item) => {

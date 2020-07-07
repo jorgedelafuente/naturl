@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../auth/Auth";
 import ProductCard from "../../components/product-card/Product-card";
 import "./Success.scss";
 
 const Success = ({ data, itemsInCart, listRelatedProducts }) => {
+  const { currentUser } = useContext(AuthContext);
+
   const orderNumber = () => {
     let randomNumber = Math.floor(Math.random() * 90000) + 10000;
     return "[#" + randomNumber.toString(10) + "]";
@@ -14,10 +17,23 @@ const Success = ({ data, itemsInCart, listRelatedProducts }) => {
   return (
     <div className="Success-container">
       <h2>Thank you for shopping at NATURL!</h2>
-      <div className="Success-message">
-        Your order <span className="Success-order-number">{orderNumber()}</span>{" "}
-        is on it&apos;s way. <br /> Review your order below:
-      </div>
+
+      {currentUser ? (
+        <div className="Success-message">
+          Your order{" "}
+          <span className="Success-order-number">{orderNumber()}</span> is on
+          it&apos;s way to {currentUser.email}.
+          <br /> Review your order below:
+        </div>
+      ) : (
+        <div className="Success-message">
+          Your order{" "}
+          <span className="Success-order-number">{orderNumber()}</span> is on
+          it&apos;s way.
+          <br /> Review your order below:
+        </div>
+      )}
+
       {suggestedProducts.length > 0 ? (
         <>
           <h2 className="Checkout-related-products-title">
