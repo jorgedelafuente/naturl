@@ -1,0 +1,22 @@
+.PurchaseHistory {
+  border-top: 1px solid #eee;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  
+  @media (max-width: 480px) {
+    margin: 1rem;
+  }
+}
+
+.PurchaseHistory-title {
+  margin-bottom: 2rem;
+}
+
+.PurchaseHistory-total-cost {
+  font-weight: 700;
+  padding: 2rem;
+}
