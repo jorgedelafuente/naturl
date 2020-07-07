@@ -90,7 +90,7 @@ const Products = ({ data, title }) => {
     const nextSelectedTags = checked
       ? [...selectedTags, tag]
       : selectedTags.filter((t) => t !== tag);
-
+      window.scrollTo(0, 300);
     setSelectedTags([...nextSelectedTags]);
   };
 

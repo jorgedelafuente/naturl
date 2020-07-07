@@ -113,7 +113,7 @@ function HomePage(props) {
         ))}
       </div>
 
-      {/* <CustomChatbot /> */}
+      <CustomChatbot data={props.data}/>
 
       <h1 className="About__us">About Us</h1>
       <p className="About__text">
