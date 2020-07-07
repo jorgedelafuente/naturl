@@ -140,6 +140,7 @@ const Products = ({ data, title }) => {
         <h1>{title}</h1>
       </div>
 
+      {/* <div className=""> */}
       <Affix offsetTop={top}>
         <div
           className="fixedHeaderButton wow zoomIn"
@@ -211,16 +212,18 @@ const Products = ({ data, title }) => {
               ))}
             </div>
             {/* <p className="products-drawer-price-filter">Price filter</p>
-            <Slider range defaultValue={[0, 50]} tipFormatter={formatter} /> */}
+              <Slider range defaultValue={[0, 50]} tipFormatter={formatter} /> */}
           </Drawer>
         </div>
       </Affix>
+      {/* </div> */}
 
       <div className="products-categories-container">
         {filtered(originalData).length > 0 ? (
           <>
             {filtered(originalData).map((item) => (
               <ProductCard
+                // className="product-card-container"
                 key={item.id}
                 image={item.image_link}
                 name={item.name}

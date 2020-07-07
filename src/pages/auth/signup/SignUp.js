@@ -1,26 +1,48 @@
-import React, { useCallback } from 'react';
-import firebase from '../../../firebase';
-import { navigate, Link } from '@reach/router';
-// import { FormButton } from '../../../components/common/button/FormButton';
-import '../FormContainer.scss';
+import React, { useCallback, useState } from "react";
+import firebase, { createUserProfileDocument } from "../../../firebase";
+import { navigate, Link } from "@reach/router";
+import "../FormContainer.scss";
+import { Alert } from "antd";
 
 const SignUp = () => {
+  const [passwordErrorAlert, setPasswordErrorAlert] = useState("none");
+  const [serverErrorAlert, setServerErrorAlert] = useState("none");
+  const [successAlert, setSuccessAlert] = useState("none");
+
   const handleSignUp = useCallback(async (event) => {
     event.preventDefault();
-    const { email, password, password2 } = event.target.elements;
+    const { email, password, password2, displayName } = event.target.elements;
+    // console.log(displayName.value, email.value);
 
     if (password.value === password2.value) {
-      // console.log('passwords match');
+      setSuccessAlert("block");
+      setTimeout(() => {
+        setSuccessAlert("none");
+      }, 3000);
+
       try {
-        await firebase
+        const { user } = await firebase
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
+        // eslint-disable-next-line
+        const consoleUser = await createUserProfileDocument(
+          user,
+          displayName.value
+        );
+        // console.log(consoleUser);
         navigate(`/`);
       } catch (error) {
-        alert(error);
+        // console.error(error);
+        setServerErrorAlert("block");
+        setTimeout(() => {
+          setServerErrorAlert("none");
+        }, 3000);
       }
     } else {
-      alert('passwords do not match');
+      setPasswordErrorAlert("block");
+      setTimeout(() => {
+        setPasswordErrorAlert("none");
+      }, 3000);
     }
   }, []);
 
@@ -30,25 +52,69 @@ const SignUp = () => {
         <h3>NATURL</h3>
       </div>
 
+      <div className="form-alerts">
+        <Alert
+          message="Account created"
+          type="success"
+          style={{ display: successAlert }}
+          showIcon={true}
+          closable
+        />
+
+        <Alert
+          message="Server Error"
+          type="error"
+          style={{ display: serverErrorAlert }}
+          showIcon={true}
+          closable
+        />
+
+        <Alert
+          message="Passwords Do not Match"
+          type="error"
+          style={{ display: passwordErrorAlert }}
+          showIcon={true}
+          closable
+        />
+      </div>
+
       <form onSubmit={handleSignUp}>
+        {/* <form onSubmit={handleSubmit}> */}
+        <div className="InputGroup">
+          <label>
+            <span>Name</span>
+            <input required name="displayName" type="text" placeholder="Name" />
+          </label>
+        </div>
+
         <div className="InputGroup">
           <label>
             <span>Email</span>
-            <input name="email" type="email" placeholder="Email" />
+            <input required name="email" type="email" placeholder="Email" />
           </label>
         </div>
 
         <div className="InputGroup">
           <label>
             <span>Password</span>
-            <input name="password" type="password" placeholder="Password" />
+            <input
+              required
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
           </label>
         </div>
 
         <div className="InputGroup">
           <label>
             <span>Re-Enter Password</span>
-            <input name="password2" type="password" placeholder="Password" />
+            <input
+              required
+              name="password2"
+              type="password"
+              placeholder="Password"
+            />
           </label>
         </div>
 

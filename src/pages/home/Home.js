@@ -7,7 +7,7 @@ import { Link } from "@reach/router";
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 // const { Meta } = Card;
 
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 import "./Home.scss";
 
 import { Carousel } from "antd";
@@ -24,30 +24,39 @@ function HomePage(props) {
       <Carousel autoplay afterChange={onChange}>
         <div className="HeroCarouselImage">
           <div className="Carousel_Text">
+            <Link className="carousel-button" to={`/products`}>
+              SHOP NOW
+            </Link>
             <h2 style={{ color: "white" }}>Naturl Toronto</h2>
-            <p>
+            {/* <p>
               “My dad used to say makeup was a shallow girl's sport, but it's
               not. It's armor.” ― Courtney Summers
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="HeroCarouselImage HeroCarouselImage1">
           <div className="Carousel_Text">
+            <Link className="carousel-button" to={`/products`}>
+              SHOP NOW
+            </Link>
             <h2 style={{ color: "white" }}>Naturl Paris</h2>
-            <p>
+            {/* <p>
               “Beneath the makeup and behind the smile I am just a girl who
               wishes for the world.” ― Marilyn Monroe
-            </p>
+            </p> */}
           </div>
         </div>
 
         <div className="HeroCarouselImage HeroCarouselImage2">
           <div className="Carousel_Text">
+            <Link className="carousel-button" to={`/products`}>
+              SHOP NOW
+            </Link>
             <h2 style={{ color: "white" }}>Naturl Global</h2>
-            <p>
+            {/* <p>
               “Beauty, to me, is about being comfortable in your own skin. That,
               or a kick-ass red lipstick.” ― Gwyneth Paltrow
-            </p>
+            </p> */}
           </div>
         </div>
       </Carousel>
@@ -59,7 +68,7 @@ function HomePage(props) {
       </h2>
       <div className="category__Main">
         <div className="Right-Cards">
-          {props.data.slice(102, 110).map((data, index) => {
+          {props.data.slice(104, 110).map((data, index) => {
             return (
               <>
                 <ProductCard

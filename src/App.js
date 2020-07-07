@@ -21,7 +21,7 @@ function App() {
   const [productData, setData] = useState([]);
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
-  const [itemsInCart, setItemsInCart] = useState([]);
+  const [itemsInCart, setItemsInCart] = useState([]); // eslint-disable-next-line
   const [userProfile, setUserProfile] = useState({});
 
   useEffect(() => {
@@ -82,6 +82,7 @@ function App() {
     localStorage.removeItem("cart");
   };
 
+
   //TODO: optimize
   const listRelatedProducts = (
     itemsInCart,
@@ -115,6 +116,8 @@ function App() {
       if (selectedSuggestions.includes(index)) return product;
     });
   };
+  
+  // console.log(userProfile);
 
   return (
     <React.StrictMode>
