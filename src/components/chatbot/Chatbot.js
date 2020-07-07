@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-import history from "../../history";
-import { Redirect } from "react-router-dom";
+import { navigate } from "@reach/router";
 
 const theme = {
   background: "#fff",
@@ -55,18 +54,15 @@ function CustomChatbot(props) {
   }, [props.data]);
 
   function redirectToLipstick() {
-    history.push(`/product/98`);
-    history.go(0);
+    navigate(`/product/98`);
   }
 
   function redirectToPowder() {
-    history.push(`/product/1039`);
-    history.go(0);
+    navigate(`/product/1039`);
   }
 
   function redirectToPencil() {
-    history.push(`/product/182`);
-    history.go(0);
+    navigate(`/product/182`);
   }
 
   const steps = [
