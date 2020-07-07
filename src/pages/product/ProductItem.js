@@ -9,6 +9,7 @@ import ProductTags from "../../components/product-details/product-tags";
 
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
+  // const [itemQuantity, setItemQuantity] = useState(1);
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
