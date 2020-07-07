@@ -6,6 +6,7 @@ import { Alert } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import SignIn from "./../signin/SignIn";
 import PropTypes from "prop-types";
+import PurchaseHistory from "../../../components/purchaseHistory/purchaseHistory";
 import "./Profile.scss";
 
 const Profile = ({ data }) => {
@@ -20,6 +21,7 @@ const Profile = ({ data }) => {
   //   ],
   // });
   const [wishList, setWishlist] = useState([]);
+  const [purchaseHistory, setPurchaseHistory] = useState([]);
   const [wishListRemoveAlert, setWishListRemoveAlert] = useState("none");
   const [displayAlert, setDisplayAlert] = useState("none");
   const { currentUser } = useContext(AuthContext);
@@ -31,6 +33,7 @@ const Profile = ({ data }) => {
           setProfileInfo(profile);
           setWishlist([...profile.wishList]);
           // setUserProfile(profile);
+          setPurchaseHistory([...profile.purchaseHistory]);
         })
         .catch((error) => {
           console.log(error);
@@ -130,7 +133,14 @@ const Profile = ({ data }) => {
             </div>
             <br />
 
-            <h2 className="Cart-title">Purchase History</h2>
+            {/* <h2 className="Cart-title">Purchase History</h2> */}
+
+            {purchaseHistory.length > 0 ? (
+              <PurchaseHistory purchaseHistory={purchaseHistory} />
+            ) : (
+              <span>You haven&apos;t purchased anything yet.</span>
+            )}
+
             {/* <div>
                 <h4>Purchase History</h4>
               </div> */}
