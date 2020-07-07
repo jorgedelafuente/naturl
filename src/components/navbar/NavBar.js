@@ -51,6 +51,9 @@ const NavBar = ({ itemsInCart }) => {
             <span className="navbar-links">
               <Link to="/about">About</Link>
             </span>
+            <span className="navbar-links">
+              <Link to="/contact">Contact</Link>
+            </span>
           </div>
 
           <div className="mobile-menuitems">

@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="About-Wrapper">
       <div className="about-heading wow zoomIn " id="about-page-header">
-        OUR STORY
+        <h1>Our Story</h1>
       </div>
       <p className="wow zoomIn">
         Naturl is a culture and movement founded in Los Angeles inspired by
