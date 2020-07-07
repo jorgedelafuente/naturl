@@ -3,6 +3,10 @@
   --animate-delay: 0.9s;
 }
 
+#about-page-header {
+  margin-top: 200px;
+}
+
 .flex-box-about {
   display: flex;
   align-items: flex-start;
@@ -31,7 +35,7 @@
   margin: auto;
   width: 50%;
   color: #000000;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 //Simple Text Card CSS
 .Simple-text-Card {
@@ -51,9 +55,13 @@
   background-color: #00677d;
   position: relative;
 }
+.sticky-header {
+  color: white;
+}
 .sticky-text {
   position: sticky;
   top: 50px;
+  color: white;
 }
 .simpleCard-heading {
   font-size: 3rem;
@@ -82,7 +90,7 @@
   margin-bottom: 30px;
 }
 .simpleImage-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100px;
   left: 0;

@@ -6,7 +6,9 @@ import SimpleImageCard from "./SimpleImageCard";
 const About = () => {
   return (
     <div className="About-Wrapper">
-      <div className="about-heading wow zoomIn ">OUR STORY</div>
+      <div className="about-heading wow zoomIn " id="about-page-header">
+        OUR STORY
+      </div>
       <p className="wow zoomIn">
         Naturl is a culture and movement founded in Los Angeles inspired by
         musicians in the studio, surfers at the beach, and athletes before/after
