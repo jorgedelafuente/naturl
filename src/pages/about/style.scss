@@ -130,6 +130,11 @@
   background-color: #000000;
   color: #fff;
   margin-left: 10px;
+  font-weight: 550;
+}
+.subscribe:hover {
+  background-color: #00677d;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .About-Wrapper > p {
