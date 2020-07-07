@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./productItem.scss";
 
 import { Rate } from "antd";
+import { HeartOutlined } from "@ant-design/icons";
 
 // import ProductColor from '../../components/product-details/product-colors';
 import ProductTags from "../../components/product-details/product-tags";
@@ -47,6 +48,10 @@ function ProductItem(props) {
             >
               Add to cart
             </button>
+
+            <div className="wishlist-icon-heart">
+              <HeartOutlined />
+            </div>
           </div>
 
           <div className="singleproduct-page-description animated fadeInLeft">
