@@ -5,25 +5,48 @@ import ProductTags from "../../components/product-details/product-tags";
 import "./productItem.scss";
 import { Rate } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
+import { Alert } from "antd";
 
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
-  // const [itemQuantity, setItemQuantity] = useState(1);
-  // console.log(props.userData.wishList);
+  const [successAlert, setSuccessAlert] = useState("none");
+  const [infoAlert, setInfoAlert] = useState("none");
+  const [loginAlert, setLoginAlert] = useState("none");
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
     setItemQuantity(quantityToInt);
   };
 
-  // console.log(props.setWishList);
-
   const addToWishList = () => {
-    console.log("wishlist");
-    // console.log(props.productId);
     // console.log(props.userId);
-    addWishList(props.userId, parseInt(props.productId));
-    props.setWishList([...props.wishList, props.productId]);
+
+    //1 - User Not Logged In // Done
+    if (props.userId === null) {
+      setLoginAlert("block");
+      setTimeout(() => {
+        setLoginAlert("none");
+      }, 3000);
+    }
+
+    // 2 - Item not in Wishlist and is then Added to Wishlist
+    if (props.userId && !props.wishList.includes(parseInt(props.productId))) {
+      addWishList(props.userId, parseInt(props.productId));
+      props.setWishList([...props.wishList, parseInt(props.productId)]);
+      console.log(props.wishList);
+      setSuccessAlert("block");
+      setTimeout(() => {
+        setSuccessAlert("none");
+      }, 3000);
+    }
+
+    // 3 - Item In Wishlist already
+    if (props.userId && props.wishList.includes(parseInt(props.productId))) {
+      setInfoAlert("block");
+      setTimeout(() => {
+        setInfoAlert("none");
+      }, 3000);
+    }
   };
 
   return (
@@ -70,6 +93,29 @@ function ProductItem(props) {
                 }}
               />
             </div>
+          </div>
+          <div className="wishList-Alert">
+            <Alert
+              message="Item added to Wishlist Successfully"
+              type="success"
+              style={{ display: successAlert }}
+              showIcon={true}
+              closable
+            />
+            <Alert
+              message="View and Manage Wishlist under Profile"
+              type="info"
+              style={{ display: infoAlert }}
+              showIcon={true}
+              closable
+            />
+            <Alert
+              message="Please Sign In to Add Items to Wishlist"
+              type="info"
+              style={{ display: loginAlert }}
+              showIcon={true}
+              closable
+            />
           </div>
 
           <div className="product-colors-container">

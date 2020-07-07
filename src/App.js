@@ -143,14 +143,6 @@ function App() {
             <Contact path="/contact" />
 
             {/* //FIX */}
-            <Profile
-              // userProfile={userProfile}
-              // setUserProfile={setUserProfile}
-              setWishList={setWishList}
-              data={productData}
-              path="/profile"
-            />
-            {/* //FIX */}
             <Product
               data={productData}
               handleAddToCartClick={handleAddToCartClick}
@@ -168,13 +160,22 @@ function App() {
               setWishList={setWishList}
               userId={userId}
             />
-            {/* //FIX */}
-            <Products data={veganData} title={"Vegan"} path="/products-vegan" />
-            {/* //FIX */}
+
+            <Products
+              data={veganData}
+              title={"Vegan"}
+              path="/products-vegan"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
+            />
             <Products
               data={glutenData}
               title={"Gluten Free"}
               path="/products-gluten-free"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
             />
 
             <CheckOut
@@ -184,6 +185,18 @@ function App() {
               handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
               listRelatedProducts={listRelatedProducts}
               path="/checkout"
+            />
+
+            {/* //FIX */}
+            <Profile
+              // userProfile={userProfile}
+              // setUserProfile={setUserProfile}
+              userId={userId}
+              wishList={wishList}
+              setWishList={setWishList}
+              setItemsInCart={setItemsInCart}
+              data={productData}
+              path="/profile"
             />
 
             <Success

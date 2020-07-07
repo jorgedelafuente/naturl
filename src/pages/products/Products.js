@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "@reach/router";
 import PropTypes from "prop-types";
 import ProductCard from "../../components/product-card/Product-card";
@@ -6,7 +6,6 @@ import { Affix, Drawer, Tag } from "antd";
 import { NodeExpandOutlined } from "@ant-design/icons";
 import "./products.scss";
 import "./filters.scss";
-import { AuthContext } from "../../auth/Auth";
 // import { Slider } from 'antd';
 
 const { CheckableTag } = Tag;
@@ -47,25 +46,15 @@ const brandTags = [
   "butter london",
 ];
 
-const Products = ({ data, title }) => {
+const Products = ({ data, title, wishList, setWishList, userId }) => {
   const [originalData, setOriginalData] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
-  const [wishList, setWishList] = useState([]);
-  const [userId, setUserId] = useState("");
   const [top, setTop] = useState(0);
   const [visible, setVisible] = useState(false);
-  const { currentUserProfile } = useContext(AuthContext);
 
   useEffect(() => {
-    if (currentUserProfile) {
-      // setWishList([...currentUserProfile.wishList]);
-      // console.log(currentUserProfile.wishList);
-      setWishList(currentUserProfile.wishList);
-      // console.log(wishList);
-      setUserId(currentUserProfile.uid);
-    }
     setOriginalData([...data]);
-  }, [data, currentUserProfile]);
+  }, [data]);
 
   const formatProductText = (tag) => {
     let wordsArr = tag.split("_");
@@ -237,6 +226,7 @@ const Products = ({ data, title }) => {
                 id={item.id}
                 wishList={wishList.includes(item.id)}
                 userId={userId}
+                setWishList={setWishList}
               />
             ))}
           </>
@@ -250,7 +240,10 @@ const Products = ({ data, title }) => {
 
 Products.propTypes = {
   data: PropTypes.array,
+  wishList: PropTypes.array,
   title: PropTypes.string,
+  userId: PropTypes.string,
+  setWishList: PropTypes.func,
 };
 
 export default Products;
