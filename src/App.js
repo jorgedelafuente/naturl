@@ -21,7 +21,7 @@ function App() {
   const [productData, setData] = useState([]);
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
-  const [itemsInCart, setItemsInCart] = useState([]);
+  const [itemsInCart, setItemsInCart] = useState([]); // eslint-disable-next-line
   const [userProfile, setUserProfile] = useState({});
 
   useEffect(() => {

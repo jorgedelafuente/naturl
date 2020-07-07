@@ -132,17 +132,22 @@
   align-items: center;
 }
 .Email-button {
-  height: 50px;
+  height: 45px;
   padding: 0px 10px;
   background-color: #000000;
   color: #fff;
   font-weight: 550;
+  margin-left: 10px;
   cursor: pointer;
 }
 .Email_input {
   height: 48px;
-  border-right: black;
-  height: 50px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 2px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #e2e4eb;
 }
 .About__us {
   text-align: center;

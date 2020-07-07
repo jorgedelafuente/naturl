@@ -5,6 +5,7 @@
 
 .product-card-image-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 300px;
@@ -63,11 +64,10 @@
 .wishlist-icon-heart-card {
   display: flex;
   justify-content: flex-end;
-}
-
-.wishlist-icon-heart-card {
+  align-items: flex-end;
+  width: 100%;
   font-size: 20px;
-  color: black;
+  color: rgb(190, 190, 190);
 }
 
 .wishlist-icon-heart-card:hover {

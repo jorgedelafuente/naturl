@@ -28,10 +28,10 @@ function HomePage(props) {
               SHOP NOW
             </Link>
             <h2 style={{ color: "white" }}>Naturl Toronto</h2>
-            <p>
+            {/* <p>
               “My dad used to say makeup was a shallow girl's sport, but it's
               not. It's armor.” ― Courtney Summers
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="HeroCarouselImage HeroCarouselImage1">
@@ -40,10 +40,10 @@ function HomePage(props) {
               SHOP NOW
             </Link>
             <h2 style={{ color: "white" }}>Naturl Paris</h2>
-            <p>
+            {/* <p>
               “Beneath the makeup and behind the smile I am just a girl who
               wishes for the world.” ― Marilyn Monroe
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -53,10 +53,10 @@ function HomePage(props) {
               SHOP NOW
             </Link>
             <h2 style={{ color: "white" }}>Naturl Global</h2>
-            <p>
+            {/* <p>
               “Beauty, to me, is about being comfortable in your own skin. That,
               or a kick-ass red lipstick.” ― Gwyneth Paltrow
-            </p>
+            </p> */}
           </div>
         </div>
       </Carousel>
