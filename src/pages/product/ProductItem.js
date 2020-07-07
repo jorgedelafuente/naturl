@@ -4,7 +4,7 @@ import "./productItem.scss";
 import { Rate } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
 
-// import ProductColor from '../../components/product-details/product-colors';
+import ProductColor from "../../components/product-details/product-colors";
 import ProductTags from "../../components/product-details/product-tags";
 
 function ProductItem(props) {
@@ -54,13 +54,15 @@ function ProductItem(props) {
             </div>
           </div>
 
+          <div className="product-colors-container">
+            {props.data.product_colors.map((item) => (
+              <ProductColor key={item.hex_value} color={item.hex_value} />
+            ))}
+          </div>
+
           <div className="singleproduct-page-description">
             <p>{props.data.description} </p>
           </div>
-
-          {/* {props.data.product_colors.map((item) => (
-            <ProductColor key={item.hex_value} color={item.hex_value} />
-          ))} */}
 
           <div className="product-details-categories-container">
             <div className="product-details-categories-labels">

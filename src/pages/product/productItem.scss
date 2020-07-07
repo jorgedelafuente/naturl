@@ -223,11 +223,22 @@
   margin-top: 20px;
 }
 
-.product-color-dots {
-  // background-color: #000000;
-  // height: 20px;
-  // margin: 0 3px 3px 3px"
+.product-colors-container {
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.product-color-dots button {
+  height: 20px;
+  margin: 0 3px 3px 3px;
   color: white;
+  width: 20px;
+}
+.product-color-dots button:hover {
+  cursor: pointer;
+  border-radius: 50px;
 }
 
 .product-color-dots p {
