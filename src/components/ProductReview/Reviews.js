@@ -11,6 +11,7 @@ export default function Review({ productId }) {
   const [open, setOpen] = useState(false);
   const [currentUser, setUser] = useState(null);
   const [reviews, setReviews] = useState([]);
+  const [avgRating, setRating] = useState(0);
   const [writeReview, setWriteReviews] = useState(false);
 
   const [review, setReview] = useState("");
@@ -43,6 +44,14 @@ export default function Review({ productId }) {
           reviews.push(items);
         });
         setReviews(reviews);
+        let avgR = 0;
+        reviews.map((val) => {
+          console.log(val.stars);
+          avgR += val.stars;
+          return;
+        });
+        console.log("avgR-------------->", avgR / reviews.length);
+        setRating(avgR / reviews.length);
       });
   };
 
@@ -134,7 +143,12 @@ export default function Review({ productId }) {
         }}
         className="heading"
       >
-        Reviews {open ? <UpOutlined /> : <DownOutlined />}
+        User Reviews
+        <span style={{ marginLeft: "auto" }}> </span> average rating is:&nbsp;
+        <b style={{ paddingRight: "20px" }}>
+          &nbsp;{isNaN(avgRating) ? "0" : avgRating}
+        </b>{" "}
+        {open ? <UpOutlined /> : <DownOutlined />}
       </div>
       {open && currentUser && (
         <div onClick={() => setWriteReviews(true)} className="writeReview">
