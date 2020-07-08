@@ -9,9 +9,11 @@ export default function CartItem({
   name,
   cost,
   quantity,
+  color,
   onRemoveItemFromCartClick,
 }) {
   const productPath = `/product/${itemId}`;
+  // console.log(color);
   return (
     <div className="CartItem">
       <div className="CartItem-description">
@@ -27,6 +29,13 @@ export default function CartItem({
         </Link>
       </div>
       <div className="CartItem-details">
+        <div className="checkout-product-color-dot-container">
+          <span
+            className="checkout-product-color-dot"
+            style={{ backgroundColor: color }}
+          ></span>
+        </div>
+
         <div className="CartItem-quantity">Qty: {quantity}</div>
         <div>${cost.toFixed(2)}</div>
         <button

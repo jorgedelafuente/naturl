@@ -31,6 +31,7 @@ const Footer = () => {
             <Link to="/products-vegan">Vegan</Link>
             <Link to="/products-gluten-free">Gluten Free</Link>
             <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
           </div>
           <div className="footer-top-right-info">
             <p>Info</p>

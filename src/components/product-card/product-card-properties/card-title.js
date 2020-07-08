@@ -8,7 +8,7 @@ function CardTitle(props) {
       </div>
       <div className="products-card-price-buy">
         <p className="products-card-nameprice-container">{"$" + props.price}</p>
-        <button className="card-button">Add to cart</button>
+        <button className="card-button">Buy</button>
       </div>
     </div>
   );

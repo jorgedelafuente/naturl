@@ -16,14 +16,15 @@ import Success from "./pages/success/Success";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import "./App.scss";
+import ManageScroll from "./scroll";
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true);
   const [productData, setData] = useState([]);
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]); // eslint-disable-next-line
-  const [userProfile, setUserProfile] = useState({});
+  const [wishList, setWishList] = useState([]);
+  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     ApiClient.getData().then((data) => {
@@ -35,7 +36,6 @@ function App() {
       setVeganData([...Vegan]);
       setGlutenData([...Gluten]);
     });
-    // .then(() => setIsLoading(false));
   }, []);
 
   useEffect(() => {
@@ -49,25 +49,37 @@ function App() {
 
   useEffect(() => {
     // update local storage with itemsInCart
-    let stringifiedCart = JSON.stringify(itemsInCart);
-    localStorage.setItem("cart", stringifiedCart);
+    const stringifiedItemsInCart = JSON.stringify(itemsInCart);
+    localStorage.setItem("cart", stringifiedItemsInCart);
+
+    if (itemsInCart.length > 0) {
+      localStorage.setItem("cartHistory", JSON.stringify(itemsInCart));
+    }
   }, [itemsInCart]);
 
-  const handleAddToCartClick = (id, itemQuantity) => {
+  // const handleAddToCartClick = (id, itemQuantity) => {
+  const handleAddToCartClick = (id, itemQuantity, itemColor) => {
     setItemsInCart((itemsInCart) => {
-      const itemInCart = itemsInCart.find((item) => item.id === id);
-
-      // if item is already in cart, update the quantity
-      if (itemInCart) {
-        return itemsInCart.map((item) => {
-          if (item.id !== id) return item;
-          return { ...itemInCart, quantity: item.quantity + itemQuantity }; //item.quantity + 1
-        });
-      }
+      // const itemInCart = itemsInCart.find((item) => item.id === id);
+      // // // if item is already in cart, update the quantity
+      // // if (itemInCart) {
+      // //   return itemsInCart.map((item) => {
+      // //     if (item.id !== id) return item;
+      // //     return {
+      // //       ...itemInCart,
+      // //       quantity: item.quantity + itemQuantity,
+      // //       color: item.color + itemColor,
+      // //     }; //item.quantity + 1
+      // //     // return { ...itemInCart, quantity: item.quantity + itemQuantity };
+      // //   });
+      // }
 
       // otherwise, add new item to cart
       const item = productData.find((item) => item.id === id);
-      return [...itemsInCart, { ...item, quantity: itemQuantity }];
+      return [
+        ...itemsInCart,
+        { ...item, quantity: itemQuantity, color: itemColor },
+      ];
     });
   };
 
@@ -81,9 +93,10 @@ function App() {
   const handleClearCartClick = () => {
     setItemsInCart([]);
     localStorage.removeItem("cart");
+    localStorage.removeItem("cartHistory");
   };
 
-  //TODO: optimize
+  //TODO: refactor
   const listRelatedProducts = (
     itemsInCart,
     productData,
@@ -121,42 +134,58 @@ function App() {
     });
   };
 
-  // console.log(userProfile);
-
   return (
     <React.StrictMode>
-      <AuthProvider>
+      <AuthProvider setWishList={setWishList} setUserId={setUserId}>
         <NavBar itemsInCart={itemsInCart} />
         <main className="main-container">
           <Router primary={false}>
-            <Home data={productData} path="/" />
+            <Home
+              data={productData}
+              path="/"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
+            />
+
             <SignIn path="/signin" />
             <SignUp path="/signup" />
             <About path="/about" />
             <Contact path="/contact" />
-            <Profile
-              setUserProfile={setUserProfile}
-              data={productData}
-              path="/profile"
-            />
 
             <Product
               data={productData}
               handleAddToCartClick={handleAddToCartClick}
               path="/product/:id"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
             />
 
             <Products
               data={productData}
               title={"All Products"}
               path="/products"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
             />
 
-            <Products data={veganData} title={"Vegan"} path="/products-vegan" />
+            <Products
+              data={veganData}
+              title={"Vegan"}
+              path="/products-vegan"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
+            />
             <Products
               data={glutenData}
               title={"Gluten Free"}
               path="/products-gluten-free"
+              wishList={wishList}
+              setWishList={setWishList}
+              userId={userId}
             />
 
             <CheckOut
@@ -168,6 +197,16 @@ function App() {
               path="/checkout"
             />
 
+            <Profile
+              setUserId={setUserId}
+              userId={userId}
+              wishList={wishList}
+              setWishList={setWishList}
+              setItemsInCart={setItemsInCart}
+              data={productData}
+              path="/profile"
+            />
+
             <Success
               data={productData}
               itemsInCart={itemsInCart}
@@ -176,6 +215,7 @@ function App() {
             />
             <NotFound default />
           </Router>
+          <ManageScroll />
         </main>
         <Footer />
       </AuthProvider>

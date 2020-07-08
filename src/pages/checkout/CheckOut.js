@@ -63,6 +63,8 @@ export default function Checkout({
   );
 
   const suggestedProducts = listRelatedProducts(itemsInCart, data, 10);
+
+  // localStorage.setItem("cartHistory", itemsInCart);
   return (
     <>
       <Cart
