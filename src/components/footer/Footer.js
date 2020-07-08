@@ -37,7 +37,6 @@ const Footer = () => {
             <Link to="/">Returns</Link>
             <Link to="/">Terms</Link>
             <Link to="/">Privacy</Link>
-            <Link to="/">Contact</Link>
           </div>
           <div className="footer-top-right-follow-us">
             <p>Follow Us</p>

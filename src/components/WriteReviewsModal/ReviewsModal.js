@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal, Input, Rate } from "antd";
 
 const { TextArea } = Input;
@@ -8,11 +8,13 @@ export default function ReviewsModal({
   setWriteReviews,
   writeReview,
   onSendReview,
+  setStars,
+  stars,
+  review,
+  setReview
 }) {
-  const [review, setReview] = useState("");
-  const [stars, setStars] = useState(1);
 
-  console.log(writeReview, ">>>>", stars);
+
   return (
     <>
       <Modal
@@ -22,7 +24,11 @@ export default function ReviewsModal({
         onOk={() => onSendReview(review, stars)}
         onCancel={() => setWriteReviews(false)}
       >
-        <Rate value={stars} onChange={setStars} />
+        <Rate
+          style={{ marginBottom: "20px" }}
+          value={stars}
+          onChange={setStars}
+        />
         <TextArea
           value={review}
           onChange={(e) => setReview(e.target.value)}
