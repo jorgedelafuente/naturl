@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "@reach/router";
 // import { StarOutlined, StarFilled } from '@ant-design/icons';
 // import { Button } from 'antd';
@@ -6,19 +6,28 @@ import { Link } from "@reach/router";
 // import { Card } from 'antd';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 // const { Meta } = Card;
-
 // import "antd/dist/antd.css";
-import "./Home.scss";
-
+import { Alert } from "antd";
 import { Carousel } from "antd";
 import CustomChatbot from "../../components/chatbot/Chatbot";
 import ProductCard from "../../components/product-card/Product-card";
+import "./Home.scss";
 
 function onChange(a, b, c) {
   // console.log(a, b, c);
 }
 
 function HomePage(props) {
+  const [displayAlert, setDisplayAlert] = useState("none");
+
+  const handleEmailNewsletterSignUp = (e) => {
+    e.preventDefault();
+    setDisplayAlert("block");
+    setTimeout(() => {
+      setDisplayAlert("none");
+    }, 5000);
+  };
+
   return (
     <div className="Home-Main">
       <Carousel autoplay afterChange={onChange}>
@@ -77,6 +86,8 @@ function HomePage(props) {
                   name={data.name}
                   price={data.price}
                   id={data.id}
+                  wishList={props.wishList.includes(data.id)}
+                  userId={props.userId}
                 />
               </>
             );
@@ -113,9 +124,9 @@ function HomePage(props) {
         ))}
       </div>
 
-      <CustomChatbot data={props.data}/>
+      <CustomChatbot data={props.data} />
 
-      <h1 className="About__us">About Us</h1>
+      <h1 className="About__us">NATURL</h1>
       <p className="About__text">
         We are a team with high criteria. We dedicate ourselves fully each day.
         We love to laugh and supply our bodies with positive energy. We are
@@ -132,18 +143,36 @@ function HomePage(props) {
             amazing offers delivered directly to your inbox.
           </p>
         </div>
-        <form className="NewsLetterInput">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="Email_input"
-            placeholder="Email Address"
-          />
-          <button className="Email-button" type="submit">
-            Subscribe
-          </button>
-        </form>
+        <div className="Home-EmailSignUp-container">
+          <div className="Home-EmailSignUp-container-alert">
+            <Alert
+              banner
+              message="Sample email subscribe functionality"
+              type="info"
+              showIcon={true}
+              style={{
+                display: displayAlert,
+              }}
+            />
+          </div>
+
+          <form className="NewsLetterInput">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="Email_input"
+              placeholder="Email Address"
+            />
+            <button
+              className="Email-button"
+              type="submit"
+              onClick={handleEmailNewsletterSignUp}
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

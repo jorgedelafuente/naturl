@@ -3,6 +3,10 @@
   --animate-delay: 0.9s;
 }
 
+.contact-page-container {
+  margin-top: 200px;
+}
+
 .flex-box-Contact {
   display: flex;
   align-items: flex-start;
@@ -18,12 +22,12 @@
   padding-left: 5%;
 }
 .Contact-heading {
-  font-size: 5rem;
+  // font-size: 5rem;
   font-weight: bold;
   text-align: center;
   color: #000000;
   margin-top: 100px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 
 .right-image-contact {
@@ -197,5 +201,13 @@
 @media (max-width: 768px) {
   .right-image-contact {
     display: none;
+  }
+
+  .contact-email-link {
+    color: cadetblue;
+  }
+
+  .contact-email-link:hover {
+    color: #00677d;
   }
 }

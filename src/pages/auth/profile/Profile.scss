@@ -1,0 +1,50 @@
+.Profile-Container {
+  // background-color: #f1ede5;
+  // border-top: 1px solid #eee;
+  margin: 0 auto;
+  max-width: 800px;
+  // padding-top: 2rem;
+  // padding-bottom: 2rem;
+  text-align: center;
+}
+
+.Profile-Welcome-title {
+  // border: 1px solid red;
+  // margin-bottom: 2rem;
+  // border-bottom: 1px solid #eee;
+  padding: 1.5rem;
+}
+
+.Profile-Category-Title {
+  // border-top: 1px solid #eee;
+  // margin-bottom: 2rem;
+  // border: 1px solid red;
+  // border-bottom: 1px solid #eee;
+}
+
+.Profile-Alert-Container {
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.Profile-EmptyList {
+  padding: 2rem;
+  font-style: italic;
+  border-top: 1px solid #eee;
+}
+
+.Wishlist-Title {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.Purchase-Title {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import firebase, { createUserProfileDocument } from "../../../firebase";
-import { navigate, Link } from "@reach/router";
+import { Link } from "@reach/router";
 import "../FormContainer.scss";
 import { Alert } from "antd";
 
@@ -12,27 +12,18 @@ const SignUp = () => {
   const handleSignUp = useCallback(async (event) => {
     event.preventDefault();
     const { email, password, password2, displayName } = event.target.elements;
-    // console.log(displayName.value, email.value);
-
     if (password.value === password2.value) {
-      setSuccessAlert("block");
-      setTimeout(() => {
-        setSuccessAlert("none");
-      }, 3000);
-
       try {
         const { user } = await firebase
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
-        // eslint-disable-next-line
-        const consoleUser = await createUserProfileDocument(
-          user,
-          displayName.value
-        );
-        // console.log(consoleUser);
-        navigate(`/`);
+        await createUserProfileDocument(user, displayName.value);
+        setSuccessAlert("block");
+        setTimeout(() => {
+          setSuccessAlert("none");
+        }, 3000);
       } catch (error) {
-        // console.error(error);
+        setSuccessAlert("none");
         setServerErrorAlert("block");
         setTimeout(() => {
           setServerErrorAlert("none");
@@ -52,7 +43,7 @@ const SignUp = () => {
         <h3>NATURL</h3>
       </div>
 
-      <div className="form-alerts">
+      <div>
         <Alert
           message="Account created"
           type="success"
@@ -79,7 +70,6 @@ const SignUp = () => {
       </div>
 
       <form onSubmit={handleSignUp}>
-        {/* <form onSubmit={handleSubmit}> */}
         <div className="InputGroup">
           <label>
             <span>Name</span>
@@ -102,6 +92,7 @@ const SignUp = () => {
               name="password"
               type="password"
               placeholder="Password"
+              minLength="6"
             />
           </label>
         </div>
@@ -114,6 +105,7 @@ const SignUp = () => {
               name="password2"
               type="password"
               placeholder="Password"
+              minLength="6"
             />
           </label>
         </div>

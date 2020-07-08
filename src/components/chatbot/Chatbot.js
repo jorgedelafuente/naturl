@@ -15,8 +15,9 @@ const theme = {
   userFontColor: "#4c4c4c",
 };
 
-var lipstick = {};
-var powder = {};
+// var lipstick = {};
+// var powder = {};
+// eslint-disable-next-line
 var item = {};
 function CustomChatbot(props) {
   // const [data, setData] = useState(props.data);

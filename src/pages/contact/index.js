@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import SimpleTextCard from "./SimpleTextCard";
+// import SimpleTextCard from "./SimpleTextCard";
 
 const Contact = () => {
   return (
@@ -16,7 +16,7 @@ const Contact = () => {
           <strong>CALL US</strong>
         </p>
         <address>
-          <span class="text-primary">
+          <span className="text-primary">
             <strong>General Inquiries</strong>
           </span>
           <br />
@@ -27,7 +27,7 @@ const Contact = () => {
           Toll-free in USA and Canada: 1-888-947-9445
         </address>
         <address>
-          <span class="text-primary">
+          <span className="text-primary">
             <strong>Business Inquiries</strong>
           </span>
           <br />
@@ -46,7 +46,7 @@ const Contact = () => {
         </p>
         <p>All legal services are provided from our head office in Montreal.</p>
         <address>
-          <span class="text-primary">
+          <span className="text-primary">
             <strong>Head Office &amp; Mailing Address</strong>
           </span>
           <br />

@@ -46,17 +46,13 @@ const brandTags = [
   "butter london",
 ];
 
-const Products = ({ data, title }) => {
-  // const [filteredData, setFilteredData] = useState([]);
+const Products = ({ data, title, wishList, setWishList, userId }) => {
   const [originalData, setOriginalData] = useState([]);
-  // const [filteredData, setFilteredData] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
-  // const [selectedTags, setSelectedTags] = useState([]);
   const [top, setTop] = useState(0);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // setFilteredData([...data]);
     setOriginalData([...data]);
   }, [data]);
 
@@ -90,7 +86,7 @@ const Products = ({ data, title }) => {
     const nextSelectedTags = checked
       ? [...selectedTags, tag]
       : selectedTags.filter((t) => t !== tag);
-      window.scrollTo(0, 300);
+    window.scrollTo(0, 300);
     setSelectedTags([...nextSelectedTags]);
   };
 
@@ -113,8 +109,6 @@ const Products = ({ data, title }) => {
     if (selectedTags.length > 1) {
       let tempArr = [];
       for (let i = 0; i < selectedTags.length; i++) {
-        console.log(selectedTags[i]);
-
         for (let j = 0; j < data.length; j++) {
           if (
             data[j].product_type === selectedTags[i] ||
@@ -140,7 +134,6 @@ const Products = ({ data, title }) => {
         <h1>{title}</h1>
       </div>
 
-      {/* <div className=""> */}
       <Affix offsetTop={top}>
         <div
           className="fixedHeaderButton wow zoomIn"
@@ -229,6 +222,9 @@ const Products = ({ data, title }) => {
                 name={item.name}
                 price={item.price}
                 id={item.id}
+                wishList={wishList.includes(item.id)}
+                userId={userId}
+                setWishList={setWishList}
               />
             ))}
           </>
@@ -242,7 +238,10 @@ const Products = ({ data, title }) => {
 
 Products.propTypes = {
   data: PropTypes.array,
+  wishList: PropTypes.array,
   title: PropTypes.string,
+  userId: PropTypes.string,
+  setWishList: PropTypes.func,
 };
 
 export default Products;

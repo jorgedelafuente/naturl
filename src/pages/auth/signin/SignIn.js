@@ -1,9 +1,9 @@
-import React, { useCallback, useContext, useState } from "react";
+import React, { useCallback, useState } from "react";
+import PropTypes from "prop-types";
 import firebase from "../../../firebase";
-import { AuthContext } from "../../../auth/Auth";
-import { navigate, Link } from "@reach/router";
-import "../FormContainer.scss";
+import { Link } from "@reach/router";
 import { Alert } from "antd";
+import "../FormContainer.scss";
 
 const Login = () => {
   const [errorAlert, setErrorAlert] = useState("none");
@@ -20,7 +20,7 @@ const Login = () => {
           showSuccess();
         });
     } catch (error) {
-      console.log(error);
+      console.error(error);
       showError();
     }
   }, []);
@@ -35,23 +35,18 @@ const Login = () => {
     setSuccessAlert("block");
     setTimeout(() => {
       setSuccessAlert("none");
-      navigate(`/`);
     }, 2000);
   };
-
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    // console.log(currentUser.uid);
-  }
 
   return (
     <div className="form-container">
       <div className="Logo">
-        <h3>NATURL</h3>
+        <Link to="/">
+          <h3>NATURL</h3>
+        </Link>
       </div>
 
-      <div className="form-alerts">
+      <div>
         <Alert
           message="Login Successful"
           type="success"
@@ -67,8 +62,6 @@ const Login = () => {
           closable
         />
       </div>
-
-      {/* {currentUser && <div>{currentUser.email}</div>} */}
 
       <form onSubmit={handleLogin}>
         <div className="InputGroup">
@@ -98,6 +91,10 @@ const Login = () => {
       </div>
     </div>
   );
+};
+
+Login.propTypes = {
+  setUserProfile: PropTypes.func,
 };
 
 export default Login;

@@ -1,13 +1,24 @@
-import React from "react";
-import "./style.scss";
+import React, { useState } from "react";
 import SimpleTextCard from "./SimpleTextCard";
 import SimpleImageCard from "./SimpleImageCard";
+import { Alert } from "antd";
+import "./style.scss";
 
 const About = () => {
+  const [displayAlert, setDisplayAlert] = useState("none");
+
+  const handleEmailNewsletterSignUp = (e) => {
+    e.preventDefault();
+    setDisplayAlert("block");
+    setTimeout(() => {
+      setDisplayAlert("none");
+    }, 5000);
+  };
+
   return (
     <div className="About-Wrapper">
       <div className="about-heading wow zoomIn " id="about-page-header">
-        OUR STORY
+        <h1>Our Story</h1>
       </div>
       <p className="wow zoomIn">
         Naturl is a culture and movement founded in Los Angeles inspired by
@@ -127,7 +138,7 @@ const About = () => {
         <div className="Simple-text-Card Simple-text-Card-1 wow zoomIn">
           <div className="sticky-text">
             <div className="about-heading simpleCard-heading sticky-header wow zoomIn">
-              OUR INGREDIENTS
+              <p className="aboutpage-purple-block">OUR INGREDIENTS</p>
             </div>
             <p className="wow zoomIn">
               Dissimilar to ordinary mineral makeup items that utilization
@@ -165,7 +176,7 @@ const About = () => {
         <div className="Simple-text-Card Simple-text-Card-2">
           <div className="sticky-text">
             <div className="about-heading simpleCard-heading sticky-header wow zoomIn">
-              Our Difference
+              <p className="aboutpage-greenblock">Our Difference</p>
             </div>
             <p className="wow zoomIn">
               We are citizens of the world, and this world offers us its beauty
@@ -200,9 +211,27 @@ const About = () => {
       <div className="bottom-text wow zoomIn">
         SUBSCRIBE TO OUR MAILING LIST
       </div>
+
       <div className="subscribe-wrapper wow zoomIn">
-        <input placeholder="email@example.com" className="input-bottom" />
-        <button className="subscribe">SUBSCRIBE</button>
+        <div className="About-EmailSignUp-container-input">
+          <div className="About-EmailSignUp-container-alert">
+            <Alert
+              banner
+              message="A sample email newsletter submit"
+              type="info"
+              showIcon={true}
+              style={{
+                display: displayAlert,
+              }}
+            />
+          </div>
+
+          <input placeholder="email@example.com" className="input-bottom" />
+        </div>
+
+        <button className="subscribe" onClick={handleEmailNewsletterSignUp}>
+          SUBSCRIBE
+        </button>
       </div>
     </div>
   );

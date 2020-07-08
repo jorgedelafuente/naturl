@@ -39,12 +39,12 @@
   padding-left: 5%;
 }
 .about-heading {
-  font-size: 5rem;
+  // font-size: 5rem;
   font-weight: bold;
   text-align: center;
   color: #000000;
   margin-top: 100px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 
 .About-Wrapper > p {
@@ -222,5 +222,22 @@
   }
   .right-image {
     display: none;
+  }
+  .aboutpage-purple-block {
+    padding-top: 50px;
+  }
+
+  .aboutpage-greenblock {
+    padding-top: 50px;
+  }
+  .About-EmailSignUp-container-input {
+    position: relative;
+  }
+
+  .About-EmailSignUp-container-alert {
+    position: absolute;
+    top: -45px;
+    width: 300px;
+    height: 48px;
   }
 }

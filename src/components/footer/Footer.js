@@ -18,9 +18,9 @@ const Footer = () => {
           <div className="footer-top-left-container">
             <h4>About</h4>
             <p>
-              NATURL is a culture and movement founded in Los Angeles inspired
-              by artists. Our mission is to inspire confidence in our community
-              by embracing uniqueness and individuality with beuty products.
+              NATURL is a culture and movement founded in Toronto inspired by by
+              artists. Our mission is to inspire confidence in our community by
+              embracing uniqueness and individuality with beuty products.
             </p>
           </div>
         </div>
@@ -31,6 +31,7 @@ const Footer = () => {
             <Link to="/products-vegan">Vegan</Link>
             <Link to="/products-gluten-free">Gluten Free</Link>
             <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
           </div>
           <div className="footer-top-right-info">
             <p>Info</p>
