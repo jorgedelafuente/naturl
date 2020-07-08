@@ -156,16 +156,15 @@ function ProductItem(props) {
             </div>
           </div>
 
+          <ProductTags objItem={props.data} />
+
           <div className="productitem-description-rating animated fadeInLeft">
-            Rating:
             <Rate
               className="product-item-description-ratings animated fadeInLeft"
               disabled
               defaultValue={props.data.rating}
             />
           </div>
-
-          <ProductTags objItem={props.data} />
         </div>
       </>
     )

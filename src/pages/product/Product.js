@@ -29,6 +29,7 @@ const Product = ({
         wishList={wishList}
         setWishList={setWishList}
       />
+
       <Review productId={id} />
     </div>
   );
