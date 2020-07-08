@@ -33,7 +33,7 @@ function ProductItem(props) {
     if (props.userId && !props.wishList.includes(parseInt(props.productId))) {
       addWishList(props.userId, parseInt(props.productId));
       props.setWishList([...props.wishList, parseInt(props.productId)]);
-      console.log(props.wishList);
+
       setSuccessAlert("block");
       setTimeout(() => {
         setSuccessAlert("none");

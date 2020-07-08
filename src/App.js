@@ -19,7 +19,6 @@ import "./App.scss";
 import ManageScroll from "./scroll";
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true);
   const [productData, setData] = useState([]);
   const [veganData, setVeganData] = useState([]);
   const [glutenData, setGlutenData] = useState([]);
@@ -37,7 +36,6 @@ function App() {
       setVeganData([...Vegan]);
       setGlutenData([...Gluten]);
     });
-    // .then(() => setIsLoading(false));
   }, []);
 
   useEffect(() => {
@@ -136,13 +134,12 @@ function App() {
               setWishList={setWishList}
               userId={userId}
             />
-            {/* <SignIn path="/signin" setUserProfile={setUserProfile} /> */}
+
             <SignIn path="/signin" />
             <SignUp path="/signup" />
             <About path="/about" />
             <Contact path="/contact" />
 
-            {/* //FIX */}
             <Product
               data={productData}
               handleAddToCartClick={handleAddToCartClick}
@@ -151,7 +148,7 @@ function App() {
               setWishList={setWishList}
               userId={userId}
             />
-            {/* //FIX */}
+
             <Products
               data={productData}
               title={"All Products"}
@@ -187,10 +184,8 @@ function App() {
               path="/checkout"
             />
 
-            {/* //FIX */}
             <Profile
-              // userProfile={userProfile}
-              // setUserProfile={setUserProfile}
+              setUserId={setUserId}
               userId={userId}
               wishList={wishList}
               setWishList={setWishList}

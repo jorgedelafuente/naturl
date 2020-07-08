@@ -8,7 +8,13 @@ import SignIn from "./../signin/SignIn";
 import PropTypes from "prop-types";
 import "./Profile.scss";
 
-const Profile = ({ data, wishList, setWishList, setItemsInCart }) => {
+const Profile = ({
+  data,
+  wishList,
+  setWishList,
+  setItemsInCart,
+  setUserId,
+}) => {
   const [profileInfo, setProfileInfo] = useState({});
   const [wishListRemoveAlert, setWishListRemoveAlert] = useState("none");
   const [displayAlert, setDisplayAlert] = useState("none");
@@ -28,21 +34,20 @@ const Profile = ({ data, wishList, setWishList, setItemsInCart }) => {
 
   const handleSignOut = () => {
     setDisplayAlert("block");
+    setTimeout(() => {
+      setDisplayAlert("none");
+    }, 5000);
     signOut();
-    // add timeout with alert
-    // clear local storage
-    // localStorage.clear();
-    // clearWishList
-    // setWishList([])
+
+    localStorage.clear("cart");
+
+    setWishList([]);
+    setItemsInCart([]);
+    setUserId(null);
     // navigate(`/`);
-    // clear cart
-    //setItemsInCart([])
-    // clear User id
-    // setUserId(null)
   };
 
   const removeFromWishList = (itemId) => {
-    console.log(itemId);
     removeWishList(currentUserProfile.uid, itemId).then((res) => {
       setWishList([...res.wishList]);
       setWishListRemoveAlert("block");
@@ -54,18 +59,16 @@ const Profile = ({ data, wishList, setWishList, setItemsInCart }) => {
 
   return (
     <>
-      {/* logic to handle loading vs logged in  */}
-      {/* add spinner */}
       {!currentUserProfile ? (
         <>
           <SignIn />
         </>
       ) : (
         <>
-          <div style={{ width: "300" }}>
+          <div className="Profile-Alert-Container">
             <Alert
               banner
-              message="Sign Out Successfully"
+              message="Sign Out Complete"
               type="success"
               showIcon={true}
               closable
@@ -75,7 +78,7 @@ const Profile = ({ data, wishList, setWishList, setItemsInCart }) => {
             />
             <Alert
               banner
-              message="Item removed from wishlist Successful"
+              message="Item removed from wishlist"
               type="info"
               showIcon={true}
               closable
@@ -139,6 +142,7 @@ Profile.propTypes = {
   wishList: PropTypes.array,
   setWishList: PropTypes.func,
   setItemsInCart: PropTypes.func,
+  setUserId: PropTypes.func,
 };
 
 export default Profile;

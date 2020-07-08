@@ -109,8 +109,6 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     if (selectedTags.length > 1) {
       let tempArr = [];
       for (let i = 0; i < selectedTags.length; i++) {
-        console.log(selectedTags[i]);
-
         for (let j = 0; j < data.length; j++) {
           if (
             data[j].product_type === selectedTags[i] ||
