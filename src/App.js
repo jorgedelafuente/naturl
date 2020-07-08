@@ -6,7 +6,6 @@ import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import CheckOut from "./pages/checkout/CheckOut";
-import SignIn from "./pages/auth/signin/SignIn";
 import SignUp from "./pages/auth/signup/SignUp";
 import Products from "./pages/products/Products";
 import Profile from "./pages/auth/profile/Profile";
@@ -148,9 +147,20 @@ function App() {
               userId={userId}
             />
 
-            <SignIn path="/signin" />
-            <SignUp path="/signup" />
+            <SignUp path="/signup" setWishList={setWishList} />
+
+            <Profile
+              setUserId={setUserId}
+              userId={userId}
+              wishList={wishList}
+              setWishList={setWishList}
+              setItemsInCart={setItemsInCart}
+              data={productData}
+              path="/profile"
+            />
+
             <About path="/about" />
+
             <Contact path="/contact" />
 
             <Product
@@ -195,16 +205,6 @@ function App() {
               handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
               listRelatedProducts={listRelatedProducts}
               path="/checkout"
-            />
-
-            <Profile
-              setUserId={setUserId}
-              userId={userId}
-              wishList={wishList}
-              setWishList={setWishList}
-              setItemsInCart={setItemsInCart}
-              data={productData}
-              path="/profile"
             />
 
             <Success
