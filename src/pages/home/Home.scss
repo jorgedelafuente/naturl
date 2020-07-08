@@ -69,7 +69,6 @@
     margin-top: 250px;
     font-size: 45px;
   }
-  /* mobile */
   @media (max-width: 480px) {
     margin-top: 250px;
     font-size: 45px;
@@ -110,17 +109,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0 5%;
   height: 300px;
 }
 
 .News_div {
   width: 40%;
-  margin-right: 50px;
+  margin-bottom: 60px;
+  // margin-right: 50px;
 }
 .News_div h1 {
-  text-align: left;
-  padding-left: 30px;
+  // text-align: left;
+  // padding-left: 30px;
   margin-bottom: 20px;
 }
 .News__Text {
@@ -151,7 +152,7 @@
 }
 .Email_input {
   height: 48px;
-  width: 300px;
+  width: 40vw;
   background-color: #fff;
   border-radius: 2px;
   padding-left: 10px;
@@ -176,14 +177,15 @@
 }
 
 .About__text {
-  letter-spacing: 5%;
+  // letter-spacing: 5%;
+  // line-height: 145%;
+  // width: 80%;
   text-align: center;
   margin: 40px auto;
-  line-height: 145%;
   font-size: 15pt;
-  width: 80%;
   margin-bottom: 100px;
   color: gray;
+  width: 65%;
 }
 
 .Main_Logo {
@@ -249,7 +251,7 @@
   }
   .News {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
     margin-right: 0px;
   }
@@ -264,6 +266,9 @@
   .News__Text {
     margin-top: 20px;
     text-align: center;
+    margin: 40px auto;
+    font-size: 15pt;
+    color: gray;
   }
 
   .column-card {
@@ -344,7 +349,9 @@
 }
 
 .Home-EmailSignUp-container {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Home-EmailSignUp-container-alert {
@@ -356,5 +363,4 @@
     top: -90px;
     width: 170px;
   }
-  
 }

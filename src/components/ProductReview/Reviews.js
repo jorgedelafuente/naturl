@@ -20,7 +20,7 @@ export default function Review({ productId }) {
 
   useEffect(() => {
     getUser();
-    getReviews();
+    getReviews(); // eslint-disable-next-line
   }, []);
 
   function generateId() {

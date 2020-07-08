@@ -254,6 +254,8 @@
 }
 .product-color-dots:hover {
   border-radius: 50px;
+  overflow: hidden;
+  text-decoration: none;
 }
 
 .ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
@@ -261,21 +263,45 @@
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
   border-color: white;
+  text-decoration: none;
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
   z-index: 1;
   color: white;
-  background: #fff;
+  background: white;
   border-color: white;
   border-radius: 50px;
+  border: 1px solid white;
+  text-decoration: none;
+  -fx-background-color: white;
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
   z-index: 1;
-  color: white;
-  background: #fff;
+  color: none;
+  background: none;
   border-color: white;
-  border-radius: 50px;
+  -fx-background-color: white;
+  // border-radius: 50px;
+  // border: 1px solid white;
+  // text-decoration: none;
 }
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::selection {
+  color: #fff;
+  background: white;
+  -fx-background-color: white;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+  background-color: white;
+  fx-focus-traversable: false;
+  fx-background-color: white;
+}
+
+// ::selection {
+//   color: #fff;
+//   background: white;
+// }
 
 .wishList-Alert {
   width: 350px;
