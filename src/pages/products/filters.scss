@@ -47,10 +47,14 @@
 
 .drawer-product-type-title {
   color: black;
+  // border: 1px solid red;
 }
 
 .drawer-product-type-tags {
   margin-bottom: 30px;
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
 }
 
 .drawer-product-type-tags .producttype-tags:hover {
