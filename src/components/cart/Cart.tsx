@@ -10,7 +10,7 @@ export default function Cart({
   itemsInCart,
   totalCost,
 }) {
-  console.log(itemsInCart);
+  // console.log(itemsInCart);
   return (
     <div className="Cart">
       <h2 className="Cart-title">Your shopping cart</h2>
@@ -18,6 +18,7 @@ export default function Cart({
         <div>
           {itemsInCart.map((item) => (
             <CartItem
+              color={item.color}
               key={item.id}
               itemId={item.id}
               thumbnail={item.image_link}
@@ -32,7 +33,7 @@ export default function Cart({
           <div className="Cart-total-cost">
             Total cost: ${totalCost.toFixed(2)}
             <button
-              className="Cart-clear-button"
+              className="checkout-clearcart-button"
               onClick={handleClearCartClick}
             >
               Clear Cart
@@ -43,7 +44,9 @@ export default function Cart({
               Proceed To Checkout
             </button>
             <Link to="/products">
-              <button className="Cart-button-cancel">Continue Shopping</button>
+              <button className="checkout-continueshopping-button">
+                Continue Shopping
+              </button>
             </Link>
           </div>
         </div>
