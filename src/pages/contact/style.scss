@@ -29,6 +29,14 @@
   margin-top: 100px;
   margin-bottom: 50px;
 }
+.Contact-heading h1 {
+  @media (max-width: 768px) and (min-width: 480px) {
+    font-size: 28px;
+  }
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
 
 .right-image-contact {
   position: absolute;
@@ -210,4 +218,20 @@
   .contact-email-link:hover {
     color: #00677d;
   }
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+  margin-top: 250px;
+  font-size: 45px;
+}
+/* mobile */
+@media (max-width: 480px) {
+}
+
+.contact-email-link {
+  color: cadetblue;
+}
+
+.contact-email-link:hover {
+  color: #00677d;
 }
