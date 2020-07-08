@@ -59,7 +59,7 @@ function CustomChatbot(props) {
   }
 
   function redirectToPowder() {
-    navigate(`/product/1039`);
+    navigate(`/product/442`);
   }
 
   function redirectToPencil() {

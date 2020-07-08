@@ -134,7 +134,7 @@ export default function Review({ productId }) {
         }}
         className="heading"
       >
-        Reviews {open ? <UpOutlined /> : <DownOutlined />}
+        User Reviews {open ? <UpOutlined /> : <DownOutlined />}
       </div>
       {open && currentUser && (
         <div onClick={() => setWriteReviews(true)} className="writeReview">
