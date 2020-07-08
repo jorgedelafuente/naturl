@@ -26,12 +26,21 @@
   margin-bottom: 15px;
 }
 
+.right-image-contact {
+  position: absolute;
+  right: -10px;
+  top: 190px;
+  z-index: 1;
+  height: 500px;
+  width: 180px;
+  transform: rotate(270deg);
+}
 .Contact-Wrapper > p {
   text-align: center;
   margin: auto;
   width: 50%;
   color: #000000;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 //Simple Text Card CSS
 .Simple-text-Card {
@@ -82,7 +91,7 @@
   margin-bottom: 30px;
 }
 .simpleImage-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100px;
   left: 0;

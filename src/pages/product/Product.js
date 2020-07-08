@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
 import "./productItem.scss";
 import PropTypes from "prop-types";
+import Review from "../../components/ProductReview/Reviews";
 
 const Product = ({ data, handleAddToCartClick, id }) => {
   const [originalData, setOriginalData] = useState([]);
@@ -13,6 +14,7 @@ const Product = ({ data, handleAddToCartClick, id }) => {
   return (
     <div className="product-page-container">
       <ProductItem data={foundItem} onAddToCartClick={handleAddToCartClick} />
+      <Review productId={id} />
     </div>
   );
 };
