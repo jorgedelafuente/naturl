@@ -321,3 +321,17 @@
     width: 320px;
   }
 }
+
+.ProductItem-details-container {
+  position: relative;
+}
+
+.ProductItem-details-alert {
+  position: absolute;
+  top: -10px;
+
+  @media (max-width: 480px) {
+    top: -35px;
+    width: 286px;
+  }
+}

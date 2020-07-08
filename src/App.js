@@ -56,28 +56,28 @@ function App() {
     }
   }, [itemsInCart]);
 
-  // const handleAddToCartClick = (id, itemQuantity) => {
-  const handleAddToCartClick = (id, itemQuantity, itemColor) => {
+  const handleAddToCartClick = (id, itemQuantity, selectedColor) => {
     setItemsInCart((itemsInCart) => {
-      // const itemInCart = itemsInCart.find((item) => item.id === id);
-      // // // if item is already in cart, update the quantity
-      // // if (itemInCart) {
-      // //   return itemsInCart.map((item) => {
-      // //     if (item.id !== id) return item;
-      // //     return {
-      // //       ...itemInCart,
-      // //       quantity: item.quantity + itemQuantity,
-      // //       color: item.color + itemColor,
-      // //     }; //item.quantity + 1
-      // //     // return { ...itemInCart, quantity: item.quantity + itemQuantity };
-      // //   });
-      // }
+      const itemInCart = itemsInCart.find((item) => item.id === id);
+
+      // if item is already in cart, update the quantity
+      // and selected color
+      if (itemInCart) {
+        return itemsInCart.map((item) => {
+          if (item.id !== id) return item;
+          return {
+            ...itemInCart,
+            quantity: item.quantity + itemQuantity,
+            selectedColors: [...item.selectedColors, selectedColor],
+          };
+        });
+      }
 
       // otherwise, add new item to cart
       const item = productData.find((item) => item.id === id);
       return [
         ...itemsInCart,
-        { ...item, quantity: itemQuantity, color: itemColor },
+        { ...item, quantity: itemQuantity, selectedColors: [selectedColor] },
       ];
     });
   };

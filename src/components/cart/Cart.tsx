@@ -10,7 +10,6 @@ export default function Cart({
   itemsInCart,
   totalCost,
 }) {
-  // console.log(itemsInCart);
   return (
     <div className="Cart">
       <h2 className="Cart-title">Your shopping cart</h2>
@@ -18,12 +17,12 @@ export default function Cart({
         <div>
           {itemsInCart.map((item) => (
             <CartItem
-              color={item.color}
               key={item.id}
               itemId={item.id}
               thumbnail={item.image_link}
               name={item.name}
               cost={item.price * item.quantity}
+              selectedColors={item.selectedColors}
               quantity={item.quantity}
               onRemoveItemFromCartClick={() =>
                 handleRemoveItemFromCartClick(item.id)
