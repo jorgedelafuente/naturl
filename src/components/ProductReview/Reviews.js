@@ -134,7 +134,7 @@ export default function Review({ productId }) {
         }}
         className="heading"
       >
-        Reviews {open ? <UpOutlined /> : <DownOutlined />}
+        NATURL reviews {open ? <UpOutlined /> : <DownOutlined />}
       </div>
       {open && currentUser && (
         <div onClick={() => setWriteReviews(true)} className="writeReview">
@@ -145,7 +145,13 @@ export default function Review({ productId }) {
         ? reviews.map((val, ind) => (
             <div key={ind.toString()} className="reviewsContent">
               <div className="menuItem">
-                {val.reviewMsg}{" "}
+                <div className="user-review-emailandmessage-container">
+                  <div className="nameDateTitle">
+                    <p>{val.email}</p>
+                  </div>
+                  <div className="user-review-message">{val.reviewMsg}</div>
+                </div>
+
                 <Popover
                   placement="left"
                   title={""}
@@ -177,12 +183,13 @@ export default function Review({ productId }) {
                 disabled
                 defaultValue={val.stars}
               />
-              <div className="nameDateTitle">
-                {val.email} -{" "}
+
+              <p className="user-review-date">
                 {val.createTime
                   ? new Date(val.createTime).toDateString()
                   : "26 May 2020"}
-              </div>
+              </p>
+
               {/* <div className="nameTitle">{}</div> */}
             </div>
           ))

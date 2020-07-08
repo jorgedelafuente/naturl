@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { addWishList } from "../../firebase";
 // import ProductColor from "../../components/product-details/product-colors";
 import ProductTags from "../../components/product-details/product-tags";
+import Review from "../../components/ProductReview/Reviews";
+
 import "./productItem.scss";
 
 import { Rate, Radio } from "antd";
@@ -164,6 +166,9 @@ function ProductItem(props) {
               disabled
               defaultValue={props.data.rating}
             />
+          </div>
+          <div className="product-item-user-reviews-container">
+            <Review productId={props.data.id} />
           </div>
         </div>
       </>

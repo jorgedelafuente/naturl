@@ -234,7 +234,8 @@
 }
 
 .product-item-description-ratings {
-  margin-left: 15px;
+  // margin-left: 15px;
+  margin-bottom: 40px;
 }
 
 .product-details-tags {
@@ -309,4 +310,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.product-item-user-reviews-container {
+  // background-color: red;
+  display: flex;
+  justify-content: center;
 }
