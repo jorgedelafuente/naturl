@@ -6,6 +6,7 @@ import { Alert } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import SignIn from "./../signin/SignIn";
 import PropTypes from "prop-types";
+import PurchaseHistory from "../../../components/purchaseHistory/purchaseHistory";
 import "./Profile.scss";
 
 const Profile = ({
@@ -16,6 +17,7 @@ const Profile = ({
   setUserId,
 }) => {
   const [profileInfo, setProfileInfo] = useState({});
+  const [purchaseHistory, setPurchaseHistory] = useState([]);
   const [wishListRemoveAlert, setWishListRemoveAlert] = useState("none");
   const [displayAlert, setDisplayAlert] = useState("none");
   const { currentUserProfile } = useContext(AuthContext);
@@ -25,6 +27,7 @@ const Profile = ({
       Promise.resolve(getUserDocument(currentUserProfile.uid))
         .then((profile) => {
           setProfileInfo(profile);
+          setPurchaseHistory([...profile.purchaseHistory]);
         })
         .catch((error) => {
           console.log(error);
@@ -38,9 +41,7 @@ const Profile = ({
       setDisplayAlert("none");
     }, 5000);
     signOut();
-
     localStorage.clear("cart");
-
     setWishList([]);
     setItemsInCart([]);
     setUserId(null);
@@ -125,7 +126,13 @@ const Profile = ({
             </div>
             <br />
 
-            <h2 className="Cart-title">Purchase History</h2>
+            <h2 className="Cart-title">Purchase History</h2>   
+
+            {purchaseHistory.length > 0 ? (
+              <PurchaseHistory purchaseHistory={purchaseHistory} />
+            ) : (
+              <span>You haven&apos;t purchased anything yet.</span>
+            )}      
 
             <button className="form-button" onClick={handleSignOut}>
               Sign out
