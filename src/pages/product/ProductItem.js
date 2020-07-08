@@ -3,28 +3,43 @@ import { addWishList } from "../../firebase";
 // import ProductColor from "../../components/product-details/product-colors";
 import ProductTags from "../../components/product-details/product-tags";
 import Review from "../../components/ProductReview/Reviews";
-
 import "./productItem.scss";
 
 import { Rate, Radio } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
 import { Alert } from "antd";
+import "./productItem.scss";
 
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
   const [successAlert, setSuccessAlert] = useState("none");
   const [infoAlert, setInfoAlert] = useState("none");
   const [loginAlert, setLoginAlert] = useState("none");
-  const [itemColor, setItemColor] = useState(1);
+  const [itemColor, setItemColor] = useState(null);
+  const [colorSelectAlert, setColorSelectAlert] = useState("none");
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
     setItemQuantity(quantityToInt);
   };
 
+  const handleSelectItemClick = (e) => {
+    if (itemQuantity && itemColor) {
+      props.onAddToCartClick(props.data.id, itemQuantity, itemColor);
+      setItemColor(null);
+      setItemQuantity(1);
+    } else {
+      setColorSelectAlert("block");
+      setTimeout(() => {
+        setColorSelectAlert("none");
+      }, 3000);
+    }
+  };
+
   function onChange(e) {
-    console.log(`radio checked:${e.target.value}`);
-    setItemColor(e.target.value);
+    // console.log(`radio checked:${e.target.value}`);
+    const currentColor = e.target.value;
+    setItemColor(currentColor);
   }
   const addToWishList = () => {
     // console.log(props.userId);
@@ -71,37 +86,45 @@ function ProductItem(props) {
             <h2>{props.data.name}</h2>
           </div>
 
-          <div className="product-details-shopinfo animated fadeInLeft">
-            <h2>${props.data.price} </h2>
-            <input
-              className="product-details-quantity-input animated fadeInLeft"
-              type="number"
-              name="discountInstant"
-              min="1"
-              max="10"
-              placeholder="1"
-              onChange={handleUpdateItemQuantity}
-              autoComplete="off"
-            ></input>
-            <button
-              onClick={() =>
-                props.onAddToCartClick(props.data.id, itemQuantity, itemColor)
-              }
-            >
-              Add to cart
-            </button>
-
-            <div className="wishlist-icon-heart">
-              <HeartOutlined
-                onClick={addToWishList}
-                style={{
-                  color: props.wishList.includes(props.data.id)
-                    ? "red"
-                    : "black",
-                }}
+          <div className="ProductItem-details-container">
+            <div className="ProductItem-details-alert">
+              <Alert
+                message="Please select a product color &nbsp;"
+                type="warning"
+                style={{ display: colorSelectAlert }}
+                showIcon={true}
+                closable
               />
             </div>
+            <div className="product-details-shopinfo animated fadeInLeft">
+              <h2>${props.data.price} </h2>
+              <input
+                className="product-details-quantity-input animated fadeInLeft"
+                type="number"
+                name="discountInstant"
+                min="1"
+                max="10"
+                placeholder="1"
+                onChange={handleUpdateItemQuantity}
+                autoComplete="off"
+              ></input>
+              <button onClick={() => handleSelectItemClick()}>
+                Add to Cart
+              </button>
+
+              <div className="wishlist-icon-heart">
+                <HeartOutlined
+                  onClick={addToWishList}
+                  style={{
+                    color: props.wishList.includes(props.data.id)
+                      ? "red"
+                      : "black",
+                  }}
+                />
+              </div>
+            </div>
           </div>
+
           <div className="wishList-Alert">
             <Alert
               message="Item added to Wishlist Successfully"
@@ -127,14 +150,15 @@ function ProductItem(props) {
           </div>
 
           <Radio.Group onChange={onChange} className="product-colors-container">
-            {props.data.product_colors.map((item) => (
+            {props.data.product_colors.map((productColor) => (
               <Radio.Button
+                key={productColor.colour_name}
                 type="radio"
                 className="product-color-dots"
                 style={{
-                  backgroundColor: item.hex_value,
+                  backgroundColor: productColor.hex_value,
                 }}
-                value={item.hex_value}
+                value={productColor.hex_value}
               ></Radio.Button>
             ))}
           </Radio.Group>

@@ -7,6 +7,7 @@ export default function PurchasedItem({
   thumbnail,
   name,
   cost,
+  selectedColors,
   quantity,
 }) {
   const productPath = `/product/${itemId}`;
@@ -24,7 +25,19 @@ export default function PurchasedItem({
           {name}
         </Link>
       </div>
-      <div className="PurchasedItem-details">
+      <div className="PurchasedItem-details-success">
+        <div className="PurchasedItem-selected-color-container">
+          {selectedColors.map((color) => (
+            <>
+              <span
+                key={color}
+                className="PurchasedItem-selected-color"
+                style={{ backgroundColor: color }}
+              ></span>
+              <span>&nbsp;</span>
+            </>
+          ))}
+        </div>
         <div className="PurchasedItem-quantity">Qty: {quantity}</div>
         <div>${cost.toFixed(2)}</div>
       </div>

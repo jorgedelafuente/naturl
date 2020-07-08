@@ -86,7 +86,7 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     const nextSelectedTags = checked
       ? [...selectedTags, tag]
       : selectedTags.filter((t) => t !== tag);
-    window.scrollTo(0, 300);
+    window.scrollTo(0, 100);
     setSelectedTags([...nextSelectedTags]);
   };
 
@@ -128,11 +128,11 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     }
   };
 
-  // function clearFilters() {
-  //   // let filteredData = filtered(originalData);
-  // }
+  function clearFilters() {
+    setSelectedTags([]);
+  }
 
-  console.log(filtered(originalData));
+  // console.log(filtered(originalData));
 
   return (
     <div className="products-page-container">
@@ -146,10 +146,7 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
           onClick={() => setTop(top)}
         >
           <div>
-            <Link
-              // onClick={clearFilters()}
-              to="/products"
-            >
+            <Link onClick={clearFilters} to="/products">
               All products
             </Link>
           </div>

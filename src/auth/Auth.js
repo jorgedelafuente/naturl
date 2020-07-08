@@ -19,9 +19,11 @@ export const AuthProvider = ({ children, setWishList, setUserId }) => {
       if (user.uid !== null) {
         getUserDocument(user.uid)
           .then((profile) => {
+            // if (profile) {
             setCurrentUserProfile(profile);
             setWishList(profile.wishList);
             setUserId(profile.uid);
+            // }
           })
           .catch((error) => console.log(error));
       }
