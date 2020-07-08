@@ -70,7 +70,7 @@ const Contact = () => {
         </p>
         <img
           src={require("../../images/contact-fadein.png")}
-          alt="image"
+          alt="makeup-lipstick"
           className="right-image-contact"
         />
         <br />
