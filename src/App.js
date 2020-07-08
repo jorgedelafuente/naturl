@@ -57,19 +57,20 @@ function App() {
     }
   }, [itemsInCart]);
 
-  const handleAddToCartClick = (id, itemQuantity, itemColor) => {
+  const handleAddToCartClick = (id, itemQuantity, selectedColor) => {
     setItemsInCart((itemsInCart) => {
       const itemInCart = itemsInCart.find((item) => item.id === id);
 
       // if item is already in cart, update the quantity
+      // and selected color
       if (itemInCart) {
         return itemsInCart.map((item) => {
           if (item.id !== id) return item;
           return {
             ...itemInCart,
             quantity: item.quantity + itemQuantity,
-            itemColor: itemColor,
-          }; //item.quantity + 1
+            selectedColors: [...item.selectedColors, selectedColor],
+          };
         });
       }
 
@@ -77,7 +78,7 @@ function App() {
       const item = productData.find((item) => item.id === id);
       return [
         ...itemsInCart,
-        { ...item, quantity: itemQuantity, itemColor: itemColor },
+        { ...item, quantity: itemQuantity, selectedColors: [selectedColor] },
       ];
     });
   };

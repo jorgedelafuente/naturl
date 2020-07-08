@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { addWishList } from "../../firebase";
 // import ProductColor from "../../components/product-details/product-colors";
 import ProductTags from "../../components/product-details/product-tags";
-import "./productItem.scss";
-
 import { Rate, Radio } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
 import { Alert } from "antd";
+import "./productItem.scss";
 
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
@@ -14,7 +13,7 @@ function ProductItem(props) {
   const [infoAlert, setInfoAlert] = useState("none");
   const [loginAlert, setLoginAlert] = useState("none");
   const [itemColor, setItemColor] = useState(null);
-  const [colorSelectAlert, setcolorSelectAlert] = useState("none");
+  const [colorSelectAlert, setColorSelectAlert] = useState("none");
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
@@ -23,19 +22,21 @@ function ProductItem(props) {
 
   const handleSelectItemClick = (e) => {
     if (itemQuantity && itemColor) {
-      console.log("COLOR");
       props.onAddToCartClick(props.data.id, itemQuantity, itemColor);
+      setItemColor(null);
+      setItemQuantity(1);
     } else {
-      setcolorSelectAlert("block");
+      setColorSelectAlert("block");
       setTimeout(() => {
-        setcolorSelectAlert("none");
+        setColorSelectAlert("none");
       }, 3000);
     }
   };
 
   function onChange(e) {
     // console.log(`radio checked:${e.target.value}`);
-    setItemColor(e.target.value);
+    const currentColor = e.target.value;
+    setItemColor(currentColor);
   }
   const addToWishList = () => {
     // console.log(props.userId);
@@ -85,7 +86,7 @@ function ProductItem(props) {
           <div className="ProductItem-details-container">
             <div className="ProductItem-details-alert">
               <Alert
-                message="Please select a color"
+                message="Please select a product color &nbsp;"
                 type="warning"
                 style={{ display: colorSelectAlert }}
                 showIcon={true}

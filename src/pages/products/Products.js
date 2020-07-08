@@ -132,7 +132,7 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
   //   // let filteredData = filtered(originalData);
   // }
 
-  console.log(filtered(originalData));
+  // console.log(filtered(originalData));
 
   return (
     <div className="products-page-container">

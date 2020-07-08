@@ -40,15 +40,31 @@
   color: #00677D;
 }
 
-.PurchasedItem-details {
+.PurchasedItem-details-success {
   display: flex;
-  width: 180px;
+  
+  @media (max-width: 480px) {
+    margin: 0.5rem;
+  }
 }
 
-.PurchasedItem-details div {
+.PurchasedItem-details-success div {
   flex: 1 1 50%;
 }
 
 .PurchasedItem-quantity {
   padding: 0 1rem;
+}
+
+.PurchasedItem-selected-color-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+}
+
+.PurchasedItem-selected-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
 }
