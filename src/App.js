@@ -16,6 +16,7 @@ import Success from "./pages/success/Success";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import "./App.scss";
+import ManageScroll from "./scroll";
 
 function App() {
   // const [isLoading, setIsLoading] = useState(true);
@@ -49,8 +50,12 @@ function App() {
 
   useEffect(() => {
     // update local storage with itemsInCart
-    let stringifiedCart = JSON.stringify(itemsInCart);
-    localStorage.setItem("cart", stringifiedCart);
+    const stringifiedItemsInCart = JSON.stringify(itemsInCart);
+    localStorage.setItem("cart", stringifiedItemsInCart);
+
+    if (itemsInCart.length > 0) {
+      localStorage.setItem("cartHistory", JSON.stringify(itemsInCart));
+    }
   }, [itemsInCart]);
 
   // const handleAddToCartClick = (id, itemQuantity) => {
@@ -90,9 +95,10 @@ function App() {
   const handleClearCartClick = () => {
     setItemsInCart([]);
     localStorage.removeItem("cart");
+    localStorage.removeItem("cartHistory");
   };
 
-  //TODO: optimize
+  //TODO: refactor
   const listRelatedProducts = (
     itemsInCart,
     productData,
@@ -185,6 +191,7 @@ function App() {
             />
             <NotFound default />
           </Router>
+          <ManageScroll />
         </main>
         <Footer />
       </AuthProvider>

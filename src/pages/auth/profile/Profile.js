@@ -1,77 +1,52 @@
 import React, { useContext, useState, useEffect } from "react";
-import {
-  signOut,
-  getUserDocument,
-  addWishList,
-  removeWishList,
-} from "../../../firebase";
+import { signOut, getUserDocument, removeWishList } from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
-import { navigate } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 import { Alert } from "antd";
-// import { Spin } from "antd";
-// import { LoadingOutlined } from "@ant-design/icons";
-import "../FormContainer.scss";
+import { DeleteOutlined } from "@ant-design/icons";
 import SignIn from "./../signin/SignIn";
 import PropTypes from "prop-types";
+import "./Profile.scss";
 
-const Profile = ({ setUserProfile, data }) => {
+const Profile = ({ data }) => {
   const [profileInfo, setProfileInfo] = useState({});
+  // const [purchaseHistory, setPurchaseHistory] = useState({
+  //   // date: Date.now(),
+  //   date: 22,
+  //   order: [
+  //     { item: "bronzer2", quantity: 3, price: 12, id: 101 },
+  //     { item: "lipstick2", quantity: 2, price: 33, id: 1011 },
+  //     { item: "eyeliner2", quantity: 3, price: 20.3, id: 1021 },
+  //   ],
+  // });
   const [wishList, setWishlist] = useState([]);
-  const [wishListAddAlert, setWishListAddAlert] = useState("none");
   const [wishListRemoveAlert, setWishListRemoveAlert] = useState("none");
-  // const [spinner, setSpinner] = useState(true);
   const [displayAlert, setDisplayAlert] = useState("none");
   const { currentUser } = useContext(AuthContext);
 
-  // console.log(data);
-
   useEffect(() => {
     if (currentUser) {
-      // console.log("test");
-      // console.log(currentUser);
       Promise.resolve(getUserDocument(currentUser.uid))
         .then((profile) => {
           setProfileInfo(profile);
           setWishlist([...profile.wishList]);
-          // console.log(profile);
-          setUserProfile(profile);
-          // setSpinner(false);
+          // setUserProfile(profile);
         })
         .catch((error) => {
           console.log(error);
         });
     }
-  }, [currentUser, setUserProfile]);
-
-  // console.log(wishList);
+  }, [currentUser]);
 
   const handleSignOut = () => {
     setDisplayAlert("block");
-
     signOut();
-
-    setTimeout(() => {
-      navigate(`/`);
-      setDisplayAlert("none");
-    }, 2000);
+    navigate(`/`);
   };
 
-  // function callback(key) {
-  //   console.log(key);
-  // }
-  // const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
-
-  const addToWishList = () => {
-    addWishList(currentUser.uid, "itemid: 123").then((res) => {
-      setWishlist([...res.wishList]);
-      setWishListAddAlert("block");
-      setTimeout(() => {
-        setWishListAddAlert("none");
-      }, 2000);
-    });
-  };
-  const removeFromWishList = () => {
-    removeWishList(currentUser.uid, "itemid: 123").then((res) => {
+  const removeFromWishList = (itemId) => {
+    console.log(itemId);
+    removeWishList(currentUser.uid, itemId).then((res) => {
       setWishlist([...res.wishList]);
       setWishListRemoveAlert("block");
       setTimeout(() => {
@@ -79,6 +54,13 @@ const Profile = ({ setUserProfile, data }) => {
       }, 2000);
     });
   };
+
+  // const savePurchase = () => {
+  //   console.log(purchaseHistory);
+  //   addOrderHistory(currentUser.uid, purchaseHistory).then((res) => {
+  //     console.log(res);
+  //   });
+  // };
 
   return (
     <>
@@ -88,88 +70,74 @@ const Profile = ({ setUserProfile, data }) => {
         </>
       ) : (
         <>
-          <div className="form-container">
-            <div className="Logo">
-              <h3>NATURL</h3>
+          <div>
+            <Alert
+              banner
+              message="Sign Out Successfully"
+              type="success"
+              showIcon={true}
+              closable
+              style={{
+                display: displayAlert,
+              }}
+            />
+            <Alert
+              banner
+              message="Item removed from wishlist Successful"
+              type="info"
+              showIcon={true}
+              closable
+              style={{
+                display: wishListRemoveAlert,
+              }}
+            />
+          </div>
+          <div className="Cart">
+            <h2 className="Cart-title">
+              Welcome <>{profileInfo.displayName}</>
+            </h2>
+
+            <div>
+              <h2 className="Cart-title">Wishlist</h2>
+              {wishList.length > 0 ? (
+                <div>
+                  {wishList.map((item, index) => (
+                    <div key={index}>
+                      <div
+                        stye={{
+                          fontSize: 8,
+                        }}
+                      >
+                        <Link to={`/product/${item}`}>
+                          {data.find((product) => product.id === item).name}
+                        </Link>
+
+                        <DeleteOutlined
+                          onClick={() => removeFromWishList(item)}
+                        />
+                      </div>
+                      <br />
+
+                      <br />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div style={{ textAlign: "center" }}>
+                  No Products in your wishlist currently.
+                </div>
+              )}
             </div>
+            <br />
 
-            <div className="form-alerts">
-              <Alert
-                banner
-                message="Sign Out Successfully"
-                type="success"
-                showIcon={true}
-                closable
-                style={{ display: displayAlert }}
-              />
-              <Alert
-                banner
-                message="Item added to wishlist Successful"
-                type="success"
-                showIcon={true}
-                closable
-                style={{ display: wishListAddAlert }}
-              />
-              <Alert
-                banner
-                message="Item removed from wishlist Successful"
-                type="info"
-                showIcon={true}
-                closable
-                style={{ display: wishListRemoveAlert }}
-              />
-            </div>
-
-            <>
-              <div>
-                <h2>
-                  Welcome <>{profileInfo.displayName}</>
-                </h2>
-              </div>
-
-              <br />
-
-              <div>
-                <h4>Wishlist</h4>
-                {wishList.length > 0 ? (
-                  <div>
-                    {wishList.map((item, index) => (
-                      <div key={index}>{item}</div>
-                    ))}
-                  </div>
-                ) : (
-                  <div>No Products in your wishlist currently.</div>
-                )}
-              </div>
-
-              <br />
-              <button
-                style={{ border: "1px solid black" }}
-                onClick={addToWishList}
-              >
-                add to wishlist
-              </button>
-              <br />
-
-              <br />
-              <button
-                style={{ border: "1px solid red" }}
-                onClick={removeFromWishList}
-              >
-                remove from wishlist
-              </button>
-              <br />
-
-              <div>
+            <h2 className="Cart-title">Purchase History</h2>
+            {/* <div>
                 <h4>Purchase History</h4>
-              </div>
-            </>
-
-            {/* <>
-              <div className="form-spinner">
-                <Spin indicator={antIcon} />
-              </div>
-            </> */}
+              </div> */}
+            {/* <Button type="primary" onClick={savePurchase}>
+                Add Purchase History
+              </Button>
+              <br /> */}
 
             <button className="form-button" onClick={handleSignOut}>
               Sign out
@@ -182,7 +150,7 @@ const Profile = ({ setUserProfile, data }) => {
 };
 
 Profile.propTypes = {
-  setUserProfile: PropTypes.func,
+  data: PropTypes.array,
 };
 
 export default Profile;

@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useState } from "react";
 import firebase from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
-import { navigate, Link } from "@reach/router";
+import { Link } from "@reach/router";
 import "../FormContainer.scss";
 import { Alert } from "antd";
 
@@ -35,7 +35,6 @@ const Login = () => {
     setSuccessAlert("block");
     setTimeout(() => {
       setSuccessAlert("none");
-      navigate(`/`);
     }, 2000);
   };
 
@@ -51,7 +50,7 @@ const Login = () => {
         <h3>NATURL</h3>
       </div>
 
-      <div className="form-alerts">
+      <div>
         <Alert
           message="Login Successful"
           type="success"
