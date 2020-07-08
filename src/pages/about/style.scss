@@ -47,6 +47,15 @@
   margin-bottom: 50px;
 }
 
+.about-heading h1 {
+  @media (max-width: 768px) and (min-width: 480px) {
+    font-size: 28px;
+  }
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
 .About-Wrapper > p {
   text-align: center;
   margin: auto;
