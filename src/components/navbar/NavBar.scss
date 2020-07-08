@@ -37,6 +37,11 @@
 
 .navbar {
   /* tablet */
+  @media (max-width: 1200px) and (min-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  }
   @media (max-width: 768px) and (min-width: 480px) {
     font-size: 1rem;
     .navbar-links {
