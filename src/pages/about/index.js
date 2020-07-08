@@ -217,7 +217,7 @@ const About = () => {
           <div className="About-EmailSignUp-container-alert">
             <Alert
               banner
-              message="A sample email newsletter submit"
+              message="Demo newsletter component"
               type="info"
               showIcon={true}
               style={{

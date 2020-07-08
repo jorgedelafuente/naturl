@@ -267,7 +267,8 @@
 .About-EmailSignUp-container-alert {
   position: absolute;
   top: -45px;
-  width: 300px;
+  width: 80vw; //fix width
+  margin: 0 auto;
   height: 48px;
 }
 

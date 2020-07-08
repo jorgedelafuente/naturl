@@ -230,6 +230,10 @@
   flex: row;
   flex-wrap: wrap;
   margin-bottom: 40px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
 }
 
 .product-color-dots {
@@ -303,6 +307,18 @@
   cursor: pointer;
 }
 
+.wishlist-icon-heart {
+  margin-left: 40px;
+  font-size: 35px;
+  color: black;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 480px) {
+    margin-left: 20px;
+  }
+}
+
 .ProductItem-Alert-Container {
   position: relative;
   display: flex;
@@ -326,12 +342,11 @@
   position: relative;
 }
 
-.ProductItem-details-alert {
+.wishList-Alert {
   position: absolute;
-  top: -10px;
 
   @media (max-width: 480px) {
-    top: -35px;
+    top: -45px;
     width: 286px;
   }
 }
