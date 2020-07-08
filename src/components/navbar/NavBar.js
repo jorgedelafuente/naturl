@@ -79,7 +79,7 @@ const NavBar = ({ itemsInCart }) => {
               </span>
             ) : (
               <span>
-                <Link to="/signin">Sign In</Link>
+                <Link to="/profile">Sign In</Link>
               </span>
             )}
 

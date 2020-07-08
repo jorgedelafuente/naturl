@@ -4,7 +4,9 @@ import { Link } from "@reach/router";
 import "../FormContainer.scss";
 import { Alert } from "antd";
 
-const SignUp = () => {
+//  const [wishList, setWishList] = useState([]);
+
+const SignUp = ({ setWishList }) => {
   const [passwordErrorAlert, setPasswordErrorAlert] = useState("none");
   const [serverErrorAlert, setServerErrorAlert] = useState("none");
   const [successAlert, setSuccessAlert] = useState("none");
@@ -18,6 +20,7 @@ const SignUp = () => {
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
         await createUserProfileDocument(user, displayName.value);
+        setWishList([]);
         setSuccessAlert("block");
         setTimeout(() => {
           setSuccessAlert("none");

@@ -38,16 +38,20 @@ const Profile = ({
   }, [currentUserProfile]);
 
   const handleSignOut = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setDisplayAlert("block");
     setTimeout(() => {
       setDisplayAlert("none");
     }, 5000);
     signOut();
-    localStorage.clear("cart");
+    // localStorage.clear("cart");
+    localStorage.removeItem("cart");
+    localStorage.removeItem("cartHistory");
     setWishList([]);
     setItemsInCart([]);
     setUserId(null);
     setProfileInfo({});
+    // window.scrollTo(0, 100);
     // navigate(`/`);
   };
 
@@ -130,7 +134,7 @@ const Profile = ({
             )}
 
             <button className="form-button" onClick={handleSignOut}>
-              Sign out
+              Sign Out
             </button>
           </div>
         </>
