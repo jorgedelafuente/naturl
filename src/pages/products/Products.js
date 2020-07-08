@@ -86,7 +86,7 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     const nextSelectedTags = checked
       ? [...selectedTags, tag]
       : selectedTags.filter((t) => t !== tag);
-    window.scrollTo(0, 300);
+    window.scrollTo(0, 100);
     setSelectedTags([...nextSelectedTags]);
   };
 
