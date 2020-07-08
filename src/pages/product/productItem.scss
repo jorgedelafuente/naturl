@@ -231,15 +231,16 @@
 }
 
 .product-color-dots {
-  margin: 0 3px 3px 3px;
-  text-decoration: none;
+  margin: 3px 3px 3px 3px;
+  overflow: hidden;
+  // text-decoration: none;
 }
 .product-color-dots:hover {
   border-radius: 50px;
 }
 
-.product-colors-container .product-color-dots:focus {
-  border: 1px solid black !important;
+.product-color-dots:after {
+  border-radius: 50px;
 }
 
 // .ant-radio-checked .ant-radio-inner {

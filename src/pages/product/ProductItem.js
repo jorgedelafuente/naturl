@@ -10,6 +10,7 @@ import ProductTags from "../../components/product-details/product-tags";
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
   const [itemColor, setItemColor] = useState(1);
+  // const [itemColorChecked, setItemColorChecked] = useState("50px");
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
@@ -18,6 +19,7 @@ function ProductItem(props) {
 
   function onChange(e) {
     console.log(`radio checked:${e.target.value}`);
+    // setItemColorChecked((e.target.style);
     setItemColor(e.target.value);
   }
 
@@ -60,21 +62,23 @@ function ProductItem(props) {
             </div>
           </div>
 
-          <div className="product-colors-container">
-            <Radio.Group onChange={onChange}>
-              {props.data.product_colors.map((item) => (
-                // <div className="product-color-dots">
-                <Radio.Button
-                  className="product-color-dots"
-                  style={{ backgroundColor: item.hex_value }}
-                  value={item.hex_value}
-                ></Radio.Button>
-                /* <button style={{ backgroundColor: item.hex_value }} /> */
-                // </div>
-                // <ProductColor key={item.hex_value} color={item.hex_value} />
-              ))}
-            </Radio.Group>
-          </div>
+          <Radio.Group onChange={onChange} className="product-colors-container">
+            {props.data.product_colors.map((item) => (
+              // <div className="product-color-dots">
+              <Radio.Button
+                type="radio"
+                className="product-color-dots"
+                style={{
+                  backgroundColor: item.hex_value,
+                  // borderRadius: "50px",
+                }}
+                value={item.hex_value}
+              ></Radio.Button>
+              /* <button style={{ backgroundColor: item.hex_value }} /> */
+              // </div>
+              // <ProductColor key={item.hex_value} color={item.hex_value} />
+            ))}
+          </Radio.Group>
 
           <div className="singleproduct-page-description">
             <p>{props.data.description} </p>
