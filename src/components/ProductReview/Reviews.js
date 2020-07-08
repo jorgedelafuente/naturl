@@ -146,7 +146,7 @@ export default function Review({ productId }) {
         NATURL reviews
         {open ? <UpOutlined /> : <DownOutlined />}
         {/* User Reviews
-        <span style={{ marginLeft: "auto" }}> </span> average rating is:&nbsp;
+        <span style={{ marginLeft: "auto" }}> </span> avg rating:&nbsp;
         <b style={{ paddingRight: "20px" }}>
           &nbsp;{isNaN(avgRating) ? "0" : avgRating}
         </b>{" "}
