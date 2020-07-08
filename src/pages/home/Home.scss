@@ -121,6 +121,7 @@
 .News_div h1 {
   text-align: left;
   padding-left: 30px;
+  margin-bottom: 20px;
 }
 .News__Text {
   letter-spacing: 2%;
@@ -129,6 +130,7 @@
   line-height: 100%;
   font-size: 15pt;
   color: gray;
+  // margin-top: 20px;
 }
 .NewsLetterInput {
   display: flex;
@@ -155,6 +157,12 @@
   padding-left: 10px;
   outline: none;
   border: 1px solid #e2e4eb;
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 170px;
+  }
+  @media (max-width: 480px) {
+    width: 170px;
+  }
 }
 .About__us {
   text-align: center;
@@ -162,7 +170,6 @@
   @media (max-width: 768px) and (min-width: 480px) {
     margin-top: 20px;
   }
-  /* mobile */
   @media (max-width: 480px) {
     margin-top: 20px;
   }

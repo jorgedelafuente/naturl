@@ -29,7 +29,7 @@ export const AuthProvider = ({ children, setWishList, setUserId }) => {
       //   console.log("user-email:", user.email);
       // }
       // setPending(false);
-    });
+    }); // eslint-disable-next-line
   }, [setCurrentUser]);
 
   // if (pending) {

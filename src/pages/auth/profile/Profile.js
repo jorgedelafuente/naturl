@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { signOut, removeWishList, getUserDocument } from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
-import { Link, navigate } from "@reach/router";
+import { Link } from "@reach/router";
 import { Alert } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import SignIn from "./../signin/SignIn";
@@ -95,44 +95,47 @@ const Profile = ({
 
             <div>
               <h2 className="Cart-title">Wishlist</h2>
-              {wishList.length > 0 ? (
-                <div>
-                  {wishList.map((item, index) => (
-                    <div key={index}>
-                      <div
-                        stye={{
-                          fontSize: 8,
-                        }}
-                      >
-                        <Link to={`/product/${item}`}>
-                          {data.find((product) => product.id === item).name}
-                        </Link>
 
-                        <DeleteOutlined
-                          onClick={() => removeFromWishList(item)}
-                        />
+              <div>
+                {wishList.length > 0 ? (
+                  <div>
+                    {wishList.map((item, index) => (
+                      <div key={index}>
+                        <div
+                          stye={{
+                            fontSize: 8,
+                          }}
+                        >
+                          <Link to={`/product/${item}`}>
+                            {data.find((product) => product.id === item).name}
+                          </Link>
+
+                          <DeleteOutlined
+                            onClick={() => removeFromWishList(item)}
+                          />
+                        </div>
+                        <br />
+
+                        <br />
                       </div>
-                      <br />
-
-                      <br />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div style={{ textAlign: "center" }}>
-                  No Products in your wishlist currently.
-                </div>
-              )}
+                    ))}
+                  </div>
+                ) : (
+                  <div style={{ textAlign: "center" }}>
+                    No Products in your wishlist currently.
+                  </div>
+                )}
+              </div>
             </div>
             <br />
 
-            <h2 className="Cart-title">Purchase History</h2>   
+            <h2 className="Cart-title">Purchase History</h2>
 
             {purchaseHistory.length > 0 ? (
               <PurchaseHistory purchaseHistory={purchaseHistory} />
             ) : (
               <span>You haven&apos;t purchased anything yet.</span>
-            )}      
+            )}
 
             <button className="form-button" onClick={handleSignOut}>
               Sign out

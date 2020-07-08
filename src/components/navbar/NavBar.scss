@@ -18,7 +18,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-left: 20px;
 }
 
 .mobile-menuitems a {
@@ -110,4 +109,13 @@
 
 .navbar-drawer-hamburguer a:hover {
   color: #00677d;
+}
+
+.navbar-cart-icons span sup span {
+  color: white;
+  font-weight: 550;
+}
+
+.navbar-cart-icons span sup span:hover {
+  color: white;
 }

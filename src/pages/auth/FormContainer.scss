@@ -1,5 +1,5 @@
 .form-container {
-  margin: 125px auto;
+  margin: 200px auto;
   padding: 20px;
   // text-align: center;
 
@@ -9,7 +9,11 @@
   box-shadow: 0 0 5px 0px #cecece;
   border-radius: 5px;
   .Logo {
-    margin: 0 auto;
+    margin: 20px auto;
+    font-size: 22px;
+  }
+  .Logo:hover {
+    color: #00677d;
   }
 
   label > span {
@@ -52,6 +56,15 @@
   .form-links {
     display: flex;
     justify-content: center;
+  }
+  .form-links a {
+    margin-top: 40px;
+    color: cadetblue;
+    font-weight: 550;
+    font-size: 16px;
+  }
+  .form-links a:hover {
+    color: #00677d;
   }
 }
 

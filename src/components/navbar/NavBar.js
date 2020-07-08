@@ -55,31 +55,26 @@ const NavBar = ({ itemsInCart }) => {
           </div>
 
           <div className="mobile-menuitems">
-            {/* <span> */}
-            <Link to="/checkout">
+            <Link className="navbar-cart-icons" to="/checkout">
               <Badge
                 count={badgeCount}
                 title={"Number of Cart Items"}
                 offset={[0, 5]}
                 style={{
-                  backgroundColor: "white",
-                  maxWidth: 2,
+                  backgroundColor: "cadetblue",
                   color: "cadetblue",
-                  // textColor: "blue",
                 }}
               >
                 <ShoppingCartOutlined
-                  // classname="cart-icon"
-                  style={{ fontSize: "20px", marginRight: "10px" }}
+                  style={{ fontSize: "20px", marginRight: "16px" }}
                 />
               </Badge>
             </Link>
-            {/* </span> */}
 
             {currentUser ? (
               <span>
                 <Link to="/profile">
-                  <UserOutlined style={{ fontSize: "20px" }} />
+                  <UserOutlined style={{ fontSize: "18px" }} />
                 </Link>
               </span>
             ) : (
@@ -119,6 +114,12 @@ const NavBar = ({ itemsInCart }) => {
                 <span>
                   <Link onClick={onClose} to="/about">
                     About
+                  </Link>
+                </span>
+                <br />
+                <span>
+                  <Link onClick={onClose} to="/contact">
+                    Contact
                   </Link>
                 </span>
                 <br />

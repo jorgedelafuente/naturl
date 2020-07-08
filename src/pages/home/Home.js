@@ -116,7 +116,7 @@ function HomePage(props) {
 
       <CustomChatbot data={props.data} />
 
-      <h1 className="About__us">About Us</h1>
+      <h1 className="About__us">NATURL</h1>
       <p className="About__text">
         We are a team with high criteria. We dedicate ourselves fully each day.
         We love to laugh and supply our bodies with positive energy. We are
