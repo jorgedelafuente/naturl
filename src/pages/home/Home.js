@@ -6,7 +6,6 @@ import { Link } from "@reach/router";
 // import { Card } from 'antd';
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 // const { Meta } = Card;
-
 // import "antd/dist/antd.css";
 import "./Home.scss";
 
@@ -77,6 +76,8 @@ function HomePage(props) {
                   name={data.name}
                   price={data.price}
                   id={data.id}
+                  wishList={props.wishList.includes(data.id)}
+                  userId={props.userId}
                 />
               </>
             );

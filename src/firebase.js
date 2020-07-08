@@ -25,7 +25,6 @@ export const signOut = () => auth.signOut();
 window.firebase = firebase;
 
 export const createUserProfileDocument = async (user, displayName) => {
-  console.log("test3", user, displayName);
   if (!user) return;
   const userRef = firestore.doc(`publicProfiles/${user.uid}`);
   const snapshot = await userRef.get();
