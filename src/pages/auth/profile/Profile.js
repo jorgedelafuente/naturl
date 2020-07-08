@@ -130,7 +130,7 @@ const Profile = ({
             )}
 
             <button className="form-button" onClick={handleSignOut}>
-              Sign out
+              Sign Out
             </button>
           </div>
         </>
