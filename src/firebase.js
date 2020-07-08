@@ -63,25 +63,6 @@ export const getUserDocument = async (uid) => {
   }
 };
 
-export const addOrderHistory = async (uid, order) => {
-  if (!uid) return;
-  const wishListRef = firestore.doc(`publicProfiles/${uid}`);
-  const snapshot = await wishListRef.get();
-  // const createdAt = new Date();
-
-  if (!snapshot.exist) {
-    try {
-      await wishListRef.update({
-        purchaseHistory: firebase.firestore.FieldValue.arrayUnion(order),
-      });
-    } catch (error) {
-      console.error("Error creating user", error.message);
-    }
-  }
-
-  return getUserDocument(uid);
-};
-
 export const addWishList = async (uid, itemId) => {
   if (!uid) return;
   const wishListRef = firestore.doc(`publicProfiles/${uid}`);
