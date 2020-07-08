@@ -342,3 +342,19 @@
 .home-featuredproducts-header {
   margin-top: 50px;
 }
+
+.Home-EmailSignUp-container {
+  position: relative;
+}
+
+.Home-EmailSignUp-container-alert {
+  position: absolute;
+  top: -50px;
+  width: 300px;
+
+  @media (max-width: 480px) {
+    top: -90px;
+    width: 170px;
+  }
+  
+}
