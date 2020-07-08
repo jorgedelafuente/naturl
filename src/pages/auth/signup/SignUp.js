@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
-import firebase, { createUserProfileDocument } from "../../../firebase";
+import PropTypes from "prop-types";
 import { Link } from "@reach/router";
+import firebase, { createUserProfileDocument } from "../../../firebase";
 import "../FormContainer.scss";
 import { Alert } from "antd";
-import PropTypes from "prop-types";
 
 const SignUp = ({ setWishList }) => {
   const [passwordErrorAlert, setPasswordErrorAlert] = useState("none");
@@ -48,8 +48,8 @@ const SignUp = ({ setWishList }) => {
         <h3>NATURL</h3>
       </div>
 
-      <div className="Home-EmailSignUp-container">
-        <div className="Home-EmailSignUp-container-alert">
+      <div className="Form-Sign-Container">
+        <div className="Form-Sign-Container-Alert">
           <Alert
             message="Account created"
             type="success"

@@ -101,21 +101,21 @@
   }
 }
 
-.Home-EmailSignUp-container {
+.Form-Sign-Container {
   position: relative;
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
 }
 
-.Home-EmailSignUp-container-alert {
+.Form-Sign-Container-Alert {
   position: absolute;
   text-align: center;
   top: -30px;
   width: 300px;
 
   @media (max-width: 480px) {
-    top: -90px;
-    width: 170px;
+    top: -30px;
+    width: 300px;
   }
 }

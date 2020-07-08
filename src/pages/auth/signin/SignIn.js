@@ -33,13 +33,11 @@ const SignIn = () => {
   return (
     <div className="form-container">
       <div className="Logo">
-        <Link to="/">
-          <h3>NATURL</h3>
-        </Link>
+        <h3>NATURL</h3>
       </div>
 
-      <div className="Home-EmailSignUp-container">
-        <div className="Home-EmailSignUp-container-alert">
+      <div className="Form-Sign-Container">
+        <div className="Form-Sign-Container-Alert">
           <Alert
             message="Credentials Incorrect"
             type="error"
