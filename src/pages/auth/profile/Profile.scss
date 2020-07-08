@@ -1,91 +1,25 @@
-.Profile {
-  background-color: #f1ede5;
-}
-
-.Cart {
-  border-top: 1px solid #eee;
+.Profile-Container {
+  // background-color: #f1ede5;
+  // border-top: 1px solid #eee;
   margin: 0 auto;
   max-width: 800px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  // padding-top: 2rem;
+  // padding-bottom: 2rem;
   text-align: center;
 }
 
-.Cart-title {
-  margin-bottom: 2rem;
+.Profile-Welcome-title {
+  // border: 1px solid red;
+  // margin-bottom: 2rem;
+  // border-bottom: 1px solid #eee;
+  padding: 1.5rem;
 }
 
-.Cart-clear-button {
-  border-bottom: 1px solid #eee;
-  margin: 1rem;
-  cursor: pointer;
-}
-
-.Cart-clear-button:hover,
-.Cart-clear-button:focus {
-  color: #00677d;
-}
-
-.Cart-total-cost {
-  font-weight: 700;
-  padding: 2rem;
-}
-
-.Cart-button-purchase {
-  display: inline-block;
-  margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
-  border: 0;
-  outline: 0;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  background-color: #262626;
-  color: #fff;
-  cursor: pointer;
-  transition-property: background-color, color;
-  transition-duration: 0.25s;
-  transition-timing-function: ease-out;
-  -webkit-appearance: none;
-}
-
-.Cart-button-purchase:hover,
-.Cart-button-purchase:focus {
-  background-color: #00677d;
-}
-
-.Cart-button-cancel {
-  display: inline-block;
-  margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
-  border: 0;
-  outline: 0;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  background-color: #757575;
-  color: #fff;
-  cursor: pointer;
-  transition-property: background-color, color;
-  transition-duration: 0.25s;
-  transition-timing-function: ease-out;
-  -webkit-appearance: none;
-}
-
-.Cart-button-cancel:hover,
-.Cart-button-cancel:focus {
-  background-color: #a1a1a1;
-}
-
-.Cart-navigation {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.Cart-message-empty {
-  margin: 2rem;
+.Profile-Category-Title {
+  // border-top: 1px solid #eee;
+  // margin-bottom: 2rem;
+  // border: 1px solid red;
+  // border-bottom: 1px solid #eee;
 }
 
 .Profile-Alert-Container {
@@ -95,4 +29,22 @@
   align-self: center;
   margin: 0 auto;
   margin-bottom: 10px;
+}
+
+.Profile-EmptyList {
+  padding: 2rem;
+  font-style: italic;
+  border-top: 1px solid #eee;
+}
+
+.Wishlist-Title {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.Purchase-Title {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }

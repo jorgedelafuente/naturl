@@ -1,12 +1,13 @@
 import React, { useContext, useState, useEffect } from "react";
 import { signOut, removeWishList, getUserDocument } from "../../../firebase";
 import { AuthContext } from "../../../auth/Auth";
-import { Link } from "@reach/router";
+// import { Link } from "@reach/router";
 import { Alert } from "antd";
-import { DeleteOutlined } from "@ant-design/icons";
+// import { DeleteOutlined } from "@ant-design/icons";
 import SignIn from "./../signin/SignIn";
 import PropTypes from "prop-types";
 import PurchaseHistory from "../../../components/purchaseHistory/purchaseHistory";
+import WishlistList from "../../../components/wishlist/wishlistList";
 import "./Profile.scss";
 
 const Profile = ({
@@ -15,6 +16,7 @@ const Profile = ({
   setWishList,
   setItemsInCart,
   setUserId,
+  userId,
 }) => {
   const [profileInfo, setProfileInfo] = useState({});
   const [purchaseHistory, setPurchaseHistory] = useState([]);
@@ -45,10 +47,12 @@ const Profile = ({
     setWishList([]);
     setItemsInCart([]);
     setUserId(null);
+    setProfileInfo({});
     // navigate(`/`);
   };
 
   const removeFromWishList = (itemId) => {
+    console.log(itemId);
     removeWishList(currentUserProfile.uid, itemId).then((res) => {
       setWishList([...res.wishList]);
       setWishListRemoveAlert("block");
@@ -60,11 +64,7 @@ const Profile = ({
 
   return (
     <>
-      {!currentUserProfile ? (
-        <>
-          <SignIn />
-        </>
-      ) : (
+      {userId !== null ? (
         <>
           <div className="Profile-Alert-Container">
             <Alert
@@ -88,59 +88,55 @@ const Profile = ({
               }}
             />
           </div>
-          <div className="Cart">
-            <h2 className="Cart-title">
-              Welcome <>{profileInfo.displayName}</>
+
+          <div className="Profile-Container">
+            <h2 className="Profile-Welcome-title">
+              Welcome <>{profileInfo.displayName} </>
+            </h2>
+
+            <h2 className="Profile-Category-Title Wishlist-Title">
+              Your Wishlist
             </h2>
 
             <div>
-              <h2 className="Cart-title">Wishlist</h2>
-
-              <div>
-                {wishList.length > 0 ? (
-                  <div>
-                    {wishList.map((item, index) => (
-                      <div key={index}>
-                        <div
-                          stye={{
-                            fontSize: 8,
-                          }}
-                        >
-                          <Link to={`/product/${item}`}>
-                            {data.find((product) => product.id === item).name}
-                          </Link>
-
-                          <DeleteOutlined
-                            onClick={() => removeFromWishList(item)}
-                          />
-                        </div>
-                        <br />
-
-                        <br />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div style={{ textAlign: "center" }}>
-                    No Products in your wishlist currently.
-                  </div>
-                )}
-              </div>
+              {wishList.length > 0 ? (
+                <>
+                  {wishList.map((item, index) => (
+                    <WishlistList
+                      key={index}
+                      removeFromWishList={removeFromWishList}
+                      wishListData={data.find((product) => product.id === item)}
+                    />
+                  ))}
+                </>
+              ) : (
+                <div className="Profile-EmptyList">
+                  No Products in your wishlist currently.
+                </div>
+              )}
             </div>
-            <br />
-
-            <h2 className="Cart-title">Purchase History</h2>
 
             {purchaseHistory.length > 0 ? (
               <PurchaseHistory purchaseHistory={purchaseHistory} />
             ) : (
-              <span>You haven&apos;t purchased anything yet.</span>
+              <>
+                <h2 className="Profile-Category-Title Purchase-Title">
+                  Your Purchase History
+                </h2>
+                <div className="Profile-EmptyList">
+                  You haven&apos;t purchased anything yet.
+                </div>
+              </>
             )}
 
             <button className="form-button" onClick={handleSignOut}>
               Sign out
             </button>
           </div>
+        </>
+      ) : (
+        <>
+          <SignIn />
         </>
       )}
     </>
@@ -153,6 +149,7 @@ Profile.propTypes = {
   setWishList: PropTypes.func,
   setItemsInCart: PropTypes.func,
   setUserId: PropTypes.func,
+  userId: PropTypes.string,
 };
 
 export default Profile;
