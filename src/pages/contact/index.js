@@ -55,7 +55,7 @@ const Contact = () => {
               <strong>Head Office &amp; Mailing Address</strong>
             </span>
             <br />
-            Campbell Cohen Law Firm
+            NATURL Cosmetics Ltd.
             <br />
             1303 Greene Ave., Suite 200
             <br />
