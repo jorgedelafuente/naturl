@@ -3,42 +3,44 @@ import firebase, { createUserProfileDocument } from "../../../firebase";
 import { Link } from "@reach/router";
 import "../FormContainer.scss";
 import { Alert } from "antd";
-
-//  const [wishList, setWishList] = useState([]);
+import PropTypes from "prop-types";
 
 const SignUp = ({ setWishList }) => {
   const [passwordErrorAlert, setPasswordErrorAlert] = useState("none");
   const [serverErrorAlert, setServerErrorAlert] = useState("none");
   const [successAlert, setSuccessAlert] = useState("none");
 
-  const handleSignUp = useCallback(async (event) => {
-    event.preventDefault();
-    const { email, password, password2, displayName } = event.target.elements;
-    if (password.value === password2.value) {
-      try {
-        const { user } = await firebase
-          .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
-        await createUserProfileDocument(user, displayName.value);
-        setWishList([]);
-        setSuccessAlert("block");
-        setTimeout(() => {
+  const handleSignUp = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const { email, password, password2, displayName } = event.target.elements;
+      if (password.value === password2.value) {
+        try {
+          const { user } = await firebase
+            .auth()
+            .createUserWithEmailAndPassword(email.value, password.value);
+          await createUserProfileDocument(user, displayName.value);
+          setWishList([]);
+          setSuccessAlert("block");
+          setTimeout(() => {
+            setSuccessAlert("none");
+          }, 3000);
+        } catch (error) {
           setSuccessAlert("none");
-        }, 3000);
-      } catch (error) {
-        setSuccessAlert("none");
-        setServerErrorAlert("block");
+          setServerErrorAlert("block");
+          setTimeout(() => {
+            setServerErrorAlert("none");
+          }, 3000);
+        }
+      } else {
+        setPasswordErrorAlert("block");
         setTimeout(() => {
-          setServerErrorAlert("none");
+          setPasswordErrorAlert("none");
         }, 3000);
       }
-    } else {
-      setPasswordErrorAlert("block");
-      setTimeout(() => {
-        setPasswordErrorAlert("none");
-      }, 3000);
-    }
-  }, []);
+    },
+    [setWishList]
+  );
 
   return (
     <div className="form-container">
@@ -46,30 +48,32 @@ const SignUp = ({ setWishList }) => {
         <h3>NATURL</h3>
       </div>
 
-      <div>
-        <Alert
-          message="Account created"
-          type="success"
-          style={{ display: successAlert }}
-          showIcon={true}
-          closable
-        />
+      <div className="Home-EmailSignUp-container">
+        <div className="Home-EmailSignUp-container-alert">
+          <Alert
+            message="Account created"
+            type="success"
+            style={{ display: successAlert }}
+            showIcon={true}
+            closable
+          />
 
-        <Alert
-          message="Server Error"
-          type="error"
-          style={{ display: serverErrorAlert }}
-          showIcon={true}
-          closable
-        />
+          <Alert
+            message="Server Error"
+            type="error"
+            style={{ display: serverErrorAlert }}
+            showIcon={true}
+            closable
+          />
 
-        <Alert
-          message="Passwords Do not Match"
-          type="error"
-          style={{ display: passwordErrorAlert }}
-          showIcon={true}
-          closable
-        />
+          <Alert
+            message="Passwords Do not Match"
+            type="error"
+            style={{ display: passwordErrorAlert }}
+            showIcon={true}
+            closable
+          />
+        </div>
       </div>
 
       <form onSubmit={handleSignUp}>
@@ -119,10 +123,14 @@ const SignUp = ({ setWishList }) => {
       </form>
 
       <div className="form-links">
-        <Link to="/signin">Already have an account</Link>
+        <Link to="/profile">Already have an account</Link>
       </div>
     </div>
   );
+};
+
+SignUp.propTypes = {
+  setWishList: PropTypes.func,
 };
 
 export default SignUp;

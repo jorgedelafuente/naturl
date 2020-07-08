@@ -19,7 +19,7 @@ const Contact = () => {
             <strong>CALL US</strong>
           </p>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>General Inquiries</strong>
             </span>
             <br />
@@ -30,7 +30,7 @@ const Contact = () => {
             Toll-free in USA and Canada: 1-888-947-9445
           </address>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>Business Inquiries</strong>
             </span>
             <br />
@@ -55,7 +55,7 @@ const Contact = () => {
             All legal services are provided from our head office in Montreal.
           </p>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>Head Office &amp; Mailing Address</strong>
             </span>
             <br />
@@ -70,7 +70,7 @@ const Contact = () => {
         </p>
         <img
           src={require("../../images/contact-fadein.png")}
-          alt="image"
+          alt="contact"
           className="right-image-contact"
         />
         <br />

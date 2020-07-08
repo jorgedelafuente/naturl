@@ -8,6 +8,7 @@ import {
   ShoppingCartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+// import { Divider } from "antd";
 import "./NavBar.scss";
 
 const NavBar = ({ itemsInCart }) => {
@@ -123,6 +124,7 @@ const NavBar = ({ itemsInCart }) => {
                   </Link>
                 </span>
                 <br />
+                {/* <Divider /> */}
                 <span>
                   <Link onClick={onClose} to="/profile">
                     Wishlist

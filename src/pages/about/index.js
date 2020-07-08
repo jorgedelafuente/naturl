@@ -33,12 +33,12 @@ const About = () => {
       </p>
       <img
         src={require("../../images/about-fadein1.png")}
-        alt="image"
+        alt="about"
         className="left-image"
       />
       <img
         src={require("../../images/about-fadein.png")}
-        alt="image"
+        alt="about2"
         className="right-image"
       />
       <div className="flex-box-about about-margin">

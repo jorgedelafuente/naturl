@@ -11,6 +11,8 @@
   .Logo {
     margin: 20px auto;
     font-size: 22px;
+    margin-bottom: 40px;
+    // border: 1px solid red;
   }
   .Logo:hover {
     color: #00677d;
@@ -96,5 +98,24 @@
   &:hover,
   &:focus {
     background-color: #00677d;
+  }
+}
+
+.Home-EmailSignUp-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.Home-EmailSignUp-container-alert {
+  position: absolute;
+  text-align: center;
+  top: -30px;
+  width: 300px;
+
+  @media (max-width: 480px) {
+    top: -90px;
+    width: 170px;
   }
 }
