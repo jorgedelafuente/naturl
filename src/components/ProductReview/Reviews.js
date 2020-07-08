@@ -124,7 +124,7 @@ export default function Review({ productId }) {
       console.log(Err, "ERROR");
     }
   };
-  console.log(reviews, ">>>>>>>");
+  // console.log(reviews, ">>>>>>>");
   return (
     <div className="reviewsHeader">
       <div
