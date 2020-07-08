@@ -68,6 +68,11 @@ const Contact = () => {
             H3Z 2A7
           </address>
         </p>
+        <img
+          src={require("../../images/contact-fadein.png")}
+          alt="image"
+          className="right-image-contact"
+        />
         <br />
       </div>
     </div>
