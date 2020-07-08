@@ -230,17 +230,37 @@
   margin-bottom: 40px;
 }
 
-.product-color-dots button {
-  height: 20px;
+.product-color-dots {
   margin: 0 3px 3px 3px;
-  color: white;
-  width: 20px;
+  text-decoration: none;
 }
-.product-color-dots button:hover {
-  cursor: pointer;
+.product-color-dots:hover {
   border-radius: 50px;
 }
 
-.product-color-dots p {
-  margin-left: 10px;
+.product-colors-container .product-color-dots:focus {
+  border: 1px solid black !important;
 }
+
+// .ant-radio-checked .ant-radio-inner {
+//   border-color: red !important ;
+// }
+
+// .ant-radio-checked .ant-radio-inner:after {
+//   background-color: red;
+// }
+
+// .ant-radio:hover .ant-radio-inner {
+//   border-color: red;
+// }
+
+// .product-color-dots button {
+//   height: 20px;
+//   margin: 0 3px 3px 3px;
+//   color: white;
+//   width: 20px;
+// }
+// .product-color-dots button:hover {
+//   cursor: pointer;
+//   border-radius: 50px;
+// }

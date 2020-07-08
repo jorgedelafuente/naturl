@@ -10,6 +10,7 @@ export default function Cart({
   itemsInCart,
   totalCost,
 }) {
+  console.log(itemsInCart);
   return (
     <div className="Cart">
       <h2 className="Cart-title">Your shopping cart</h2>
