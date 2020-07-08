@@ -215,3 +215,12 @@
     text-align: justify;
   }
 }
+
+@media (max-width: 768px) {
+  .left-image {
+    display: none;
+  }
+  .right-image {
+    display: none;
+  }
+}
