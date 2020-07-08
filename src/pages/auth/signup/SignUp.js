@@ -70,7 +70,6 @@ const SignUp = () => {
       </div>
 
       <form onSubmit={handleSignUp}>
-        {/* <form onSubmit={handleSubmit}> */}
         <div className="InputGroup">
           <label>
             <span>Name</span>
@@ -93,6 +92,7 @@ const SignUp = () => {
               name="password"
               type="password"
               placeholder="Password"
+              minLength="6"
             />
           </label>
         </div>
@@ -105,6 +105,7 @@ const SignUp = () => {
               name="password2"
               type="password"
               placeholder="Password"
+              minLength="6"
             />
           </label>
         </div>

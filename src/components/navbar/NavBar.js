@@ -1,16 +1,14 @@
 import React, { useState, useContext } from "react";
+import PropTypes from "prop-types";
 import { Link } from "@reach/router";
-// import firebase from '../../firebase';
-// import { signInWithGoogle } from '../../firebase';
+import { AuthContext } from "../../auth/Auth";
 import { Badge, Drawer } from "antd";
 import {
   MenuOutlined,
   ShoppingCartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { AuthContext } from "../../auth/Auth";
 import "./NavBar.scss";
-import PropTypes from "prop-types";
 
 const NavBar = ({ itemsInCart }) => {
   const [visible, setVisible] = useState(false);
@@ -27,7 +25,7 @@ const NavBar = ({ itemsInCart }) => {
     0
   );
 
-  // console.log("BADGE COUNT", badgeCount);
+  // console.log(currentUser);
 
   return (
     <div className="navbar">

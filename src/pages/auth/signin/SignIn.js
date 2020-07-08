@@ -1,9 +1,9 @@
-import React, { useCallback, useContext, useState } from "react";
+import React, { useCallback, useState } from "react";
+import PropTypes from "prop-types";
 import firebase from "../../../firebase";
-import { AuthContext } from "../../../auth/Auth";
 import { Link } from "@reach/router";
-import "../FormContainer.scss";
 import { Alert } from "antd";
+import "../FormContainer.scss";
 
 const Login = () => {
   const [errorAlert, setErrorAlert] = useState("none");
@@ -20,7 +20,7 @@ const Login = () => {
           showSuccess();
         });
     } catch (error) {
-      console.log(error);
+      console.error(error);
       showError();
     }
   }, []);
@@ -37,12 +37,6 @@ const Login = () => {
       setSuccessAlert("none");
     }, 2000);
   };
-
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    // console.log(currentUser.uid);
-  }
 
   return (
     <div className="form-container">
@@ -66,8 +60,6 @@ const Login = () => {
           closable
         />
       </div>
-
-      {/* {currentUser && <div>{currentUser.email}</div>} */}
 
       <form onSubmit={handleLogin}>
         <div className="InputGroup">
@@ -97,6 +89,10 @@ const Login = () => {
       </div>
     </div>
   );
+};
+
+Login.propTypes = {
+  setUserProfile: PropTypes.func,
 };
 
 export default Login;
