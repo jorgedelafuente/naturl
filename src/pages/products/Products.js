@@ -128,6 +128,12 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     }
   };
 
+  function clearFilters() {
+    setSelectedTags([]);
+  }
+
+  // console.log(filtered(originalData));
+
   return (
     <div className="products-page-container">
       <div className="products-title wow zoomIn">
@@ -140,7 +146,9 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
           onClick={() => setTop(top)}
         >
           <div>
-            <Link to="/products">All products</Link>
+            <Link onClick={clearFilters} to="/products">
+              All products
+            </Link>
           </div>
           <div className="filter-product-types-link">
             <span

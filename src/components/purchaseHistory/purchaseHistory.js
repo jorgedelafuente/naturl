@@ -13,6 +13,7 @@ export default function PurchaseHistory({ purchaseHistory }) {
           thumbnail={item.image_link}
           name={item.name}
           cost={item.price * item.quantity}
+          selectedColors={item.selectedColors}
           quantity={item.quantity}
         />
       ))}

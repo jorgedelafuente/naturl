@@ -1,9 +1,14 @@
 .product-page-container {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: center;
+  // align-items: center;
   margin-top: 100px;
   margin-bottom: 100px;
+  @media (max-width: 480px) {
+    align-items: center;
+  }
 }
 
 .product-image-leftside-page {
@@ -128,6 +133,10 @@
   flex-direction: row;
 }
 
+.product-details-categories-labels p {
+  margin-right: 5px;
+}
+
 .product-details-tags {
   display: flex;
   justify-content: space-around;
@@ -149,17 +158,26 @@
     justify-content: center;
   }
 }
+.product-details-shopinfo button {
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+}
 
 .product-details-quantity-input {
   width: 3rem;
   height: 2rem;
   margin-right: 40px;
+  text-decoration: none;
   @media (max-width: 768px) and (min-width: 480px) {
     margin-right: 20px;
   }
   @media (max-width: 480px) {
     margin-right: 20px;
   }
+}
+.product-details-quantity-input:focus {
+  outline: none;
 }
 
 .product-details-shopinfo h2 {
@@ -191,22 +209,6 @@
   background-color: #00677d;
 }
 
-.wishlist-icon-heart {
-  margin-left: 40px;
-  font-size: 35px;
-  color: black;
-  @media (max-width: 768px) and (min-width: 480px) {
-    margin-left: 20px;
-  }
-  @media (max-width: 480px) {
-    margin-left: 20px;
-  }
-}
-.wishlist-icon-heart:hover {
-  color: red;
-  cursor: pointer;
-}
-
 .productitem-description-rating {
   display: flex;
   justify-content: center;
@@ -233,43 +235,103 @@
 .product-color-dots {
   margin: 3px 3px 3px 3px;
   overflow: hidden;
-  // text-decoration: none;
 }
 .product-color-dots:hover {
   border-radius: 50px;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-.product-color-dots:after {
+.ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
+  border-right-color: white;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+  border-color: white;
+  text-decoration: none;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  z-index: 1;
+  color: white;
+  background: white;
+  border-color: white;
   border-radius: 50px;
+  border: 1px solid white;
+  text-decoration: none;
+  -fx-background-color: white;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  z-index: 1;
+  color: none;
+  background: none;
+  border-color: white;
+  -fx-background-color: white;
+  // border-radius: 50px;
+  // border: 1px solid white;
+  // text-decoration: none;
 }
 
-// .ant-radio-checked .ant-radio-inner {
-//   border-color: red !important ;
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::selection {
+  color: #fff;
+  background: white;
+  -fx-background-color: white;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+  background-color: white;
+  fx-focus-traversable: false;
+  fx-background-color: white;
+}
+
+// ::selection {
+//   color: #fff;
+//   background: white;
 // }
 
-// .ant-radio-checked .ant-radio-inner:after {
-//   background-color: red;
-// }
+.ProductItem-Icon-Heart {
+  margin-left: 40px;
+  font-size: 35px;
+  color: black;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 480px) {
+    margin-left: 20px;
+  }
+}
+.wishlist-icon-heart:hover {
+  color: red;
+  cursor: pointer;
+}
 
-// .ant-radio:hover .ant-radio-inner {
-//   border-color: red;
-// }
-
-// .product-color-dots button {
-//   height: 20px;
-//   margin: 0 3px 3px 3px;
-//   color: white;
-//   width: 20px;
-// }
-// .product-color-dots button:hover {
-//   cursor: pointer;
-//   border-radius: 50px;
-// }
-
-.wishList-Alert {
-  width: 350px;
-  padding-bottom: 15px;
+.ProductItem-Alert-Container {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.ProductItem-Alert-Container-Alerts {
+  position: absolute;
+  text-align: center;
+  top: -40px;
+
+  @media (max-width: 480px) {
+    top: -35px;
+    width: 320px;
+  }
+}
+
+.ProductItem-details-container {
+  position: relative;
+}
+
+.ProductItem-details-alert {
+  position: absolute;
+  top: -10px;
+
+  @media (max-width: 480px) {
+    top: -35px;
+    width: 286px;
+  }
 }

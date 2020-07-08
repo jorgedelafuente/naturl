@@ -9,11 +9,10 @@ export default function CartItem({
   name,
   cost,
   quantity,
-  color,
+  selectedColors,
   onRemoveItemFromCartClick,
 }) {
   const productPath = `/product/${itemId}`;
-  // console.log(color);
   return (
     <div className="CartItem">
       <div className="CartItem-description">
@@ -29,11 +28,17 @@ export default function CartItem({
         </Link>
       </div>
       <div className="CartItem-details">
-        <div className="checkout-product-color-dot-container">
-          <span
-            className="checkout-product-color-dot"
-            style={{ backgroundColor: color }}
-          ></span>
+        <div className="CartItem-selected-color-container">
+          {selectedColors.map((color) => (
+            <>
+              <span
+                key={color}
+                className="CartItem-selected-color"
+                style={{ backgroundColor: color }}
+              ></span>
+              <span>&nbsp;</span>
+            </>
+          ))}
         </div>
 
         <div className="CartItem-quantity">Qty: {quantity}</div>

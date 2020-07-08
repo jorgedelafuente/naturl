@@ -6,7 +6,6 @@ import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import CheckOut from "./pages/checkout/CheckOut";
-import SignIn from "./pages/auth/signin/SignIn";
 import SignUp from "./pages/auth/signup/SignUp";
 import Products from "./pages/products/Products";
 import Profile from "./pages/auth/profile/Profile";
@@ -57,28 +56,28 @@ function App() {
     }
   }, [itemsInCart]);
 
-  // const handleAddToCartClick = (id, itemQuantity) => {
-  const handleAddToCartClick = (id, itemQuantity, itemColor) => {
+  const handleAddToCartClick = (id, itemQuantity, selectedColor) => {
     setItemsInCart((itemsInCart) => {
-      // const itemInCart = itemsInCart.find((item) => item.id === id);
-      // // // if item is already in cart, update the quantity
-      // // if (itemInCart) {
-      // //   return itemsInCart.map((item) => {
-      // //     if (item.id !== id) return item;
-      // //     return {
-      // //       ...itemInCart,
-      // //       quantity: item.quantity + itemQuantity,
-      // //       color: item.color + itemColor,
-      // //     }; //item.quantity + 1
-      // //     // return { ...itemInCart, quantity: item.quantity + itemQuantity };
-      // //   });
-      // }
+      const itemInCart = itemsInCart.find((item) => item.id === id);
+
+      // if item is already in cart, update the quantity
+      // and selected color
+      if (itemInCart) {
+        return itemsInCart.map((item) => {
+          if (item.id !== id) return item;
+          return {
+            ...itemInCart,
+            quantity: item.quantity + itemQuantity,
+            selectedColors: [...item.selectedColors, selectedColor],
+          };
+        });
+      }
 
       // otherwise, add new item to cart
       const item = productData.find((item) => item.id === id);
       return [
         ...itemsInCart,
-        { ...item, quantity: itemQuantity, color: itemColor },
+        { ...item, quantity: itemQuantity, selectedColors: [selectedColor] },
       ];
     });
   };
@@ -148,9 +147,20 @@ function App() {
               userId={userId}
             />
 
-            <SignIn path="/signin" />
-            <SignUp path="/signup" />
+            <SignUp path="/signup" setWishList={setWishList} />
+
+            <Profile
+              setUserId={setUserId}
+              userId={userId}
+              wishList={wishList}
+              setWishList={setWishList}
+              setItemsInCart={setItemsInCart}
+              data={productData}
+              path="/profile"
+            />
+
             <About path="/about" />
+
             <Contact path="/contact" />
 
             <Product
@@ -195,16 +205,6 @@ function App() {
               handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
               listRelatedProducts={listRelatedProducts}
               path="/checkout"
-            />
-
-            <Profile
-              setUserId={setUserId}
-              userId={userId}
-              wishList={wishList}
-              setWishList={setWishList}
-              setItemsInCart={setItemsInCart}
-              data={productData}
-              path="/profile"
             />
 
             <Success

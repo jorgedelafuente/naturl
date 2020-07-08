@@ -28,7 +28,7 @@ const Success = () => {
       {currentUser ? (
         <div className="Success-message">
           Your order
-          <span className="Success-order-number">{orderNumber()}</span> is on
+          <span className="Success-order-number">&nbsp;{orderNumber()}</span> is
           it&apos;s way. <br /> Check your inbox at {currentUser.email} for
           shipping details.
         </div>

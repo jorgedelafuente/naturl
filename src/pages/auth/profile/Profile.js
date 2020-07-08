@@ -21,7 +21,7 @@ const Profile = ({
   const [profileInfo, setProfileInfo] = useState({});
   const [purchaseHistory, setPurchaseHistory] = useState([]);
   const [wishListRemoveAlert, setWishListRemoveAlert] = useState("none");
-  const [displayAlert, setDisplayAlert] = useState("none");
+
   const { currentUserProfile } = useContext(AuthContext);
 
   useEffect(() => {
@@ -35,15 +35,14 @@ const Profile = ({
           console.log(error);
         });
     }
+    return () => getUserDocument;
   }, [currentUserProfile]);
 
   const handleSignOut = () => {
-    setDisplayAlert("block");
-    setTimeout(() => {
-      setDisplayAlert("none");
-    }, 5000);
+    window.scrollTo({ top: 0, behavior: "smooth" });
     signOut();
-    localStorage.clear("cart");
+    localStorage.removeItem("cart");
+    localStorage.removeItem("cartHistory");
     setWishList([]);
     setItemsInCart([]);
     setUserId(null);
@@ -66,29 +65,6 @@ const Profile = ({
     <>
       {userId !== null ? (
         <>
-          <div className="Profile-Alert-Container">
-            <Alert
-              banner
-              message="Sign Out Complete"
-              type="success"
-              showIcon={true}
-              closable
-              style={{
-                display: displayAlert,
-              }}
-            />
-            <Alert
-              banner
-              message="Item removed from wishlist"
-              type="info"
-              showIcon={true}
-              closable
-              style={{
-                display: wishListRemoveAlert,
-              }}
-            />
-          </div>
-
           <div className="Profile-Container">
             <h2 className="Profile-Welcome-title">
               Welcome <>{profileInfo.displayName} </>
@@ -97,6 +73,19 @@ const Profile = ({
             <h2 className="Profile-Category-Title Wishlist-Title">
               Your Wishlist
             </h2>
+
+            <div className="Form-Sign-Container">
+              <div className="Form-Sign-Container-Alert">
+                <Alert
+                  banner
+                  message="Item removed from wishlist"
+                  type="info"
+                  showIcon={true}
+                  closable
+                  style={{ display: wishListRemoveAlert }}
+                />
+              </div>
+            </div>
 
             <div>
               {wishList.length > 0 ? (
@@ -130,7 +119,7 @@ const Profile = ({
             )}
 
             <button className="form-button" onClick={handleSignOut}>
-              Sign out
+              Sign Out
             </button>
           </div>
         </>

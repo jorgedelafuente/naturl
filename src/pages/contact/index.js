@@ -10,16 +10,16 @@ const Contact = () => {
           <h1>Contact</h1>
         </div>
         <p className="wow zoomIn">
-          <h2>
+          <h4>
             You are welcome to call us or send us an email with your questions
             and inquiries.
-          </h2>
+          </h4>
           <br />
           <p>
             <strong>CALL US</strong>
           </p>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>General Inquiries</strong>
             </span>
             <br />
@@ -30,7 +30,7 @@ const Contact = () => {
             Toll-free in USA and Canada: 1-888-947-9445
           </address>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>Business Inquiries</strong>
             </span>
             <br />
@@ -42,7 +42,11 @@ const Contact = () => {
             <strong>EMAIL US</strong>
             <br />
             Alternatively, you can&nbsp;
-            <a href="mailto:info@canadavisa.com" rel="alternate">
+            <a
+              className="contact-email-link"
+              href="mailto:info@naturl.com"
+              rel="alternate"
+            >
               email&nbsp;
             </a>
             us.
@@ -51,11 +55,11 @@ const Contact = () => {
             All legal services are provided from our head office in Montreal.
           </p>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>Head Office &amp; Mailing Address</strong>
             </span>
             <br />
-            Campbell Cohen Law Firm
+            NATURL Cosmetics Ltd.
             <br />
             1303 Greene Ave., Suite 200
             <br />
@@ -64,6 +68,11 @@ const Contact = () => {
             H3Z 2A7
           </address>
         </p>
+        <img
+          src={require("../../images/contact-fadein.png")}
+          alt="makeup-lipstick"
+          className="right-image-contact"
+        />
         <br />
       </div>
     </div>

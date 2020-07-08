@@ -1,0 +1,57 @@
+.reviewsContent {
+  cursor: pointer;
+  border-left: solid 1px #f2f2f2;
+  border-right: solid 1px #f2f2f2;
+  border-bottom: solid 1px #f2f2f2;
+  border-radius: 0 0 5px 5px;
+  padding: 15px 15px 15px 0;
+  font-size: 14px;
+}
+
+.writeReview {
+  width: calc(100%);
+  padding: 10px 0 5px 0;
+  &:hover {
+    font-weight: 500;
+  }
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviewsHeader {
+  border: 1px solid #dcd3d3;
+  box-shadow: 0px 1px 1px;
+  cursor: pointer;
+  padding: 15px;
+  max-width: calc(55%);
+  min-width: calc(55%);
+  display: flex;
+  align-self: end;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100%);
+  }
+  .nameTitle {
+    display: flex;
+    text-align: left;
+    width: calc(80%);
+    padding: 5px 0 5px 0;
+  }
+  .nameDateTitle {
+    display: flex;
+    text-align: left;
+    font-weight: 900;
+    width: calc(80%);
+    padding: 5px 0 5px 0;
+  }
+}

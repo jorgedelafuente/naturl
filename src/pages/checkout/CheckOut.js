@@ -20,7 +20,7 @@ export default function Checkout({
     return { price: item.stripe_price_id, quantity: item.quantity };
   });
 
-  const prefilledEmail = (currentUser, currentLineItems) => {
+  const prefillUserEmail = (currentUser, currentLineItems) => {
     if (currentUser) {
       return {
         lineItems: currentLineItems,
@@ -47,9 +47,8 @@ export default function Checkout({
   const handleCheckoutClick = async (event) => {
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await stripePromise;
-
     const { error } = await stripe.redirectToCheckout(
-      prefilledEmail(currentUser, currentLineItems)
+      prefillUserEmail(currentUser, currentLineItems)
     );
     //TODO: handle error message
     if (error) {
@@ -64,36 +63,37 @@ export default function Checkout({
 
   const suggestedProducts = listRelatedProducts(itemsInCart, data, 10);
 
-  // localStorage.setItem("cartHistory", itemsInCart);
   return (
     <>
-      <Cart
-        itemsInCart={itemsInCart}
-        totalCost={totalCost}
-        handleClearCartClick={handleClearCartClick}
-        onCheckoutClick={handleCheckoutClick}
-        handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
-      />
-      {suggestedProducts.length > 0 ? (
-        <>
-          <h2 className="Checkout-related-products-title">
-            You might also be interested in these products...
-          </h2>
-          <div className="Checkout-related-products">
-            {suggestedProducts.map((item) => (
-              <ProductCard
-                key={item.id}
-                image={item.image_link}
-                name={item.name}
-                price={item.price}
-                id={item.id}
-              />
-            ))}
-          </div>
-        </>
-      ) : (
-        <></>
-      )}
+      <div className="checkoutpage-container">
+        <Cart
+          itemsInCart={itemsInCart}
+          totalCost={totalCost}
+          handleClearCartClick={handleClearCartClick}
+          onCheckoutClick={handleCheckoutClick}
+          handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
+        />
+        {suggestedProducts.length > 0 ? (
+          <>
+            <h2 className="Checkout-related-products-title">
+              You might also be interested in these products...
+            </h2>
+            <div className="Checkout-related-products">
+              {suggestedProducts.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  image={item.image_link}
+                  name={item.name}
+                  price={item.price}
+                  id={item.id}
+                />
+              ))}
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
+      </div>
     </>
   );
 }

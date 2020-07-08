@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import ProductItem from "./ProductItem";
 import "./productItem.scss";
+import Review from "../../components/ProductReview/Reviews";
 
 const Product = ({
   data,
@@ -28,6 +29,7 @@ const Product = ({
         wishList={wishList}
         setWishList={setWishList}
       />
+      <Review productId={id} />
     </div>
   );
 };
