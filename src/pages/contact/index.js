@@ -42,7 +42,11 @@ const Contact = () => {
             <strong>EMAIL US</strong>
             <br />
             Alternatively, you can&nbsp;
-            <a href="mailto:info@canadavisa.com" rel="alternate">
+            <a
+              className="contact-email-link"
+              href="mailto:info@naturl.com"
+              rel="alternate"
+            >
               email&nbsp;
             </a>
             us.
@@ -55,7 +59,7 @@ const Contact = () => {
               <strong>Head Office &amp; Mailing Address</strong>
             </span>
             <br />
-            Campbell Cohen Law Firm
+            NATURL Cosmetics Ltd.
             <br />
             1303 Greene Ave., Suite 200
             <br />

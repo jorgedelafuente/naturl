@@ -1,9 +1,20 @@
-import React from "react";
-import "./style.scss";
+import React, { useState } from "react";
 import SimpleTextCard from "./SimpleTextCard";
 import SimpleImageCard from "./SimpleImageCard";
+import { Alert } from "antd";
+import "./style.scss";
 
 const About = () => {
+  const [displayAlert, setDisplayAlert] = useState("none");
+
+  const handleEmailNewsletterSignUp = (e) => {
+    e.preventDefault();
+    setDisplayAlert("block");
+    setTimeout(() => {
+      setDisplayAlert("none");
+    }, 5000);
+  };
+
   return (
     <div className="About-Wrapper">
       <div className="about-heading wow zoomIn " id="about-page-header">
@@ -93,9 +104,9 @@ const About = () => {
               </div>
               <p className="wow zoomIn">
                 In 2017, we gave all of our profits to helping victims of
-                Hurricane Harvey. In 2019, we worked with Bali Children's
-                Project to restore and build children's libraries in Bali. Now,
-                in the midst of the global 2020 pandemic, we are working to
+                Hurricane Harvey. In 2019, we worked with Bali Children&apos;s
+                Project to restore and build children&apos;s libraries in Bali.
+                Now, in the midst of the global 2020 pandemic, we are working to
                 raise funds for personal protective equipment for frontline
                 healthcare works in the United States. See our current efforts
                 here.
@@ -113,11 +124,12 @@ const About = () => {
             </div>
             <p className="wow zoomIn">
               In 2017, we gave all of our profits to helping victims of
-              Hurricane Harvey. In 2019, we worked with Bali Children's Project
-              to restore and build children's libraries in Bali. Now, in the
-              midst of the global 2020 pandemic, we are working to raise funds
-              for personal protective equipment for frontline healthcare works
-              in the United States. See our current efforts here.
+              Hurricane Harvey. In 2019, we worked with Bali Children&apos;s
+              Project to restore and build children&apos;s libraries in Bali.
+              Now, in the midst of the global 2020 pandemic, we are working to
+              raise funds for personal protective equipment for frontline
+              healthcare works in the United States. See our current efforts
+              here.
             </p>
           </div>
         </div>
@@ -186,9 +198,27 @@ const About = () => {
       <div className="bottom-text wow zoomIn">
         SUBSCRIBE TO OUR MAILING LIST
       </div>
+
       <div className="subscribe-wrapper wow zoomIn">
-        <input placeholder="email@example.com" className="input-bottom" />
-        <button className="subscribe">SUBSCRIBE</button>
+        <div className="About-EmailSignUp-container-input">
+          <div className="About-EmailSignUp-container-alert">
+            <Alert
+              banner
+              message="A sample email newsletter submit"
+              type="info"
+              showIcon={true}
+              style={{
+                display: displayAlert,
+              }}
+            />
+          </div>
+
+          <input placeholder="email@example.com" className="input-bottom" />
+        </div>
+
+        <button className="subscribe" onClick={handleEmailNewsletterSignUp}>
+          SUBSCRIBE
+        </button>
       </div>
     </div>
   );
