@@ -47,7 +47,9 @@ const Login = () => {
   return (
     <div className="form-container">
       <div className="Logo">
-        <h3>NATURL</h3>
+        <Link to="/">
+          <h3>NATURL</h3>
+        </Link>
       </div>
 
       <div>
