@@ -10,16 +10,16 @@ const Contact = () => {
           <h1>Contact</h1>
         </div>
         <p className="wow zoomIn">
-          <h2>
+          <h4>
             You are welcome to call us or send us an email with your questions
             and inquiries.
-          </h2>
+          </h4>
           <br />
           <p>
             <strong>CALL US</strong>
           </p>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>General Inquiries</strong>
             </span>
             <br />
@@ -30,7 +30,7 @@ const Contact = () => {
             Toll-free in USA and Canada: 1-888-947-9445
           </address>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>Business Inquiries</strong>
             </span>
             <br />
@@ -55,7 +55,7 @@ const Contact = () => {
             All legal services are provided from our head office in Montreal.
           </p>
           <address>
-            <span class="text-primary">
+            <span className="text-primary">
               <strong>Head Office &amp; Mailing Address</strong>
             </span>
             <br />
@@ -70,7 +70,7 @@ const Contact = () => {
         </p>
         <img
           src={require("../../images/contact-fadein.png")}
-          alt="image"
+          alt="makeup-lipstick"
           className="right-image-contact"
         />
         <br />

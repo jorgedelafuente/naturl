@@ -128,9 +128,9 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     }
   };
 
-  // function clearFilters() {
-  //   // let filteredData = filtered(originalData);
-  // }
+  function clearFilters() {
+    setSelectedTags([]);
+  }
 
   // console.log(filtered(originalData));
 
@@ -146,10 +146,7 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
           onClick={() => setTop(top)}
         >
           <div>
-            <Link
-              // onClick={clearFilters()}
-              to="/products"
-            >
+            <Link onClick={clearFilters} to="/products">
               All products
             </Link>
           </div>

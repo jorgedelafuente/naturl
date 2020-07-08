@@ -138,10 +138,6 @@ function HomePage(props) {
       <div className="News">
         <div className="News_div">
           <h1>Subscribe to our newsletter!</h1>
-          <p className="News__Text">
-            Signup for our weekly newsletter to get the latset news, updates and
-            amazing offers delivered directly to your inbox.
-          </p>
         </div>
         <div className="Home-EmailSignUp-container">
           <div className="Home-EmailSignUp-container-alert">

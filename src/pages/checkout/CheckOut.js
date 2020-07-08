@@ -65,33 +65,35 @@ export default function Checkout({
 
   return (
     <>
-      <Cart
-        itemsInCart={itemsInCart}
-        totalCost={totalCost}
-        handleClearCartClick={handleClearCartClick}
-        onCheckoutClick={handleCheckoutClick}
-        handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
-      />
-      {suggestedProducts.length > 0 ? (
-        <>
-          <h2 className="Checkout-related-products-title">
-            You might also be interested in these products...
-          </h2>
-          <div className="Checkout-related-products">
-            {suggestedProducts.map((item) => (
-              <ProductCard
-                key={item.id}
-                image={item.image_link}
-                name={item.name}
-                price={item.price}
-                id={item.id}
-              />
-            ))}
-          </div>
-        </>
-      ) : (
-        <></>
-      )}
+      <div className="checkoutpage-container">
+        <Cart
+          itemsInCart={itemsInCart}
+          totalCost={totalCost}
+          handleClearCartClick={handleClearCartClick}
+          onCheckoutClick={handleCheckoutClick}
+          handleRemoveItemFromCartClick={handleRemoveItemFromCartClick}
+        />
+        {suggestedProducts.length > 0 ? (
+          <>
+            <h2 className="Checkout-related-products-title">
+              You might also be interested in these products...
+            </h2>
+            <div className="Checkout-related-products">
+              {suggestedProducts.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  image={item.image_link}
+                  name={item.name}
+                  price={item.price}
+                  id={item.id}
+                />
+              ))}
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
+      </div>
     </>
   );
 }

@@ -47,6 +47,15 @@
   margin-bottom: 50px;
 }
 
+.about-heading h1 {
+  @media (max-width: 768px) and (min-width: 480px) {
+    font-size: 28px;
+  }
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
 .About-Wrapper > p {
   text-align: center;
   margin: auto;
@@ -119,6 +128,7 @@
 .show-two-cards-right {
   width: 60%;
 }
+
 .bottom-text {
   font-size: 3rem;
   font-weight: bold;
@@ -127,6 +137,16 @@
   margin-top: 100px;
   margin-bottom: 40px;
 }
+
+.bottom-text p {
+  @media (max-width: 768px) and (min-width: 480px) {
+    font-size: 24px;
+  }
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
 .subscribe-wrapper {
   display: flex;
   justify-content: center;
@@ -226,7 +246,6 @@
   .aboutpage-purple-block {
     padding-top: 50px;
   }
-
   .aboutpage-greenblock {
     padding-top: 50px;
   }
@@ -236,9 +255,25 @@
   position: relative;
 }
 
+.About-EmailSignUp-container-input input {
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 40vw;
+  }
+  @media (max-width: 480px) {
+    width: 70vw;
+  }
+}
+
 .About-EmailSignUp-container-alert {
   position: absolute;
   top: -45px;
   width: 300px;
   height: 48px;
+}
+
+.aboutpage-purple-block {
+  padding-top: 50px;
+}
+.aboutpage-greenblock {
+  padding-top: 50px;
 }
