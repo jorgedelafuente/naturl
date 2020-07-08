@@ -6,7 +6,24 @@
 #about-page-header {
   margin-top: 200px;
 }
-
+.left-image {
+  position: absolute;
+  top: 80px;
+  left: -30px;
+  z-index: -1;
+  height: 400px;
+  width: 300px;
+  transform: rotate(80deg);
+}
+.right-image {
+  position: absolute;
+  top: 2400px;
+  right: -10px;
+  z-index: -1;
+  width: 250px;
+  height: 300px;
+  transform: rotate(270deg);
+}
 .flex-box-about {
   display: flex;
   align-items: flex-start;
@@ -199,20 +216,28 @@
   }
 }
 
-.aboutpage-purple-block {
-  padding-top: 50px;
-}
+@media (max-width: 768px) {
+  .left-image {
+    display: none;
+  }
+  .right-image {
+    display: none;
+  }
+  .aboutpage-purple-block {
+    padding-top: 50px;
+  }
 
-.aboutpage-greenblock {
-  padding-top: 50px;
-}
-.About-EmailSignUp-container-input {
-  position: relative;
-}
+  .aboutpage-greenblock {
+    padding-top: 50px;
+  }
+  .About-EmailSignUp-container-input {
+    position: relative;
+  }
 
-.About-EmailSignUp-container-alert {
-  position: absolute;
-  top: -45px;
-  width: 300px;
-  height: 48px;
+  .About-EmailSignUp-container-alert {
+    position: absolute;
+    top: -45px;
+    width: 300px;
+    height: 48px;
+  }
 }

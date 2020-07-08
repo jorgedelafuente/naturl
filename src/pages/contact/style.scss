@@ -30,6 +30,15 @@
   margin-bottom: 50px;
 }
 
+.right-image-contact {
+  position: absolute;
+  right: -10px;
+  top: 190px;
+  z-index: 1;
+  height: 500px;
+  width: 180px;
+  transform: rotate(270deg);
+}
 .Contact-Wrapper > p {
   text-align: center;
   margin: auto;
@@ -189,11 +198,16 @@
     text-align: justify;
   }
 }
+@media (max-width: 768px) {
+  .right-image-contact {
+    display: none;
+  }
 
-.contact-email-link {
-  color: cadetblue;
-}
+  .contact-email-link {
+    color: cadetblue;
+  }
 
-.contact-email-link:hover {
-  color: #00677d;
+  .contact-email-link:hover {
+    color: #00677d;
+  }
 }
