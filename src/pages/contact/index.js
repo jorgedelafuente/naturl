@@ -42,7 +42,11 @@ const Contact = () => {
             <strong>EMAIL US</strong>
             <br />
             Alternatively, you can&nbsp;
-            <a href="mailto:info@canadavisa.com" rel="alternate">
+            <a
+              className="contact-email-link"
+              href="mailto:info@naturl.com"
+              rel="alternate"
+            >
               email&nbsp;
             </a>
             us.

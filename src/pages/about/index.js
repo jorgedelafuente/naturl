@@ -136,7 +136,7 @@ const About = () => {
         <div className="Simple-text-Card Simple-text-Card-1 wow zoomIn">
           <div className="sticky-text">
             <div className="about-heading simpleCard-heading sticky-header wow zoomIn">
-              OUR INGREDIENTS
+              <p className="aboutpage-purple-block">OUR STYLE</p>
             </div>
             <p className="wow zoomIn">
               We are citizens of the world, and this world offers us its beauty
@@ -154,7 +154,7 @@ const About = () => {
         <div className="Simple-text-Card Simple-text-Card-2">
           <div className="sticky-text">
             <div className="about-heading simpleCard-heading sticky-header wow zoomIn">
-              Our Difference
+              <p className="aboutpage-greenblock">Our Difference</p>
             </div>
             <p className="wow zoomIn">
               We are citizens of the world, and this world offers us its beauty

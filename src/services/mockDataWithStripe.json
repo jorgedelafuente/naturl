@@ -154,31 +154,6 @@
     "stripe_price_id": "price_1H0uhBCzjdOYYybLyB8f0C12"
   },
   {
-    "id": 1039,
-    "brand": "w3llpeople",
-    "name": " Realist Invisible Setting Powder",
-    "price": "1.99",
-    "price_sign": "$",
-    "currency": "USD",
-    "image_link": "https://www.purpicks.com/wp-content/uploads/2018/06/w3llpeople-Realist-Invisible-Setting-Powder.jpg",
-    "product_link": "https://www.purpicks.com/product/w3llpeople-realist-invisible-setting-powder/",
-    "website_link": "https://purpicks.com/",
-    "description": "<span style=\"font-weight: 400;\">Keep it real with a polished, soft-focus look using this superfine, loose mineral powder. The healing properties of organic aloe help soothe and calm stressed out skin. Instantly minimize pores, soften imperfections, and creates a matte finish with superfine powder. Use by itself for an air-brushed look, or to set foundation for ultra-long wear.</span><span style=\"font-weight: 400;\">* Set makeup or by itself for matte air-brushed effect</span><span style=\"font-weight: 400;\">* Absorbs excess oil while softening fine lines</span><span style=\"font-weight: 400;\">* Organic aloe creates radiant, rejuvenated skin</span><span style=\"font-weight: 400;\">* Hypoallergenic, Chemical Free, Cruelty Free &amp; Noncomedogenic </span><span style=\"font-weight: 400;\">* EWG Verified for non-toxic health and safety</span><span style=\"font-weight: 400;\">* Free From: Parabens, Gluten, GMO, Phthalates, Sulfates, Fragrance, Pheonoxyethanol, Dimethicone, PEG, Propylene Glycol, Butylene Glycol, Lead, Mineral Oil, Talc</span>",
-    "rating": null,
-    "category": "powder",
-    "product_type": "foundation",
-    "tag_list": ["Gluten Free", "EWG Verified", "purpicks"],
-    "created_at": "2018-06-30T19:19:32.191Z",
-    "updated_at": "2018-06-30T20:26:26.417Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1039.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/039/original/open-uri20180630-4-rfmkzd?1530390386",
-    "product_colors": [
-      { "hex_value": "#E8E6E7", "colour_name": "Translucent" }
-    ],
-    "stripe_product_id": "prod_Ha4q82AV08Fnkp",
-    "stripe_price_id": "price_1H0uhBCzjdOYYybLoF5SCMR0"
-  },
-  {
     "id": 1031,
     "brand": "rejuva minerals",
     "name": "Bronzer - pressed",
@@ -1983,7 +1958,7 @@
     "image_link": "https://www.purpicks.com/wp-content/uploads/2018/03/rejuva-minerals-bronzer.jpg",
     "product_link": "https://www.purpicks.com/product/rejuva-minerals-bronzer-caribbean/",
     "website_link": "https://purpicks.com/",
-    "description": "Caribbean is a multi-purpose shade that is suitable for medium-tan skin tones. This shade may be used as a bronzer, or as a contour shade. <ul><li>Our bronzer has been enhanced with Fruits, Botanicals and Clays for their natural color, fragrance and antioxidant benefits!</li><li>Blended with Certified Organics Fruits and Botanicals</li><li>Formulated with common skin irritants.</li><li>Our bronzer will offer a natural “ultra sheer” semi-matte finish.</li><li>Made without any gluten containing ingredients</li><li>VEGAN!</li><li>Eco Friendly jars!</li></ul>",
+    "description": "Caribbean is a multi-purpose shade that is suitable for medium-tan skin tones. This shade may be used as a bronzer, or as a contour shade. Our bronzer has been enhanced with Fruits, Botanicals and Clays for their natural color, fragrance and antioxidant benefits! Blended with Certified Organics Fruits and Botanicals. Formulated with common skin irritants. Our bronzer will offer a natural “ultra sheer” semi-matte finish. Made without any gluten containing ingredients.",
     "rating": null,
     "category": "powder",
     "product_type": "bronzer",

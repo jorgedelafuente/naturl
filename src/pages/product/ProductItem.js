@@ -22,7 +22,6 @@ function ProductItem(props) {
 
   function onChange(e) {
     console.log(`radio checked:${e.target.value}`);
-    // setItemColorChecked((e.target.style);
     setItemColor(e.target.value);
   }
   const addToWishList = () => {
@@ -127,19 +126,14 @@ function ProductItem(props) {
 
           <Radio.Group onChange={onChange} className="product-colors-container">
             {props.data.product_colors.map((item) => (
-              // <div className="product-color-dots">
               <Radio.Button
                 type="radio"
                 className="product-color-dots"
                 style={{
                   backgroundColor: item.hex_value,
-                  // borderRadius: "50px",
                 }}
                 value={item.hex_value}
               ></Radio.Button>
-              /* <button style={{ backgroundColor: item.hex_value }} /> */
-              // </div>
-              // <ProductColor key={item.hex_value} color={item.hex_value} />
             ))}
           </Radio.Group>
 
