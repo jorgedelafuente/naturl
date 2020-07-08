@@ -89,7 +89,7 @@ function ProductItem(props) {
               Add to cart
             </button>
 
-            <div className="wishlist-icon-heart">
+            <div className="ProductItem-Icon-Heart">
               <HeartOutlined
                 onClick={addToWishList}
                 style={{
@@ -100,33 +100,37 @@ function ProductItem(props) {
               />
             </div>
           </div>
-          <div className="wishList-Alert">
-            <Alert
-              message="Item added to Wishlist Successfully"
-              type="success"
-              style={{ display: successAlert }}
-              showIcon={true}
-              closable
-            />
-            <Alert
-              message="View and Manage Wishlist under Profile"
-              type="info"
-              style={{ display: infoAlert }}
-              showIcon={true}
-              closable
-            />
-            <Alert
-              message="Please Sign In to Add Items to Wishlist"
-              type="info"
-              style={{ display: loginAlert }}
-              showIcon={true}
-              closable
-            />
+          <div className="ProductItem-Alert-Container">
+            <div className="ProductItem-Alert-Container-Alerts">
+              <Alert
+                message="Item added to Wishlist Successfully"
+                type="success"
+                style={{ display: successAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="View and Manage Wishlist under Profile"
+                type="info"
+                style={{ display: infoAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Please Sign In to Add Items to Wishlist"
+                type="info"
+                style={{ display: loginAlert }}
+                // style={{ display: "block" }}
+                showIcon={true}
+                closable
+              />
+            </div>
           </div>
 
           <Radio.Group onChange={onChange} className="product-colors-container">
-            {props.data.product_colors.map((item) => (
+            {props.data.product_colors.map((item, index) => (
               <Radio.Button
+                key={index}
                 type="radio"
                 className="product-color-dots"
                 style={{
