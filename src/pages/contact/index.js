@@ -10,10 +10,10 @@ const Contact = () => {
           <h1>Contact</h1>
         </div>
         <p className="wow zoomIn">
-          <h2>
+          <h4>
             You are welcome to call us or send us an email with your questions
             and inquiries.
-          </h2>
+          </h4>
           <br />
           <p>
             <strong>CALL US</strong>
@@ -70,7 +70,7 @@ const Contact = () => {
         </p>
         <img
           src={require("../../images/contact-fadein.png")}
-          alt="image"
+          alt="makeup-lipstick"
           className="right-image-contact"
         />
         <br />

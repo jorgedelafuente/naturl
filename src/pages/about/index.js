@@ -33,12 +33,12 @@ const About = () => {
       </p>
       <img
         src={require("../../images/about-fadein1.png")}
-        alt="image"
+        alt="makeup-lipstick-colors"
         className="left-image"
       />
       <img
         src={require("../../images/about-fadein.png")}
-        alt="image"
+        alt="makeup-powder"
         className="right-image"
       />
       <div className="flex-box-about about-margin">
@@ -137,8 +137,8 @@ const About = () => {
         </div>
         <div className="Simple-text-Card Simple-text-Card-1 wow zoomIn">
           <div className="sticky-text">
-            <div className="about-heading simpleCard-heading sticky-header wow zoomIn">
-              <p className="aboutpage-purple-block">OUR INGREDIENTS</p>
+            <div className="aboutpage-purple-block simpleCard-heading sticky-header wow zoomIn">
+              <p>OUR INGREDIENTS</p>
             </div>
             <p className="wow zoomIn">
               Dissimilar to ordinary mineral makeup items that utilization
@@ -209,7 +209,7 @@ const About = () => {
         />
       </div>
       <div className="bottom-text wow zoomIn">
-        SUBSCRIBE TO OUR MAILING LIST
+        <p>SUBSCRIBE TO OUR MAILING LIST</p>
       </div>
 
       <div className="subscribe-wrapper wow zoomIn">
