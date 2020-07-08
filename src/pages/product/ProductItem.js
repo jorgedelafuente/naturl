@@ -13,7 +13,7 @@ function ProductItem(props) {
   const [successAlert, setSuccessAlert] = useState("none");
   const [infoAlert, setInfoAlert] = useState("none");
   const [loginAlert, setLoginAlert] = useState("none");
-  // const [itemColor, setItemColor] = useState(1);
+  const [itemColor, setItemColor] = useState(1);
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
@@ -23,7 +23,7 @@ function ProductItem(props) {
   function onChange(e) {
     console.log(`radio checked:${e.target.value}`);
     // setItemColorChecked((e.target.style);
-    // setItemColor(e.target.value);
+    setItemColor(e.target.value);
   }
   const addToWishList = () => {
     // console.log(props.userId);
@@ -84,7 +84,7 @@ function ProductItem(props) {
             ></input>
             <button
               onClick={() =>
-                props.onAddToCartClick(props.data.id, itemQuantity)
+                props.onAddToCartClick(props.data.id, itemQuantity, itemColor)
               }
             >
               Add to cart
