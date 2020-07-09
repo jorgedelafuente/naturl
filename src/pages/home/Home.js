@@ -140,42 +140,6 @@ function HomePage(props) {
         handleEmailNewsletterSignUp={handleEmailNewsletterSignUp}
         displayStatus={displayAlert}
       />
-
-      {/* <div className="News">
-        <div className="News_div">
-          <h1>Subscribe to our newsletter!</h1>
-        </div>
-        <div className="Home-EmailSignUp-container">
-          <div className="Home-EmailSignUp-container-alert">
-            <Alert
-              banner
-              message="Sample email subscribe functionality"
-              type="info"
-              showIcon={true}
-              style={{
-                display: displayAlert,
-              }}
-            />
-          </div>
-
-          <form className="NewsLetterInput">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="Email_input"
-              placeholder="Email Address"
-            />
-            <button
-              className="Email-button"
-              type="submit"
-              onClick={handleEmailNewsletterSignUp}
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div> */}
     </div>
   );
 }

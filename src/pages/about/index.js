@@ -210,31 +210,6 @@ const About = () => {
         handleEmailNewsletterSignUp={handleEmailNewsletterSignUp}
         displayStatus={displayAlert}
       />
-      {/* <div className="bottom-text wow zoomIn">
-        <p>SUBSCRIBE TO OUR MAILING LIST</p>
-      </div>
-
-      <div className="subscribe-wrapper wow zoomIn">
-        <div className="About-EmailSignUp-container-input">
-          <div className="About-EmailSignUp-container-alert">
-            <Alert
-              banner
-              message="Demo newsletter component"
-              type="info"
-              showIcon={true}
-              style={{
-                display: displayAlert,
-              }}
-            />
-          </div>
-
-          <input placeholder="email@example.com" className="input-bottom" />
-        </div>
-
-        <button className="subscribe" onClick={handleEmailNewsletterSignUp}>
-          SUBSCRIBE
-        </button>
-      </div>*/}
     </div>
   );
 };
