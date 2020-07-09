@@ -18,11 +18,6 @@ body {
   box-sizing: border-box;
 }
 
-*::selection {
-  color: #fff;
-  background: white;
-}
-
 html {
   --antd-wave-shadow-color: white;
   --scroll-bar: 0;
