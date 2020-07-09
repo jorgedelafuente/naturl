@@ -10,9 +10,6 @@ function ProductTags(props) {
         <Tag key={index} color="cyan">
           {item}
         </Tag>
-        //   <Tag key={index} color="#00677d">
-        //     {item}
-        // </Tag>
       ))}
     </div>
   );
