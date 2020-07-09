@@ -8,6 +8,9 @@ import Home from "./pages/home/Home";
 import CheckOut from "./pages/checkout/CheckOut";
 import SignUp from "./pages/auth/signup/SignUp";
 import Products from "./pages/products/Products";
+import Vegan from "./pages/products/Vegan";
+import Gluten from "./pages/products/Gluten";
+
 import Profile from "./pages/auth/profile/Profile";
 import NotFound from "./pages/notfound/NotFound";
 import Product from "./pages/product/Product";
@@ -181,7 +184,7 @@ function App() {
               userId={userId}
             />
 
-            <Products
+            <Vegan
               data={veganData}
               title={"Vegan"}
               path="/products-vegan"
@@ -189,7 +192,7 @@ function App() {
               setWishList={setWishList}
               userId={userId}
             />
-            <Products
+            <Gluten
               data={glutenData}
               title={"Gluten Free"}
               path="/products-gluten-free"
