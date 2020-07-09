@@ -1,7 +1,6 @@
 import React from "react";
 import { Modal, Input, Rate } from "antd";
-
-// import "./ReviewsModal.scss";
+import "./ReviewsModal.scss";
 
 const { TextArea } = Input;
 
@@ -15,6 +14,9 @@ export default function ReviewsModal({
   review,
   setReview,
 }) {
+  // const style={
+  //   backgroundColor: "orange"
+  // }
   return (
     <>
       <Modal
@@ -23,7 +25,6 @@ export default function ReviewsModal({
         visible={writeReview}
         onOk={() => onSendReview(review, stars)}
         onCancel={() => setWriteReviews(false)}
-        // className="porduct-user-review-modal"
       >
         <Rate
           style={{ marginBottom: "20px" }}

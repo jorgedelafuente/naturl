@@ -12,11 +12,12 @@ import "./productItem.scss";
 
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
+  const [itemColor, setItemColor] = useState(null);
   const [successAlert, setSuccessAlert] = useState("none");
   const [infoAlert, setInfoAlert] = useState("none");
   const [loginAlert, setLoginAlert] = useState("none");
-  const [itemColor, setItemColor] = useState(null);
   const [colorSelectAlert, setColorSelectAlert] = useState("none");
+  const [addedToCartAlert, setAddedToCartAlert] = useState("none");
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
@@ -26,6 +27,10 @@ function ProductItem(props) {
   const handleSelectItemClick = (e) => {
     if (itemQuantity && itemColor) {
       props.onAddToCartClick(props.data.id, itemQuantity, itemColor);
+      setAddedToCartAlert("block");
+      setTimeout(() => {
+        setAddedToCartAlert("none");
+      }, 3000);
       setItemColor(null);
       setItemQuantity(1);
     } else {
@@ -118,10 +123,16 @@ function ProductItem(props) {
           <div className="ProductItem-details-container">
             <div className="wishList-Alert">
               <Alert
+                message="Item added to Cart"
+                type="success"
+                style={{ display: addedToCartAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
                 message="Please select a product color &nbsp;"
                 type="warning"
                 style={{ display: colorSelectAlert }}
-                // style={{ display: "block" }}
                 showIcon={true}
                 closable
               />

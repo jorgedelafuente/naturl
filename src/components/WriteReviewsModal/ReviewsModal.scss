@@ -1,4 +1,24 @@
-.porduct-user-review-modal {
-  background-color: red;
-  color: blue;
+.ant-input:hover {
+  border-color: cadetblue;
+}
+
+.ant-input:focus {
+  border-color: cadetblue;
+  box-shadow: 0 0 0 2px rgba(95, 158, 160, 0.2);
+}
+
+.ant-btn:hover, .ant-btn:focus {
+  color: cadetblue;
+  border-color: cadetblue;
+}
+
+.ant-btn-primary {
+  background: cadetblue;
+  border-color: cadetblue;
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  color: white;
+  background: cadetblue;
+  border-color: cadetblue;
 }

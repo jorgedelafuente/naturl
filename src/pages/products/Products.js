@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "@reach/router";
 import PropTypes from "prop-types";
 import ProductCard from "../../components/product-card/Product-card";
 import { Affix, Drawer, Tag } from "antd";
@@ -86,7 +85,7 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     const nextSelectedTags = checked
       ? [...selectedTags, tag]
       : selectedTags.filter((t) => t !== tag);
-    window.scrollTo(0, 100);
+    window.scrollTo(0, 200);
     setSelectedTags([...nextSelectedTags]);
   };
 
@@ -157,9 +156,12 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
           onClick={() => setTop(top)}
         >
           <div>
-            <Link onClick={clearFilters} to="/products">
+            <span
+              onClick={clearFilters}
+              style={{ fontSize: 18, cursor: "pointer" }}
+            >
               All products
-            </Link>
+            </span>
           </div>
           <div className="filter-product-types-link">
             <span

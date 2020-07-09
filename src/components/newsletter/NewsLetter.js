@@ -10,7 +10,7 @@ const NewsLetter = ({ handleEmailNewsletterSignUp, displayStatus }) => {
   };
 
   return (
-    <div>
+    <>
       <div className="Newsletter-Heading wow zoomIn">
         <p>SUBSCRIBE TO OUR MAILING LIST</p>
       </div>
@@ -21,6 +21,7 @@ const NewsLetter = ({ handleEmailNewsletterSignUp, displayStatus }) => {
             <Alert
               message="A Demo Newsletter Component"
               type="info"
+              // style={{ display: "block" }}
               style={{ display: displayStatus }}
               showIcon={true}
               closable
@@ -29,11 +30,11 @@ const NewsLetter = ({ handleEmailNewsletterSignUp, displayStatus }) => {
 
           <input placeholder="email@example.com" className="Newsletter-Input" />
         </div>
-        <button className="subscribe" onClick={handleClick}>
+        <button className="Subscribe-Button" onClick={handleClick}>
           SUBSCRIBE
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
