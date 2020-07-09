@@ -155,7 +155,7 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
           className="fixedHeaderButton wow zoomIn"
           onClick={() => setTop(top)}
         >
-          <div>
+          <div className="allproducts-clear-button">
             <span
               onClick={clearFilters}
               style={{ fontSize: 18, cursor: "pointer" }}
