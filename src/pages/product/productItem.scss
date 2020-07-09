@@ -247,51 +247,6 @@
   text-decoration: none;
 }
 
-.ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
-  border-right-color: white;
-}
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
-  border-color: white;
-  text-decoration: none;
-}
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  z-index: 1;
-  color: white;
-  background: white;
-  border-color: white;
-  border-radius: 50px;
-  border: 1px solid white;
-  text-decoration: none;
-  -fx-background-color: white;
-}
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
-  z-index: 1;
-  color: none;
-  background: none;
-  border-color: white;
-  -fx-background-color: white;
-  // border-radius: 50px;
-  // border: 1px solid white;
-  // text-decoration: none;
-}
-
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::selection {
-  color: #fff;
-  background: white;
-  -fx-background-color: white;
-}
-
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
-  background-color: white;
-  fx-focus-traversable: false;
-  fx-background-color: white;
-}
-
-// ::selection {
-//   color: #fff;
-//   background: white;
-// }
-
 .ProductItem-Icon-Heart {
   margin-left: 40px;
   font-size: 35px;
@@ -357,4 +312,20 @@
   // background-color: red;
   display: flex;
   justify-content: center;
+}
+
+.ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
+  border-right-color: white;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+  border-color: white;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  border-color: white;
+  border-radius: 50px;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  border-color: white;
 }

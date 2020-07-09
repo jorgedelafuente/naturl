@@ -139,6 +139,17 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
         <h1>{title}</h1>
       </div>
 
+      {/* <img
+        src={require("../../images/allproductsmakeup.jpg")}
+        alt="makeup-lipstick-colors"
+        className="productspage-image"
+      /> */}
+      <img
+        src={require("../../images/manyproductsmakeup.jpg")}
+        alt="makeup-lipstick-colors"
+        className="productspage-image"
+      />
+
       <Affix offsetTop={top}>
         <div
           className="fixedHeaderButton wow zoomIn"

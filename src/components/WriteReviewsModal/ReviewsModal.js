@@ -14,10 +14,9 @@ export default function ReviewsModal({
   review,
   setReview,
 }) {
-
-  const style={
-    backgroundColor: "orange"
-  }
+  // const style={
+  //   backgroundColor: "orange"
+  // }
   return (
     <>
       <Modal
