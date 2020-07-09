@@ -7,11 +7,12 @@ import { Link } from "@reach/router";
 // import { Components } from 'antd/lib/date-picker/generatePicker';
 // const { Meta } = Card;
 // import "antd/dist/antd.css";
-import { Alert } from "antd";
+// import { Alert } from "antd";
 import { Carousel } from "antd";
 import CustomChatbot from "../../components/chatbot/Chatbot";
 import ProductCard from "../../components/product-card/Product-card";
 import "./Home.scss";
+import Newsletter from "../../components/newsletter/NewsLetter";
 
 function onChange(a, b, c) {
   // console.log(a, b, c);
@@ -20,12 +21,12 @@ function onChange(a, b, c) {
 function HomePage(props) {
   const [displayAlert, setDisplayAlert] = useState("none");
 
-  const handleEmailNewsletterSignUp = (e) => {
-    e.preventDefault();
+  const handleEmailNewsletterSignUp = () => {
+    // e.preventDefault();
     setDisplayAlert("block");
     setTimeout(() => {
       setDisplayAlert("none");
-    }, 5000);
+    }, 3000);
   };
 
   return (
@@ -135,41 +136,10 @@ function HomePage(props) {
         body, mind and emotions.
       </p>
 
-      <div className="News">
-        <div className="News_div">
-          <h1>Subscribe to our newsletter!</h1>
-        </div>
-        <div className="Home-EmailSignUp-container">
-          <div className="Home-EmailSignUp-container-alert">
-            <Alert
-              banner
-              message="Sample email subscribe functionality"
-              type="info"
-              showIcon={true}
-              style={{
-                display: displayAlert,
-              }}
-            />
-          </div>
-
-          <form className="NewsLetterInput">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="Email_input"
-              placeholder="Email Address"
-            />
-            <button
-              className="Email-button"
-              type="submit"
-              onClick={handleEmailNewsletterSignUp}
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
+      <Newsletter
+        handleEmailNewsletterSignUp={handleEmailNewsletterSignUp}
+        displayStatus={displayAlert}
+      />
     </div>
   );
 }
