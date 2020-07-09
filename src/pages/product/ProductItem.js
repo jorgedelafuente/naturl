@@ -41,6 +41,27 @@ function ProductItem(props) {
     }
   };
 
+  const formatProductText = (tag) => {
+    if (tag === null) {
+      return "";
+    }
+    let wordsArr = tag.split("_");
+    for (let i = 0; i < wordsArr.length; i++) {
+      wordsArr[i] =
+        wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
+    }
+    return wordsArr.join(" ");
+  };
+
+  const formatBrandText = (tag) => {
+    let wordsArr = tag.split(" ");
+    for (let i = 0; i < wordsArr.length; i++) {
+      wordsArr[i] =
+        wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
+    }
+    return wordsArr.join(" ");
+  };
+
   function onChange(e) {
     // console.log(`radio checked:${e.target.value}`);
     const currentColor = e.target.value;
@@ -181,15 +202,15 @@ function ProductItem(props) {
           <div className="product-details-categories-container">
             <div className="product-details-categories-labels">
               <p>Brand:</p>
-              <p>{props.data.brand} </p>
+              <p>{formatBrandText(props.data.brand)} </p>
             </div>
             <div className="product-details-categories-labels animated fadeInLeft">
               <p>Product type:</p>
-              <p>{props.data.product_type} </p>
+              <p>{formatProductText(props.data.product_type)} </p>
             </div>
             <div className="product-details-categories-labels animated fadeInLeft">
               <p>Category: </p>
-              <p>{props.data.category}</p>
+              <p>{formatProductText(props.data.category)}</p>
             </div>
           </div>
 

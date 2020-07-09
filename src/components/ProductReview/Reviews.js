@@ -44,11 +44,11 @@ export default function Review({ productId }) {
         setReviews(reviews);
         let avgR = 0;
         reviews.map((val) => {
-          console.log(val.stars);
+          // console.log(val.stars);
           avgR += val.stars; // eslint-disable-next-line
           return;
         });
-        console.log("avgR-------------->", avgR / reviews.length);
+        // console.log("avgR-------------->", avgR / reviews.length);
         setRating(avgR / reviews.length);
       });
   };

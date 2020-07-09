@@ -139,7 +139,13 @@
 
 .product-details-tags {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 20px;
+  @media (max-width: 480px) {
+    // border: 1px solid red;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .product-details-shopinfo {
@@ -220,10 +226,6 @@
 .product-item-description-ratings {
   // margin-left: 15px;
   margin-bottom: 40px;
-}
-
-.product-details-tags {
-  margin-top: 20px;
 }
 
 .product-colors-container {
