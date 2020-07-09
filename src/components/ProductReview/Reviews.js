@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Rate, Popover } from "antd";
 import { DownOutlined, UpOutlined, MoreOutlined } from "@ant-design/icons";
 import firebase from "firebase/app";
-
 import WriteReviewsModal from "../WriteReviewsModal/ReviewsModal";
-
+import { Alert } from "antd";
 import "./Reviews.scss";
 
 export default function Review({ productId }) {
@@ -133,7 +132,7 @@ export default function Review({ productId }) {
       console.log(Err, "ERROR");
     }
   };
-  // console.log(reviews, ">>>>>>>");
+
   return (
     <div className="reviewsHeader">
       <div
@@ -155,6 +154,11 @@ export default function Review({ productId }) {
       {open && currentUser && (
         <div onClick={() => setWriteReviews(true)} className="writeReview">
           Write a review
+        </div>
+      )}
+      {open && !currentUser && (
+        <div className="review-not-signed-in">
+          Please Sign In to write a review.
         </div>
       )}
 
