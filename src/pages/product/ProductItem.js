@@ -87,15 +87,6 @@ function ProductItem(props) {
           </div>
 
           <div className="ProductItem-details-container">
-            <div className="ProductItem-details-alert">
-              <Alert
-                message="Please select a product color &nbsp;"
-                type="warning"
-                style={{ display: colorSelectAlert }}
-                showIcon={true}
-                closable
-              />
-            </div>
             <div className="product-details-shopinfo animated fadeInLeft">
               <h2>${props.data.price} </h2>
               <input
@@ -124,29 +115,38 @@ function ProductItem(props) {
               </div>
             </div>
           </div>
-
-          <div className="wishList-Alert">
-            <Alert
-              message="Item added to Wishlist Successfully"
-              type="success"
-              style={{ display: successAlert }}
-              showIcon={true}
-              closable
-            />
-            <Alert
-              message="View and Manage Wishlist under Profile"
-              type="info"
-              style={{ display: infoAlert }}
-              showIcon={true}
-              closable
-            />
-            <Alert
-              message="Please Sign In to Add Items to Wishlist"
-              type="info"
-              style={{ display: loginAlert }}
-              showIcon={true}
-              closable
-            />
+          <div className="ProductItem-details-container">
+            <div className="wishList-Alert">
+              <Alert
+                message="Please select a product color &nbsp;"
+                type="warning"
+                style={{ display: colorSelectAlert }}
+                // style={{ display: "block" }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Item added to Wishlist"
+                type="success"
+                style={{ display: successAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Manage Wishlist under Profile"
+                type="info"
+                style={{ display: infoAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Sign In to Add Items to Wishlist"
+                type="info"
+                style={{ display: loginAlert }}
+                showIcon={true}
+                closable
+              />
+            </div>
           </div>
 
           <Radio.Group onChange={onChange} className="product-colors-container">
