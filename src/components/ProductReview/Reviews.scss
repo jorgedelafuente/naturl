@@ -6,6 +6,7 @@
   border-radius: 0 0 5px 5px;
   padding: 15px 15px 15px 0;
   font-size: 14px;
+  // background-color: red;
 }
 
 .writeReview {
@@ -14,7 +15,17 @@
   &:hover {
     font-weight: 500;
   }
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  background-color: cadetblue;
+  color: white;
 }
+// .writeReview p {
+//   border-bottom: solid 1px cadetblue;
+// }
 
 .menuItem {
   display: flex;
@@ -23,12 +34,14 @@
 }
 
 .reviewsHeader {
-  border: 1px solid #dcd3d3;
-  box-shadow: 0px 1px 1px;
+  // border: 1px solid #dcd3d3;
+  width: 90%;
+  background-color: rgb(249, 249, 249);
+  // box-shadow: 0px 1px 1px;
   cursor: pointer;
   padding: 15px;
-  max-width: calc(55%);
-  min-width: calc(55%);
+  // max-width: calc(55%);
+  // min-width: calc(55%);
   display: flex;
   align-self: end;
   font-size: 18px;
@@ -40,18 +53,42 @@
     align-items: center;
     justify-content: space-between;
     width: calc(100%);
+    // background-color: blue;
+    color: black;
   }
-  .nameTitle {
+
+  .user-review-emailandmessage-container {
+    // background-color: red;
     display: flex;
-    text-align: left;
-    width: calc(80%);
-    padding: 5px 0 5px 0;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
   }
   .nameDateTitle {
     display: flex;
-    text-align: left;
-    font-weight: 900;
-    width: calc(80%);
-    padding: 5px 0 5px 0;
+    align-items: center;
+    font-weight: 650;
+    // background-color: chartreuse;
+    margin-right: 10px;
   }
+}
+
+.user-review-message {
+  display: flex;
+  align-items: center;
+  // background-color: blue;
+}
+
+.user-review-date {
+  font-weight: 450;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.average-user-ratings {
+  margin-top: 30px;
+  // background-color: red;
+  font-size: 15px;
 }

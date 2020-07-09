@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { addWishList } from "../../firebase";
 // import ProductColor from "../../components/product-details/product-colors";
 import ProductTags from "../../components/product-details/product-tags";
+import Review from "../../components/ProductReview/Reviews";
+import "./productItem.scss";
+
 import { Rate, Radio } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
 import { Alert } from "antd";
@@ -179,16 +182,18 @@ function ProductItem(props) {
             </div>
           </div>
 
+          <ProductTags objItem={props.data} />
+
           <div className="productitem-description-rating animated fadeInLeft">
-            Rating:
             <Rate
               className="product-item-description-ratings animated fadeInLeft"
               disabled
               defaultValue={props.data.rating}
             />
           </div>
-
-          <ProductTags objItem={props.data} />
+          <div className="product-item-user-reviews-container">
+            <Review productId={props.data.id} />
+          </div>
         </div>
       </>
     )
