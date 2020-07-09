@@ -24,12 +24,9 @@ const About = () => {
         Naturl is a culture and movement founded in Los Angeles inspired by
         musicians in the studio, surfers at the beach, and athletes before/after
         the game. Our mission is to inspire cool confidence in our community by
-        embracing uniqueness and individuality.
-      </p>
-      <br />
-      <p className="wow zoomIn">
-        As we grow, our eyes are set on three things: doing truly good business,
-        celebrating individuality globally, and giving back in any way we can.
+        embracing uniqueness and individuality. As we grow, our eyes are set on
+        three things: doing truly good business, celebrating individuality
+        globally, and giving back in any way we can.
       </p>
       <img
         src={require("../../images/about-fadein1.png")}
