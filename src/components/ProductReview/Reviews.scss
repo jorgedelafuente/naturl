@@ -59,37 +59,36 @@
 
   .user-review-emailandmessage-container {
     // background-color: red;
-    // display: flex;
-    // flex-direction: row;
-    // align-items: flex-start;
-    // justify-content: flex-start;
-
-    width: 100%;
-  }
-
-  .nameTitle {
     display: flex;
-    text-align: left;
-    width: calc(80%);
-    padding: 5px 0 5px 0;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
   }
   .nameDateTitle {
     display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-weight: 750;
-    width: calc(80%);
-    padding: 5px 0 5px 0;
+    align-items: center;
+    font-weight: 650;
+    // background-color: chartreuse;
+    margin-right: 10px;
   }
 }
 
 .user-review-message {
-  // background-color: red;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  // background-color: blue;
 }
 
 .user-review-date {
   font-weight: 450;
   margin-top: 5px;
-  // margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.average-user-ratings {
+  margin-top: 30px;
+  // background-color: red;
+  font-size: 15px;
 }

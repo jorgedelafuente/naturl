@@ -10,7 +10,7 @@ import "./Reviews.scss";
 export default function Review({ productId }) {
   const [open, setOpen] = useState(false);
   const [currentUser, setUser] = useState(null);
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]); // eslint-disable-next-line
   const [avgRating, setRating] = useState(0);
   const [writeReview, setWriteReviews] = useState(false);
 
@@ -47,7 +47,7 @@ export default function Review({ productId }) {
         let avgR = 0;
         reviews.map((val) => {
           console.log(val.stars);
-          avgR += val.stars;
+          avgR += val.stars; // eslint-disable-next-line
           return;
         });
         console.log("avgR-------------->", avgR / reviews.length);
@@ -143,7 +143,7 @@ export default function Review({ productId }) {
         }}
         className="heading"
       >
-        NATURL reviews
+        <h4>NATURL reviews</h4>
         {open ? <UpOutlined /> : <DownOutlined />}
         {/* User Reviews
         <span style={{ marginLeft: "auto" }}> </span> avg rating:&nbsp;
@@ -157,6 +157,10 @@ export default function Review({ productId }) {
           Write a review
         </div>
       )}
+
+      {/* <div>
+
+      </div> */}
       {open && reviews.length
         ? reviews.map((val, ind) => (
             <div key={ind.toString()} className="reviewsContent">
@@ -165,7 +169,9 @@ export default function Review({ productId }) {
                   <div className="nameDateTitle">
                     <p>{val.email}</p>
                   </div>
-                  <div className="user-review-message">{val.reviewMsg}</div>
+                  <div className="user-review-message">
+                    <p>{val.reviewMsg}</p>
+                  </div>
                 </div>
 
                 <Popover
@@ -199,17 +205,23 @@ export default function Review({ productId }) {
                 disabled
                 defaultValue={val.stars}
               />
-
               <p className="user-review-date">
                 {val.createTime
                   ? new Date(val.createTime).toDateString()
                   : "26 May 2020"}
               </p>
-
-              {/* <div className="nameTitle">{}</div> */}
             </div>
           ))
         : null}
+
+      <div className="average-user-ratings">
+        <span style={{ marginLeft: "auto" }}> </span> Customer review
+        average:&nbsp;
+        <b style={{ paddingRight: "20px" }}>
+          &nbsp;{isNaN(avgRating) ? "0" : avgRating}/5
+        </b>{" "}
+      </div>
+
       <WriteReviewsModal
         onSendReview={onSendReview}
         productId={productId}
