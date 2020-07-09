@@ -3,7 +3,6 @@ import { Rate, Popover } from "antd";
 import { DownOutlined, UpOutlined, MoreOutlined } from "@ant-design/icons";
 import firebase from "firebase/app";
 import WriteReviewsModal from "../WriteReviewsModal/ReviewsModal";
-import { Alert } from "antd";
 import "./Reviews.scss";
 
 export default function Review({ productId }) {
