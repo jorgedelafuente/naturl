@@ -7,17 +7,22 @@
 .vegan-title {
   display: flex;
   align-items: center;
-  margin-top: 150px;
-  margin-bottom: 100px;
+  // margin-top: 150px;
+  // margin-top: 0px;
+  margin-top: 60px;
+  margin-bottom: 270px;
+  // background-color: black;
   @media (max-width: 768px) and (min-width: 480px) {
     margin-bottom: 100px;
   }
   @media (max-width: 480px) {
+    margin-top: 140px;
     margin-bottom: 0px;
   }
 }
 
 .vegan-title h1 {
+  // color: black;
   color: white;
   font-size: 3rem;
 }
@@ -61,6 +66,12 @@
 
 .veganpage-image {
   position: absolute;
+  z-index: -1;
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 768px;
+    height: 500px;
+    object-fit: scale-down;
+  }
   @media (max-width: 320px) {
     width: 320px;
     height: 250px;
@@ -68,7 +79,7 @@
   }
   @media (max-width: 480px) and (min-width: 325px) {
     width: 375px;
-    height: 250px;
+    height: 480px;
     object-fit: scale-down;
   }
 }

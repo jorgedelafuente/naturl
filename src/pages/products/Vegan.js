@@ -136,8 +136,18 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
 
   return (
     <div className="products-page-container">
-      <img
+      {/* <img
         src={require("../../images/veganproducts.jpg")}
+        alt="makeup-lipstick-colors"
+        className="veganpage-image"
+      /> */}
+      {/* <img
+        src={require("../../images/vegan2.jpg")}
+        alt="makeup-lipstick-colors"
+        className="veganpage-image"
+      /> */}
+      <img
+        src={require("../../images/vegan4.jpg")}
         alt="makeup-lipstick-colors"
         className="veganpage-image"
       />
