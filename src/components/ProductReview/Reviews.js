@@ -158,9 +158,6 @@ export default function Review({ productId }) {
         </div>
       )}
 
-      {/* <div>
-
-      </div> */}
       {open && reviews.length
         ? reviews.map((val, ind) => (
             <div key={ind.toString()} className="reviewsContent">
