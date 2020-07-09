@@ -39,11 +39,11 @@
   padding-left: 5%;
 }
 .about-heading {
-  // font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
   color: #000000;
-  margin-top: 100px;
+  // margin-top: 100px;
   margin-bottom: 50px;
 }
 
@@ -52,7 +52,7 @@
     font-size: 28px;
   }
   @media (max-width: 480px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
@@ -218,9 +218,9 @@
   .bottom-text {
     font-size: 2rem;
   }
-  .about-heading {
-    font-size: 3.5rem;
-  }
+  // .about-heading {
+  //   font-size: 3.5rem;
+  // }
 }
 @media (max-width: 500px) {
   .subscribe-wrapper {
