@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import SimpleTextCard from "./SimpleTextCard";
 import SimpleImageCard from "./SimpleImageCard";
-import { Alert } from "antd";
+// import { Alert } from "antd";
 import "./style.scss";
+import Newsletter from "../../components/newsletter/NewsLetter";
 
 const About = () => {
   const [displayAlert, setDisplayAlert] = useState("none");
 
-  const handleEmailNewsletterSignUp = (e) => {
-    e.preventDefault();
+  const handleEmailNewsletterSignUp = () => {
+    // e.preventDefault();
     setDisplayAlert("block");
     setTimeout(() => {
       setDisplayAlert("none");
@@ -205,7 +206,11 @@ const About = () => {
         `}
         />
       </div>
-      <div className="bottom-text wow zoomIn">
+      <Newsletter
+        handleEmailNewsletterSignUp={handleEmailNewsletterSignUp}
+        displayStatus={displayAlert}
+      />
+      {/* <div className="bottom-text wow zoomIn">
         <p>SUBSCRIBE TO OUR MAILING LIST</p>
       </div>
 
@@ -229,7 +234,7 @@ const About = () => {
         <button className="subscribe" onClick={handleEmailNewsletterSignUp}>
           SUBSCRIBE
         </button>
-      </div>
+      </div>*/}
     </div>
   );
 };
