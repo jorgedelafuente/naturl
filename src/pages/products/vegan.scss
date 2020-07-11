@@ -1,17 +1,21 @@
-.products-page-container {
+.vegan-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 1000px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    min-height: 450px;
+  }
+  @media (max-width: 480px) {
+    min-height: 400px;
+  }
 }
 
 .vegan-title {
   display: flex;
   align-items: center;
-  // margin-top: 150px;
-  // margin-top: 0px;
   margin-top: 60px;
   margin-bottom: 270px;
-  // background-color: black;
   @media (max-width: 768px) and (min-width: 480px) {
     margin-bottom: 100px;
   }
@@ -22,7 +26,6 @@
 }
 
 .vegan-title h1 {
-  // color: black;
   color: white;
   font-size: 3rem;
 }
@@ -52,13 +55,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  // margin-top: 600px;
 }
-
-// .product-card-container {
-//   background-color: greenyellow;
-//   margin-left: 400px;
-// }
 
 .products-categories-container-item {
   margin-bottom: 50px;

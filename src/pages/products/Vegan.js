@@ -23,20 +23,15 @@ const productTags = [
 
 const brandTags = [
   "mineral fusion",
-  "marcelle",
-  "cargo cosmetics",
   "pure anada",
-  "w3llpeople",
   "rejuva minerals",
   "marienatie",
-  "physicians formula",
   "sante",
   "pacifica",
   "zorah",
   "moov",
   "colourpop",
   "penny lane organics",
-  "alva",
   "milani",
   "e.l.f.",
   "dr. hauschka",
@@ -131,20 +126,8 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     setSelectedTags([]);
   }
 
-  // console.log(filtered(originalData));
-
   return (
-    <div className="products-page-container">
-      {/* <img
-        src={require("../../images/veganproducts.jpg")}
-        alt="makeup-lipstick-colors"
-        className="veganpage-image"
-      /> */}
-      {/* <img
-        src={require("../../images/vegan2.jpg")}
-        alt="makeup-lipstick-colors"
-        className="veganpage-image"
-      /> */}
+    <div className="vegan-page-container">
       <img
         src={require("../../images/vegan4.jpg")}
         alt="makeup-lipstick-colors"
