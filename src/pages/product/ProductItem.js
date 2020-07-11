@@ -54,6 +54,9 @@ function ProductItem(props) {
   };
 
   const formatBrandText = (tag) => {
+    if (tag === null) {
+      return "";
+    }
     let wordsArr = tag.split(" ");
     for (let i = 0; i < wordsArr.length; i++) {
       wordsArr[i] =
