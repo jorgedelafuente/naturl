@@ -47,10 +47,14 @@
 
 .drawer-product-type-title {
   color: black;
+  // border: 1px solid red;
 }
 
 .drawer-product-type-tags {
   margin-bottom: 30px;
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
 }
 
 .drawer-product-type-tags .producttype-tags:hover {
@@ -60,4 +64,12 @@
 
 .ant-tag-checkable-checked {
   background-color: cadetblue;
+}
+
+.allproducts-clear-button {
+  color: black;
+}
+
+.allproducts-clear-button:hover {
+  color: #00677d;
 }

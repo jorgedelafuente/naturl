@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import SimpleTextCard from "./SimpleTextCard";
 import SimpleImageCard from "./SimpleImageCard";
-import { Alert } from "antd";
+// import { Alert } from "antd";
 import "./style.scss";
+import Newsletter from "../../components/newsletter/NewsLetter";
 
 const About = () => {
   const [displayAlert, setDisplayAlert] = useState("none");
 
-  const handleEmailNewsletterSignUp = (e) => {
-    e.preventDefault();
+  const handleEmailNewsletterSignUp = () => {
+    // e.preventDefault();
     setDisplayAlert("block");
     setTimeout(() => {
       setDisplayAlert("none");
@@ -24,12 +25,9 @@ const About = () => {
         Naturl is a culture and movement founded in Los Angeles inspired by
         musicians in the studio, surfers at the beach, and athletes before/after
         the game. Our mission is to inspire cool confidence in our community by
-        embracing uniqueness and individuality.
-      </p>
-      <br />
-      <p className="wow zoomIn">
-        As we grow, our eyes are set on three things: doing truly good business,
-        celebrating individuality globally, and giving back in any way we can.
+        embracing uniqueness and individuality. As we grow, our eyes are set on
+        three things: doing truly good business, celebrating individuality
+        globally, and giving back in any way we can.
       </p>
       <img
         src={require("../../images/about-fadein1.png")}
@@ -208,31 +206,10 @@ const About = () => {
         `}
         />
       </div>
-      <div className="bottom-text wow zoomIn">
-        <p>SUBSCRIBE TO OUR MAILING LIST</p>
-      </div>
-
-      <div className="subscribe-wrapper wow zoomIn">
-        <div className="About-EmailSignUp-container-input">
-          <div className="About-EmailSignUp-container-alert">
-            <Alert
-              banner
-              message="A sample email newsletter submit"
-              type="info"
-              showIcon={true}
-              style={{
-                display: displayAlert,
-              }}
-            />
-          </div>
-
-          <input placeholder="email@example.com" className="input-bottom" />
-        </div>
-
-        <button className="subscribe" onClick={handleEmailNewsletterSignUp}>
-          SUBSCRIBE
-        </button>
-      </div>
+      <Newsletter
+        handleEmailNewsletterSignUp={handleEmailNewsletterSignUp}
+        displayStatus={displayAlert}
+      />
     </div>
   );
 };

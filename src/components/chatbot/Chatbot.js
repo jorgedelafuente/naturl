@@ -60,7 +60,7 @@ function CustomChatbot(props) {
   }
 
   function redirectToPowder() {
-    navigate(`/product/1039`);
+    navigate(`/product/442`);
   }
 
   function redirectToPencil() {
@@ -68,24 +68,24 @@ function CustomChatbot(props) {
   }
 
   const steps = [
-    {
-      id: "1",
-      message: "Hello, Welcome to Naturl! Please tell me your name!",
-      trigger: "6",
-    },
-    {
-      id: "6",
-      user: true,
-      trigger: "2",
-    },
-    {
-      id: "2",
-      message: "Hi {previousValue}, Glad to know you !!",
-      trigger: "3",
-    },
+    // {
+    //   id: "1",
+    //   message: "Hello, Welcome to Naturl! Please tell me your name!",
+    //   trigger: "6",
+    // },
+    // {
+    //   id: "6",
+    //   user: true,
+    //   trigger: "2",
+    // },
+    // {
+    //   id: "2",
+    //   message: "Hi {previousValue}, Glad to know you !!",
+    //   trigger: "3",
+    // },
     {
       id: "3",
-      message: "What type of product are you looking for?",
+      message: "Hello, what type of product are you looking for?",
       trigger: "4",
     },
     {

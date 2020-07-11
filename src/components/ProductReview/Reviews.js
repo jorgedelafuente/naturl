@@ -2,15 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Rate, Popover } from "antd";
 import { DownOutlined, UpOutlined, MoreOutlined } from "@ant-design/icons";
 import firebase from "firebase/app";
-
 import WriteReviewsModal from "../WriteReviewsModal/ReviewsModal";
-
 import "./Reviews.scss";
 
 export default function Review({ productId }) {
   const [open, setOpen] = useState(false);
   const [currentUser, setUser] = useState(null);
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]); // eslint-disable-next-line
+  const [avgRating, setRating] = useState(0);
   const [writeReview, setWriteReviews] = useState(false);
 
   const [review, setReview] = useState("");
@@ -43,6 +42,14 @@ export default function Review({ productId }) {
           reviews.push(items);
         });
         setReviews(reviews);
+        let avgR = 0;
+        reviews.map((val) => {
+          // console.log(val.stars);
+          avgR += val.stars; // eslint-disable-next-line
+          return;
+        });
+        // console.log("avgR-------------->", avgR / reviews.length);
+        setRating(avgR / reviews.length);
       });
   };
 
@@ -124,7 +131,7 @@ export default function Review({ productId }) {
       console.log(Err, "ERROR");
     }
   };
-  // console.log(reviews, ">>>>>>>");
+
   return (
     <div className="reviewsHeader">
       <div
@@ -134,18 +141,39 @@ export default function Review({ productId }) {
         }}
         className="heading"
       >
-        Reviews {open ? <UpOutlined /> : <DownOutlined />}
+        <h4>NATURL reviews</h4>
+        {open ? <UpOutlined /> : <DownOutlined />}
+        {/* User Reviews
+        <span style={{ marginLeft: "auto" }}> </span> avg rating:&nbsp;
+        <b style={{ paddingRight: "20px" }}>
+          &nbsp;{isNaN(avgRating) ? "0" : avgRating}
+        </b>{" "}
+        {open ? <UpOutlined /> : <DownOutlined />} */}
       </div>
       {open && currentUser && (
         <div onClick={() => setWriteReviews(true)} className="writeReview">
           Write a review
         </div>
       )}
+      {open && !currentUser && (
+        <div className="review-not-signed-in">
+          Please Sign In to write a review.
+        </div>
+      )}
+
       {open && reviews.length
         ? reviews.map((val, ind) => (
             <div key={ind.toString()} className="reviewsContent">
               <div className="menuItem">
-                {val.reviewMsg}{" "}
+                <div className="user-review-emailandmessage-container">
+                  <div className="nameDateTitle">
+                    <p>{val.email}</p>
+                  </div>
+                  <div className="user-review-message">
+                    <p>{val.reviewMsg}</p>
+                  </div>
+                </div>
+
                 <Popover
                   placement="left"
                   title={""}
@@ -177,16 +205,23 @@ export default function Review({ productId }) {
                 disabled
                 defaultValue={val.stars}
               />
-              <div className="nameDateTitle">
-                {val.email} -{" "}
+              <p className="user-review-date">
                 {val.createTime
                   ? new Date(val.createTime).toDateString()
                   : "26 May 2020"}
-              </div>
-              {/* <div className="nameTitle">{}</div> */}
+              </p>
             </div>
           ))
         : null}
+
+      <div className="average-user-ratings">
+        <span style={{ marginLeft: "auto" }}> </span> Customer review
+        average:&nbsp;
+        <b style={{ paddingRight: "20px" }}>
+          &nbsp;{isNaN(avgRating) ? "0" : avgRating}/5
+        </b>{" "}
+      </div>
+
       <WriteReviewsModal
         onSendReview={onSendReview}
         productId={productId}

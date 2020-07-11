@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import ProductCard from "../../components/product-card/Product-card";
 import { Affix, Drawer, Tag } from "antd";
 import { NodeExpandOutlined } from "@ant-design/icons";
-import "./products.scss";
+import "./gluten.scss";
 import "./filters.scss";
 // import { Slider } from 'antd';
 
@@ -135,20 +135,15 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
 
   return (
     <div className="products-page-container">
-      <div className="products-title wow zoomIn">
+      <img
+        src={require("../../images/glutenfreeproducts.jpg")}
+        alt="makeup-lipstick-colors"
+        className="glutenpage-image"
+      />
+
+      <div className="gluten-title wow zoomIn">
         <h1>{title}</h1>
       </div>
-
-      {/* <img
-        src={require("../../images/allproductsmakeup.jpg")}
-        alt="makeup-lipstick-colors"
-        className="productspage-image"
-      /> */}
-      <img
-        src={require("../../images/manyproductsmakeup.jpg")}
-        alt="makeup-lipstick-colors"
-        className="productspage-image"
-      />
 
       <Affix offsetTop={top}>
         <div

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { addWishList } from "../../firebase";
 // import ProductColor from "../../components/product-details/product-colors";
 import ProductTags from "../../components/product-details/product-tags";
+import Review from "../../components/ProductReview/Reviews";
+import "./productItem.scss";
+
 import { Rate, Radio } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
 import { Alert } from "antd";
@@ -9,11 +12,12 @@ import "./productItem.scss";
 
 function ProductItem(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
+  const [itemColor, setItemColor] = useState(null);
   const [successAlert, setSuccessAlert] = useState("none");
   const [infoAlert, setInfoAlert] = useState("none");
   const [loginAlert, setLoginAlert] = useState("none");
-  const [itemColor, setItemColor] = useState(null);
   const [colorSelectAlert, setColorSelectAlert] = useState("none");
+  const [addedToCartAlert, setAddedToCartAlert] = useState("none");
 
   const handleUpdateItemQuantity = (e) => {
     const quantityToInt = parseInt(e.target.value, 10);
@@ -23,6 +27,10 @@ function ProductItem(props) {
   const handleSelectItemClick = (e) => {
     if (itemQuantity && itemColor) {
       props.onAddToCartClick(props.data.id, itemQuantity, itemColor);
+      setAddedToCartAlert("block");
+      setTimeout(() => {
+        setAddedToCartAlert("none");
+      }, 3000);
       setItemColor(null);
       setItemQuantity(1);
     } else {
@@ -31,6 +39,30 @@ function ProductItem(props) {
         setColorSelectAlert("none");
       }, 3000);
     }
+  };
+
+  const formatProductText = (tag) => {
+    if (tag === null) {
+      return "";
+    }
+    let wordsArr = tag.split("_");
+    for (let i = 0; i < wordsArr.length; i++) {
+      wordsArr[i] =
+        wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
+    }
+    return wordsArr.join(" ");
+  };
+
+  const formatBrandText = (tag) => {
+    if (tag === null) {
+      return "";
+    }
+    let wordsArr = tag.split(" ");
+    for (let i = 0; i < wordsArr.length; i++) {
+      wordsArr[i] =
+        wordsArr[i].charAt(0).toUpperCase() + wordsArr[i].substring(1);
+    }
+    return wordsArr.join(" ");
   };
 
   function onChange(e) {
@@ -84,15 +116,6 @@ function ProductItem(props) {
           </div>
 
           <div className="ProductItem-details-container">
-            <div className="ProductItem-details-alert">
-              <Alert
-                message="Please select a product color &nbsp;"
-                type="warning"
-                style={{ display: colorSelectAlert }}
-                showIcon={true}
-                closable
-              />
-            </div>
             <div className="product-details-shopinfo animated fadeInLeft">
               <h2>${props.data.price} </h2>
               <input
@@ -121,29 +144,44 @@ function ProductItem(props) {
               </div>
             </div>
           </div>
-
-          <div className="wishList-Alert">
-            <Alert
-              message="Item added to Wishlist Successfully"
-              type="success"
-              style={{ display: successAlert }}
-              showIcon={true}
-              closable
-            />
-            <Alert
-              message="View and Manage Wishlist under Profile"
-              type="info"
-              style={{ display: infoAlert }}
-              showIcon={true}
-              closable
-            />
-            <Alert
-              message="Please Sign In to Add Items to Wishlist"
-              type="info"
-              style={{ display: loginAlert }}
-              showIcon={true}
-              closable
-            />
+          <div className="ProductItem-details-container">
+            <div className="wishList-Alert">
+              <Alert
+                message="Item added to Cart"
+                type="success"
+                style={{ display: addedToCartAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Please select a product color &nbsp;"
+                type="warning"
+                style={{ display: colorSelectAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Item added to Wishlist"
+                type="success"
+                style={{ display: successAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Manage Wishlist under Profile"
+                type="info"
+                style={{ display: infoAlert }}
+                showIcon={true}
+                closable
+              />
+              <Alert
+                message="Sign In to Add Items to Wishlist"
+                type="info"
+                style={{ display: loginAlert }}
+                showIcon={true}
+                closable
+              />
+            </div>
           </div>
 
           <Radio.Group onChange={onChange} className="product-colors-container">
@@ -167,28 +205,30 @@ function ProductItem(props) {
           <div className="product-details-categories-container">
             <div className="product-details-categories-labels">
               <p>Brand:</p>
-              <p>{props.data.brand} </p>
+              <p>{formatBrandText(props.data.brand)} </p>
             </div>
             <div className="product-details-categories-labels animated fadeInLeft">
               <p>Product type:</p>
-              <p>{props.data.product_type} </p>
+              <p>{formatProductText(props.data.product_type)} </p>
             </div>
             <div className="product-details-categories-labels animated fadeInLeft">
               <p>Category: </p>
-              <p>{props.data.category}</p>
+              <p>{formatProductText(props.data.category)}</p>
             </div>
           </div>
 
+          <ProductTags objItem={props.data} />
+
           <div className="productitem-description-rating animated fadeInLeft">
-            Rating:
             <Rate
               className="product-item-description-ratings animated fadeInLeft"
               disabled
               defaultValue={props.data.rating}
             />
           </div>
-
-          <ProductTags objItem={props.data} />
+          <div className="product-item-user-reviews-container">
+            <Review productId={props.data.id} />
+          </div>
         </div>
       </>
     )

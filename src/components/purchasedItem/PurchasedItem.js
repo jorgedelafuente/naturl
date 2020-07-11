@@ -27,16 +27,20 @@ export default function PurchasedItem({
       </div>
       <div className="PurchasedItem-details-success">
         <div className="PurchasedItem-selected-color-container">
-          {selectedColors.map((color) => (
-            <>
-              <span
-                key={color}
-                className="PurchasedItem-selected-color"
-                style={{ backgroundColor: color }}
-              ></span>
-              <span>&nbsp;</span>
-            </>
-          ))}
+          {selectedColors.length > 0 ? (
+            selectedColors.map((color) => (
+              <>
+                <span
+                  key={color}
+                  className="PurchasedItem-selected-color"
+                  style={{ backgroundColor: color }}
+                ></span>
+                <span>&nbsp;</span>
+              </>
+            ))
+          ) : (
+            <></>
+          )}
         </div>
         <div className="PurchasedItem-quantity">Qty: {quantity}</div>
         <div>${cost.toFixed(2)}</div>

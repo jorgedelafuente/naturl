@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Input, Rate } from "antd";
+import "./ReviewsModal.scss";
 
 const { TextArea } = Input;
 
@@ -11,10 +12,8 @@ export default function ReviewsModal({
   setStars,
   stars,
   review,
-  setReview
+  setReview,
 }) {
-
-
   return (
     <>
       <Modal

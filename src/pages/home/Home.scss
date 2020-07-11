@@ -1,12 +1,12 @@
 #Home-Main {
-  max-width: 100vw;
+  max-width: 100%;
 }
 .category__Main {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-around;
-  margin-right: auto;
+  // margin-right: auto;
   padding-left: 5%;
 }
 .category__Main_feature {
@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-around;
-  margin-right: auto;
+  // margin-right: auto;
   padding-left: 5%;
 }
 
@@ -32,6 +32,7 @@
   background-image: url(../../images/photo-1470259078422-826894b933aa.jpg);
   background-position: center;
   background-size: cover;
+  width: 100vw;
   height: 80vh;
   position: relative;
   background-color: white;
@@ -41,6 +42,7 @@
   background-position: center;
   background-size: cover;
   height: 80vh;
+  width: 100vw;
   position: relative;
   background-color: white;
 }
@@ -49,6 +51,7 @@
   background-position: center;
   background-size: cover;
   height: 80vh;
+  width: 100vw;
   position: relative;
   background-color: white;
 }
@@ -66,12 +69,12 @@
   color: white;
   margin-top: 300px;
   @media (max-width: 768px) and (min-width: 480px) {
-    margin-top: 250px;
-    font-size: 45px;
+    margin-top: 50px;
+    font-size: 35px;
   }
   @media (max-width: 480px) {
-    margin-top: 250px;
-    font-size: 45px;
+    margin-top: 50px;
+    font-size: 35px;
   }
 }
 .Carousel_Text a:hover {
@@ -88,7 +91,7 @@
   margin-bottom: 20px;
   flex: 1 0 40%;
   min-width: 300px;
-  margin-right: auto;
+  // margin-right: auto;
 }
 .left-Card-main-image {
   width: 100%;
@@ -177,9 +180,6 @@
 }
 
 .About__text {
-  // letter-spacing: 5%;
-  // line-height: 145%;
-  // width: 80%;
   text-align: center;
   margin: 40px auto;
   font-size: 15pt;
@@ -195,7 +195,7 @@
   background-color: black;
   height: 90px;
   margin-bottom: 0px !important;
-  font-family: Vidaloka;
+  // font-family: Vidaloka;
   letter-spacing: 10px;
 }
 

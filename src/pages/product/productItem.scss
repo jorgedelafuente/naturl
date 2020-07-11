@@ -139,7 +139,13 @@
 
 .product-details-tags {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 20px;
+  @media (max-width: 480px) {
+    // border: 1px solid red;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .product-details-shopinfo {
@@ -218,11 +224,8 @@
 }
 
 .product-item-description-ratings {
-  margin-left: 15px;
-}
-
-.product-details-tags {
-  margin-top: 20px;
+  // margin-left: 15px;
+  margin-bottom: 40px;
 }
 
 .product-colors-container {
@@ -230,6 +233,10 @@
   flex: row;
   flex-wrap: wrap;
   margin-bottom: 40px;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
 }
 
 .product-color-dots {
@@ -241,51 +248,6 @@
   overflow: hidden;
   text-decoration: none;
 }
-
-.ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
-  border-right-color: white;
-}
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
-  border-color: white;
-  text-decoration: none;
-}
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  z-index: 1;
-  color: white;
-  background: white;
-  border-color: white;
-  border-radius: 50px;
-  border: 1px solid white;
-  text-decoration: none;
-  -fx-background-color: white;
-}
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
-  z-index: 1;
-  color: none;
-  background: none;
-  border-color: white;
-  -fx-background-color: white;
-  // border-radius: 50px;
-  // border: 1px solid white;
-  // text-decoration: none;
-}
-
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::selection {
-  color: #fff;
-  background: white;
-  -fx-background-color: white;
-}
-
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
-  background-color: white;
-  fx-focus-traversable: false;
-  fx-background-color: white;
-}
-
-// ::selection {
-//   color: #fff;
-//   background: white;
-// }
 
 .ProductItem-Icon-Heart {
   margin-left: 40px;
@@ -301,6 +263,18 @@
 .wishlist-icon-heart:hover {
   color: red;
   cursor: pointer;
+}
+
+.wishlist-icon-heart {
+  margin-left: 40px;
+  font-size: 35px;
+  color: black;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 480px) {
+    margin-left: 20px;
+  }
 }
 
 .ProductItem-Alert-Container {
@@ -326,12 +300,34 @@
   position: relative;
 }
 
-.ProductItem-details-alert {
+.wishList-Alert {
   position: absolute;
-  top: -10px;
+  top: -45px;
 
   @media (max-width: 480px) {
-    top: -35px;
+    top: -45px;
     width: 286px;
   }
+}
+
+.product-item-user-reviews-container {
+  // background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
+  border-right-color: white;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+  border-color: white;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  border-color: white;
+  border-radius: 50px;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  border-color: white;
 }
