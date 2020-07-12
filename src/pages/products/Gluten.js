@@ -26,7 +26,6 @@ const brandTags = [
   "marcelle",
   "cargo cosmetics",
   "pure anada",
-  "w3llpeople",
   "rejuva minerals",
   "marienatie",
   "physicians formula",
@@ -34,15 +33,7 @@ const brandTags = [
   "pacifica",
   "zorah",
   "moov",
-  "colourpop",
   "penny lane organics",
-  "alva",
-  "milani",
-  "e.l.f.",
-  "dr. hauschka",
-  "suncoat",
-  "misa",
-  "butter london",
 ];
 
 const Products = ({ data, title, wishList, setWishList, userId }) => {
@@ -131,10 +122,8 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     setSelectedTags([]);
   }
 
-  // console.log(filtered(originalData));
-
   return (
-    <div className="products-page-container">
+    <div className="gluten-page-container">
       <img
         src={require("../../images/glutenfreeproducts.jpg")}
         alt="makeup-lipstick-colors"

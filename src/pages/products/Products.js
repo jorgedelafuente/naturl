@@ -26,7 +26,6 @@ const brandTags = [
   "marcelle",
   "cargo cosmetics",
   "pure anada",
-  "w3llpeople",
   "rejuva minerals",
   "marienatie",
   "physicians formula",
@@ -36,7 +35,6 @@ const brandTags = [
   "moov",
   "colourpop",
   "penny lane organics",
-  "alva",
   "milani",
   "e.l.f.",
   "dr. hauschka",
@@ -131,19 +129,11 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
     setSelectedTags([]);
   }
 
-  // console.log(filtered(originalData));
-
   return (
     <div className="products-page-container">
       <div className="products-title wow zoomIn">
         <h1>{title}</h1>
       </div>
-
-      {/* <img
-        src={require("../../images/allproductsmakeup.jpg")}
-        alt="makeup-lipstick-colors"
-        className="productspage-image"
-      /> */}
       <img
         src={require("../../images/manyproductsmakeup.jpg")}
         alt="makeup-lipstick-colors"
