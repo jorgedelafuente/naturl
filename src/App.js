@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Router } from "@reach/router";
+import ReactGA from "react-ga";
 import { AuthProvider } from "./auth/Auth";
 import ApiClient from "./services/ApiClient";
 import NavBar from "./components/navbar/NavBar";
@@ -10,7 +11,6 @@ import SignUp from "./pages/auth/signup/SignUp";
 import Products from "./pages/products/Products";
 import Vegan from "./pages/products/Vegan";
 import Gluten from "./pages/products/Gluten";
-
 import Profile from "./pages/auth/profile/Profile";
 import NotFound from "./pages/notfound/NotFound";
 import Product from "./pages/product/Product";
@@ -19,6 +19,12 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import "./App.scss";
 import ManageScroll from "./scroll";
+
+function initializeReactGA() {
+  ReactGA.initialize("UA-172493133-1");
+  ReactGA.pageview("/");
+}
+initializeReactGA();
 
 function App() {
   const [productData, setData] = useState([]);
