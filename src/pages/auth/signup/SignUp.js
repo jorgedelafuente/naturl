@@ -19,7 +19,9 @@ const SignUp = ({ setWishList }) => {
           const { user } = await firebase
             .auth()
             .createUserWithEmailAndPassword(email.value, password.value);
-          await createUserProfileDocument(user, displayName.value);
+          await createUserProfileDocument(user, displayName.value).then(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
           setWishList([]);
           setSuccessAlert("block");
           setTimeout(() => {
