@@ -4,8 +4,6 @@ An online e-commerce boilerplate store based on the JAM stack. The SPA app provi
 
 ## Deployed Site
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f76d5daa-4c5d-4f5c-82f7-cd75fd1e649e/deploy-status)](https://naturl.netlify.app/ )
-
 Visit the live demo store at https://naturl.netlify.app/
 We recommend signing in for full experience. Guest credentials found below: 
 
