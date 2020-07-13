@@ -1,13 +1,13 @@
 # NATURL
 
-An online e-commerce boilerplate store based on the JAM stack. The SPA app provides all the functionality necessary for a merchant to display their merchandise to customers, build a customer database, and collect a payment within hours. 
+An online e-commerce boilerplate store based on the JAM stack. The SPA app provides all the functionality necessary for a merchant to display their merchandise to customers, build a customer database, and collect a payment within hours.
 
 ## Deployed Site
 
 Visit the live demo store at https://naturl.netlify.app/
-We recommend signing in for a full experience. Guest credentials found below: 
+We recommend signing in for a full experience. Guest credentials found below:
 
- Guest credentials: guest@guest.com 123456
+Guest credentials: guest@guest.com 123456
 
 ## Screenshots
 
@@ -15,11 +15,63 @@ We recommend signing in for a full experience. Guest credentials found below:
  <img src="assets/naturl_readme.png" />
 </p>
 
+## User interface
+
+1. Home
+<p align="center">
+ <img src="assets/home.png" />
+</p>
+
+2. Products
+<p align="center">
+  <img src="assets/products.png" />
+</p>
+
+3. Product Filters
+<p align="center">
+ <img src="assets/productFilters.png" />
+</p>
+
+4. Gluten free
+<p align="center">
+ <img src="assets/glutenFree.png" />
+</p>
+
+5. Individual product
+<p align="center">
+ <img src="assets/individualProduct.png" />
+</p>
+
+6. Checkout
+<p align="center">
+ <img src="assets/checkout.png" />
+</p>
+
+7. Recomendations
+<p align="center">
+ <img src="assets/recomendations.png" />
+</p>
+
+8. Payment
+<p align="center">
+ <img src="assets/payment.png" />
+</p>
+
+9. Ticket
+<p align="center">
+ <img src="assets/ticket.png" />
+</p>
+
+10. Wishlist
+<p align="center">
+ <img src="assets/wishlist.png" />
+</p>
+
 ## Getting started
 
-* To run the project you will need Git, Node, and npm installed.
-* Create a Stripe Account as you will need your own set of keys.
-* Create a Firebase Account as you will need your own set of keys.
+- To run the project you will need Git, Node, and npm installed.
+- Create a Stripe Account as you will need your own set of keys.
+- Create a Firebase Account as you will need your own set of keys.
 
 ## Installation
 
@@ -30,38 +82,38 @@ We recommend signing in for a full experience. Guest credentials found below:
 
 ## Environment Variables
 
-Create a .env file in the **client** folder with the following variables: 
+Create a .env file in the **client** folder with the following variables:
 
- SKIP_PREFLIGHT_CHECK=true
- REACT_APP_FIREBASE_KEY=YOUR_FIREBASE_KEY
- REACT_APP_FIREBASE_DOMAIN=YOUR_FIREBASE_DOMAIN
- REACT_APP_FIREBASE_DATABASE=YOUR_FIREBASE_DATABASE
- REACT_APP_FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
- REACT_APP_FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE_BUCKET
- REACT_APP_FIREBASE_SENDER_ID=YOUR_FIREBASE_SENDER_ID
- REACT_APP_STRIPE_CHECKOUT_PK=YOUR_STRIPE_PK
- REACT_APP_STRIPE_CHECKOUT_SK=YOUR_STRIPE_SK
- REACT_APP_DOMAIN=YOUR_APP_DOMAIN
+SKIP_PREFLIGHT_CHECK=true
+REACT_APP_FIREBASE_KEY=YOUR_FIREBASE_KEY
+REACT_APP_FIREBASE_DOMAIN=YOUR_FIREBASE_DOMAIN
+REACT_APP_FIREBASE_DATABASE=YOUR_FIREBASE_DATABASE
+REACT_APP_FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+REACT_APP_FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE_BUCKET
+REACT_APP_FIREBASE_SENDER_ID=YOUR_FIREBASE_SENDER_ID
+REACT_APP_STRIPE_CHECKOUT_PK=YOUR_STRIPE_PK
+REACT_APP_STRIPE_CHECKOUT_SK=YOUR_STRIPE_SK
+REACT_APP_DOMAIN=YOUR_APP_DOMAIN
 
 For local development, REACT_APP_DOMAIN would be http://localhost:3000 (replace port 3000 if using a different port).
 
 ## Built with
 
-* [React](https://reactjs.org/) - Front end library for building user interfaces.
+- [React](https://reactjs.org/) - Front end library for building user interfaces.
 
-* [Reach Router](https://reach.tech/router/) - Next-generation Routing for React.
+- [Reach Router](https://reach.tech/router/) - Next-generation Routing for React.
 
-* [Stripe API](https://stripe.com/docs/api) - An API service that allows users to accept payments online. 
+- [Stripe API](https://stripe.com/docs/api) - An API service that allows users to accept payments online.
 
-* [Firebase](https://facebook.github.io/react-native) - A web application development platform used for realtime database and authentication.
+- [Firebase](https://facebook.github.io/react-native) - A web application development platform used for realtime database and authentication.
 
-* [Sass](https://sass-lang.com/) - A powerful CSS extension language.
+- [Sass](https://sass-lang.com/) - A powerful CSS extension language.
 
-* [Ant D](https://ant.design/) - A design system for enterprise-level products.
+- [Ant D](https://ant.design/) - A design system for enterprise-level products.
 
 ## Developers
 
-* Sofiya Lazarova - [GitHub](https://github.com/sofiyaca) - [LinkedIn](https://www.linkedin.com/in/sofiyalazarova/)
-* Jorge de La Fuente - [GitHub](https://github.com/jorgedelafuente) - [LinkedIn](https://www.linkedin.com/in/jorgedelafuente/)
-* Juan Carrillo - [GitHub](https://github.com/juanpc10) - [LinkedIn](https://www.linkedin.com/in/juan-pablo-carrillo-5802981b2/)
-* Chris Akua - [GitHub](https://github.com/ChrisAs) - [LinkedIn](https://www.linkedin.com/in/chris-a-5376541b2/)
+- Sofiya Lazarova - [GitHub](https://github.com/sofiyaca) - [LinkedIn](https://www.linkedin.com/in/sofiyalazarova/)
+- Jorge de La Fuente - [GitHub](https://github.com/jorgedelafuente) - [LinkedIn](https://www.linkedin.com/in/jorgedelafuente/)
+- Juan Carrillo - [GitHub](https://github.com/juanpc10) - [LinkedIn](https://www.linkedin.com/in/juan-pablo-carrillo-5802981b2/)
+- Chris Akua - [GitHub](https://github.com/ChrisAs) - [LinkedIn](https://www.linkedin.com/in/chris-a-5376541b2/)
