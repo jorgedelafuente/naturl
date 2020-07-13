@@ -32,12 +32,12 @@ Guest credentials: guest@guest.com 123456
  <img src="assets/productFilters.png" />
 </p>
 
-4. Gluten free
+4. Gluten Free
 <p align="center">
- <img src="assets/glutenFree.png" />
+ <img src="assets/glutenfree.png" />
 </p>
 
-5. Individual product
+5. Individual Product
 <p align="center">
  <img src="assets/individualProduct.png" />
 </p>
@@ -47,7 +47,7 @@ Guest credentials: guest@guest.com 123456
  <img src="assets/checkout.png" />
 </p>
 
-7. Recomendations
+7. Recommendations
 <p align="center">
  <img src="assets/recomendations.png" />
 </p>
