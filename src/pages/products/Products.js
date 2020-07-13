@@ -7,35 +7,6 @@ import "./products.scss";
 import "./filters.scss";
 // import { Slider } from 'antd';
 
-<<<<<<< HEAD
-
-import ProductItem from "../../components/product-card/Product-card";
-
-function Products(data) {
-
-  const datad = data.data;
-  console.log(datad);
-  
-
-  return (
-    <div className="products-page-container">
-      <div className="products-title" >
-        <h1>Products</h1>
-      </div>
-      <div className="products-labels-and-filter">
-        <a className="products-allproducts-label" href="/">All products</a><a href="/">Product types/ Filter</a>
-      </div>
-      
-      
-      <div className="products-categories-container">
-    
-
-          {
-            datad.map(item => (<ProductItem image={item.image_link}  name={item.name} price={item.price} />))
-          }
-
-
-=======
 const { CheckableTag } = Tag;
 
 const productTags = [
@@ -272,7 +243,6 @@ const Products = ({ data, title, wishList, setWishList, userId }) => {
         ) : (
           <div>No Products match Criteria</div>
         )}
->>>>>>> a2f6b2c75de27abbe2d2d95f6c42cec46930bcbd
       </div>
     </div>
   );
@@ -285,6 +255,5 @@ Products.propTypes = {
   userId: PropTypes.string,
   setWishList: PropTypes.func,
 };
-
 
 export default Products;
