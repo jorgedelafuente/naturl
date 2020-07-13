@@ -1,11 +1,11 @@
-$greyblack: #262626;
-$bluegreen: #00677d;
-$purple-color: #63418f;
+// $greyblack: #262626;
+// $bluegreen: #00677d;
+// $purple-color: #63418f;
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   // font-family: 'Roboto', Helvetica, monospace;
   -webkit-font-smoothing: antialiased;
@@ -18,9 +18,16 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  --antd-wave-shadow-color: white;
+  --scroll-bar: 0;
+}
+
 main {
   // width: 90%;
   margin: 0 auto;
+  margin-top: 100px; // This ensure the space between the navbar and the start of the page is always 40px
+  margin-bottom: 100px;
 }
 
 button {

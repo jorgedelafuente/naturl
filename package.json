@@ -1,5 +1,5 @@
 {
-  "name": "front-end",
+  "name": "Naturl",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,14 +11,16 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.14",
+    "animate.css": "^4.1.0",
     "antd": "^4.4.0",
     "firebase": "^7.15.5",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
+    "react-ga": "^3.1.2",
     "react-scripts": "3.4.1",
     "react-stripe-elements": "^6.1.2",
+    "stripe": "^8.68.0",
     "styled-components": "^5.1.1"
   },
   "scripts": {

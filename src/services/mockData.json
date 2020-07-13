@@ -149,7 +149,7 @@
     "id": 1039,
     "brand": "w3llpeople",
     "name": " Realist Invisible Setting Powder",
-    "price": "0.0",
+    "price": "1.99",
     "price_sign": "$",
     "currency": "USD",
     "image_link": "https://www.purpicks.com/wp-content/uploads/2018/06/w3llpeople-Realist-Invisible-Setting-Powder.jpg",
@@ -167,31 +167,10 @@
     "product_colors": [{ "hex_value": "#E8E6E7", "colour_name": "Translucent" }]
   },
   {
-    "id": 1032,
-    "brand": "rejuva minerals",
-    "name": "Bronzer - loose",
-    "price": "0.0",
-    "price_sign": "$",
-    "currency": "USD",
-    "image_link": "https://www.purpicks.com/wp-content/uploads/2018/03/rejuva-minerals-bronzer.jpg",
-    "product_link": "https://www.purpicks.com/product/rejuva-minerals-bronzer-caribbean/",
-    "website_link": "https://purpicks.com/",
-    "description": "Caribbean is a multi-purpose shade that is suitable for medium-tan skin tones. This shade may be used as a bronzer, or as a contour shade. \u003cul\u003e\u003cli\u003eOur bronzer has been enhanced with Fruits, Botanicals and Clays for their natural color, fragrance and antioxidant benefits!\u003c/li\u003e\u003cli\u003eBlended with Certified Organics Fruits and Botanicals\u003c/li\u003e\u003cli\u003eFormulated with common skin irritants.\u003c/li\u003e\u003cli\u003eOur bronzer will offer a natural “ultra sheer” semi-matte finish.\u003c/li\u003e\u003cli\u003eMade without any gluten containing ingredients\u003c/li\u003e\u003cli\u003eVEGAN!\u003c/li\u003e\u003cli\u003eEco Friendly jars!\u003c/li\u003e\u003c/ul\u003e",
-    "rating": null,
-    "category": "powder",
-    "product_type": "bronzer",
-    "tag_list": ["Gluten Free", "Vegan", "EWG Verified", "purpicks"],
-    "created_at": "2018-06-30T19:19:31.682Z",
-    "updated_at": "2018-09-02T22:52:06.643Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1032.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/032/original/open-uri20180630-4-1bl3btv?1530390381",
-    "product_colors": [{ "hex_value": "#A37948", "colour_name": "Caribbean" }]
-  },
-  {
     "id": 1031,
     "brand": "rejuva minerals",
     "name": "Bronzer - pressed",
-    "price": "0.0",
+    "price": "1.99",
     "price_sign": "$",
     "currency": "USD",
     "image_link": "https://www.purpicks.com/wp-content/uploads/2018/03/rejuva-minerals-bronzer.jpg",
@@ -212,45 +191,10 @@
     ]
   },
   {
-    "id": 1030,
-    "brand": "penny lane organics",
-    "name": "Lip Gloss",
-    "price": "0.0",
-    "price_sign": "$",
-    "currency": "USD",
-    "image_link": "https://www.purpicks.com/wp-content/uploads/csm/sunset-bronze-pennylaneorganics1.jpg",
-    "product_link": "https://www.purpicks.com/product/penny-lane-organics-lip-gloss/",
-    "website_link": "https://purpicks.com/",
-    "description": "For fuller healthier lips! Long lasting colour! This colour is a good choice for any skin tone. It can be made lighter by wiping some off after application.Please note that our Vitamin E is extracted from non-GMO soy bean oil and therefore is gluten-free.",
-    "rating": null,
-    "category": "lip_gloss",
-    "product_type": "lipstick",
-    "tag_list": [
-      "Gluten Free",
-      "Chemical Free",
-      "Vegan",
-      "CertClean",
-      "purpicks"
-    ],
-    "created_at": "2018-06-30T19:19:31.534Z",
-    "updated_at": "2018-09-02T22:52:06.618Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1030.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/030/original/open-uri20180630-4-ucbwbt?1530390380",
-    "product_colors": [
-      { "hex_value": "#8E2432", "colour_name": "Tropical Fuschia" },
-      { "hex_value": "#511617", "colour_name": "Sweet Cherry" },
-      { "hex_value": "#783F30", "colour_name": "Sunset Bronze" },
-      { "hex_value": "#B05665", "colour_name": "Pink Shimmer" },
-      { "hex_value": "#6F2633", "colour_name": "Pearl Pink" },
-      { "hex_value": "#4F1314", "colour_name": "Fiery Red" },
-      { "hex_value": "#2F1513", "colour_name": "Black Cherry" }
-    ]
-  },
-  {
     "id": 1023,
     "brand": "marienatie",
     "name": "Lipstick",
-    "price": "0.0",
+    "price": "1.99",
     "price_sign": "$",
     "currency": "USD",
     "image_link": "https://www.purpicks.com/wp-content/uploads/csm/Evelyn_Pic1.jpg",
@@ -271,27 +215,6 @@
       { "hex_value": "#B03B3E", "colour_name": "Rosie" },
       { "hex_value": "#9D5E4F", "colour_name": "Evelyn" }
     ]
-  },
-  {
-    "id": 1021,
-    "brand": "marienatie",
-    "name": "Gel Liner",
-    "price": "0.0",
-    "price_sign": "$",
-    "currency": "USD",
-    "image_link": "https://www.purpicks.com/wp-content/uploads/csm/Photo10_12001.jpg",
-    "product_link": "https://www.purpicks.com/product/marie-natie-gel-liner/",
-    "website_link": "https://purpicks.com/",
-    "description": "This smooth and creamy formula from MarieNatie will provide a silky soft and non-oily finish. It glides on evenly to deliver immediate results.",
-    "rating": null,
-    "category": "gel",
-    "product_type": "eyeliner",
-    "tag_list": ["Gluten Free", "Vegan", "CertClean", "purpicks"],
-    "created_at": "2018-06-30T19:19:30.898Z",
-    "updated_at": "2018-09-02T22:52:06.494Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1021.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/021/original/open-uri20180630-4-10sgmvz?1530390373",
-    "product_colors": [{ "hex_value": "#000000", "colour_name": "Black" }]
   },
   {
     "id": 507,
@@ -426,33 +349,6 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/479.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/479/original/data?1514063328",
     "product_colors": []
-  },
-  {
-    "id": 469,
-    "brand": null,
-    "name": "Saint Cosmetics Blush",
-    "price": "28.96",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/ed6e230c6394a3c6d1904fcd02a4ae3a_ra,w158,h184_pa,w158,h184.png",
-    "product_link": "https://well.ca/products/saint-cosmetics-blush_116825.html",
-    "website_link": "https://well.ca",
-    "description": "Create naturally flushed looking cheeks with Saint Cosmetics' blush formulations. Designed to be worn alone or layered for more depth.Features: An ultra-blendable blush with a long-lasting formulaSilky smooth finishCreates a multi-dimensional lookMade in Canada from naturally derived ingredientsChemical Free, Vegan, Gluten Free",
-    "rating": null,
-    "category": "powder",
-    "product_type": "blush",
-    "tag_list": ["Canadian", "Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:35:28.524Z",
-    "updated_at": "2017-12-23T21:08:42.899Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/469.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/469/original/open-uri20171223-4-i60yfu?1514063322",
-    "product_colors": [
-      { "hex_value": "#EC8389", "colour_name": "Peaching To The Choir " },
-      { "hex_value": "#C7797B", "colour_name": "Passionate Plum " },
-      { "hex_value": "#EE8581", "colour_name": "Luv Me Gently " },
-      { "hex_value": "#E88C90", "colour_name": "Get Me To The Alter " },
-      { "hex_value": "#F591A6", "colour_name": "Cheeky Cherub " }
-    ]
   },
   {
     "id": 462,
@@ -767,29 +663,6 @@
       { "hex_value": "#cc7e68", "colour_name": "Natural " },
       { "hex_value": "#863e4c", "colour_name": "Cool Berry " },
       { "hex_value": "#a25d60", "colour_name": "Cinnamon " }
-    ]
-  },
-  {
-    "id": 392,
-    "brand": "sante",
-    "name": "Sante Lip Duo Contour and Gloss Pencil",
-    "price": "20.49",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/d203321e1481ff3e90906b92c960c524_ra,w158,h184_pa,w158,h184.png",
-    "product_link": "https://well.ca/products/sante-lip-duo-contour-and-gloss_51588.html",
-    "website_link": "https://well.ca",
-    "description": "Sante Lip Duo Pencils have two products in one. A lipliner for perfect contours \nand lipgloss for a sexy finish. They come in trendy colors and have a moisturizing texture.  \nVegan and gluten-free. Not tested on animals.Colours:",
-    "rating": 4.4,
-    "category": null,
-    "product_type": "lip_liner",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:33:33.446Z",
-    "updated_at": "2017-12-23T21:08:38.219Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/392.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/392/original/open-uri20171223-4-jjp4xg?1514063318",
-    "product_colors": [
-      { "hex_value": "#93474f", "colour_name": "No.3 Glamorous Look " }
     ]
   },
   {
@@ -1138,32 +1011,6 @@
     "product_colors": []
   },
   {
-    "id": 283,
-    "brand": "pacifica",
-    "name": "Pacifica Enlighten Eye Brightening Shadow Palette",
-    "price": "28.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/eea39137208ea1ea7754c6c6e95689c5_ra,w158,h184_pa,w158,h184.jpeg",
-    "product_link": "https://well.ca/products/pacifica-enlighten-eye-brightening_77797.html",
-    "website_link": "https://well.ca",
-    "description": "An incredibly innovative formula that pushes mineral makeup color to new bounds.  Rich, lasting, ceaseless eye shadows are infused with coconut water for a velvety, cream-like finish.  These four highly pigmented mineral satin makeup and iridescent shades are specially curated are designed to brighten the eyes and make you look gorgeous and awake.  (Even when you did not get a good night's sleep!) Includes 4 Beautiful Shades:Urchin - An iridescent jeweled purple with gold tones.  Use dry as a shadow, wet as a liner.  Perfect for smudging and a great substitute for black.Golden - A perfect gold with just the right amount of shimmer.  Use on the lids or line the eyes.Coral Sand - A satin lid base or highlighter. Skinny Dip - Matte nude base, a universal brightener.  Perfect for using on the inner eye to add brightness.Formulated without: Phthalates, parabens, carmine, beeswax, lanolin, mineral oils, propylene glycol, petroleum and FD\u0026 C colors (along with other nasties you do not want on your skin).  No animal testing. Gluten-free, 100% vegan and cruelty-free.Ingredients: Coral Sand Ingredients: Mica, Zinc Stearate, Ethylhexyl Stearate(Plant Source), , Cocos Nucifera (Coconut) Oil, Carthamus Tinctorius(Safflower) Seed Oil, Macrocystis, Pyrifera (Brown Kelp) Extract, Panax (Ginseng) Root Extract. May Contain: Silica, Dimethicone, Calcium Sodium Borosilicate, Tin Oxide, Titanium Dioxide, CI 7789, Ferric Ferrocyanide CI77510, Iron Oxides C1 77491, CI 77742, C177499.Skinny Dip Ingredients: Mica, Zinc Stearate, Ethylhexyl Stearate(Plant Source), , Cocos Nucifera (Coconut) Oil, Carthamus Tinctorius(Safflower) Seed Oil, Macrocystis, Pyrifera (Brown Kelp) Extract, Panax (Ginseng) Root Extract. May Contain: Silica, Dimethicone, Calcium Sodium Borosilicate, Tin Oxide, Titanium Dioxide, CI 7789, Ferric Ferrocyanide CI77510, Iron Oxides C1 77491, CI 77742, C177499.Urchin Ingredients: Mica, Zinc Stearate, Ethylhexyl Stearate(Plant Source), , Cocos Nucifera (Coconut) Oil, Carthamus Tinctorius(Safflower) Seed Oil, Macrocystis, Pyrifera (Brown Kelp) Extract, Panax (Ginseng) Root Extract. May Contain: Silica, Dimethicone, Calcium Sodium Borosilicate, Tin Oxide, Titanium Dioxide, CI 7789, Ferric Ferrocyanide CI77510, Iron Oxides C1 77491, CI 77742, C177499.Golden Ingredients: Mica, Zinc Stearate, Ethylhexyl Stearate(Plant Source), , Cocos Nucifera (Coconut) Oil, Carthamus Tinctorius(Safflower) Seed Oil, Macrocystis, Pyrifera (Brown Kelp) Extract, Panax (Ginseng) Root Extract. May Contain: Silica, Dimethicone, Calcium Sodium Borosilicate, Tin Oxide, Titanium Dioxide, CI 7789, Ferric Ferrocyanide CI77510, Iron Oxides C1 77491, CI 77742, C177499.",
-    "rating": 4.6,
-    "category": "palette",
-    "product_type": "eyeshadow",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:30:16.741Z",
-    "updated_at": "2017-12-26T00:33:00.629Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/283.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/283/original/data?1514063293",
-    "product_colors": [
-      { "hex_value": "#664E51", "colour_name": "color 4" },
-      { "hex_value": "#BB8D59", "colour_name": "color 3" },
-      { "hex_value": "#BE866B", "colour_name": "color 2" },
-      { "hex_value": "#BF9D87", "colour_name": "color 1" }
-    ]
-  },
-  {
     "id": 278,
     "brand": "pacifica",
     "name": "Pacifica Radiant Shimmer Highlighting Creams For Eyes Lips Face",
@@ -1208,57 +1055,6 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/277.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/277/original/open-uri20171223-4-a17eci?1514063291",
     "product_colors": []
-  },
-  {
-    "id": 275,
-    "brand": "pure anada",
-    "name": "Pure Anada Pressed Mineral Eye Color Pan",
-    "price": "8.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/9b489f80495f5d059d0f49ef38c36664_ra,w158,h184_pa,w158,h184.jpeg",
-    "product_link": "https://well.ca/products/pure-anada-pressed-mineral-eye-color_83502.html",
-    "website_link": "https://well.ca",
-    "description": "Pure Anada is pleased to bring you a lovely selection of convenient pressed mineral colors!   You’ll love the silky texture and longevity of these very wearable shades.Mineral pigments and organic Jojoba are pressed together to create a natural makeup product. You can have confidence that you are making a beautiful, healthy choice!Pure Anada pressed colors are designed to be inserted into customizable magnetic compacts like the Pure Ananda Reusable Magnetic Compact. Design your own palette! What look do you go for: the natural bronzed babe, tropical brights, or classic beauty? Try all three with this get the look with natural makeup piece found on our blog, The Well! Shadow Finishes: Demi-Matte shadows are a combination of opaque matte minerals and luminous satin mica.  This provides both true color and a light-reflecting finish.Matte shadows are soft, silky shadows that do not exude any sheen whatsoever.Shades: Ingredients: Mica (CI 77019), Iron Oxides (CI 77492, CI 77499) Calcium Carbonate, Caprylic Triglyceride *Simmondsia Chinensis (Jojoba seed oil) Ultramarines (CI 77007), Titanium Dioxide (CI 77891) * Certified Organic IngredientVegan, Gluten Free, Non-GMO, Dairy Free, Peanut Free, Natural",
-    "rating": 4.5,
-    "category": null,
-    "product_type": "eyeshadow",
-    "tag_list": ["Canadian", "Non-GMO", "Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:30:03.877Z",
-    "updated_at": "2017-12-23T21:08:11.558Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/275.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/275/original/data?1514063291",
-    "product_colors": [
-      { "hex_value": "#F9DDCB", "colour_name": "Whisper (Demi-Matte) " },
-      { "hex_value": "#BAB4B6", "colour_name": "Sterling (Demi-Matte) " },
-      { "hex_value": "#C89987", "colour_name": "Sahara (Demi-Matte) " },
-      { "hex_value": "#6f9087", "colour_name": "Reef (Demi-Matte Turquoise) " },
-      { "hex_value": "#9D837E", "colour_name": "Pewter (Demi-Matte) " },
-      { "hex_value": "#2f2a27", "colour_name": "Onyx (Demi-Matte Black) " },
-      { "hex_value": "#EFB49E", "colour_name": "Nectar (Demi-Matte) " },
-      { "hex_value": "#CEB2A0", "colour_name": "Mirage (Demi-Matte) " },
-      { "hex_value": "#8A9C86", "colour_name": "Meadow (Demi-Matte) " },
-      { "hex_value": "#FBCFB2", "colour_name": "Luna (Demi-Matte) " },
-      { "hex_value": "#A6777A", "colour_name": "Grape (Demi-Matte) " },
-      {
-        "hex_value": "#e38597",
-        "colour_name": "Freesia (Demi-Matte Medium Pink) "
-      },
-      { "hex_value": "#A06C69", "colour_name": "Espresso (Demi-Matte) " },
-      { "hex_value": "#fcdda6", "colour_name": "Ecru\t(Matte Cream) " },
-      { "hex_value": "#ac9689", "colour_name": "Dove\t(Matte Medium Grey) " },
-      {
-        "hex_value": "#9786b0",
-        "colour_name": "Crocus (Demi-Matte Lilac Purple "
-      },
-      {
-        "hex_value": "#ecc2c6",
-        "colour_name": "Cameo (Demi-Matte Light Pink White) "
-      },
-      { "hex_value": "#CC9B7B", "colour_name": "Burlap (Matte)  " },
-      { "hex_value": "#8CA7B5", "colour_name": "Breeze (Demi-Matte) " },
-      { "hex_value": "#533C5D", "colour_name": "Blackberry (Demi-Matte) " }
-    ]
   },
   {
     "id": 262,
@@ -1387,31 +1183,6 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/238.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/238/original/data?1514063284",
     "product_colors": []
-  },
-  {
-    "id": 234,
-    "brand": "sante",
-    "name": "Sante Kajal Eyeliner Pencil",
-    "price": "17.29",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/9006e43a8083b3dff963ecbfa02c3707_ra,w158,h184_pa,w158,h184.png",
-    "product_link": "https://well.ca/products/sante-kajal-eyeliner-pencil_51514.html",
-    "website_link": "https://well.ca",
-    "description": "Sante gentle eyeliner pencils have a wonderful texture. They are perfectly suitable\n for use on the inner eyelid. Or can be used blended with a sponge to create a \nsophisticated effect and make the color last longer.  Vegan and \ngluten-free. Not tested on animals.Ingredients: Caprylic/Capric Triglyceride, Ricinus Communis \n(Castor) Seed Oil*, Hydrogenated Palm Kernel Glycerides, Copernica \nCerifera (Carnauba) Wax, Hydrogenated Castor O il, Euphorbia Cerifera \n(Candelilla) Wax, Cera Alba (Beeswax), Hydrogenated Palm Glycerides, \nAscorbyl Palmitate, Tocopherol, Mica, [+/-CI 77007, CI 77288, CI 77491, \nCI 77492, CI 77499, CI 77510, CI 77742, CI 77891]",
-    "rating": 3.9,
-    "category": "pencil",
-    "product_type": "eyeliner",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:29:01.951Z",
-    "updated_at": "2017-12-23T20:51:26.864Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/234.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/234/original/open-uri20171223-4-1tzjkro?1514062286",
-    "product_colors": [
-      { "hex_value": "#5a5b60", "colour_name": "No.7 Anthracite " },
-      { "hex_value": "#5f769c", "colour_name": "No.4 Night Blue " },
-      { "hex_value": "#386e6e", "colour_name": "No. 10 Petrol " }
-    ]
   },
   {
     "id": 210,
@@ -1636,38 +1407,6 @@
     ]
   },
   {
-    "id": 168,
-    "brand": "moov",
-    "name": "Moov Cosmetics St. Tropez Collection",
-    "price": "14.99",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/f426b2e2e9ff8e01788a0947aad93512_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/moov-cosmetics-st-tropez-collection_116031.html",
-    "website_link": "https://well.ca",
-    "description": "The Moov Cosmetics St. Tropez Collection is a vegan nail colour that is perfect collection of shades that will take you from day to day.Features:VeganLonger lasting wearCreamy applicationDirections: Apply two coats, best results with Moov 2-in-1 Prime \u0026 Prep application.Ingredients: Butyl Acetate, Ethyl Acetate, Nitrocellulose, Adipic Acid/Neopentyl, Gloycol/Trimellitic Anhydride, Copolymer, Tributyl Citrate, Isopropyl Alcohol, Strearalkonium Bentonite, Acrylates Copolymer, Silica,Benzophenone-1, Trimethylpentanediyl DibenzoateNatural, Vegan, Gluten Free, Fair Trade, Sugar Free, Non-GMO, Dairy Free",
-    "rating": null,
-    "category": null,
-    "product_type": "nail_polish",
-    "tag_list": [
-      "Canadian",
-      "Dairy Free",
-      "Non-GMO",
-      "Sugar Free",
-      "Fair Trade",
-      "Gluten Free",
-      "Vegan",
-      "Natural"
-    ],
-    "created_at": "2016-10-01T18:27:39.741Z",
-    "updated_at": "2017-12-23T20:51:13.564Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/168.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/168/original/data?1514062273",
-    "product_colors": [
-      { "hex_value": "#DAC3B1", "colour_name": "Lace Camisole " }
-    ]
-  },
-  {
     "id": 165,
     "brand": "moov",
     "name": "Moov Cosmetics Caribbean Wedding Collection",
@@ -1699,110 +1438,6 @@
       { "hex_value": "#967971", "colour_name": "On One Knee " },
       { "hex_value": "#DDA4B3", "colour_name": "I Do " },
       { "hex_value": "#E4A993", "colour_name": "Blush Bouquet " }
-    ]
-  },
-  {
-    "id": 156,
-    "brand": "moov",
-    "name": "Moov Cosmetics Home Grown Canuck Collection",
-    "price": "14.99",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/65ca894afba3c4351a3db71c24234c50_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/moov-cosmetics-home-grown-canuck_116061.html",
-    "website_link": "https://well.ca",
-    "description": "The Moov Cosmetics Home Grown Canuck Collection is a vegan nail colour that has a fun representation of shades from East to West.Features:VeganLonger lasting wearCreamy applicationDirections: Apply two coats, best results with Moov 2-in-1 Prime \u0026 Prep application.Ingredients: Butyl Acetate, Ethyl Acetate, Nitrocellulose, Adipic Acid/Neopentyl, Gloycol/Trimellitic Anhydride, Copolymer, Tributyl Citrate, Isopropyl Alcohol, Strearalkonium Bentonite, Acrylates Copolymer, Silica,Benzophenone-1, Trimethylpentanediyl DibenzoateNatural, Vegan, Gluten Free, Fair Trade, Sugar Free, Non-GMO, Dairy Free",
-    "rating": 3.0,
-    "category": null,
-    "product_type": "nail_polish",
-    "tag_list": [
-      "Canadian",
-      "Dairy Free",
-      "Non-GMO",
-      "Sugar Free",
-      "Fair Trade",
-      "Gluten Free",
-      "Vegan",
-      "Natural"
-    ],
-    "created_at": "2016-10-01T18:27:19.853Z",
-    "updated_at": "2017-12-23T20:51:11.135Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/156.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/156/original/data?1514062271",
-    "product_colors": [
-      { "hex_value": "#8C0002", "colour_name": "True North " },
-      { "hex_value": "#C4658F", "colour_name": "Lunching In Yorkville " },
-      { "hex_value": "#A99483", "colour_name": "Double Double " },
-      { "hex_value": "#521B3E", "colour_name": "Canadian Wildberries " },
-      { "hex_value": "#251414", "colour_name": "Deep Creek " }
-    ]
-  },
-  {
-    "id": 126,
-    "brand": "pure anada",
-    "name": "Pure Anada Nail Polish",
-    "price": "10.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/3184a0a50b398f81e7284b1a04befc9a_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/pure-anada-nail-polish_93647.html",
-    "website_link": "https://well.ca",
-    "description": "Pure Anada Nail Polish is long-wearing polish color that is “free” from the 5 most toxic ingredients found in traditional polish. Plus it is solvent-based, not water-based.Pure Anada Polish is amazingly long-lasting when applied with the “Over-Under” base/top coat.Ingredients: Butylacetate, Ethylacetate, Nitrocellulose, Acetyl Tributyl  Citrate, Adipic Acid/Neopentyl, Glycol Trimellitic, Anhydride Copolymer, Isopropyl Alcohol, Acrylates Copolymer, Stearalkonium Bentonite,  Styrene Acrylates, Copolymer, Silica, Alumina, Benzophenone-1. May contain:  Mica, Iron Oxides (CI77491, 77499), Titanium Dioxide (CI77891), Red 7 Lake (CI158501), UltramarinesVegan, Gluten Free, Non-GMO, 5-Free, Dairy Free, Peanut Free",
-    "rating": 4.8,
-    "category": null,
-    "product_type": "nail_polish",
-    "tag_list": ["Canadian", "Non-GMO", "Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:26:15.348Z",
-    "updated_at": "2017-12-23T20:51:04.558Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/126.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/126/original/data?1514062264",
-    "product_colors": [
-      { "hex_value": "#FD5758", "colour_name": "Poolside Pink " },
-      { "hex_value": "#E44579", "colour_name": "Make it Magenta " },
-      {
-        "hex_value": "#983539",
-        "colour_name": "Velvet Rose\t - Medium Deep Reddish Rose "
-      },
-      {
-        "hex_value": "#d8afb7",
-        "colour_name": "Twilight Romance\t - Medium Dusty Rose "
-      },
-      { "hex_value": "#ebd9cd", "colour_name": "Sheer Love\t - Sheer Nude " },
-      {
-        "hex_value": "#dbc59b",
-        "colour_name": "Saturn\t - Large Gold Glitter and Small Rose Glitter "
-      },
-      { "hex_value": "#BD3871", "colour_name": "Nebula - Mixed Pink Glitter " },
-      { "hex_value": "#8b7267", "colour_name": "Mink\t - Medium Grey " },
-      {
-        "hex_value": "#f38d6a",
-        "colour_name": "Melon Mania\t - Bright Orange Coral "
-      },
-      {
-        "hex_value": "#7b6a52",
-        "colour_name": "Medieval - Deep Grey Brown with Slight Green Undertone "
-      },
-      {
-        "hex_value": "#d1b494",
-        "colour_name": "Jazz Hands\t - Medium Shimmering Caramel "
-      },
-      {
-        "hex_value": "#4b1d33",
-        "colour_name": "Eggplant\t - Dark Purple Black "
-      },
-      {
-        "hex_value": "#590203",
-        "colour_name": "Deep Wine\t - Rich Deep Red Burgundy "
-      },
-      {
-        "hex_value": "#eed4d2",
-        "colour_name": "Cherry Blossom\t - Light Bubble Gum Pink "
-      },
-      { "hex_value": "#e89488", "colour_name": "Call Me Baby\t - Coral " },
-      {
-        "hex_value": "#aa897e",
-        "colour_name": "Baroque Beauty\t- Medium Taupe "
-      }
     ]
   },
   {
@@ -2230,7 +1865,7 @@
     "id": 1034,
     "brand": "rejuva minerals",
     "name": "Multi Purpose Powder - Eye Shadow \u0026 Face",
-    "price": "0.0",
+    "price": "1.99",
     "price_sign": "$",
     "currency": "USD",
     "image_link": "https://www.purpicks.com/wp-content/uploads/2018/06/Rejuva-Minerals-Multi-Purpose-Powder-Eye-Shadow-Face-1.jpg",
@@ -2259,7 +1894,7 @@
     "id": 1032,
     "brand": "rejuva minerals",
     "name": "Bronzer - loose",
-    "price": "0.0",
+    "price": "1.99",
     "price_sign": "$",
     "currency": "USD",
     "image_link": "https://www.purpicks.com/wp-content/uploads/2018/03/rejuva-minerals-bronzer.jpg",
@@ -2277,34 +1912,10 @@
     "product_colors": [{ "hex_value": "#A37948", "colour_name": "Caribbean" }]
   },
   {
-    "id": 1031,
-    "brand": "rejuva minerals",
-    "name": "Bronzer - pressed",
-    "price": "0.0",
-    "price_sign": "$",
-    "currency": "USD",
-    "image_link": "https://www.purpicks.com/wp-content/uploads/2018/03/rejuva-minerals-bronzer.jpg",
-    "product_link": "https://www.purpicks.com/product/rejuva-bronzer-light/",
-    "website_link": "https://purpicks.com/",
-    "description": "Our bronzer has been enhanced with Fruits, Botanicals and Clays for their natural color, fragrance and antioxidant benefits! Blended with Certified Organics Fruits and Botanicals Formulated with common skin irritants. Our bronzer will offer a natural 'ultra sheer' semi-matte finish. Made without any gluten containing ingredients VEGAN! Eco Friendly jars!",
-    "rating": null,
-    "category": "powder",
-    "product_type": "bronzer",
-    "tag_list": ["Gluten Free", "Vegan", "EWG Verified", "purpicks"],
-    "created_at": "2018-06-30T19:19:31.624Z",
-    "updated_at": "2018-09-02T22:52:06.629Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1031.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/031/original/open-uri20180630-4-1axfay6?1530390380",
-    "product_colors": [
-      { "hex_value": "#9C7248", "colour_name": "Bahama Mama" },
-      { "hex_value": "#DDA983", "colour_name": "St Tropez" }
-    ]
-  },
-  {
     "id": 1030,
     "brand": "penny lane organics",
     "name": "Lip Gloss",
-    "price": "0.0",
+    "price": "1.99",
     "price_sign": "$",
     "currency": "USD",
     "image_link": "https://www.purpicks.com/wp-content/uploads/csm/sunset-bronze-pennylaneorganics1.jpg",
@@ -2336,36 +1947,10 @@
     ]
   },
   {
-    "id": 1023,
-    "brand": "marienatie",
-    "name": "Lipstick",
-    "price": "0.0",
-    "price_sign": "$",
-    "currency": "USD",
-    "image_link": "https://www.purpicks.com/wp-content/uploads/csm/Evelyn_Pic1.jpg",
-    "product_link": "https://www.purpicks.com/product/marie-natie-lipstick/",
-    "website_link": "https://purpicks.com/",
-    "description": "A pure and creamy lipstick by MarieNatie formulated with organic jojoba, avocado, and coconut oil which are rich in anti-oxidants and have moisturizing benefits. Enriched with naturally derived organic mango and cocoa butters that will soothe, hydrate and regenerate dry lips.",
-    "rating": null,
-    "category": "lipstick",
-    "product_type": "lipstick",
-    "tag_list": ["Gluten Free", "Vegan", "CertClean", "purpicks"],
-    "created_at": "2018-06-30T19:19:31.034Z",
-    "updated_at": "2018-09-02T22:52:06.510Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1023.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/023/original/open-uri20180630-4-149dwc3?1530390375",
-    "product_colors": [
-      { "hex_value": "#B4556E", "colour_name": "Ava" },
-      { "hex_value": "#9A1C24", "colour_name": "Giselle" },
-      { "hex_value": "#B03B3E", "colour_name": "Rosie" },
-      { "hex_value": "#9D5E4F", "colour_name": "Evelyn" }
-    ]
-  },
-  {
     "id": 1021,
     "brand": "marienatie",
     "name": "Gel Liner",
-    "price": "0.0",
+    "price": "1.99",
     "price_sign": "$",
     "currency": "USD",
     "image_link": "https://www.purpicks.com/wp-content/uploads/csm/Photo10_12001.jpg",
@@ -2402,30 +1987,6 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/1005.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/005/original/open-uri20180630-4-1eau5wj?1530390360",
     "product_colors": [{ "hex_value": "#B8A89A", "colour_name": "Pale Almond" }]
-  },
-  {
-    "id": 507,
-    "brand": null,
-    "name": "Saint Cosmetics Bronzer",
-    "price": "30.96",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/4f8578c9a7588249e95d463078b84de1_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/saint-cosmetics-bronzer_116816.html",
-    "website_link": "https://well.ca",
-    "description": "Saint Cosmetics' velvety smooth bronzing formulation gives the skin a soft, healthy and naturally radiant skin.Features:Comes in a range of shades to enhance all complexionsLong- lastingProvides skin with a sun-kissed healthy glowMade in Canada from naturally derived ingredientsChemical Free, Vegan, Gluten Free",
-    "rating": null,
-    "category": null,
-    "product_type": "bronzer",
-    "tag_list": ["Canadian", "Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:36:30.602Z",
-    "updated_at": "2017-12-23T21:08:52.329Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/507.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/507/original/data?1514063332",
-    "product_colors": [
-      { "hex_value": "#B98963", "colour_name": "On Cloud 9 " },
-      { "hex_value": "#B77C59", "colour_name": "Glowing Halo " }
-    ]
   },
   {
     "id": 485,
@@ -2560,45 +2121,6 @@
     ]
   },
   {
-    "id": 437,
-    "brand": "pure anada",
-    "name": "Pure Anada Pressed Mineral Cheek Colour Pan",
-    "price": "12.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/43071cd57ecffc55c1e0bff29278c3a7_ra,w158,h184_pa,w158,h184.jpeg",
-    "product_link": "https://well.ca/products/pure-anada-pressed-mineral-cheek_83224.html",
-    "website_link": "https://well.ca",
-    "description": "Pure Anada is pleased to bring you a lovely selection of convenient pressed mineral colors!    You’ll love the silky texture and longevity of these highly wearable cheek colors.Mineral pigments and organic Jojoba are pressed together to create a natural makeup product. You can have confidence that you are making a beautiful, healthy choice!Pure Anada pressed colors are designed to be inserted into customizable magnetic compacts like the Pure Ananda Reusable Magnetic Compact. Design your own palette!  Shades:Ingredients: Mica (CI 77019), Iron Oxides (CI 77492, CI 77499) Calcium Carbonate, Caprylic Triglyceride *Simmondsia Chinensis (Jojoba seed oil) Ultramarines (CI 77007), Titanium Dioxide (CI 77891) * Certified Organic IngredientVegan, Gluten Free, Non-GMO, Dairy Free, Peanut Free, Natural",
-    "rating": 4.4,
-    "category": "powder",
-    "product_type": "blush",
-    "tag_list": ["Canadian", "Non-GMO", "Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:34:42.997Z",
-    "updated_at": "2017-12-23T21:08:44.981Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/437.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/437/original/data?1514063324",
-    "product_colors": [
-      { "hex_value": "#e07b78", "colour_name": "Tender Twig " },
-      { "hex_value": "#f39f94", "colour_name": "Sweet Pea " },
-      { "hex_value": "#e06989", "colour_name": "Strawberry Field  " },
-      {
-        "hex_value": "#c14c38",
-        "colour_name": "Lush Nectarine (Demi-Matte Apricot) "
-      },
-      { "hex_value": "#ee7f66", "colour_name": "Fresh Mandarin " },
-      {
-        "hex_value": "#f47892",
-        "colour_name": "Forever Summer\t (Demi-Matte Coral Pink) "
-      },
-      {
-        "hex_value": "#b9484a",
-        "colour_name": "Day Lily (Demi-Matte Burgundy) "
-      },
-      { "hex_value": "#d88a66", "colour_name": "Bronzed Clove " }
-    ]
-  },
-  {
     "id": 431,
     "brand": "e.l.f.",
     "name": "e.l.f. Studio Contouring Blush \u0026 Bronzing Powder",
@@ -2686,27 +2208,6 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/378.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/378/original/data?1514063313",
     "product_colors": [{ "hex_value": "#ECB78F", "colour_name": "Sand " }]
-  },
-  {
-    "id": 377,
-    "brand": "mineral fusion",
-    "name": "Mineral Fusion Sheer Tint Foundation",
-    "price": "37.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/ad193b9a7696d646f5d398e1550f2f04_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/mineral-fusion-sheer-tint-foundation_119082.html",
-    "website_link": "https://well.ca",
-    "description": "Mineral Fusion Sheer Tint Foundation is a lightweight, hydrating foundation with a dewy finish that provides sheer coverage for a perfectly even skin tone.  The blend of Pomegranate, Red Tea, White Tea and Sea Kelp offer age-defying antioxidant protection to defend against free radical damage and give skin a healthy radiance.  This foundation is formulated with only the safest, most gentle ingredients plus the natural UV protection of minerals and skin soothing botanicals. Great for use on all skin types.Features:Sheer coverage for neutral skinFlawless CoverageAge-DefyingSkin SoothingFree of artificial colour or fragranceTalc freeHypo-allergenicCruelty FreeParaben FreePhthalate FreeIngredients: Water, Squalane (Olive), Tridecyl Neopentanoate, Titanium Dioxide, Propylene Glycol Dicaprylate/Dicaprate, Vegetable Glycerin, Cetearyl Alcohol, Polysorbate 80, Glyceryl Stearate SE, Cyclomethicone, Hydrogenated Polyisobutene, Dimethicone Crosspolymer-3, Sorbitol, Triethanolamine, Stearic Acid, Sorbitan Sesquioleate, Cetyl Alcohol, Dimethicone, Laureth-7, Magnesium Aluminum Silicate, Cyclopentasiloxane, Xanthan Gum, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polysorbate 60, Cellulose Gum, PEG-12 Dimethicone, Carthamus Tinctorius (Safflower) Seed Oil, Vitis Vinifera (Grape) Seed Extract, Camellia Sinensis (White Tea) Leaf Extract, Aspalathus Linearis (Rooibos Red Tea) Leaf Extract, Punica Granatum (Pomegranate) Extract, Caprylic/Capric Triglyceride, Laminaria Ochroleuca (Sea Kelp) Extract, Gluconolactone, Sodium Benzoate. MAY CONTAIN (+/-): Iron Oxides.Vegan, Gluten Free",
-    "rating": null,
-    "category": "cream",
-    "product_type": "foundation",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:33:01.981Z",
-    "updated_at": "2017-12-23T21:08:38.025Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/377.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/377/original/data?1514063317",
-    "product_colors": []
   },
   {
     "id": 323,
@@ -2807,31 +2308,6 @@
       { "hex_value": "#3B333D", "colour_name": "color 3" },
       { "hex_value": "#96789F", "colour_name": "color 2" },
       { "hex_value": "#A28D95", "colour_name": "color 1" }
-    ]
-  },
-  {
-    "id": 308,
-    "brand": "sante",
-    "name": "Sante Eyeshadow Trio",
-    "price": "24.49",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/a7bde92c185b56ec210838dea41d9bec_ra,w158,h184_pa,w158,h184.jpeg",
-    "product_link": "https://well.ca/products/sante-eyeshadow-trio_51611.html",
-    "website_link": "https://well.ca",
-    "description": "Sante Eyeshadow Trios each have three complementary shades for your lid,\n crease and highlight. Plus they are formulated with organic jojoba and \nchamomile. Vegan and gluten-free. Not \ntested on animals. \t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t",
-    "rating": 5.0,
-    "category": null,
-    "product_type": "eyeshadow",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:30:59.801Z",
-    "updated_at": "2017-12-23T21:08:19.026Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/308.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/308/original/data?1514063298",
-    "product_colors": [
-      { "hex_value": "#534C42", "colour_name": "color 3" },
-      { "hex_value": "#908F7D", "colour_name": "color 2" },
-      { "hex_value": "#C3B098", "colour_name": "color 1" }
     ]
   },
   {
@@ -2982,31 +2458,6 @@
     ]
   },
   {
-    "id": 278,
-    "brand": "pacifica",
-    "name": "Pacifica Radiant Shimmer Highlighting Creams For Eyes Lips Face",
-    "price": "28.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/4395f2c09aebd1b8d8f183168bc5d00f_ra,w158,h184_pa,w158,h184.jpeg",
-    "product_link": "https://well.ca/products/pacifica-radiant-shimmer_77804.html?cat=1977",
-    "website_link": "https://well.ca",
-    "description": "You will absolutely LOVE these Radiant Shimmer Coconut Multiples! Coconut infused multi-use creamy colors for cheeks, eyes, lips and even your body are housed in a magically decorated palette. Create shimmering highlights, glowing illumination and beautiful contours. Natural mineral makeup formula blends effortlessly and can be used sheer, layered or built-up for more drama. Go ahead and play all you want, these mineral makeup colors are full of skin-loving naturals.Includes 3 Shimmering Shades:Bronzed: Perfectly glowing sun-kissed color with golden shimmer shadowIsland Rose: shimmering, radiant dewy pink shadowMoonlit: Iridescent pale shades of moon-kissed shimmerFeatures:No animal testingGluten-free100% vegan and cruelty-freeFormulated without: Phthalates, parabens, carmine, beeswax, lanolin, mineral oils, propylene glycol, petroleum and FD\u0026 C colors (along with other nasties you do not want on your skin). Ingredients: Ethylhexyl Palmitate, Silica, Mica,  Caprylic/Capric Triglyceride,Helianthus Annuus (Sunflower) Seed Oil, Ozokerite, Copernicia Cerifera(Carnauba) Wax, Euphorbia Cerifera (Candelilla) Wax, Cetyl Palmitate, Carthamus Tinctorius (Safflower) Seedoil, Parfum (All Natural), Tocopheryl Acetate (Vitamin E), Macrocystis Pyrifera (Brown Kelp) Extract,Cocos Nucifera (Coconut) Fruit Extract, Tin Oxide. Titanium Dioxide Ci 77891, Iron Oxides Ci 77941",
-    "rating": 3.6,
-    "category": "powder",
-    "product_type": "blush",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:30:09.334Z",
-    "updated_at": "2017-12-23T21:08:44.239Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/278.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/278/original/data?1514063324",
-    "product_colors": [
-      { "hex_value": "#D1B6A9", "colour_name": "color 3" },
-      { "hex_value": "#BC8A88", "colour_name": "color 2" },
-      { "hex_value": "#7E554A", "colour_name": "color 1" }
-    ]
-  },
-  {
     "id": 275,
     "brand": "pure anada",
     "name": "Pure Anada Pressed Mineral Eye Color Pan",
@@ -3079,27 +2530,6 @@
     "product_colors": []
   },
   {
-    "id": 248,
-    "brand": "pacifica",
-    "name": "Pacifica Natural Eye Pencil",
-    "price": "16.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/b2c0bdd88398baadd69b710d27893ca2_ra,w158,h184_pa,w158,h184.jpeg",
-    "product_link": "https://well.ca/products/pacifica-natural-eye-pencil_94342.html",
-    "website_link": "https://well.ca",
-    "description": "Pacifica Natural Eye Pencil is a waterproof, buttery smooth eye pencil that glides on easily to avoid pulling on the delicate eye area. Color glides on and stays put for those perfectly defined eyes. Whether it be a very fine line or the ever glamorous cat-eye, these pencils provide the right amount of saturated color to make your eyes pop.Formulated without: Animal ingredients (including carmine, beeswax and \nlanolin), animal testing, FD\u0026C colors, mineral oil, parabens, \nphthalates, petroleum, propylene glycol, SLS, gluten, peanut oil and \nother ingredients you don’t want on your skin.Ingredients: Gun Metal (pewter) - hydrogenated simmondsia chinensis seed oil, mica, caprylic / capric triglycerides, hydrogenated vegetable oil, simmondsia chinensis seed oil, butyrospermum parkii butter, titanium dioxide CI 77891, canola oil, sclerocarya birrea seed oil, iron oxide CI 77499, euphorbia cerifera cera, glyceryl caprylate, copernicia cerifera cera, tocopherol, helianthus annuus seed oil, ascorbyl palmitateBare (Nude) - titanium dioxide CI 77891, hydrogenated simmondsia chinensis seed oil, simmondsia chinensis seed oil, caprylic / capric triglycerides, hydrogenated vegetable oil, mica, butyrospermum parkii butter, canola oil, sclerocarya birrea seed oil, iron oxide CI 77492, euphorbia cerifera cera, glyceryl caprylate, copernicia cerifera cera, iron oxide CI 77491, iron oxide CI 77499, tocopherol, ascorbyl palmitate.Fringe (brown) - hydrogenated simmondsia chinensis seed oil, iron oxide CI 77499, mica, iron oxide CI 77491, iron oxide CI 77492, hydrogenated vegetable oil, caprylic / capric triglyceride, simmondsia chinensis seed oil, butyrospermum parkii butter, canola oil, sclerocarya birrea seed oil, candelilla cerifera cera, glyceryl caprylate, copernicia cerifera cera, tocopherol, helianthus annuus seed oil, ascorbyl palmitate.Jet (black) - iron oxide CI 77499, hydrogenated simmondsia chinenesis seed oil, caprylic / capric triglyceride, simmondsia chinenesis seed oil, hydrogenated vegetable oil, butyrospermum parkii butter, sclerocarya birrea seed oil, mica, candelilla cerifera cera, glyceryl caprylate, copernicia cerifera cera, tocopherol, helianthus annuus seed oil, ascorbyl palmitate",
-    "rating": 5.0,
-    "category": "pencil",
-    "product_type": "eyeliner",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:29:24.754Z",
-    "updated_at": "2017-12-23T21:08:04.906Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/248.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/248/original/data?1514063284",
-    "product_colors": []
-  },
-  {
     "id": 234,
     "brand": "sante",
     "name": "Sante Kajal Eyeliner Pencil",
@@ -3144,30 +2574,6 @@
     "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/227.json",
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/227/original/data?1514062290",
     "product_colors": [{ "hex_value": "#322423", "colour_name": "Espresso " }]
-  },
-  {
-    "id": 191,
-    "brand": "zorah",
-    "name": "Zorah Liquid Liner",
-    "price": "24.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/3dc157e4a7e28f90dbe7e9849ccfc87a_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/zorah-liquid-liner_99339.html",
-    "website_link": "https://well.ca",
-    "description": "Zorah Liquid Liner gives you 12 hours of long-lasting intense color, is transfer-free (leaves no trace on crease above the eyelid) and has Pure Light Capture® minerals that deliver color and radiance. Silky lines and refreshingly light, Pure Argan eyeliner leaves a weightless feel on the eyelids.What look do you go for: the natural bronzed babe, tropical brights, or classic beauty? Try all three with this get the look with natural makeup piece found on our blog, The Well! Directions: Lightly trace the lash line. Repeat with a second layer to intensify. Make small dots from the outside working inward. Wait 3 seconds before opening eye so as to avoid streaking. Repeat line if necessary.Ingredients: Aqua, Hydrolyzed Corn Starch, Glyceryl Stearate Citrate, Argania Spinosa Kernel Oil*, Cucurbita Pepo (Pumpkin) Seed Oil*, Glycerin,  Silica, Copernicia Cerifera (Carnauba) Wax*, Hectorite, Sodium Phytate, Sodium Citrate, Benzyl Alcohol, Salicylic Acid, Sorbic Acid, Dehydroacetic Acid. [+/-(peut contenir/may contain) Iron Oxides,Mica, Ultramarines, Bismuth Oxychloride.]Tested dermatologically and ophthalmologically.Certified by Ecocert Greenlife: 98% of the total ingredients are from \nnatural origin, 5% of total ingredients are from organic farming",
-    "rating": 3.3,
-    "category": "liquid",
-    "product_type": "eyeliner",
-    "tag_list": ["Canadian", "Gluten Free", "Vegan", "Organic", "Natural"],
-    "created_at": "2016-10-01T18:28:07.638Z",
-    "updated_at": "2017-12-23T20:51:18.506Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/191.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/191/original/data?1514062278",
-    "product_colors": [
-      { "hex_value": "#74482f", "colour_name": "Brown " },
-      { "hex_value": "#000000", "colour_name": "Black " }
-    ]
   },
   {
     "id": 188,
@@ -3334,40 +2740,6 @@
     "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/168/original/data?1514062273",
     "product_colors": [
       { "hex_value": "#DAC3B1", "colour_name": "Lace Camisole " }
-    ]
-  },
-  {
-    "id": 165,
-    "brand": "moov",
-    "name": "Moov Cosmetics Caribbean Wedding Collection",
-    "price": "14.99",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/678f91758b7a611d673124f7ad1f00d0_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/moov-cosmetics-caribbean-wedding_116039.html",
-    "website_link": "https://well.ca",
-    "description": "The Moov Cosmetics Caribbean Wedding Collection is a vegan nail colour that has the perfect soft pastel shades for that romantic getaway.Features:VeganLonger lasting wearCreamy applicationDirections: Apply two coats, best results with Moov 2-in-1 Prime \u0026 Prep application.Ingredients: Butyl Acetate, Ethyl Acetate, Nitrocellulose, Adipic Acid/Neopentyl, Gloycol/Trimellitic Anhydride, Copolymer, Tributyl Citrate, Isopropyl Alcohol, Strearalkonium Bentonite, Acrylates Copolymer, Silica,Benzophenone-1, Trimethylpentanediyl DibenzoateNatural, Vegan, Gluten Free, Fair Trade, Sugar Free, Non-GMO, Dairy Free",
-    "rating": 2.0,
-    "category": null,
-    "product_type": "nail_polish",
-    "tag_list": [
-      "Canadian",
-      "Dairy Free",
-      "Non-GMO",
-      "Sugar Free",
-      "Fair Trade",
-      "Gluten Free",
-      "Vegan",
-      "Natural"
-    ],
-    "created_at": "2016-10-01T18:27:34.994Z",
-    "updated_at": "2017-12-23T20:51:13.105Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/165.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/165/original/data?1514062273",
-    "product_colors": [
-      { "hex_value": "#967971", "colour_name": "On One Knee " },
-      { "hex_value": "#DDA4B3", "colour_name": "I Do " },
-      { "hex_value": "#E4A993", "colour_name": "Blush Bouquet " }
     ]
   },
   {
@@ -3598,33 +2970,6 @@
         "hex_value": "#aa897e",
         "colour_name": "Baroque Beauty\t- Medium Taupe "
       }
-    ]
-  },
-  {
-    "id": 101,
-    "brand": "mineral fusion",
-    "name": "Mineral Fusion Sheer Moisture Lip Tint",
-    "price": "12.0",
-    "price_sign": null,
-    "currency": null,
-    "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/8980a2195fbd6f4a47e5b57ac2148e9b_ra,w158,h184_pa,w158,h184.jpg",
-    "product_link": "https://well.ca/products/mineral-fusion-sheer-moisture-lip_119085.html?cat=330",
-    "website_link": "https://well.ca",
-    "description": "Mineral Fusion Sheer Moisture Lip Tint is a sheer, buildable mineral colour that provides long-lasting hydration and applies effortlessly on-the-go with no mirror required.  The 100% pure mineral shades are ultra-hydrating, infused with Cocoa Butter, a lip-firming peptide, and a refreshing Vanilla-Mint flavor.  Features:Hydrating \u0026 FirmingPerfect for On-The-Go UseFree of artificial colour and fragranceCruelty FreeParaben FreeTalc FreeHypo-allergenicPhthalate FreeIngredients: Ricinus Communis (Castor) Seed Oil, Ethylhexyl Hydroxystearate, Jojoba (Simmondsia  Chinensis) Seed Oil, Cera Alba (Beeswax), Euphorbia Cerifera (Candelilla) Wax,  Copernicia Cerifera (Carnauba) Wax, Isopropyl Palmitate, Cetyl Alcohol, Ascorbic Acid  (Vitamin C), Theobroma Cacao (Cocoa) Seed Butter, Aloe Barbadensis, Tocopheryl  Acetate (Vitamin E), Palmitoyl Tripeptide-5, Olea Europaea (Olive) Leaf Extract,  Eupatorium Rebaudianum Bertoni Leaf Extract, Origanum Vulgare (Oregano) Leaf  Extract, Thymus Vulgarus (Thyme) Extract, Cocos Nucifera (Coconut) Oil, and Natural  Vanilla Mint.    May Contain: Red Iron Oxide, Yellow Iron Oxide, Black Iron Oxide, Titanium Dioxide, Mica. Gluten Free, Vegan",
-    "rating": null,
-    "category": "lipstick",
-    "product_type": "lipstick",
-    "tag_list": ["Gluten Free", "Vegan", "Natural"],
-    "created_at": "2016-10-01T18:25:38.145Z",
-    "updated_at": "2017-12-23T21:08:30.160Z",
-    "product_api_url": "https://makeup-api.herokuapp.com/api/v1/products/101.json",
-    "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/101/original/data?1514063310",
-    "product_colors": [
-      { "hex_value": "#981E29", "colour_name": "Smolder - Cherry Red " },
-      { "hex_value": "#B1585C", "colour_name": "Glisten - Caramel Shimmer " },
-      { "hex_value": "#892E33", "colour_name": "Flicker - Berry " },
-      { "hex_value": "#793041", "colour_name": "Blush - Earthy Purple " },
-      { "hex_value": "#54281F", "colour_name": "Adorn - Rich Plum " }
     ]
   },
   {

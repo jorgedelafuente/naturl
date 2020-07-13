@@ -1,50 +1,47 @@
-import React from 'react';
-import './product.scss';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import ProductItem from "./ProductItem";
+import "./productItem.scss";
+// import Review from "../../components/ProductReview/Reviews";
 
+const Product = ({
+  data,
+  handleAddToCartClick,
+  id,
+  wishList,
+  setWishList,
+  userId,
+}) => {
+  const [productData, setProductData] = useState([]);
 
-// import ProductItem from "../components/product-card-item";
+  useEffect(() => {
+    setProductData([...data]);
+  }, [data]);
 
-
-
-function Products() {
-
+  const foundItem = productData.find((item) => item.id === parseInt(id));
   return (
-    <div className="singleproduct-page-container">
+    <div className="product-page-container">
+      <ProductItem
+        data={foundItem}
+        onAddToCartClick={handleAddToCartClick}
+        userId={userId}
+        productId={id}
+        wishList={wishList}
+        setWishList={setWishList}
+      />
 
-      <div className="singleproduct-productimage-and-description-container">
-        <div className="singleproduct-image">
-        <img alt="example" src="https://img.makeupalley.com/7/4/1/7/2706184.PNG" />
-        </div>
-
-        <div className="singleproduct-product-title-and-description-container">
-          <div className="singleproduct-page-title" >
-            <h1>Blotted Lip</h1>
-          </div>
-          <div className="singleproduct-page-description" >
-            <p>Blotted Lip Sheer matte lipstick that creates the perfect popsicle pout! Formula is lightweight, matte and buildable for light to medium coverage.</p>
-          </div>
-          <div className="singleproduct-page-description" >
-            <h3>Price $6.50</h3>
-          </div>
-          <div className="singleproduct-page-colors" >
-            <p>Colors:</p>
-            <p>Lolly</p>
-            <p>Candyfloss</p>
-            <p>Drip</p>
-            <p>Ice Cube</p>
-            <p>On a Stick</p>
-            <p>Bee's Knees</p>
-            <p>Brain Freeze</p>
-          </div>
-          <div className="singleproduct-page-colors" >
-            <input id='instant-input1' className='settings-input' type='number' name='discountInstant' min="0" max="100" autocomplete='off'  ></input>
-            <button>Add to cart</button>
-          </div>  
-        </div>
-      </div>
+      {/* <Review productId={id} /> */}
     </div>
   );
-}
+};
 
+Product.propTypes = {
+  data: PropTypes.array,
+  wishList: PropTypes.array,
+  handleAddToCartClick: PropTypes.func,
+  setWishList: PropTypes.func,
+  id: PropTypes.string,
+  userId: PropTypes.string,
+};
 
-export default Products;
+export default Product;

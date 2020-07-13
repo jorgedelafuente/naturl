@@ -1,0 +1,87 @@
+.gluten-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 650px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    min-height: 450px;
+  }
+  @media (max-width: 480px) {
+    min-height: 400px;
+  }
+}
+
+.gluten-title {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 280px;
+  @media (max-width: 768px) and (min-width: 480px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 0px;
+  }
+}
+
+.gluten-title h1 {
+  color: white;
+  font-size: 2.8rem;
+}
+
+.products-labels-and-filter {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 25px;
+}
+
+.products-labels-and-filter a {
+  font-size: 18px;
+  color: black;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.products-labels-and-filter a:hover {
+  color: #00677d;
+}
+
+.products-categories-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  // margin-top: 600px;
+}
+
+// .product-card-container {
+//   background-color: greenyellow;
+//   margin-left: 400px;
+// }
+
+.products-categories-container-item {
+  margin-bottom: 50px;
+}
+
+.glutenpage-image {
+  position: absolute;
+  z-index: -1;
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 768px;
+    height: 500px;
+    object-fit: scale-down;
+  }
+  @media (max-width: 320px) {
+    width: 320px;
+    height: 250px;
+    object-fit: scale-down;
+  }
+  @media (max-width: 480px) and (min-width: 325px) {
+    width: 375px;
+    height: 250px;
+    object-fit: scale-down;
+  }
+}

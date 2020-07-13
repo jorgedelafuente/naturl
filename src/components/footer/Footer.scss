@@ -1,0 +1,137 @@
+.footer {
+  /* tablet */
+  @media (max-width: 768px) and (min-width: 480px) {
+    font-size: 0.8rem;
+    height: 800px;
+  }
+  /* mobile */
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+    height: 450px;
+  }
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  a {
+    text-decoration: none;
+  }
+  & a,
+  & span {
+    margin-right: 1.25rem;
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: #00677d;
+    }
+  }
+}
+
+.Home__Hr {
+  width: 90vw;
+  margin-bottom: 50px;
+  border: 1px solid #eee;
+}
+
+.footer-top {
+  height: 150px;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 768px) and (min-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+  }
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+  }
+}
+
+.footer-top-left {
+  width: 70%;
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-top-left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  h4 {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer-top-right {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-top-right-pages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-top-right-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-top-right-follow-us {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-bottom {
+  width: 90vw;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    font-size: 35px;
+  }
+  @media (max-width: 768px) and (min-width: 480px) {
+    width: 80vw;
+  }
+  @media (max-width: 480px) {
+    width: 80vw;
+  }
+}

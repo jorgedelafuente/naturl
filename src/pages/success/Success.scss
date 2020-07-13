@@ -1,0 +1,16 @@
+.Success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem;
+}
+
+.Success-message {
+  text-align: center;
+  margin: 1rem;
+}
+
+.Success-order-number {
+  font-weight: bold;
+}

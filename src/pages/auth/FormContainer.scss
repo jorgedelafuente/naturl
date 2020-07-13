@@ -1,0 +1,121 @@
+.form-container {
+  margin: 200px auto;
+  padding: 20px;
+  // text-align: center;
+
+  max-width: 350px;
+  // width: 20%;
+  height: auto;
+  box-shadow: 0 0 5px 0px #cecece;
+  border-radius: 5px;
+  .Logo {
+    margin: 20px auto;
+    font-size: 22px;
+    margin-bottom: 40px;
+    // border: 1px solid red;
+  }
+  .Logo:hover {
+    color: #00677d;
+  }
+
+  label > span {
+    font-weight: bold;
+  }
+  input {
+    margin-top: 5px;
+    display: block;
+    border: 1px solid black;
+  }
+
+  label,
+  input {
+    display: block;
+    width: 100%;
+  }
+
+  .InputGroup {
+    padding: 10px 0;
+  }
+  .InputGroup > input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid #cecece;
+    font-weight: bold;
+    color: #666;
+    padding: 0 10px;
+    // border: 1px solid red;
+    // box-sizing: border-box;
+  }
+  .InputGroup > input::placeholder {
+    font-family: "Lato";
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+  }
+
+  .form-links {
+    display: flex;
+    justify-content: center;
+  }
+  .form-links a {
+    margin-top: 40px;
+    color: cadetblue;
+    font-weight: 550;
+    font-size: 16px;
+  }
+  .form-links a:hover {
+    color: #00677d;
+  }
+}
+
+.form-button {
+  // display: inline-block;
+  margin: 0 0 1rem 0;
+  padding: 0.85em 1em;
+  border: 0;
+  outline: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  background-color: #262626;
+  color: #fff;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+  -webkit-appearance: none;
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+
+  &:hover,
+  &:focus {
+    background-color: #00677d;
+  }
+}
+
+.Form-Sign-Container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.Form-Sign-Container-Alert {
+  position: absolute;
+  text-align: center;
+  top: -30px;
+  width: 300px;
+
+  @media (max-width: 480px) {
+    top: -30px;
+    width: 300px;
+  }
+}

@@ -1,13 +1,14 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
+import "./NotFound.scss";
 
 export const NotFound = () => {
   return (
-    <div>
-      <h3>Whoops, page does not Exist! </h3>
-      <p>
+    <div className="NotFound-Container">
+      <h2>Whoops, page does not Exist!</h2>
+      <div>
         <Link to="/">Return to Home</Link>
-      </p>
+      </div>
     </div>
   );
 };

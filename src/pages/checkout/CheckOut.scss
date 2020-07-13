@@ -1,0 +1,19 @@
+.Checkout-related-products {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.Checkout-related-products-title {
+  margin: 2rem;
+}
+
+.checkoutpage-container {
+  margin-bottom: 100px;
+  min-height: 400px;
+}
